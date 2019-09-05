@@ -1,0 +1,21 @@
+EQUATORIAL;1;Equatorial;"Umbrella term of all equatorial frame.  Only use for old, pre-FK4 equatorial coordinates."
+ICRS;2;ICRS;"International Celestial Reference System as defined by 1998AJ....116..516M."
+FK4;2;FK4;"Positions based on the 4th Fundamental Katalog. If no equinox is defined with this frame, assume B1950.0."
+FK5;2;FK5;"Positions based on the 5th Fundamental Katalog. If no equinox is defined with this frame, assume J2000.0.  Applications not requiring extremely high precision can identify FK5 at J2000 with ICRS."
+eq_FK4;2;FK4;"Old VOTable COOSYS term for FK4.";ivoasem:deprecated ivoasem:useInstead(FK4)
+eq_FK5;2;FK5;"Old VOTable COOSYS term for FK5.";ivoasem:deprecated ivoasem:useInstead(FK5)
+ECLIPTIC;1;Ecliptic;"Ecliptic coordinates; the ecliptic of J2000.0 is assumed."
+ecl_FK4;2;Ecliptic (FK4);Old VOTable COOSYS term ecliptic coordinates for the FK4 ecliptic (of B1950.0).
+ecl_FK5;2;Ecliptic (FK5);Old VOTable COOSYS term ecliptic coordinates for the FK5 ecliptic (of J2000.0).;ivoasem:deprecated ivoasem:useInstead(ECLIPTIC)
+GENERIC_GALACTIC;1;Galactic;"Umbrella term for Galactic coordinates.  If at all possible, use a more specific term, as historically, many different conventions have been in use."
+GALACTIC_I;2;Old Galactic;"Old, pre-1958, Galactic coordinates.  See 1960MNRAS.121..123B for details."
+GALACTIC;2;Galactic;"Galactic coordinates, modern definition: Pole at precisely FK4 B1950 192.25, 27.4, origin at approximately FK4 B1950 265.55, -28.92.  See 1960MNRAS.121..123B for details."
+galactic;2;Galactic;"Old VOTable COOSYS term for GALACTIC.";ivoasem:deprecated ivoasem:useInstead(GALACTIC)
+SUPER_GALACTIC;2;Supergalactic;"Supergalactic coordinates (pole at GALACTIC 47.37, +6.32, origin at GALACTIC 137.37, 0."
+supergalactic;2;Supergalactic;Old VOTable COOSYS term for SUPER_GALACTIC;ivoasem:deprecated ivoasem:useInstead(SUPER_GALACITC)
+AZ_EL;1;Azimuth/elevation;"Local azimuth and elevation. (Ground-based observations; Azimuth from North through East.)"
+BODY;1;Body Coordinates;"Generic bodycentric coordinates. Data annotated in this way cannot be automatically combined with any other data.  Use or create more specific terms if at all possible."
+UNKNOWN;1;Unknown reference frame;"Unknown reference frame. Only to be used as a last resort or for simulations. Data annotated in this way cannot be automatically combined with any other data."
+xy;1;Unknown reference frame;Old VOTable COOSYS term for UNKNOWN;ivoasem:deprecated ivoasem:useInstead(UNKNOWN)
+barycentric;1;?;Old VOTable COOSYS term TO BE CLARIFIED
+geo_app;1;?;Old VOTable COOSYS term TO BE CLARIFIED

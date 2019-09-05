@@ -1,0 +1,12 @@
+Accepted;1;Accepted;"The date that the publisher accepted the  resource into their system"
+Available;1;Available;"The date the resource is made publicly  available."
+Copyrighted;1;Copyrighted;"The specific, documented date at which the  resource receives a copyrighted status; if  applicable."
+Collected;1;Collected;"A (representative) date at which the resource  content was collected."
+representative;1;Representative;"A rough indication of the resource's time coverage (deprecated in favour of Collected)";ivoasem:useInstead(Collected) ivoasem:deprecated
+Created;1;Created;"The date the resource itself was put together"
+creation;1;Creation;The date that the resource was created (deprecated in favour of Created);ivoasem:useInstead(Created) ivoasem:deprecated
+Issued;1;Issued;"The date that the resource is published or  distributed e.g. to a data center"
+Submitted;1;Submitted;"The date the creator submits the resource to the publisher. This could be different from Accepted if the publisher then applies a  selection process."
+Updated;1;Updated;"The date of the last update to the resource;  when the resource is being added to."
+update;1;Update;A date on which the resource was updated (deprecated in favour of Updated);ivoasem:useInstead(Updated) ivoasem:deprecated
+Valid;1;Valid;A date of validitiy.  This is probably not useful in the VOResource context.

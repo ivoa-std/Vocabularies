@@ -1,0 +1,6 @@
+TOPOCENTER;1;Topocenter;The location of the instrument that made the observation
+GEOCENTER;1;Geocenter;The center of the earth
+BARYCENTER;1;Solar System Barycenter;The barycenter of the solar system
+HELIOCENTER;1;Heliocenter;The center of the sun
+EMBARYCENTER;1;Earth-Moon Barycenter;The barycenter of the Earth-Moon system
+UNKNOWN;1;Unknown;The times cannot be transformed to a different reference position reliably.  This is to be used for simulated data or for data for which the reference position has been lost.

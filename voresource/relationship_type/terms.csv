@@ -1,0 +1,19 @@
+mirror-of;1;is a mirror of;This resource is a mirror (reasonably faithful reproduction) of the referenced resource. This is a VOResource 1.0 term deprecated in favour of IsIdenticalTo.;ivoasem:useInstead(IsIdenticalTo) ivoasem:deprecated
+service-for;1;is a service for;This resource makes data from the referenced resource (typcally some sort for data collection) available. This is a VOResource 1.0 term deprecated in favour of IsServiceFor.;ivoasem:useInstead(IsServiceFor) ivoasem:deprecated
+served-by;1;is served by;This resource can be accessed or otherwise used through the referenced service.  This is a VOResource 1.0 term deprecated in favour of IsServedBy.;ivoasem:useInstead(IsServedBy) ivoasem:deprecated
+derived-from;1;is derived from;This resource was produced using data from the referenced resource.  This is a VOResource 1.0 term deprecated in favour of IsDerivedFrom.;ivoasem:useInstead(IsDerivedFrom) ivoasem:deprecated
+related-to;1;is related to;This resource has some unspecified relationship to the referenced resource.  This is a VOResource 1.0 term that should no longer be used in new resource records.  Use specific terms instead.;ivoasem:deprecated
+Cites;1;cites;This resource makes use of the referenced resource.  This is in particular to reference tools like programs from educational material like tutorials.  It is not intended to track citations in a bibliographic sense.
+IsSupplementTo;1;is supplement to;This resource augments the referenced resource (inverse  of IsSupplementedBy)
+IsSupplementedBy;1;is supplemented by;Additional material pertaining to this resource  is available at the referenced resource (inverse of IsSupplementedTo)
+IsContinuedBy;1;is continued by;This resource has been or will be discontinued, and clients should turn to the referenced resource (inverse of Continues)
+Continues;1;continues;This resource has taken up the service of the referenced resource (inverse of IsContinuedBy)
+IsNewVersionOf;1;is new version of;The referenced resource has been developed on, and this resource should be used in preference (inverse of IsPreviousVersionOf)
+IsPreviousVersionOf;1;is previous version of;This resource has been developed on, and the referenced resource should be used for more up-to-date information (inverse of NewVersionOf)
+IsPartOf;1;is part of;The referenced resource is a collection of some sort, perhaps a series, and this resource is a part of that collection (inverse of HasPart)
+HasPart;1;has part;This is resource is a collection of other resources, and this relationship points to the individual parts (inverse of IsPartOf)
+IsSourceOf;1;is source of;This is resource has been used to produce the referenced resource (inverse of derived-from)
+IsDerivedFrom;1;is derived from;This resource was produced using data from the referenced resource (inverse of IsSourceOf)
+IsIdenticalTo;1;is a identical to;This resource is identical to the referenced resource, for use when there is a need to register two separate instances of the same resource.  In a VO context, this will typcially indicate mirrors operated by different publishers (mirrors with identical publishers use interface/mirrorURL elements).
+IsServiceFor;1;is a service for;This resource makes data from the referenced resource (typcally some sort for data collection) available (inverse of IsServedBy)
+IsServedBy;1;is served by;This resource can be accessed or otherwise used through the referenced service (inverse of IsServiceFor)

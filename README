@@ -1,0 +1,148 @@
+This directory contains "generic" vocabularies not (or no longer)
+associated to a single standard, as well as the recommended
+infrastructure to build and maintain vocabularies (you *can*
+use other RDF tools as well, of course).
+
+
+Repository Organisation
+=======================
+
+In this repository, each vocabulary is in a subdirectory of its own; the
+directory structure copies what is eventually on ivoa.net; vocabulary
+names with several segments ("datalink/core", "voresource/relationship")
+are supported but discouraged.
+
+In each subdirectory, a file terms.csv contains the actual terms.
+
+Per-vocabulary metadata is given in a single file in the root of the
+repository called vocabs.conf.  This, in particular, controls the
+versioning of the vocabularies.  See below for a discussion of its
+format.
+
+
+Defining Vocabularies
+=====================
+
+By default, our vocabularies are kept in CSV files.  The CSV separator
+is ";".  Since our descriptions will have lots of commas in them, this
+helps to keep the necessity for quoting low.
+
+The columns or the CSVs are:
+
+subject; level; label; description; more_relations
+
+The fields mean:
+
+:term:
+  This is the actual, machine-readable vocabulary term.  Please only use
+  letters, digits, underscores, and dashes here.  It is *not* intended
+  for human consumption as such, although in the VO we prefer terms that
+  make sense in English.
+:level:
+  This is used for simple input of wider/narrower relationships.
+  It must be 1 for “root” terms.  Terms with level of 2 that follow a
+  root term becomes its children (“narrower”); you can nest, i.e., have
+  terms of level 3 below terms of level 2.  Note that this means the
+  order of rows must be preserved in our CSV files: Do *not* sort them
+  and then save them.
+:label:
+  This is a short, human-readable label for the term.  In the VO, this
+  is generally derived fairly directly from subject, ususally by
+  inserting blanks at the right places and fixing capitalisation.
+:description:
+  This is a longer explanation of what the term means.  We do not
+  support any markup here, not even paragraphs, so there is probably a
+  limit how much can be communicated here.
+:more_relations: 
+  This column enables the declaration of non-hierarchical relationships
+  and contains whitespace-separated declarations.  Each declaration has
+  the form property[(term)].  See below for the common properties
+  supported here.  Plain terms are references within the vocabulary, but
+  CURIEs with known prefixes or full URIs are admitted, too.
+
+Non-ASCII characters are allowed in label and description; files must be
+in UTF-8.
+
+It is recommended to have, in addition to the terms.csv, a README in
+each vocabulary directory; this can contain internal notes, todo items,
+backwards compatibility considerations, and the like.
+
+
+Defining Vocabulary Metadata
+============================
+
+Vocabularies maintained in our CSV format are converted to standard RDF
+formats and directory structures deployable on apache web servers
+(typically, on the IVOA semantics repository, http://ivoa.net/rdf) using
+the little python program convert.py.  It is configured using
+vocabs.conf, which in turn is a simple INI-style file containing one
+section per vocabulary.  Here is an example section::
+
+  [reference_positions]
+  timestamp: 2019-03-15
+  title: Interoperable VO reference positions 
+  type:rdfclass
+  description: This vocabulary enumerates reference positions for
+    which positions and times in the Virtual Observatory can be given.
+    It is intended that clients, on encountering such a declaration, can
+    transform coordinates automatically on behalf of the user, or,
+    failing that because of missing data or implementation limitations,
+    at least adjust the systematic error of the associated values.
+  authors: Rots, A.; Demleitner, M.; Cresitello-Dittmar, M.
+
+The section header gives the name of the directory from which to read
+the terms.csv.  It can contain multiple path segments if absolutely
+necessary.  Each segments should only contain lowercase letters and
+underscore characters.
+
+The configuration items have the following meanings:
+
+:timestamp:
+  A manually maintained date of the last modification.  This is
+  essentially a version marker and should be changed only in preparation
+  for a release.  If is recommended to set it to the intended release
+  date during development and not change it for every edit.
+:title:
+  A human-readable short phrase saying what the vocabulary describes.
+:type:
+  One of rdfclass, rdfproperty, or skos (where the toolset currently
+  does not support skos)
+:description:
+  A longer text (about a paragraph) stating what the vocabulary should
+  used for.  No markup is supported here.
+:authors:
+  Persons involved with the creation of the standard.  These are *not*
+  the persons to ask for maintenance; all requests for changes should be
+  directed to the semantics working group.
+:draft:
+  While a vocabulary is still being reviewed in its entirety, you should
+  add a key draft set to ``True``.  This will add language to the effect
+  that terms may still vanish from the vocabulary.  Once the vocabulary
+  is approved, delete the draft key.
+
+
+Deployment
+==========
+
+To have a local installation, decide on a location from where you'll
+serve your vocabularies; since we currently generate apache .htaccess
+files only, this should be served by an apache HTTP server.  Then, call
+``make local`` with ROOT_URI set to that root URL, e.g.,::
+
+  python convert.py --root-uri http://docs.g-vo.org/rdf vocabs.conf
+
+The result of this is a file local.tar.gz.  Move that to the directory
+corresponding to the ROOT_URI and ``tar -xvzf`` it.
+
+In order for the .htaccess configuration to work, that directory (or one
+of its ancestors) has to be configured to interpret FileInfo
+content.  This would look like this::
+
+    <Directory /var/www/docs/rdf>
+          AllowOverride FileInfo
+    </Directory>
+
+Also, mod_rewrite must be enabled.
+
+You will then see the hierarchy of the vocabularies.  Clicking on a link
+to a vocabulary you should be taken to its latest version.

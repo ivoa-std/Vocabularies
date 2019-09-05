@@ -1,0 +1,9 @@
+These vocabularies were built by the Theory WG for use with SimDM, which
+is why they reside in this subfolder.  For the time being, please do not
+commit here without prior consultation with theory@ivoa.net.
+
+It might be wise to move them out of here when they have been accepted
+by the IVOA.
+
+All these vocabularies are in SKOS.
+

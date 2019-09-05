@@ -1,0 +1,9 @@
+The content_level, content_type, date_role, and relationship_type terms
+were historically created within VOResource; to maintain vocabulary
+URIs, we keep them in a subdirectory.  This is *not* a recommendable
+practice, as other users of these terms now have the odd "voresource"
+in the vocabulary URIs.
+
+This material has originally been maintained at
+
+http://volute.g-vo.org/svn/trunk/projects/registry/VOResource/terms

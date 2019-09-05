@@ -1,0 +1,36 @@
+this;1;the data itself;the primary (as opposed to related) data of the identified resource
+
+progenitor;1;Progenitor;data resources that were used to create this dataset (e.g. input raw data)
+derivation;1;Derivation;data resources that are derived from this dataset (e.g. output data products)
+
+auxiliary;1;Auxiliary;auxiliary resources
+weight;2;Weight map;resource with array(s) containing weighting values
+error;2;Error map;resource with array(s) containing error values
+noise;2;Noise map;resource with array(s) containing noise values
+
+calibration;1;Calibration data;resource used to calibrate the primary data
+bias;2;Bias calibration data;used to subtract the detector offset level
+dark;2;Dark calibration data;used to subtract the accumulated detector dark current
+flat;2;Flat field calibration data;used to calibrate variations in detector sensitivity
+
+preview;1;Preview;low fidelity but easily viewed representation of the data 
+preview-image;2;Image preview;preview of the data as a 2-dimensional image
+preview-plot;2;Plot preview;preview of the data as a plot (e.g. spectrum or light-curve)
+
+#config;1;Observing configuration;Can also be other instrumental data
+#det-psf;2;Point spread function;(or lsf)
+#beam-image;2;Beam image;For radio data
+
+proc;1;Processing;server-side data processing result
+cutout;2;Cutout;a subsection of the primary data
+#regrid;2;Regridded data;Excerpt of a regridded dataset
+#moments;2;Moment extraction;Extracted moments from an original observed dataset
+#spectral-index;2;Spectral Index;Extracted spectral index from an original observed dataset
+#fit;2;Model fit;"Result of a fitting procedure by a model: fit, residual etc."
+#source-list;2;Source list;Result list of sources extracted from an observed data set
+
+#model;1;Model;"A link to a metadata description conforming to either an IVOA data model, or some other proprietary data modelling language"
+#characterization;2;CharDM;A link to a CharDM-style data model
+#obscore;2;ObsCore;A link to an ObsCore-style data model
+#imagedm;2;ImageDM;A link to an ImageDM-style data model
+#proprietary;2;ProprietaryModel;A link to a data model in some non-IVOA syntax

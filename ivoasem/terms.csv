@@ -1,0 +1,4 @@
+vocflavour;1;Vocabulary Flavour;The object of this property indicates what sorts of terms the vocabulary can contain.  See Vocabularies in the VO for the string literals allowed in objects of RDF triples using this.
+preliminary;1;Preliminary;The subject of an RDF triple with this property is a term that is still under review and may disappear again.
+deprecated;1;Deprecated;The subject of an RDF triple with this property is a term that should no longer be used.
+useInstead;1;Replace with;Used in RDFs triples to indicate that the object should be used in new annotation where previously the subject was used.;
