@@ -1,11 +1,4 @@
-author;1;Author; The agent is an author of this Entity.
-operator;1;Operator;The agent was an operator for a specific Activity.
-coordinator;1;Coordinator;The agent was coordinating a specific Activity.
-observer;1;Observer;The agent was observing and is associated to a specific “observation” Activity or responsible for observing an specific Entity.  
-contributor;1;Contributor; The agent helped in the creation of this Entity.
-creator;1;Creator; The agent created this Entity.
-curator;1;Curator; The agent curated this Entity.
-funder;1;Funder; The agent provided financial support for this Activity or the creation of the Entity.
-provider;1;Provider; The agent provided this Entity.
-publisher;1;Publisher; The agent publishes this Entity.
-editor;1;Editor; Agent was responsible for editing this Entity.
+creator;1;Creator;The agent attributed participated in the production of the entity; not applicable to wasAssociatedWith.
+operator;1;Operator;The agent associated performed the activity; not applicable to wasAttributedTo.
+funder;1;Funder; The agent associated or attributed provided financial support for the Activity or the creation of the Entity.
+publisher;1;Publisher; The attributed agent makes the entity publicly available; not applicable to wasAssociatedWith.
