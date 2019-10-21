@@ -34,3 +34,22 @@ cutout;2;Cutout;a subsection of the primary data
 #obscore;2;ObsCore;A link to an ObsCore-style data model
 #imagedm;2;ImageDM;A link to an ImageDM-style data model
 #proprietary;2;ProprietaryModel;A link to a data model in some non-IVOA syntax
+
+# VEP-0001
+associated-dataset;1;Dataset associated to the main item.; The dataset  pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-image;2;Image associated to the main item.;The 2D image  pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-cube;2;Cube associated to the main item.;The data cube  pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-spectrum;2;Spectrum associated to the main item.; The spectrum  pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-sed;2;Sed associated to the main item.;The sed pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-visibility;2;Visibility data associated to the main item.;The interferometric Visibility dataset pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-event;2;Event list associated to the main item.;The event list pointed by the link is considered associated to the main discovered item. ;ivoasem:preliminary
+associated-measurements;2;Measurement catalogue associated to the main item.;The measurements catalogue pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-timeseries;2;Timeseries associated to the main item.;The timeseries pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-lightcurve;3;Lightcurve associated to the main item.;The lightcurve pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-timeseries-spectrum;3;Timeseries of spectra associated to the main item.;The timeseries of spectra pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-timeseries-image;3;Timeseries of images associated to the main item.;The timeseries of images pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-radialvelocitycurve;3;timeseries of radialvelocities associated to the main item.;The timeseries of radial velocities pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+associated-timeseries-cube;3;Timeseries of cubes associated to the main item.;The timeseries of cubes pointed by the link is considered associated to the main discovered item.;ivoasem:preliminary
+
+# VEP-0002
+documentation;1;Documentation;Extra information on the item in human-readable text form, ranging from processing logs to weather reports to technical documents on instruments to related publications.;ivoasem:preliminary
