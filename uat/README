@@ -1,0 +1,8 @@
+This is some experimental code for a bridge between the UAT and IVOA
+vocabularies.  If adopted, it quite certainly will not stay here.
+
+The basic interest is:
+
+* have IVOA-compatible URIs for UAT concepts; most importantly, we want
+  readable concept URIs (BlackHole rather than 120)
+* maintain format guarantees (have simple XML, have turtle)
