@@ -46,10 +46,10 @@ KNOWN_PREDICATES = frozenset([
     "ivoasem:preliminary", "ivoasem:deprecated", "ivoasem:useInstead",
     "rdfs:subClassOf",
     "rdfs:subPropertyOf",
-    "skos:broader"])
+    "skos:broader", "skos:exactMatch"])
 
 # an RE our term URIs must match (we're not very diligent yet)
-FULL_TERM_PATTERN = "[\w\d#:/_-]+"
+FULL_TERM_PATTERN = "[\w\d#:/_.-]+"
 
 # an RE our terms themselves must match
 TERM_PATTERN = "[\w\d_-]+"
@@ -373,6 +373,20 @@ def make_ttl_literal(ob):
             return '"{}"'.format(ob.encode("utf-8").replace('"', '\\"'))
 
 
+def linkify(ob):
+    """returns ob as a link.
+
+    This is the equivalent of make_ttl_literal for HTML:  if ob looks
+    like a link already, it's returned as a link with the URL as anchor.
+    Else, it's considered a local term and returned as a link with
+    #ob as href.
+    """
+    if re.match("https?://", ob):
+        return T.a(href=ob)[ob]
+    else:
+        return T.a(href="#"+ob)[ob]
+
+
 class Term(object):
     """A term in our vocabulary.
 
@@ -516,14 +530,15 @@ class Term(object):
         formatted_relations = []
         for prop, label in [
                ("ivoasem:useInstead", "Use Instead"),
-               ("ivoasem:deprecated", "Deprecated Term"),]:
+               ("ivoasem:deprecated", "Deprecated Term"),
+               ("skos:exactMatch", "Same As")]:
             objs = [self._format_term_as_html(ob) 
                 for ob in self.get_objects_for(prop)]
             if objs:
                 non_nulls = [o for o in objs if o is not None]
                 if non_nulls:
                     append_with_sep(formatted_relations,
-                        [label+": ", [obj
+                        [label+": ", [linkify(obj)
                             for obj in non_nulls]], T.br)
                 else:
                     append_with_sep(formatted_relations, 
@@ -543,7 +558,7 @@ class Term(object):
             T.td(class_="label")[self.label],
             T.td(class_="description")[self.description],
             T.td(class_="parent")[[
-                self._format_term_as_html(name)
+                [self._format_term_as_html(name), " "]
                 for name in self.get_objects_for(
                     self.vocabulary.wider_predicate)]],
             T.td(class_="morerels")[formatted_relations],]
@@ -635,7 +650,7 @@ class Vocabulary(object):
         except IOError, ex:
             raise ReportableError(
                 "Expected terms file {}.terms cannot be read: {}".format(
-                    vocab_def["terms_fname"], ex))
+                    self.filename, ex))
         self._read_terms_source()
 
     def get_meta_dict(self):
@@ -926,12 +941,19 @@ class SKOSVocabulary(Vocabulary):
             "http://www.w3.org/2004/02/skos/core#broader",
             term))
         
-# TODO: look for additional relationships
+        more_relations = []
+        for match in self._get_skos_objects_for(voc,
+                "http://www.w3.org/2004/02/skos/core#exactMatch",
+                term):
+            more_relations.append(
+                "skos:exactMatch({})".format(match))
+
         return Term(self, 
             self._normalise_uri(term), 
             label, 
             description, 
-            parents)
+            parents,
+            " ".join(more_relations))
 
     def _read_terms_source(self):
         """creates Terms instances from RDF/X SKOS.
@@ -940,12 +962,8 @@ class SKOSVocabulary(Vocabulary):
 
         voc = skosify.skosify(self.filename)
         for term in voc.subjects():
-            # HACK: There's nothing we can do with Scheme terms cropping
-            # up in some of your Skos sources.  We don't want to do
-            # anything with them either, as top concepts don't concern
-            # us.  Until I figure out a better way, I just filter this
-            # on the term name
-            if term.endswith("#Scheme"):
+            if not term.startswith(self.baseuri):
+                # disregard all terms not belonging to us
                 continue
             n = self._read_one_term(voc, term)
             self.terms[n.term] = n

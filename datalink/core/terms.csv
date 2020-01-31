@@ -35,5 +35,9 @@ cutout;2;Cutout;a subsection of the primary data
 #imagedm;2;ImageDM;A link to an ImageDM-style data model
 #proprietary;2;ProprietaryModel;A link to a data model in some non-IVOA syntax
 
-# VEP-0002
+# VEP-002
 documentation;1;Documentation;Extra information on the item in human-readable text form, ranging from processing logs to weather reports to technical documents on instruments to related publications.;ivoasem:preliminary
+
+# VEP-003
+sibling;1;Sibling Data;Data products derived from the same progenitor as #this.  This could be a lightcure for an object catalog derived from repeated observations, the dataset processed using a different pipeline, or the like.;ivoasem:preliminary
+
