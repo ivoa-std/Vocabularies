@@ -1,8 +1,14 @@
-This is some experimental code for a bridge between the UAT and IVOA
-vocabularies.  If adopted, it quite certainly will not stay here.
+This is a technology study for a bridge between the UAT and IVOA
+vocabularies.
 
 The basic interest is:
 
 * have IVOA-compatible URIs for UAT concepts; most importantly, we want
   readable concept URIs (BlackHole rather than 120)
-* maintain format guarantees (have simple XML, have turtle)
+* maintain format guarantees (have simple, revovo-readable XML).
+
+The uat.skos file in here, although under version control, is *not* to
+be changed or managed.  It is always generated from upstream UAT using
+the uat2ivo.py script present here.
+
+The actual conversion needs rapper installed.

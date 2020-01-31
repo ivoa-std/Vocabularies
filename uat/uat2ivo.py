@@ -9,6 +9,7 @@ What this outputs is a SKOS file for consumption by the IVOA ingestor.
 """
 
 import re
+import subprocess
 import warnings
 #warnings.filterwarnings("ignore", message="Non-Concept:")
 
@@ -18,7 +19,7 @@ import requests
 
 UAT_RDF_SOURCE = "https://raw.githubusercontent.com/astrothesaurus/UAT/master/UAT.rdf"
 # for now, convert what's coming from there with
-# rapper -o rdfxml-abbrev input-from-github.rdf > input.rdf
+# 
 UAT_TERM_PREFIX = "http://astrothesaurus.org/uat/"
 IVO_TERM_PREFIX = "http://www.ivoa.net/rdf/uat#"
 
@@ -179,16 +180,21 @@ def make_ivoa_input_skos(
 
 
 def main():
-	f = open("input.rdf", "rb")
-	tree = ElementTree.parse(f)
-	f.close()
+	with open("/dev/null", "rb") as null:
+		rapper = subprocess.Popen([
+			"rapper", "-o", "rdfxml-abbrev", UAT_RDF_SOURCE],
+			stdin=null, stdout=subprocess.PIPE, close_fds=True)
+		tree = ElementTree.parse(rapper.stdout)
+		if rapper.wait():
+			raise Exception("Obtaining or filtering upstream UAT failed."
+				" Giving up.")
 
 	concept_mapping = ConceptMapping()
 	concept_mapping.update_from_etree(tree)
 
 	make_ivoa_input_skos(tree, concept_mapping)
 
-	with open("output.skos", "wb") as f:
+	with open("uat.skos", "wb") as f:
 		tree.write(f, encoding="utf-8")
 
 
