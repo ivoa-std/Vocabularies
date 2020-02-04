@@ -17,9 +17,11 @@ from xml.etree import ElementTree
 import requests
 
 
+# Upstream UAT RDF/XML
 UAT_RDF_SOURCE = "https://raw.githubusercontent.com/astrothesaurus/UAT/master/UAT.rdf"
-# for now, convert what's coming from there with
-# 
+# Downstream IVOA UAT; required here for existing maps
+IVOA_RDF_SOURCE = "http://www.ivoa.net/rdf/uat"
+
 UAT_TERM_PREFIX = "http://astrothesaurus.org/uat/"
 IVO_TERM_PREFIX = "http://www.ivoa.net/rdf/uat#"
 
@@ -41,11 +43,10 @@ RESOURCE_ATTR = ElementTree.QName(NS_MAPPING["rdf"], "resource")
 DESCRIPTION_TAG = ElementTree.QName(NS_MAPPING["skos"], "Concept")
 IVOA_DEPRECATED_TAG = ElementTree.QName(NS_MAPPING["ivoasem"], "deprecated")
 
-
 # set to True to ignore current IVOA mapping (in other words, never;
 # that would quite certainly change quite a few terms on the IVOA
 # side because previous mappings are forgotten).
-BOOTSTRAP = True
+BOOTSTRAP = False
 
 
 def label_to_term(label:str):
@@ -85,11 +86,10 @@ class ConceptMapping:
 	fill the mapping from what is already defined.
 	"""
 	def __init__(self):
-		if BOOTSTRAP:
-			self.uat_mapping = {}
-			self.ivo_mapping = {}
-		else:
-			raise NotImplementedError("Can't read from IVOA yet")
+		self.uat_mapping = {}
+		self.ivo_mapping = {}
+		if not BOOTSTRAP:
+			self._fill_from_ivoa()
 
 	def __contains__(self, uat_uri: str):
 		return uat_uri in self.uat_mapping
@@ -100,6 +100,23 @@ class ConceptMapping:
 		It will raise a KeyError for an unknown UAT URI.
 		"""
 		return self.uat_mapping[key]
+
+	def _fill_from_ivoa(self):
+		"""bootstraps the UAT <-> IOVA term mappings.
+		"""
+		tree = ElementTree.parse(
+			requests.get(IVOA_RDF_SOURCE, stream=True, 
+				headers={"accept": "application/rdf+xml"}).raw)
+		
+		for concept in tree.iter(DESCRIPTION_TAG):
+			em_el = concept.find("skos:exactMatch", NS_MAPPING)
+			if em_el is None:
+				warnings.warn("IVOA Concept without a UAT match: {}".format(
+					concept.get(ABOUT_ATTR)))
+			else:
+				self.add_pair(
+					em_el.get(RESOURCE_ATTR),
+					concept.get(ABOUT_ATTR))
 
 	def add_pair(self, uat_uri:str, ivo_uri:str):
 		"""enters a mapping between uat_uri and ivo_uri to our mappings.
@@ -131,9 +148,10 @@ class ConceptMapping:
 		if label is None:
 			raise Exception("No preferred label on {}".format(uat_uri))
 
-		self.add_pair(
-			desc_node.attrib[ABOUT_ATTR],
-			IVO_TERM_PREFIX+label_to_term(label.text))
+		if uat_uri not in self:
+			ivo_uri = IVO_TERM_PREFIX+label_to_term(label.text)
+			print("New mapping: {} -> {}".format(uat_uri, ivo_uri))
+			self.add_pair(uat_uri, ivo_uri)
 
 	def update_from_etree(self, tree:ElementTree.ElementTree):
 		"""updates the mappings from an elementtree of the RDF-XML produced
@@ -180,9 +198,10 @@ def make_ivoa_input_skos(
 
 
 def main():
+	concept_mapping = ConceptMapping()
 	with open("/dev/null", "rb") as null:
 		rapper = subprocess.Popen([
-			"rapper", "-o", "rdfxml-abbrev", UAT_RDF_SOURCE],
+			"rapper", "-q", "-o", "rdfxml-abbrev", UAT_RDF_SOURCE],
 			stdin=null, stdout=subprocess.PIPE, close_fds=True)
 		tree = ElementTree.parse(rapper.stdout)
 		if rapper.wait():
