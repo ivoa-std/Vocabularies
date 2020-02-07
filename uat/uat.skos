@@ -191,7 +191,7 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1020" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#medium-band-photometry">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#photometric-systems" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#str-mgren-photometric-system" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stromgren-photometric-system" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#vilnius-photometry" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#walraven-photometry" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ddo-photometry" />
@@ -1008,7 +1008,7 @@
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#nonrotating-black-holes">
     <skos:altLabel xml:lang="en">Non-rotating black holes</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#classical-black-holes" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#reissner-nordstr-m-black-holes" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#reissner-nordstrom-black-holes" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#schwarzschild-black-holes" />
     <skos:prefLabel xml:lang="en">Nonrotating black holes</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1121" /></skos:Concept>
@@ -2976,7 +2976,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#early-universe" />
     <skos:prefLabel xml:lang="en">Reionization</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1383" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#reissner-nordstr-m-black-holes">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#reissner-nordstrom-black-holes">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-20T17:43:34.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Reissner Nordstrom black holes</skos:altLabel>
@@ -3097,7 +3097,7 @@
     <skos:prefLabel xml:lang="en">Ring singularities</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#kerr-black-holes" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1402" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ritchey-chr-tien-telescopes">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ritchey-chretien-telescopes">
     <skos:altLabel xml:lang="en">Ritchey–Chretien telescopes</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#cassegrain-telescopes" />
     <skos:prefLabel xml:lang="en">Ritchey–Chrétien telescopes</skos:prefLabel>
@@ -4959,7 +4959,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stellar-gas-distribution" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stellar-interiors" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stellar-surfaces" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#str-mgren-spheres" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stromgren-spheres" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#circumstellar-shells" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stellar-convection-envelopes" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#stellar-convective-zones" />
@@ -5040,7 +5040,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#earth-atmosphere" />
     <skos:prefLabel xml:lang="en">Stratosphere</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1640" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#str-mgren-photometric-system">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stromgren-photometric-system">
     <skos:altLabel xml:lang="en">Four-color photometry</skos:altLabel>
     <skos:altLabel xml:lang="en">Stromgren uvby system</skos:altLabel>
     <skos:altLabel xml:lang="en">Strömgren photometry</skos:altLabel>
@@ -5048,7 +5048,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#medium-band-photometry" />
     <skos:prefLabel xml:lang="en">Strömgren photometric system</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1641" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#str-mgren-spheres">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stromgren-spheres">
     <skos:altLabel xml:lang="en">Stromgren spheres</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-structures" />
     <skos:prefLabel xml:lang="en">Strömgren spheres</skos:prefLabel>
@@ -8070,7 +8070,7 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2019" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cassegrain-telescopes">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#reflecting-telescopes" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ritchey-chr-tien-telescopes" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ritchey-chretien-telescopes" />
     <skos:prefLabel xml:lang="en">Cassegrain telescopes</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/202" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-variability">
@@ -9552,7 +9552,7 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/222" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#charged-black-holes">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#classical-black-holes" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#reissner-nordstr-m-black-holes" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#reissner-nordstrom-black-holes" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#kerr-newman-black-holes" />
     <skos:prefLabel xml:lang="en">Charged black holes</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/223" /></skos:Concept>
@@ -10431,7 +10431,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#einstein-universe" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#expanding-universe" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#friedmann-universe" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#g-del-universe" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#godel-universe" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#inflationary-universe" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#lemaitre-universe" />
     <skos:prefLabel xml:lang="en">Cosmological models</skos:prefLabel>
@@ -12959,7 +12959,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#star-clusters" />
     <skos:prefLabel xml:lang="en">Globular star clusters</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/656" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#g-del-universe">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#godel-universe">
     <skos:altLabel xml:lang="en">Constructible universe</skos:altLabel>
     <skos:altLabel xml:lang="en">Godel universe</skos:altLabel>
     <skos:altLabel xml:lang="en">Goedel universe</skos:altLabel>

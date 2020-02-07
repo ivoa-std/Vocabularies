@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# * Use unidecode to make skos terms from labels (in uatbridge)
+
 """
 A script to convert the CSV input format to various outputs.
 
@@ -272,6 +274,7 @@ def pick_exactly_one(iter, errmsg, default=None):
         raise ReportableError("Expected exactly one {} but got {}".format(
             errmsg, len(res)))
 
+
 ############ tiny DOM start (snarfed and simplified from DaCHS stanxml)
 # (used to write HTML)
 
@@ -371,20 +374,6 @@ def make_ttl_literal(ob):
             return '"""{}"""'.format(ob.encode("utf-8"))
         else:
             return '"{}"'.format(ob.encode("utf-8").replace('"', '\\"'))
-
-
-def linkify(ob):
-    """returns ob as a link.
-
-    This is the equivalent of make_ttl_literal for HTML:  if ob looks
-    like a link already, it's returned as a link with the URL as anchor.
-    Else, it's considered a local term and returned as a link with
-    #ob as href.
-    """
-    if re.match("https?://", ob):
-        return T.a(href=ob)[ob]
-    else:
-        return T.a(href="#"+ob)[ob]
 
 
 class Term(object):
@@ -513,6 +502,9 @@ class Term(object):
         """
         if term is None:
             return term
+        if re.match("https?://", term):
+            return T.a(href=term)[term]
+
         if term[0]=='#':
             term = term[1:]
 
@@ -538,11 +530,11 @@ class Term(object):
                 non_nulls = [o for o in objs if o is not None]
                 if non_nulls:
                     append_with_sep(formatted_relations,
-                        [label+": ", [linkify(obj)
+                        [T.em[label+": "], [obj
                             for obj in non_nulls]], T.br)
                 else:
                     append_with_sep(formatted_relations, 
-                        label, T.br)
+                        T.em[label], T.br)
 
         if preliminary:
             row_class = "preliminary"
@@ -551,16 +543,17 @@ class Term(object):
         else:
             row_class = "term"
 
+        parents = []
+        for name in self.get_objects_for(self.vocabulary.wider_predicate):
+            append_with_sep(parents, self._format_term_as_html(name), ", ")
+
         el =  T.tr(class_=row_class, id=self.term)[
             T.td(class_="term")[self.term
                 +(" (Preliminary)" if preliminary else "")
                 +(" (Deprecated)" if deprecated else "")],
             T.td(class_="label")[self.label],
             T.td(class_="description")[self.description],
-            T.td(class_="parent")[[
-                [self._format_term_as_html(name), " "]
-                for name in self.get_objects_for(
-                    self.vocabulary.wider_predicate)]],
+            T.td(class_="parent")[parents],
             T.td(class_="morerels")[formatted_relations],]
         
         return el
@@ -715,8 +708,8 @@ class Vocabulary(object):
         return T.table(class_="terms")[
         T.thead[
             T.tr[
-                T.th(title="The formal name of the predicate as used in URIs"
-                    )["Predicate"],
+                T.th(title="The formal name of the term as used in URIs"
+                    )["Term"],
                 T.th(title="Suggested label for the predicate"
                     " in human-facing UIs")["Label"],
                 T.th(title="Human-readable description of the predicate"

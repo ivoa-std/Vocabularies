@@ -6,15 +6,17 @@ UAT concept identifiers to readable IVOA identifiers.  To maintain that,
 we fetch the current mapping from the IVOA RDF repo.
 
 What this outputs is a SKOS file for consumption by the IVOA ingestor.
+
+Dependencies: python3, python3-requests, python3-unidecode.
 """
 
 import re
 import subprocess
 import warnings
-#warnings.filterwarnings("ignore", message="Non-Concept:")
-
 from xml.etree import ElementTree
+
 import requests
+import unidecode
 
 
 # Upstream UAT RDF/XML
@@ -60,7 +62,8 @@ def label_to_term(label:str):
 
     ConceptMapping makes sure what's resulting is unique within the IVOA UAT.
     """
-    return re.sub("[^A-Za-z0-9]+", "-", label).lower()
+    return re.sub("[^a-z0-9]+", "-", 
+        unidecode.unidecode(label).lower())
 
 
 def iter_uat_concepts(tree:ElementTree.ElementTree, chatty:bool):
@@ -151,7 +154,8 @@ class ConceptMapping:
 
         if uat_uri not in self:
             ivo_uri = IVO_TERM_PREFIX+label_to_term(label.text)
-            print("New mapping: {} -> {}".format(uat_uri, ivo_uri))
+            if not BOOTSTRAP:
+                print("New mapping: {} -> {}".format(uat_uri, ivo_uri))
             self.add_pair(uat_uri, ivo_uri)
 
     def update_from_etree(self, tree:ElementTree.ElementTree):
