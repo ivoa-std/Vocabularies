@@ -159,6 +159,8 @@ For any non-trivial edit of a vocabulary, do the following:
 (3) Commit the result.  In the commit message, specify what caused
     the change ("mail by person@example.org"; "TCG telecon of 2020-02-11")
 (4) Run convert.py <vocname>
-(4) Go to the build subdirectory, run tar -cvzf upload.tar.gz <vocname>
-(5) mail upload.tar.gz to ivoadoc@ivoa.net, asking to unpack it in the
+(5) Go to the build subdirectory, run tar -cvzf upload.tar.gz <vocname>
+(6) mail upload.tar.gz to ivoadoc@ivoa.net, asking to unpack it in the
     rdf subdirectory.
+(7) Update https://wiki.ivoa.net/twiki/bin/view/IVOA/VEPs as
+    appropriate.

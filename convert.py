@@ -5,7 +5,8 @@
 """
 A script to convert the CSV input format to various outputs.
 
-Dependencies: python2, rapper, skosify
+Dependencies: python3, rapper, skosify (not packaged yet; see
+https://pypi.org/project/skosify/)
 
 See Appendix A of Vocabularies in the VO 2 for what this is and what
 it's for.
@@ -16,7 +17,7 @@ In case of problems, please contact Markus Demleitner
 <msdemlei@ari.uni-heidelberg.de>
 """
 
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 from xml.etree import ElementTree as etree
 
 import contextlib
@@ -28,7 +29,7 @@ import subprocess
 import textwrap
 import shutil
 import sys
-import urlparse
+import urllib.parse
 import weakref
 
 try:
@@ -305,7 +306,7 @@ class _Element(object):
                 if child is None:
                         return
 
-                elif isinstance(child, basestring):
+                elif isinstance(child, str):
                         self.add_text(child)
 
                 elif isinstance(child, (int, float)):
@@ -324,7 +325,7 @@ class _Element(object):
                 return self
         
         def __call__(self, **kwargs):
-                for k, v in kwargs.iteritems():
+                for k, v in kwargs.items():
                         if k.endswith("_"):
                                 k = k[:-1]
                         k = k.replace("_", "-")
@@ -332,7 +333,8 @@ class _Element(object):
                 return self
 
         def dump(self, encoding="utf-8", dest_file=sys.stdout):
-            etree.ElementTree(self.node).write(dest_file)
+            etree.ElementTree(self.node).write(
+                dest_file, encoding=encoding)
 
 
 class _T(object):
@@ -361,7 +363,7 @@ def make_ttl_literal(ob):
     if isinstance(ob, bool):
         return "true" if ob else "false"
 
-    assert isinstance(ob, basestring)
+    assert isinstance(ob, str)
     if is_URI(ob):
         return "<{}>".format(ob)
 
@@ -371,9 +373,9 @@ def make_ttl_literal(ob):
 
     else:
         if "\n" in ob:
-            return '"""{}"""'.format(ob.encode("utf-8"))
+            return '"""{}"""'.format(ob)
         else:
-            return '"{}"'.format(ob.encode("utf-8").replace('"', '\\"'))
+            return '"{}"'.format(ob.replace('"', '\\"'))
 
 
 class Term(object):
@@ -638,9 +640,9 @@ class Vocabulary(object):
         """
         try:
             # just see whether the file is readable.
-            with open(self.filename) as f:
+            with open(self.filename, "rb") as f:
                 _ = f.read(10)
-        except IOError, ex:
+        except IOError as ex:
             raise ReportableError(
                 "Expected terms file {}.terms cannot be read: {}".format(
                     self.filename, ex))
@@ -664,7 +666,7 @@ class Vocabulary(object):
         """writes a turtle representation of the vocabulary to
         the current directory as <name>.ttl.
         """
-        with open(self.name+".ttl", "w") as f:
+        with open(self.name+".ttl", "w", encoding="utf-8") as f:
             meta_items = dict((k, make_ttl_literal(v))
                 for k, v in self.get_meta_dict().items())
             meta_items["creators"] = ",\n    ".join(
@@ -686,7 +688,7 @@ class Vocabulary(object):
         I guess this little uglyness is worth it, because this way we at least
         get a tiny bit of validation on our ttls.
         """
-        with open(self.name+".rdf", "w") as f:
+        with open(self.name+".rdf", "w", encoding="utf-8") as f:
             rapper = subprocess.Popen([
                 "rapper", 
                 "-iturtle", 
@@ -758,28 +760,28 @@ class Vocabulary(object):
                     T.a(href=self.name+".ttl")["Turtle"],
                     "."]]]
 
-        with open(self.name+".html", "w") as f:
+        with open(self.name+".html", "wb") as f:
             doc.dump(dest_file=f)
 
     def write_meta_inf(self):
         """writes a "short" META.INF for use by the vocabulary TOC generator
         at the IVOA web page to the current directory.
         """
-        with open("META.INF", "w") as f:
-            f.write(u"Name: {}\n{}\n".format(
+        with open("META.INF", "w", encoding="utf-8") as f:
+            f.write("Name: {}\n{}\n".format(
             self.title,
             textwrap.fill(
                 self.description, 
                 initial_indent="Description: ",
-                subsequent_indent="  ")).encode("utf-8"))
+                subsequent_indent="  ")))
             if self.draft:
                 f.write("Status: Draft\n")
 
     def write_htaccess(self):
         """writes a customised .htaccess for content negotiation.
         """
-        install_base = urlparse.urlparse(self.baseuri).path+"/"
-        with open(".htaccess", "w") as f:
+        install_base = urllib.parse.urlparse(self.baseuri).path+"/"
+        with open(".htaccess", "w", encoding="utf-8") as f:
             f.write(HT_ACCESS_TEMPLATE_CSV.format(
                 install_base=install_base,
                 timestamp=self.timestamp,
@@ -830,7 +832,7 @@ class CSVBasedVocabulary(Vocabulary):
         parent_stack = []
         last_term = None
         self.terms = {}
-        with open(self.filename) as f:
+        with open(self.filename, "r", encoding="utf-8") as f:
             for index, rec in enumerate(csv.reader(
                     comment_ignoring(f), delimiter=";")):
                 rec = [(s or None) for s in rec]
@@ -855,8 +857,8 @@ class CSVBasedVocabulary(Vocabulary):
                     new_term = Term(
                         self,
                         rec[0], 
-                        rec[2].decode("utf-8"), 
-                        rec[3].decode("utf-8"), 
+                        rec[2], 
+                        rec[3], 
                         parent, 
                         more_relations)
 
@@ -961,7 +963,7 @@ class SKOSVocabulary(Vocabulary):
             n = self._read_one_term(voc, term)
             self.terms[n.term] = n
        
-        with open(self.filename) as f:
+        with open(self.filename, "r", encoding="utf-8") as f:
             self.original_rdfx = f.read()
 
 
@@ -1012,8 +1014,8 @@ def parse_config(config_name):
     """
     parser = ConfigParser()
     try:
-        with open(config_name) as f:
-            parser.readfp(f)
+        with open(config_name, "r", encoding="utf-8") as f:
+            parser.read_file(f)
     except IOError:
         raise ReportableError(
             "Cannot open or read vocabulary configuration {}".format(
@@ -1082,7 +1084,7 @@ def main():
 if __name__=="__main__":
     try:
         main()
-    except ReportableError, msg:
+    except ReportableError as msg:
         import traceback;traceback.print_exc()
         sys.stderr.write("*** Fatal: {}\n".format(msg))
         sys.exit(1)
