@@ -1,0 +1,8 @@
+image;1;Image;An astronomical image, typically a 2D image with two spatial axes, e.g., a FITS image. The image content may be complex.  For instance, an objective-prism observation would be considered a type of image, even though an extracted spectrum would be a spectrum data product.
+cube;1;Cube;A multidimensional astronomical image with 3 or more axes, e.g., a spectral image cube, a polarization cube, a full Stokes radio data cube, a time image cube, etc.
+spectrum;1;Spectrum;Any dataset for which spectral coverage is the primary attribute, e.g., a 1D spectrum or a long slit spectrum.
+sed;2;SED;"A spectral energy distribution, i.e., a set of calibrated fluxes over a typically wide part of the spectrum.  An SED is usually produced by combining data from multiple observations."
+timeseries;1;Time Series;A one dimensional array presenting some quantity as a function of time. A light curve is a typical example of a time series dataset.
+visibilitiy;1;Visibility;An interferometric radio observation given in Fourier space.
+event;1;Events;A collection of some sort of observed events, such as high-energy particles observed.  An event is typically characterised by spatial, spectral, and time information.
+measurements;1;Measurements;A set of derived measurements obtained from a particular original dataset or a catalog of sources compiled from various progenitors.

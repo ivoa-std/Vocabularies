@@ -1,0 +1,8 @@
+This vocabulary started its life as a "half-closed" enumeration in
+Obscore 1.0 and Obscore 1.1, http://ivoa.net/documents/ObsCore/20170509/
+
+It was turned into a proper vocabulary when it was realised that these
+types are useful far beyond that (such as in content parameters to media
+types or to declare data products returned by SSAP services).  The
+initial version of this vocabulary matches very closely the list given
+in Obscore 1.1.
