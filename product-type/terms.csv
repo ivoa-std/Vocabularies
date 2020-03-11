@@ -5,4 +5,5 @@ sed;2;SED;"A spectral energy distribution, i.e., a set of calibrated fluxes over
 timeseries;1;Time Series;A one dimensional array presenting some quantity as a function of time. A light curve is a typical example of a time series dataset.
 visibilitiy;1;Visibility;An interferometric radio observation given in Fourier space.
 event;1;Events;A collection of some sort of observed events, such as high-energy particles observed.  An event is typically characterised by spatial, spectral, and time information.
-measurements;1;Measurements;A set of derived measurements obtained from a particular original dataset or a catalog of sources compiled from various progenitors.
+measurements;1;Measurements;  Generic tabular data not fitting any of the other terms.  Because of its lack of specificity, this term should generally be avoided, and new, more precise terms should be introduced instead.
+
