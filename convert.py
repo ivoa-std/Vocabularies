@@ -23,6 +23,7 @@ from xml.etree import ElementTree as etree
 import contextlib
 import csv
 import itertools
+import json
 import os
 import re
 import subprocess
@@ -78,6 +79,9 @@ RewriteRule ^$ {timestamp}/{name}.rdf [R=303]
 
 RewriteCond %{{HTTP_ACCEPT}} text/turtle
 RewriteRule ^$ {timestamp}/{name}.ttl [R=303]
+
+RewriteCond %{{HTTP_ACCEPT}} text/json;content=desise
+RewriteRule ^$ {timestamp}/{name}.desise [R=303]
 
 # No accept conditions: make the .html version the default
 RewriteRule ^$ {timestamp}/{name}.html [R=303]
@@ -703,7 +707,14 @@ class Vocabulary(object):
             sys.stderr.write(msgs)
             raise ReportableError(
                 "Conversion to RDF+XML failed; see output above.")
-   
+  
+    def write_desise(self):
+        """writes a dead simple semantics json into the current directory
+        as <name>.desise.
+        """
+        with open(self.name+".desise", "w", encoding="utf-8") as f:
+            json.dump(to_desise_dict(self), f, indent="  ")
+
     def get_html_body(self):
         """returns HTML DOM material for the terms in this vocabulary.
         """
@@ -758,7 +769,9 @@ class Vocabulary(object):
                     T.a(href=self.name+".rdf")["RDF"],
                     ", ",
                     T.a(href=self.name+".ttl")["Turtle"],
-                    "."]]]
+                    ", ",
+                    T.a(href=self.name+".desise")["desise"],
+                    " (non-RDF json)."]]]
 
         with open(self.name+".html", "wb") as f:
             doc.dump(dest_file=f)
@@ -803,6 +816,7 @@ class Vocabulary(object):
             self.write_turtle()
             self.write_html()
             self.write_rdfx()
+            self.write_desise()
 
         with work_dir(
                 os.path.join(fs_root, self.path)):
@@ -965,6 +979,32 @@ class SKOSVocabulary(Vocabulary):
        
         with open(self.filename, "r", encoding="utf-8") as f:
             self.original_rdfx = f.read()
+
+
+############# dead simple semantics support
+
+def to_desise_dict(voc):
+    """returns a vocabulary as a dead simple semantics dictionary.
+    """
+    res = {}
+    res["uri"] = voc.baseuri
+    res["flavour"] = voc.flavour
+
+    res["terms"] = {t.term: [t.label, t.description]
+        for t in voc.terms.values()}
+    
+    res["deprecated_terms"], res["preliminary_terms"] = [], []
+    res["wider_terms"] = {}
+    for t in voc.terms.values():
+        if ("ivoasem:deprecated", None) in t.relations:
+            res["deprecated_terms"].append(t.term)
+        if ("ivoasem:preliminary", None) in t.relations:
+            res["preliminary_terms"].append(t.term)
+        for w in t.get_objects_for(voc.wider_predicate):
+            res["wider_terms"].setdefault(t.term, []).append(
+                w.lstrip("#"))
+
+    return res
 
 
 ############# Top-level control

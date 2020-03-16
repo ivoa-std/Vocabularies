@@ -1,5 +1,7 @@
+LOCAL_WEB_ROOT?=/var/www/htdocs/rdf
+
 all: clean vocabs.conf
-	python convert.py ALL
+	python3 convert.py ALL
 
 dist.tar.gz: all
 	tar --transform='s/^build\///' -czf $@ build
@@ -7,13 +9,8 @@ dist.tar.gz: all
 FAIL = $(error "Need to define ROOT_URI for make local")
 
 local: clean
-# ROOT_URI at ARI: http://docs.g-vo.org/rdf
-ifdef ROOT_URI
-	python convert.py --root-uri $(ROOT_URI) vocabs.conf
-	(cd build; tar -czf ../local.tar.gz *)
-else
-	$(FAIL)
-endif
+	python3 convert.py --root-uri http://localhost/rdf \
+		--dest-dir $(LOCAL_WEB_ROOT) ALL
 
 clean:
 	rm -rf build
