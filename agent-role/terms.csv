@@ -1,4 +1,0 @@
-creator;1;Creator;The agent attributed participated in the production of the entity. Not applicable to wasAssociatedWith.
-operator;1;Operator;The agent associated performed the activity. Not applicable to wasAttributedTo.
-funder;1;Funder; The agent associated or attributed provided financial support for the Activity or the creation of the Entity.
-publisher;1;Publisher; The attributed agent makes the entity publicly available. Not applicable to wasAssociatedWith.

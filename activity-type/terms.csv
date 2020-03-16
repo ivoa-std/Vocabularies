@@ -1,7 +1,0 @@
-observation;1;Observation;Active acquisition of information on a phenomenon
-simulation;1;Simulation;Generation of data through a computational process
-reduction;1;Reduction;Transformation of digital information into a corrected, ordered, and simplified form
-calibration;2;Calibration;Transformation and comparison of measurement values with respect to a calibration standard of known accuracy
-selection;1;Selection;Application of filters or criteria to select partial information
-analysis;1;Analysis;Process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, informing conclusions, and supporting decision-making
-reconstruction;2;Reconstruction;Estimation of physical properties using indirect in formation
