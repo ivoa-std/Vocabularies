@@ -1,0 +1,75 @@
+This file reflects pre-IVOA deprecations that are not completely
+reflected in the UAT SKOS.  It was collected from the github
+release notes up to version 1.3.
+
+It is reflected in the OVERRIDES dictionary in uat2ivo.py and not
+directly used by any software.
+
+http://astrothesaurus.org/uat/275	Cometary atmospheres	Duplicate concept, merged into Comae (http://astrothesaurus.org/uat/271)
+http://astrothesaurus.org/uat/279	Cometary studies	Removed, vague concept
+http://astrothesaurus.org/uat/625	Galaxy voids	Duplicate concept, merged into Voids (http://astrothesaurus.org/uat/1779)
+http://astrothesaurus.org/uat/815	Intergalactic voids	Duplicate concept, merged into Voids (http://astrothesaurus.org/uat/1779)
+http://astrothesaurus.org/uat/984	Solar M coronal region	Duplicate concept, merged into Solar coronal holes (http://astrothesaurus.org/uat/1484)
+http://astrothesaurus.org/uat/2043	Stellar M coronal regions	Duplicate concept, merged into Stellar coronal holes (http://astrothesaurus.org/uat/307)
+http://astrothesaurus.org/uat/2071	Radiative processes	Duplicate concept, merged into Radiative processes (http://astrothesaurus.org/uat/2055)
+
+http://astrothesaurus.org/uat/242	Circumstellar Shells	Circumstellar Shell
+http://astrothesaurus.org/uat/529	Far infrared astronomy	Far-infrared astronomy
+http://astrothesaurus.org/uat/553	FU Orionis stars	FU Orionis
+http://astrothesaurus.org/uat/935	Long period variable stars	Long period variables
+http://astrothesaurus.org/uat/944	Luminous blue variable stars	Luminous blue variables
+http://astrothesaurus.org/uat/1067	Mira variable stars	Mira variables
+http://astrothesaurus.org/uat/1104	Neutrino oscillations	Neutrino oscillation
+http://astrothesaurus.org/uat/1327	R Coronae Borealis variable stars	R Coronae Borealis stars
+http://astrothesaurus.org/uat/1444	Semi-regular variable stars	Semiregular variables
+http://astrothesaurus.org/uat/13	Accreting binary stars	Low usage in literature.
+http://astrothesaurus.org/uat/132	Bailey type stars	Duplicate concept, merged into RR Lyrae variable stars (http://astrothesaurus.org/uat/1410).
+http://astrothesaurus.org/uat/143	Be type stars	Duplicate concept, merged into Be stars (http://astrothesaurus.org/uat/142).
+http://astrothesaurus.org/uat/146	Beryllium abundance	Advised to include all elements or none.
+http://astrothesaurus.org/uat/176	Boron abundance	Advised to include all elements or none.
+http://astrothesaurus.org/uat/282	Compact binary components	Extranous grouping concept, low usage in literatuere.
+http://astrothesaurus.org/uat/284	Compact binary systems	Extranous grouping concept, low usage in literatuere.
+http://astrothesaurus.org/uat/298	Continuum radio emission	Duplicate concept, merged into Radio continuum emission (http://astrothesaurus.org/uat/1340).
+http://astrothesaurus.org/uat/357	Darkrooms	Low usage in literature.
+http://astrothesaurus.org/uat/392	Disk population	Low usage in literature.
+http://astrothesaurus.org/uat/393	Disk stars	Low usage in literature.
+http://astrothesaurus.org/uat/454	Elemental abundance	Duplicate concept, merged into Chemical abundaces (http://astrothesaurus.org/uat/224).
+http://astrothesaurus.org/uat/462	English mounts	Low usage in literature.
+http://astrothesaurus.org/uat/471	Equinox correction	Low usage in literature.
+http://astrothesaurus.org/uat/474	Eruptive binary stars	Low usage in literature.
+http://astrothesaurus.org/uat/482	Exobiology	Duplicate concept, merged into Astrobiology (http://astrothesaurus.org/uat/74).
+http://astrothesaurus.org/uat/485	Exoplanet astrometry	Duplicate concept, merged into Astrometry (http://astrothesaurus.org/uat/80).
+http://astrothesaurus.org/uat/547	Fork mounts	Low usage in literature.
+http://astrothesaurus.org/uat/579	Galaxy chemical composition	Duplicaet concept, merged into Galaxy abundances (http://astrothesaurus.org/uat/574).
+http://astrothesaurus.org/uat/587	Galaxy components	Duplicate concept, merged into Galaxy structure (http://astrothesaurus.org/uat/622).
+http://astrothesaurus.org/uat/636	Gamma ray telescopes	Duplicate concept, merged into Gamma-ray telescopes (http://astrothesaurus.org/uat/634).
+http://astrothesaurus.org/uat/649	German equatorial mounts	Low usage in literature.
+http://astrothesaurus.org/uat/673	Gravitational microlensing [Exoplanets]	Merged with Gravitational microlensing (http://astrothesaurus.org/uat/672).
+http://astrothesaurus.org/uat/713	Helium abundance	Advised to include all elements or none.
+http://astrothesaurus.org/uat/720	Henry Draper Catalogue	Duplicate concept, merged into Henry Draper Catalog (http://astrothesaurus.org/uat/719).
+http://astrothesaurus.org/uat/749	Horseshoe mounts	Low usage in literature.
+http://astrothesaurus.org/uat/778	I galaxies	Duplicate concept, merged into Irregular galaxies (http://astrothesaurus.org/uat/864).
+http://astrothesaurus.org/uat/781	Individual planetary nebulae	UAT does not provide a general concept for a specific object.
+http://astrothesaurus.org/uat/782	Individual quasars	UAT does not provide a general concept for a specific object.
+http://astrothesaurus.org/uat/817	Intermediate population stars	Low usage in literature.
+http://astrothesaurus.org/uat/926	Lithium abundance	Advised to include all elements or none.
+http://astrothesaurus.org/uat/1206	Penumbral filaments	Low usage in literature.
+http://astrothesaurus.org/uat/1279	Polarimetry [Exoplanets]	Duplicate concept, merged with Polarimetry (http://astrothesaurus.org/uat/1278).
+http://astrothesaurus.org/uat/1333	Radial velocity methods [Exoplanets]	Duplicate concept, merged with Radial velocity (http://astrothesaurus.org/uat/1332).
+http://astrothesaurus.org/uat/1364	RC Aurigae stars	Not a class of stars.
+http://astrothesaurus.org/uat/1411	RR Telescopii stars	Not a class of stars.
+http://astrothesaurus.org/uat/1412	RRA stars	Recognized in modern astronomy to be the same as RRb stars, now classed together, concept merged into RRab stars (http://astrothesaurus.org/uat/1413).
+http://astrothesaurus.org/uat/1414	RRb stars	Recognized in modern astronomy to be the same as RRa stars, now classed together, concept merged into RRab stars (http://astrothesaurus.org/uat/1413).
+http://astrothesaurus.org/uat/1422	S Vulpeculae stars	Not a class of stars.
+http://astrothesaurus.org/uat/1448	Seyfert's sextant	Typo in PrefLabel, should have been "Seyfet's Sextet," a group of galaxies in the constellation Serpens. Deprecated for low usage in literature.
+http://astrothesaurus.org/uat/1480	Solar composition	Duplicate concept, merged into Solar abundances (http://astrothesaurus.org/uat/1474).
+http://astrothesaurus.org/uat/1505	Solar magnetism	Duplicate concept, merged into Solar magnetic fields (http://astrothesaurus.org/uat/1503).
+http://astrothesaurus.org/uat/1520	Solar properties	Extranous grouping concept, low usage in literatuere.
+http://astrothesaurus.org/uat/1588	Stellar chemical composition	Duplicate concept, merged into Stellar abundances (http://astrothesaurus.org/uat/1577).
+http://astrothesaurus.org/uat/1591	Stellar composition	Duplicate concept, merged into Stellar abundances (http://astrothesaurus.org/uat/1577).
+http://astrothesaurus.org/uat/1598	Stellar elemental abundances	Duplicate concept, merged into Stellar abundances (http://astrothesaurus.org/uat/1577).
+http://astrothesaurus.org/uat/1665	Supernova evolution	Low usage in literature.
+http://astrothesaurus.org/uat/1726	Two-spectrum binary stars	Low usage in literature.
+http://astrothesaurus.org/uat/1798	White dwarf evolution	Low usage in literature.
+http://astrothesaurus.org/uat/1802	Wilson-Bappu Effect	Low usage in literature.
+http://astrothesaurus.org/uat/1831	Yoke mounts	Low usage in literature.
