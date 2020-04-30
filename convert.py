@@ -373,7 +373,7 @@ def make_ttl_literal(ob):
     if is_URI(ob):
         return "<{}>".format(ob)
 
-    elif re.match(r"\w*:", ob):
+    elif re.match(r"\w+:\w+", ob):
         # TTL prefixed IRI, restricted to what we want to see.
         return ob
 
@@ -510,7 +510,7 @@ class Term(object):
         """
         if term is None:
             return term
-        if re.match("https?://", term):
+        if is_URI(term):
             return T.a(href=term)[term]
 
         if term[0]=='#':
@@ -706,7 +706,7 @@ class Vocabulary(object):
 
         if rapper.returncode!=0:
             sys.stderr.write("Output of the failed rapper run:\n")
-            sys.stderr.write(msgs)
+            sys.stderr.buffer.write(msgs)
             raise ReportableError(
                 "Conversion to RDF+XML failed; see output above.")
   
