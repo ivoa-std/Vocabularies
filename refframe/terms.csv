@@ -1,4 +1,4 @@
-EQUATORIAL;1;Equatorial;"Umbrella term of all equatorial frame.  Only use for old, pre-FK4 equatorial coordinates."
+EQUATORIAL;1;Equatorial;"Umbrella term of all equatorial frames.  Only use for old, pre-FK4 equatorial coordinates."
 ICRS;2;ICRS;"International Celestial Reference System as defined by 1998AJ....116..516M."
 FK4;2;FK4;"Positions based on the 4th Fundamental Katalog. If no equinox is defined with this frame, assume B1950.0."
 FK5;2;FK5;"Positions based on the 5th Fundamental Katalog. If no equinox is defined with this frame, assume J2000.0.  Applications not requiring extremely high precision can identify FK5 at J2000 with ICRS."

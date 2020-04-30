@@ -68,8 +68,10 @@ HT_ACCESS_TEMPLATE_CSV = """# .htaccess for content negotiation
 
 AddType application/rdf+xml .rdf
 AddType text/turtle .ttl
+AddType text/json;content=desise .desise
 AddCharset UTF-8 .ttl
 AddCharset UTF-8 .html
+AddCharset UTF-8 .desise
 
 RewriteEngine On
 RewriteBase {install_base}
