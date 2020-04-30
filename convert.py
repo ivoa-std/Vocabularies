@@ -959,6 +959,24 @@ class SKOSVocabulary(Vocabulary):
             more_relations.append(
                 "skos:exactMatch({})".format(match))
 
+        for match in self._get_skos_objects_for(voc,
+                "http://www.ivoa.net/rdf/ivoasem#useInstead",
+                term):
+            more_relations.append(
+                "ivoasem:useInstead({})".format(match))
+
+        for match in self._get_skos_objects_for(voc,
+                "http://www.ivoa.net/rdf/ivoasem#deprecated",
+                term):
+            more_relations.append(
+                "ivoasem:deprecated")
+
+        for match in self._get_skos_objects_for(voc,
+                "http://www.ivoa.net/rdf/ivoasem#preliminary",
+                term):
+            more_relations.append(
+                "ivoasem:preliminary")
+       
         return Term(self, 
             self._normalise_uri(term), 
             label, 
