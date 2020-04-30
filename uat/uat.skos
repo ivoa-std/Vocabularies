@@ -1,4 +1,4 @@
-<rdf:RDF xmlns:ns2="http://purl.org/dc/terms/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+<rdf:RDF xmlns:ivoasem="http://www.ivoa.net/rdf/ivoasem#" xmlns:ns2="http://purl.org/dc/terms/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#dc-stars">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-23T19:10:45.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -324,6 +324,8 @@
     <skos:prefLabel xml:lang="en">Meteoroid dust clouds</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1039" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#astrophysical-processes">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-31T16:35:06.224Z</ns2:modified>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#astrophysical-magnetism" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#nuclear-astrophysics" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#relativity" />
@@ -586,6 +588,10 @@
     <skos:prefLabel xml:lang="en">Mira variable stars</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#me-stars" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1066" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-mira-variables">
+    <rdfs:label xml:lang="en">Mira variable stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Mira Variables</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#mira-variables" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1067" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#missing-mass">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#intergalactic-medium" />
     <skos:prefLabel xml:lang="en">Missing mass</skos:prefLabel>
@@ -890,6 +896,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#neutrino-astronomy" />
     <skos:prefLabel xml:lang="en">Neutrino masses</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1102" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#neutrino-oscillation">
+    <rdfs:label xml:lang="en">Neutrino oscillation</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Neutrino oscillation</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1103" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#neutrino-oscillations">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-26T20:07:36.000Z</ns2:modified>
@@ -1688,6 +1698,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#eclipses" />
     <skos:prefLabel xml:lang="en">Penumbra</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1205" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#penumbral-filaments">
+    <rdfs:label xml:lang="en">Penumbral filaments</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Penumbral filaments</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1206" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#periapsis">
     <skos:altLabel xml:lang="en">Pericenter</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#apsides" />
@@ -2194,6 +2208,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#spectropolarimetry" />
     <skos:prefLabel xml:lang="en">Polarimetry</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1278" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#polarimetry-exoplanets-">
+    <rdfs:label xml:lang="en">Polarimetry [Exoplanets]</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Polarimetry [Exoplanets]</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#polarimetry" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1279" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#b-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T17:14:36.000Z</ns2:modified>
@@ -2372,6 +2390,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#hydrogen-burning" />
     <skos:prefLabel xml:lang="en">Proton-proton reaction</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1299" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#accreting-binary-stars">
+    <rdfs:label xml:lang="en">Accreting binary stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Accreting Binary Stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/13" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#b-supergiant-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-02T21:24:15.749Z</ns2:modified>
@@ -2540,6 +2562,10 @@
     <skos:prefLabel xml:lang="en">Quasars</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#radio-sources" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1319" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#bailey-type-stars">
+    <rdfs:label xml:lang="en">Bailey type stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Bailey type stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/132" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#quasinormal-modes">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#black-hole-physics" />
     <skos:prefLabel xml:lang="en">Quasinormal modes</skos:prefLabel>
@@ -2577,6 +2603,10 @@
     <skos:prefLabel xml:lang="en">R associations</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#reflection-nebulae" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1325" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#r-coronae-borealis-stars">
+    <rdfs:label xml:lang="en">R Coronae Borealis stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">R Coronae Borealis stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1326" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#r-coronae-borealis-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-26T20:46:29.000Z</ns2:modified>
@@ -2629,6 +2659,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrometry" />
     <skos:prefLabel xml:lang="en">Radial velocity</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1332" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radial-velocity-methods-exoplanets-">
+    <rdfs:label xml:lang="en">Radial velocity methods [Exoplanets]</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Radial velocity methods [Exoplanets]</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#radial-velocity" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1333" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radiative-braking">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-rotation" />
     <skos:prefLabel xml:lang="en">Radiative braking</skos:prefLabel>
@@ -2839,6 +2873,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-oscillations" />
     <skos:prefLabel xml:lang="en">Rapid stellar oscillations</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1363" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rc-aurigae-stars">
+    <rdfs:label xml:lang="en">RC Aurigae stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">RC Aurigae stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1364" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#recombination-cosmology-">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T20:34:15.000Z</ns2:modified>
@@ -3155,6 +3193,14 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#rrd-variable-stars" />
     <skos:prefLabel xml:lang="en">RR Lyrae variable stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1410" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rr-telescopii-stars">
+    <rdfs:label xml:lang="en">RR Telescopii stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">RR Telescopii stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1411" /><ivoasem:deprecated /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rra-stars">
+    <rdfs:label xml:lang="en">RRA stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">RRA stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#rrab-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1412" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rrab-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-12T14:27:45.000Z</ns2:modified>
@@ -3167,6 +3213,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#blazhko-effect" />
     <skos:prefLabel xml:lang="en">RRab variable stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1413" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rrb-stars">
+    <rdfs:label xml:lang="en">RRb stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">RRb stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#rrab-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1414" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rrc-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-02T16:32:03.470Z</ns2:modified>
@@ -3241,6 +3291,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#zirconium-stars" />
     <skos:prefLabel xml:lang="en">S stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1421" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#s-vulpeculae-stars">
+    <rdfs:label xml:lang="en">S Vulpeculae stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">S Vulpeculae stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1422" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#sagittarius-dwarf-spheroidal-galaxy">
     <skos:altLabel xml:lang="en">Sagittarius dwarf elliptical galaxy</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#dwarf-spheroidal-galaxies" />
@@ -3284,6 +3338,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
     <skos:prefLabel xml:lang="en">Scale height</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1429" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#be-type-stars">
+    <rdfs:label xml:lang="en">Be type stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Be type stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/143" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#scattered-disk-objects">
     <skos:altLabel xml:lang="en">SDOs</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#resonant-kuiper-belt-objects" />
@@ -3402,6 +3460,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#high-energy-astrophysics" />
     <skos:prefLabel xml:lang="en">Seyfert galaxies</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1447" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#seyfert-s-sextant">
+    <rdfs:label xml:lang="en">Seyfert's sextet</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Seyfert's sextant</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1448" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#shadow-bands">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-eclipses" />
     <skos:prefLabel xml:lang="en">Shadow bands</skos:prefLabel>
@@ -3465,6 +3527,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ap-stars" />
     <skos:prefLabel xml:lang="en">Silicon stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1459" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#beryllium-abundance">
+    <rdfs:label xml:lang="en">Beryllium abundance</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Beryllium abundance</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/146" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#single-dish-antennas">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#radio-telescopes" />
     <skos:prefLabel xml:lang="en">Single-dish antennas</skos:prefLabel>
@@ -3666,6 +3732,10 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#main-sequence-stars" />
     <skos:scopeNote xml:lang="en">"These stars are usually hot blue-white stars of spectral class B and should not be confused with Cepheid variables, which are named after Delta Cephei and are luminous supergiant stars." -Wikipedia  https://en.wikipedia.org/wiki/Beta_Cephei_variable</skos:scopeNote>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/148" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-solar-composition">
+    <rdfs:label xml:lang="en">Solar composition</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Solar composition</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#solar-composition" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1480" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-constant">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrometry" />
     <skos:prefLabel xml:lang="en">Solar constant</skos:prefLabel>
@@ -3899,6 +3969,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-magnetic-fields" />
     <skos:prefLabel xml:lang="en">Solar magnetic reconnection</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1504" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-magnetism">
+    <rdfs:label xml:lang="en">Solar magnetism</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Solar magnetism</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#solar-magnetic-fields" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1505" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-mass">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T21:39:55.000Z</ns2:modified>
@@ -4009,6 +4083,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#hadron-barrier" />
     <skos:prefLabel xml:lang="en">Big Bang theory</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/152" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-properties">
+    <rdfs:label xml:lang="en">Solar properties</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Solar properties</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1520" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-radiation">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-12T21:43:47.894Z</ns2:modified>
@@ -4527,6 +4605,10 @@
     <skos:prefLabel xml:lang="en">Stellar bridges</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Between galaxies</skos:scopeNote>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1587" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-chemical-composition">
+    <rdfs:label xml:lang="en">Stellar chemical composition</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Stellar chemical composition</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#stellar-abundances" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1588" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-classification">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-17T15:57:44.000Z</ns2:modified>
@@ -4573,6 +4655,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-properties" />
     <skos:prefLabel xml:lang="en">Stellar colors</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1590" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-composition">
+    <rdfs:label xml:lang="en">Stellar composition</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Stellar composition</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#stellar-abundances" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1591" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-cores">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T21:43:18.000Z</ns2:modified>
@@ -4614,6 +4700,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-properties" />
     <skos:prefLabel xml:lang="en">Stellar effective temperatures</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1597" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-elemental-abundances">
+    <rdfs:label xml:lang="en">Stellar elemental abundances</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Stellar elemental abundances</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#stellar-abundances" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1598" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-evolution">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T20:16:54.000Z</ns2:modified>
@@ -5204,6 +5294,10 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#supernovae" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#explosive-nucleosynthesis" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1664" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#supernova-evolution">
+    <rdfs:label xml:lang="en">Supernova evolution</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Supernova evolution</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1665" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#supernova-neutrinos">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#particle-astrophysics" />
     <skos:prefLabel xml:lang="en">Supernova neutrinos</skos:prefLabel>
@@ -5686,6 +5780,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#non-standard-theories-of-gravity" />
     <skos:prefLabel xml:lang="en">Two-dimensional gravity</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1725" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#two-spectrum-binary-stars">
+    <rdfs:label xml:lang="en">Two-spectrum binary stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Two-spectrum binary stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1726" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#twotinos">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#resonant-kuiper-belt-objects" />
     <skos:prefLabel xml:lang="en">Twotinos</skos:prefLabel>
@@ -5885,6 +5983,10 @@
     <skos:prefLabel xml:lang="en">Variable radiation sources</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#uv-ceti-stars" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1759" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#boron-abundance">
+    <rdfs:label xml:lang="en">Boron abundance</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Boron abundance</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/176" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#variable-star-period-change">
     <skos:altLabel xml:lang="en">Period variation</skos:altLabel>
     <skos:altLabel xml:lang="en">Period-change</skos:altLabel>
@@ -6146,6 +6248,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#gravitational-lensing" />
     <skos:prefLabel xml:lang="en">Weak gravitational lensing</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1797" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#white-dwarf-evolution">
+    <rdfs:label xml:lang="en">White dwarf evolution</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">White dwarf evolution</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1798" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#white-dwarf-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T14:47:53.000Z</ns2:modified>
@@ -6189,6 +6295,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#binary-stars" />
     <skos:prefLabel xml:lang="en">Wide binary stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1801" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#wilson-bappu-effect">
+    <rdfs:label xml:lang="en">Wilson-Bappu Effect</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Wilson-Bappu Effect</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1802" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#wilson-effect">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#sunspots" />
     <skos:prefLabel xml:lang="en">Wilson effect</skos:prefLabel>
@@ -6391,6 +6501,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-classification" />
     <skos:prefLabel xml:lang="en">Yerkes classification</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1830" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#yoke-mounts">
+    <rdfs:label xml:lang="en">Yoke mounts</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Yoke mounts</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1831" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#young-disk-cepheid-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-23T19:43:35.000Z</ns2:modified>
@@ -8291,6 +8405,10 @@
     <skos:prefLabel xml:lang="en">Solar K corona</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#stellar-k-corona" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2042" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-m-coronal-regions">
+    <rdfs:label xml:lang="en">Stellar M coronal regions</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Stellar M coronal regions</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#stellar-coronal-holes" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2043" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#morgan-keenan-classification">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T22:18:43.000Z</ns2:created>
@@ -8613,6 +8731,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#atomic-physics" />
     <skos:prefLabel xml:lang="en">Natural decay</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2070" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-radiative-processes">
+    <rdfs:label xml:lang="en">Radiative processes</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Radiative Processes</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#radiative-processes" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2071" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#recombination">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T20:01:14.000Z</ns2:created>
@@ -9940,6 +10062,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#comet-tail-streamers" />
     <skos:prefLabel xml:lang="en">Comet tails</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/274" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-cometary-atmospheres">
+    <rdfs:label xml:lang="en">Cometary atmospheres</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#comae" /><skos:prefLabel xml:lang="en">Deprecated: Cometary atmospheres</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/275" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cometary-globules">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#dark-interstellar-clouds" />
     <skos:prefLabel xml:lang="en">Cometary globules</skos:prefLabel>
@@ -9957,6 +10083,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#protostars" />
     <skos:prefLabel xml:lang="en">Cometary nebulae</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/278" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cometary-studies">
+    <rdfs:label xml:lang="en">Cometary studies</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Cometary studies</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/279" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#alt-azimuth-mounts">
     <skos:altLabel xml:lang="en">Alt-azimuth mounting</skos:altLabel>
     <skos:altLabel xml:lang="en">Altazimuth</skos:altLabel>
@@ -9996,6 +10126,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ultracompact-dwarf-galaxies" />
     <skos:prefLabel xml:lang="en">Compact dwarf galaxies</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/281" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#compact-binary-components">
+    <rdfs:label xml:lang="en">Compact binary components</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Compact binary components</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/282" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#compact-binary-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T15:22:51.000Z</ns2:modified>
@@ -10006,6 +10140,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#x-ray-binary-stars" />
     <skos:prefLabel xml:lang="en">Compact binary stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/283" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#compact-binary-systems">
+    <rdfs:label xml:lang="en">Compact binary systems</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Compact binary systems</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/284" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#compact-galaxies">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#galaxies" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#n-galaxies" />
@@ -10087,6 +10225,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#w-ursae-majoris-variable-stars" />
     <skos:prefLabel xml:lang="en">Contact binary stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/297" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#continuum-radio-emission">
+    <rdfs:label xml:lang="en">Continuum radio emission</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Continuum radio emission</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/298" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stellar-convection-envelopes">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T21:36:49.000Z</ns2:modified>
@@ -10593,6 +10735,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#large-scale-structure-of-the-universe" />
     <skos:prefLabel xml:lang="en">Dark matter distribution</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/356" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#darkrooms">
+    <rdfs:label xml:lang="en">Darkrooms</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Darkrooms</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/357" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#db-stars">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#white-dwarf-stars" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#helium-rich-stars" />
@@ -10833,6 +10979,14 @@
     <skos:prefLabel xml:lang="en">Disk galaxies</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Refers to the specific shape and form of a particular classification of galaxies.  Does not refer to the disk part of a galaxy (see "Galaxy disk").</skos:scopeNote>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/391" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#disk-population">
+    <rdfs:label xml:lang="en">Disk population</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Disk population</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/392" /><ivoasem:deprecated /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#disk-stars">
+    <rdfs:label xml:lang="en">Disk stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Disk stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/393" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#distance-indicators">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-distance" />
     <skos:prefLabel xml:lang="en">Distance indicators</skos:prefLabel>
@@ -11324,6 +11478,10 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#stellar-coronal-mass-ejections" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#solar-coronal-mass-ejections" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/453" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#elemental-abundance">
+    <rdfs:label xml:lang="en">Elemental abundance</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Elemental abundance</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#chemical-abundances" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/454" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ellipsoidal-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T15:24:19.000Z</ns2:modified>
@@ -11400,6 +11558,10 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#gaseous-nebulae" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#herbig-haro-objects" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/461" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#english-mounts">
+    <rdfs:label xml:lang="en">English mounts</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">English mounts</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/462" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ephemeral-active-regions">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T19:48:50.000Z</ns2:modified>
@@ -11458,6 +11620,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#vernal-equinox" />
     <skos:prefLabel xml:lang="en">Equinox</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/470" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#equinox-correction">
+    <rdfs:label xml:lang="en">Equinox correction</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Equinox correction</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/471" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ergosphere">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#black-hole-physics" />
     <skos:prefLabel xml:lang="en">Ergosphere</skos:prefLabel>
@@ -11470,6 +11636,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#dwarf-planets" />
     <skos:prefLabel xml:lang="en">Eris</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/473" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#eruptive-binary-stars">
+    <rdfs:label xml:lang="en">Eruptive binary stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Eruptive binary stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/474" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#eruptive-phenomena">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-evolution" />
     <skos:prefLabel xml:lang="en">Eruptive phenomena</skos:prefLabel>
@@ -11518,6 +11688,10 @@
     <skos:prefLabel xml:lang="en">Evolved stars</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#hertzsprung-russell-diagram" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/481" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exobiology">
+    <rdfs:label xml:lang="en">Exobiology</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Exobiology</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#astrobiology" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/482" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T19:34:41.000Z</ns2:modified>
@@ -11534,6 +11708,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-astronomy" />
     <skos:prefLabel xml:lang="en">Exoplanet systems</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/484" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-astrometry">
+    <rdfs:label xml:lang="en">Exoplanet astrometry</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Exoplanet astrometry</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#astrometry" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/485" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-astronomy">
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planet-hosting-stars" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-" />
@@ -11897,6 +12075,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#radio-galaxies" />
     <skos:prefLabel xml:lang="en">Fanaroff-Riley radio galaxies</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/526" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-far-infrared-astronomy">
+    <rdfs:label xml:lang="en">Far-infrared astronomy</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Far Infrared Astronomy</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#far-infrared-astronomy" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/527" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#far-infrared-interferometry">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T15:43:06.000Z</ns2:modified>
@@ -12032,6 +12214,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#cosmic-rays" />
     <skos:prefLabel xml:lang="en">Forbush effect</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/546" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#fork-mounts">
+    <rdfs:label xml:lang="en">Fork mounts</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Fork mounts</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/547" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#fornax-dwarf-spheroidal-galaxy">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#dwarf-spheroidal-galaxies" />
     <skos:prefLabel xml:lang="en">Fornax dwarf spheroidal galaxy</skos:prefLabel>
@@ -12078,6 +12264,10 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#t-tauri-stars" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#infrared-sources" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/553" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-fu-orionis-stars">
+    <rdfs:label xml:lang="en">FU Orionis stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: FU Orionis Stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#fu-orionis-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/554" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#fundamental-parameters-of-stars">
     <skos:altLabel xml:lang="en">Fundamental properties of stars</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrometry" />
@@ -12302,6 +12492,10 @@
     <skos:prefLabel xml:lang="en">Galaxy bulges</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#galactic-bulge" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/578" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#galaxy-chemical-composition">
+    <rdfs:label xml:lang="en">Galaxy chemical composition</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Galaxy chemical composition</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#galaxy-abundances" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/579" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#apollo-group">
     <skos:altLabel xml:lang="en">Apollo asteroids</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#near-earth-objects" />
@@ -12372,6 +12566,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#green-valley-galaxies" />
     <skos:prefLabel xml:lang="en">Galaxy colors</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/586" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#galaxy-components">
+    <rdfs:label xml:lang="en">Galaxy components</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Galaxy components</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#galaxy-structure" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/587" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#galaxy-counts">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#surveys" />
     <skos:prefLabel xml:lang="en">Galaxy counts</skos:prefLabel>
@@ -12699,6 +12897,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#interacting-galaxies" />
     <skos:prefLabel xml:lang="en">Galaxy triplets</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/624" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#galaxy-voids">
+    <rdfs:label xml:lang="en">Galaxy voids</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Galaxy voids</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#voids" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/625" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#galaxy-winds">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#galaxy-processes" />
     <skos:prefLabel xml:lang="en">Galaxy winds</skos:prefLabel>
@@ -12809,6 +13011,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#eruptive-variable-stars" />
     <skos:prefLabel xml:lang="en">Gamma Cassiopeiae stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/635" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-gamma-ray-telescopes">
+    <rdfs:label xml:lang="en">Gamma-ray telescopes</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Gamma ray telescopes</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#gamma-ray-telescopes" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/636" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gamma-rays">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T19:49:41.000Z</ns2:modified>
@@ -12849,6 +13055,8 @@
     <skos:prefLabel xml:lang="en">Gegenschein</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/640" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#general-relativity">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-31T16:37:31.784Z</ns2:modified>
     <skos:altLabel xml:lang="en">General theory of relativity</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#relativity" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#gravitation" />
@@ -12896,6 +13104,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#geostationary-satellites" />
     <skos:prefLabel xml:lang="en">Geosynchronous satellites</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/648" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#german-equatorial-mounts">
+    <rdfs:label xml:lang="en">German equatorial mounts</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">German equatorial mounts</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/649" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#argument-of-perigee">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#orbital-elements" />
     <skos:prefLabel xml:lang="en">Argument of perigee</skos:prefLabel>
@@ -12990,6 +13202,8 @@
     <skos:prefLabel xml:lang="en">Gravastars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/660" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gravitation">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-01-31T16:35:06.224Z</ns2:modified>
     <skos:altLabel xml:lang="en">Gravitational force</skos:altLabel>
     <skos:altLabel xml:lang="en">Gravity</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrophysical-processes" />
@@ -13093,6 +13307,10 @@
     <skos:prefLabel xml:lang="en">Gravitational microlensing</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#free-floating-planets" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/672" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gravitational-microlensing-exoplanets-">
+    <rdfs:label xml:lang="en">Gravitational microlensing [Exoplanets]</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Gravitational microlensing [Exoplanets]</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#gravitational-microlensing" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/673" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gravitational-singularities">
     <skos:altLabel xml:lang="en">Cosmic singularities</skos:altLabel>
     <skos:altLabel xml:lang="en">Singularity</skos:altLabel>
@@ -13362,6 +13580,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-tracking-devices" />
     <skos:prefLabel xml:lang="en">Heliostats</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/712" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#helium-abundance">
+    <rdfs:label xml:lang="en">Helium abundance</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Helium abundance</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/713" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#helium-poor-stars">
     <skos:altLabel xml:lang="en">Helium poor stars</skos:altLabel>
     <skos:altLabel xml:lang="en">Helium-weak stars</skos:altLabel>
@@ -13420,6 +13642,10 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#asteroid-belt" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-medium" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/72" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-henry-draper-catalogue">
+    <rdfs:label xml:lang="en">Henry Draper Catalogue</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Henry Draper Catalogue</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#henry-draper-catalog" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/720" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#henyey-track">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-evolutionary-tracks" />
     <skos:prefLabel xml:lang="en">Henyey track</skos:prefLabel>
@@ -13674,6 +13900,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#diurnal-parallax" />
     <skos:prefLabel xml:lang="en">Horizontal parallax</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/748" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#horseshoe-mounts">
+    <rdfs:label xml:lang="en">Horseshoe mounts</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Horseshoe mounts</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/749" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#astrochemistry">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-20T15:07:58.000Z</ns2:modified>
@@ -13861,6 +14091,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#low-mass-x-ray-binary-stars" />
     <skos:prefLabel xml:lang="en">Hz Herculis x-ray binary stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/777" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#i-galaxies">
+    <rdfs:label xml:lang="en">I galaxies</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">I galaxies</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#irregular-galaxies" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/778" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#impact-phenomena">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
     <skos:prefLabel xml:lang="en">Impact phenomena</skos:prefLabel>
@@ -13876,6 +14110,14 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#orbital-elements" />
     <skos:prefLabel xml:lang="en">Inclination</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/780" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#individual-planetary-nebulae">
+    <rdfs:label xml:lang="en">Individual planetary nebulae</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Individual planetary nebulae</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/781" /><ivoasem:deprecated /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#individual-quasars">
+    <rdfs:label xml:lang="en">Individual quasars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Individual quasars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/782" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#indochinites">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#tektites" />
     <skos:prefLabel xml:lang="en">Indochinites</skos:prefLabel>
@@ -14194,10 +14436,18 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#hot-intergalactic-medium" />
     <skos:prefLabel xml:lang="en">Intergalactic medium phases</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/814" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intergalactic-voids">
+    <rdfs:label xml:lang="en">Intergalactic voids</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Intergalactic voids</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#voids" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/815" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-mass-black-holes">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrophysical-black-holes" />
     <skos:prefLabel xml:lang="en">Intermediate-mass black holes</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/816" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-population-stars-">
+    <rdfs:label xml:lang="en">Intermediate population stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Intermediate population stars`</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/817" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-type-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-17T19:46:54.000Z</ns2:modified>
@@ -15123,6 +15373,10 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#emission-line-galaxies" />
     <skos:prefLabel xml:lang="en">LINER galaxies</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/925" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#lithium-abundance">
+    <rdfs:label xml:lang="en">Lithium abundance</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Lithium abundance</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/926" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#lithium-stars">
     <skos:altLabel xml:lang="en">Li stars</skos:altLabel>
     <skos:altLabel xml:lang="en">Lithium rich stars</skos:altLabel>
@@ -15167,6 +15421,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#oort-cloud" />
     <skos:prefLabel xml:lang="en">Long period comets</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/933" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#deprecated-long-period-variable-stars">
+    <rdfs:label xml:lang="en">Long period variable stars</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Deprecated: Long period variable stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#long-period-variable-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/934" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#long-period-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-20T14:21:25.000Z</ns2:modified>
@@ -15244,6 +15502,10 @@
     <skos:prefLabel xml:lang="en">Luminous blue variable stars</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#alpha-cygni-variable-stars" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/944" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#luminous-blue-variables">
+    <rdfs:label xml:lang="en">Luminous blue variables</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Luminous blue variables</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/945" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#luminous-infrared-galaxies">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-15T16:58:31.430Z</ns2:modified>
@@ -15510,6 +15772,10 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#me-variable-stars" />
     <skos:prefLabel xml:lang="en">M giant stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/983" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-m-coronal-region">
+    <rdfs:label xml:lang="en">Solar M coronal region</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Solar M coronal region</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#solar-coronal-holes" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/984" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#m-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T17:15:15.000Z</ns2:modified>

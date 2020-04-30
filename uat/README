@@ -5,10 +5,21 @@ The basic interest is:
 
 * have IVOA-compatible URIs for UAT concepts; most importantly, we want
   readable concept URIs (BlackHole rather than 120)
-* maintain format guarantees (have simple, revovo-readable XML).
+* maintain format guarantees (e.g., offer a desise file)
 
 The uat.skos file in here, although under version control, is *not* to
 be changed or managed.  It is always generated from upstream UAT using
 the uat2ivo.py script present here.
 
 The actual conversion needs rapper installed.
+
+To let us do emergency fixes for things that are problematic for us but
+that cannot (easily) be fixed upstream, there is an EXTRA_TRIPLES dict
+in uat2ivo.py.  Use it sparingly.
+
+Here's what we're using it for so far:
+
+(a) In the early history of the UAT, some duplicate labels were given.
+This would kill us here, since we generate the IVOA concept ids from
+the labels.  To fix this, we override these labels (which all belong
+to deprecated concepts).
