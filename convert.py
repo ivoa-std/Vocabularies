@@ -105,6 +105,7 @@ TTL_HEADER_TEMPLATE = """@base {baseuri}.
 <> a owl:Ontology;
     dc:created {timestamp};
     dc:creator {creators};
+    dc:license <http://creativecommons.org/publicdomain/zero/1.0/>;
     rdfs:label {title}@en;
     dc:title {title}@en;
     dc:description {description};
@@ -212,6 +213,13 @@ ul.compactlist {
 
 ul.compactlist li {
     margin-bottom: 0.3ex;
+}
+
+#license {
+    margin-top: 2rem;
+    background-color: #ccc;
+    padding: 0.5rem;
+    font-size: 80%;
 }
 """
 
@@ -773,7 +781,20 @@ class Vocabulary(object):
                     T.a(href=self.name+".ttl")["Turtle"],
                     ", ",
                     T.a(href=self.name+".desise")["desise"],
-                    " (non-RDF json)."]]]
+                    " (non-RDF json)."],
+                T.p(id="license")["This vocabulary is made"
+                    " available under ", 
+                    T.a(href="http://creativecommons.org/"
+                        "publicdomain/zero/1.0/")["CC-0"],
+                    " by the ",
+                    T.a(href="https://wiki.ivoa.net/twiki/bin/"
+                        "view/IVOA/IvoaSemantics")[
+                        "IVOA Semantics Working Group"],
+                    ".  To learn how to improve and amend this"
+                    " vocabulary, see ",
+                    T.a(href="http://ivoa.net/documents/Vocabularies/"
+                        "20200326/")["Vocabularies in the VO 2"], "."
+       ]]]
 
         with open(self.name+".html", "wb") as f:
             doc.dump(dest_file=f)
