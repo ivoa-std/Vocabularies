@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/documents_template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>IVOA.net</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="file:///Macintosh HD/Users/sarah/Documents/Sites/css/style.css" type="text/css" media="all" />
+<!-- InstanceBeginEditable name="head" -->
+	
+	<meta name="Title" content="IVOA Documents and Standards" />
+	<meta name="Keywords" content="IVOA, International, Virtual, Observatory, Alliance, Standards, Documents, Process" />
+	
+	<meta name="maintainedBy" content="IVOA Document Coordinator, ivoadoc@ivoa.net" />
+	<link href="/Documents/latest.xml" rel="alternate" type="application/rss+xml" title="Latest Documents" />
+
+
+<style type="text/css">
+.veryold {
+  display: none;
+}
+</style>
+
+<script>
+function showVeryOld() {
+    veryold = getElementsByClassName(document, "span", "veryold");
+    for(var i=0; i<veryold.length; i++) {
+        veryold[i].style.display = 'inline';
+    }
+}
+
+/*
+    getElementsByClassName
+    Written by Jonathan Snook, http://www.snook.ca/jonathan
+    Add-ons by Robert Nyman, http://www.robertnyman.com
+*/
+function getElementsByClassName(oElm, strTagName, strClassName){
+    var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+    var arrReturnElements = new Array();
+    strClassName = strClassName.replace(/\-/g, "\\-");
+    var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$)");
+    var oElement;
+    for(var i=0; i<arrElements.length; i++){
+        oElement = arrElements[i];
+        if(oRegExp.test(oElement.className)){
+            arrReturnElements.push(oElement);
+        }
+    }
+    return (arrReturnElements)
+}
+
+</script>
+
+<!-- InstanceEndEditable -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- Header -->
+<div id="header">
+  <div class="shell">
+    <!-- Logo -->
+    <h1 id="logo" class="notext"><a href="http://www.ivoa.net"></a></h1>
+    <!-- End Logo -->
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        
+        <li><a href="http://www.ivoa.net/"><span>Home</span></a></li>
+        <li ><a href="http://www.ivoa.net/astronomers/"><span>Astronomers</span></a></li>
+        <li><a href="http://www.ivoa.net/deployers"><span>Deployers</span></a></li>
+        <li class="active"><a href="http://www.ivoa.net/members/"><span>Members</span></a></li>
+        <li><a href="http://www.ivoa.net/about/"><span>About</span></a></li>
+
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+</div>
+<!-- END Header -->
+<!-- Heading -->
+<div id="heading">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <div class="heading-cnt">
+      <!-- InstanceBeginEditable name="PageTitle" -->
+      <h2>IVOA Vocabularies</h2><!-- InstanceEndEditable -->
+      <!-- InstanceBeginEditable name="PageBody" -->
+
+<center>
+</center><br/>
+<table width="85%" border="0" align="center" cellspacing="5">
+  <tr>
+    <td align="center"><a href="index.html">DOCUMENTS</a></td>
+    <td align="center"><a href="../xml/index.html">XML SCHEMA</a></td>
+    <td align="center"><a href="templates/index.html">TEMPLATES</a></td>
+    <td align="center"><a href="http://www.ivoa.net/cgi-bin/up.cgi">DOC SUBMISSION</a></td>
+  </tr>
+</table>
+
+VOCAB_LIST_HERE
+
+</div>
+
+<br/><br/><br/>
+<div class="doccoordinator"><a title="IVOA Document Coordinator" href="mailto:ivoadoc@ivoa.net">::ivoa document coordinator::</a></div>
+
+<!-- InstanceEndEditable --></div>
+    <p>&nbsp;</p>
+    <p><img src="http://www.ivoa.net/images/ivoa_logoc2.jpg" alt="" width="238" height="129" align="middle" class="right" /></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><br />
+      <br />
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p><a href="http://voi.iucaa.ernet.in:9090/InterOp_2011"><span class="right"><a href="http://voi.iucaa.ernet.in:9090/InterOp_2011"></a></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    
+    <div class="cl"><span class="right">&nbsp;</span></div>
+  </div>
+</div>
+<span class="right">
+<!-- End Heading -->
+<!-- Features -->
+</span>
+<div id="features">
+  <div class="shell">
+    <div class="features-cnt">
+      <div class="cl"><span class="right">&nbsp;</span></div>
+      <!-- Feature 1 -->
+      <div class="feature">
+            <h2>For Astronomers</h2>
+        <a href="http://www.ivoa.net/astronomers/" class="left"><img src="http://www.ivoa.net/css/images/ivoa_astronomers.jpg" alt="" /></a>
+        <p><a class="blueback" href="http://www.ivoa.net/astronomers/getting_started.html">Getting Started</a> / <a href="http://www.ivoa.net/astronomers/using_the_vo.html" class="blueback">Using the VO<br />
+        </a><a href="http://www.ivoa.net/astronomers/vo_glossary.html" class="blueback">VO Glossary</a> / <a href="../astronomers/applications.html" class="blueback">VO Applications</a><br />
+        <a href="http://www.ivoa.net/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="http://www.ivoa.net/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br />
+        <a href="http://www.ivoa.net/astronomers" class="more"></a></p>
+        
+      </div>
+      <!-- End Feature 1 -->
+      <!-- Feature 2 -->
+      <div class="feature less-padding">
+        <h2>For Deployers/Developers</h2>
+        <a href="http://www.ivoa.net/deployers/" class="left"><img src="http://www.ivoa.net/css/images/ivoa_deployers.jpg" alt="" /></a>
+        <p><a href="http://www.ivoa.net/deployers/intro_to_vo_concepts.html" class="blueback">Intro to VO Concepts</a> / <a href="http://www.ivoa.net/documents" class="blueback"><br />
+IVOA Standards</a> / <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/PublishingInTheVONew" class="blueback">Guide to Publishing in the VO</a> / <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/VOGlossary" class="blueback"> Technical Glossary</a><a href="http://www.ivoa.net/deployers/" class="more"></a></p>
+      </div>
+      <!-- End Feature 2 -->
+      <!-- Feature 3 -->
+      <div class="feature no-padding">
+<h2>For Members</h2>
+        <a href="http://www.ivoa.net/members/" class="left"><img src="http://www.ivoa.net/css/images/ivoa_members.jpg" alt="" /></a>
+        <p><a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="http://www.ivoa.net/members/index.html" class="blueback">Working Groups</a>/ <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="http://www.ivoa.net/documents" class="blueback">Documents in Progress</a> / <a href="http://www.ivoa.net/members/index.html" class="blueback">Mailing Lists</a> / <a href="../about/roadmap.html" class="blueback">IVOA Roadmap</a><a href="http://www.ivoa.net/members/" class="more"></a></p>
+        
+      </div>
+      <!-- End Feature 3 -->
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Feature 3 -->
+<div class="cl">&nbsp;</div>
+    </div>
+  </div>
+</div>
+<!-- End Features -->
+<!-- Main -->
+<!-- End Main -->
+<!-- Footer -->
+<div id="footer">
+  <div class="shell">
+    <div class="cl">&nbsp;</div>
+    <p class="copy">&copy; IVOA.net. Contact the<a href="mailto:ivoadoc@ivoa.net"> IVOA Webmaster</a></p>
+    <div class="cl">&nbsp;</div>
+  </div>
+</div>
+<!-- End Footer -->
+</body>
+<!-- InstanceEnd --></html>
