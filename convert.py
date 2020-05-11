@@ -1041,7 +1041,9 @@ def to_desise_dict(voc):
     res["uri"] = voc.baseuri
     res["flavour"] = voc.flavour
 
-    res["terms"] = {t.term: [t.label, t.description]
+    res["terms"] = {t.term: {
+            "label": t.label, 
+            "description": t.description}
         for t in voc.terms.values()}
     
     res["deprecated_terms"], res["preliminary_terms"] = [], []
