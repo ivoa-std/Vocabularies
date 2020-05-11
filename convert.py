@@ -105,7 +105,7 @@ TTL_HEADER_TEMPLATE = """@base {baseuri}.
 <> a owl:Ontology;
     dc:created {timestamp};
     dc:creator {creators};
-    dc:license <http://creativecommons.org/publicdomain/zero/1.0/>;
+    dc:license {licenseuri};
     rdfs:label {title}@en;
     dc:title {title}@en;
     dc:description {description};
@@ -602,6 +602,10 @@ class Vocabulary(object):
     * draft: true if there's a key draft in vocabs.conf
     * terms: a dictionary of the terms as strings to the respective Term
       instances.
+    * licenseuri: a license URI.  Only use for externally managed 
+      vocabularies; IVOA vocabularies are always CC-0.
+    * licensename: the human-readable name of the license.  Again,
+      only use for externally managed vocabularies.
     
     To derive a subclass, you need to define:
 
@@ -624,12 +628,17 @@ class Vocabulary(object):
 
         self.draft = bool(meta.pop("draft", False))
 
-        if not "path" in meta:
-            meta["path"] = meta["name"]
-        if "baseuri" not in meta:
-            meta["baseuri"] = IVOA_RDF_URI+meta["path"]
-        if "filename" not in meta:
-            meta["filename"] = os.path.join(meta["path"], "terms.csv")
+        path = meta.get("path", meta["name"])
+        defaults = {
+            "path": path,
+            "baseuri": IVOA_RDF_URI+path,
+            "filename": os.path.join(path, "terms.csv"),
+            "licensename": "CC-0",
+            "licenseuri": 
+                "http://creativecommons.org/publicdomain/zero/1.0/",
+        }
+        defaults.update(meta)
+        meta = defaults
 
         for key, value in meta.items():
             setattr(self, key, value)
@@ -674,7 +683,8 @@ class Vocabulary(object):
             "description": self.description,
             "authors": self.authors,
             "title": self.title,
-            "flavour": self.flavour}
+            "flavour": self.flavour,
+            "licenseuri": self.licenseuri}
 
     def write_turtle(self):
         """writes a turtle representation of the vocabulary to
@@ -784,8 +794,8 @@ class Vocabulary(object):
                     " (non-RDF json)."],
                 T.p(id="license")["This vocabulary is made"
                     " available under ", 
-                    T.a(href="http://creativecommons.org/"
-                        "publicdomain/zero/1.0/")["CC-0"],
+                    T.a(href=self.licenseuri)[
+                        self.licensename],
                     " by the ",
                     T.a(href="https://wiki.ivoa.net/twiki/bin/"
                         "view/IVOA/IvoaSemantics")[
