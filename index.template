@@ -1,66 +1,28 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/documents_template.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>IVOA.net</title>
-<!-- InstanceEndEditable -->
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="file:///Macintosh HD/Users/sarah/Documents/Sites/css/style.css" type="text/css" media="all" />
-<!-- InstanceBeginEditable name="head" -->
-	
 	<meta name="Title" content="IVOA Documents and Standards" />
-	<meta name="Keywords" content="IVOA, International, Virtual, Observatory, Alliance, Standards, Documents, Process" />
-	
-	<meta name="maintainedBy" content="IVOA Document Coordinator, ivoadoc@ivoa.net" />
-	<link href="/Documents/latest.xml" rel="alternate" type="application/rss+xml" title="Latest Documents" />
+	<meta name="Keywords" content="IVOA, International, Virtual, Observatory, Alliance, Semantics, RDF, Vocabulary" />
+	<meta name="maintainedBy" content="IVOA Semantics Working Group" />
+	<link href="../css/style.css" rel="stylesheet" type="text/css" />
 
-
-<style type="text/css">
-.veryold {
-  display: none;
-}
-</style>
-
-<script>
-function showVeryOld() {
-    veryold = getElementsByClassName(document, "span", "veryold");
-    for(var i=0; i<veryold.length; i++) {
-        veryold[i].style.display = 'inline';
-    }
-}
-
-/*
-    getElementsByClassName
-    Written by Jonathan Snook, http://www.snook.ca/jonathan
-    Add-ons by Robert Nyman, http://www.robertnyman.com
-*/
-function getElementsByClassName(oElm, strTagName, strClassName){
-    var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
-    var arrReturnElements = new Array();
-    strClassName = strClassName.replace(/\-/g, "\\-");
-    var oRegExp = new RegExp("(^|\\s)" + strClassName + "(\\s|$)");
-    var oElement;
-    for(var i=0; i<arrElements.length; i++){
-        oElement = arrElements[i];
-        if(oRegExp.test(oElement.className)){
-            arrReturnElements.push(oElement);
-        }
-    }
-    return (arrReturnElements)
-}
-
-</script>
-
-<!-- InstanceEndEditable -->
-<link href="../css/style.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		#license {
+			font-size: 80%;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			margin-left: 2rem;
+			margin-right: 2rem;
+		}
+	</style>
 </head>
 <body>
 <!-- Header -->
 <div id="header">
   <div class="shell">
-    <!-- Logo -->
     <h1 id="logo" class="notext"><a href="http://www.ivoa.net"></a></h1>
-    <!-- End Logo -->
     <!-- Navigation -->
     <div id="navigation">
       <ul>
@@ -80,7 +42,7 @@ function getElementsByClassName(oElm, strTagName, strClassName){
 <!-- Heading -->
 <div id="heading">
   <div class="shell">
-    <div class="cl">&nbsp;</div>
+    <div class="cl">&#xa0;</div>
     <div class="heading-cnt">
       <!-- InstanceBeginEditable name="PageTitle" -->
       <h2>IVOA Vocabularies</h2><!-- InstanceEndEditable -->
@@ -99,36 +61,21 @@ function getElementsByClassName(oElm, strTagName, strClassName){
 
 VOCAB_LIST_HERE
 
+<p id="license">IVOA vocabularies and their metadata are made available under 
+<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC-0</a> by the 
+<a href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA 
+Semantics Working Group</a>.  To learn how to work with and improve
+IVOA vocabularies, see <a
+href="http://ivoa.net/documents/Vocabularies/20200326/">Vocabularies in the VO
+2</a>.</p>
 </div>
 
 <br/><br/><br/>
 <div class="doccoordinator"><a title="IVOA Document Coordinator" href="mailto:ivoadoc@ivoa.net">::ivoa document coordinator::</a></div>
 
-<!-- InstanceEndEditable --></div>
-    <p>&nbsp;</p>
-    <p><img src="http://www.ivoa.net/images/ivoa_logoc2.jpg" alt="" width="238" height="129" align="middle" class="right" /></p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><br />
-      <br />
-    </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p><a href="http://voi.iucaa.ernet.in:9090/InterOp_2011"><span class="right"><a href="http://voi.iucaa.ernet.in:9090/InterOp_2011"></a></p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    
-    <div class="cl"><span class="right">&nbsp;</span></div>
-  </div>
 </div>
+    <p><img src="http://www.ivoa.net/images/ivoa_logoc2.jpg" alt="" width="238" height="129" align="middle" class="right" /></p>
+  </div>
 <span class="right">
 <!-- End Heading -->
 <!-- Features -->
@@ -136,7 +83,7 @@ VOCAB_LIST_HERE
 <div id="features">
   <div class="shell">
     <div class="features-cnt">
-      <div class="cl"><span class="right">&nbsp;</span></div>
+      <div class="cl"><span class="right">&#xa0;</span></div>
       <!-- Feature 1 -->
       <div class="feature">
             <h2>For Astronomers</h2>
@@ -164,24 +111,19 @@ IVOA Standards</a> / <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/Pu
         
       </div>
       <!-- End Feature 3 -->
-      <div class="cl">&nbsp;</div>
+      <div class="cl">&#xa0;</div>
     </div>
-  </div>
 </div>
 <!-- End Feature 3 -->
-<div class="cl">&nbsp;</div>
+<div class="cl">&#xa0;</div>
     </div>
-  </div>
-</div>
 <!-- End Features -->
-<!-- Main -->
-<!-- End Main -->
 <!-- Footer -->
 <div id="footer">
   <div class="shell">
-    <div class="cl">&nbsp;</div>
-    <p class="copy">&copy; IVOA.net. Contact the<a href="mailto:ivoadoc@ivoa.net"> IVOA Webmaster</a></p>
-    <div class="cl">&nbsp;</div>
+    <div class="cl">&#xa0;</div>
+    <p class="copy">&#169; IVOA.net. Contact the<a href="mailto:ivoadoc@ivoa.net"> IVOA Webmaster</a></p>
+    <div class="cl">&#xa0;</div>
   </div>
 </div>
 <!-- End Footer -->

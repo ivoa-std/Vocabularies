@@ -93,7 +93,7 @@ class _Element(object):
         if child is None:
             return
 
-        elif isinstance(child, basestring):
+        elif isinstance(child, str):
             self.add_text(child)
 
         elif isinstance(child, (int, float)):
@@ -111,7 +111,7 @@ class _Element(object):
         return self
     
     def __call__(self, **kwargs):
-        for k, v in kwargs.iteritems():
+        for k, v in kwargs.items():
             if k.endswith("_"):
                 k = k[:-1]
             k = k.replace("_", "-")
@@ -160,7 +160,7 @@ def parse_meta(f):
         mat = re.match(r"([\w ]+):(.*)", ln)
         if mat:
             cur_key = mat.group(1).strip().lower()
-            res[cur_key] = mat.group(2).strip().decode("utf-8")
+            res[cur_key] = mat.group(2).strip()
             continue
 
         mat = re.match(r"\s+(.*)", ln)
@@ -169,7 +169,7 @@ def parse_meta(f):
                 raise ReportableError(
                     "Syntax error in {}, {}: continuation line"
                     " not allowed here".format(f.name, ln_no))
-            res[cur_key] += u" "+mat.group(1).strip().decode("utf-8")
+            res[cur_key] += " "+mat.group(1).strip()
             continue
 
         raise ReportableError("Syntax error in {}, {}: neither key-value"
@@ -185,7 +185,7 @@ def iter_voc_descriptors():
     Each dictionary has the keys name, description, last change, and uri.
     """
     for path in find_meta_infs("."):
-        with open(path, "rb") as f:
+        with open(path, "r", encoding="utf-8") as f:
             meta = parse_meta(f)
 
         # fill out defaults for local vocabularies; the date last changed
@@ -281,15 +281,13 @@ span.status {
     return f.getvalue().decode("utf-8")
 
 
-def fill_template(vocabs):
+def fill_template(template, vocabs):
     """returns a (native) string with our HTML template filled out with
     the stuff in vocabulary.
 
     vocabs is a sequence of vocabulary descriptors as returned by
     iter_voc_descriptors.
     """
-    with open("index.template", "r") as f:
-        template = f.read().decode("utf-8")
     return template.replace("VOCAB_LIST_HERE", 
         get_vocab_table(vocabs))
 
@@ -308,14 +306,20 @@ def main():
         die("Usage: {} <rdf-directory>\n".format(sys.argv[0]))
 
     try:
+        with open("index.template", "r", encoding="utf-8") as f:
+            template = f.read()
+    except IOError:
+        die("Cannot read HTML index.template")
+
+    try:
         os.chdir(sys.argv[1])
         vocabs = list(iter_voc_descriptors())
         vocabs.sort(key=get_voc_sort_key)
-        rendered = fill_template(vocabs)
+        rendered = fill_template(template, vocabs)
 
         # don't inline fill_template below lest incomplete results be
         # written
-        with open("index.html", "w") as f:
+        with open("index.html", "w", encoding="utf-8") as f:
             f.write(rendered)
     except ReportableError as msg:
         die(str(msg))
