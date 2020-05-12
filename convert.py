@@ -179,9 +179,13 @@ table {
     border-bottom: 1pt solid black;
 }
 
+tr {
+    padding: 5pt;
+}
+
 td {
     vertical-align: top;
-    padding: 2pt;
+    padding: 5pt;
 }
 
 th:nth-child(1),
@@ -192,7 +196,6 @@ td:nth-child(1) {
 th:nth-child(3),
 td:nth-child(3) {
   background: #eef;
-  max-width: 20em;
 }
 
 th:nth-child(5),
