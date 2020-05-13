@@ -61,7 +61,8 @@
 
 VOCAB_LIST_HERE
 
-<p id="license">IVOA vocabularies and their metadata are made available under 
+<p id="license">Unless specified otherwise on the vocabulary page,
+IVOA vocabularies and their metadata are made available under 
 <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC-0</a> by the 
 <a href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA 
 Semantics Working Group</a>.  To learn how to work with and improve

@@ -68,7 +68,7 @@ HT_ACCESS_TEMPLATE_CSV = """# .htaccess for content negotiation
 
 AddType application/rdf+xml .rdf
 AddType text/turtle .ttl
-AddType text/json;content=desise .desise
+AddType application/x-desise+xml .desise
 AddCharset UTF-8 .ttl
 AddCharset UTF-8 .html
 AddCharset UTF-8 .desise
