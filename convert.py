@@ -227,6 +227,14 @@ ul.compactlist li {
 """
 
 
+DEFAULT_LICENSE_HTML = """This vocabulary is made available under
+<a href="">CC-0</a> by the <a 
+href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA 
+Semantics Working Group</a>.  To learn how to improve and amend this
+vocabulary, see <a href="http://ivoa.net/documents/Vocabularies/20200326/"
+>Vocabularies in the VO 2</a>."""
+
+
 class ReportableError(Exception):
     """is raised for expected and explainable error conditions.
 
@@ -331,6 +339,9 @@ class _Element(object):
 
                 elif isinstance(child, _Element):
                         self.node.append(child.node)
+
+                elif isinstance(child, etree.Element):
+                        self.node.append(child)
 
                 elif hasattr(child, "__iter__"):
                         for c in child:
@@ -607,8 +618,8 @@ class Vocabulary(object):
       instances.
     * licenseuri: a license URI.  Only use for externally managed 
       vocabularies; IVOA vocabularies are always CC-0.
-    * licensename: the human-readable name of the license.  Again,
-      only use for externally managed vocabularies.
+    * licensehtml: a human-readable license text that is reproduced
+      verbatim in HTML.  Again, only use for externally managed vocabularies.
     
     To derive a subclass, you need to define:
 
@@ -636,7 +647,7 @@ class Vocabulary(object):
             "path": path,
             "baseuri": IVOA_RDF_URI+path,
             "filename": os.path.join(path, "terms.csv"),
-            "licensename": "CC-0",
+            "licensehtml": DEFAULT_LICENSE_HTML,
             "licenseuri": 
                 "http://creativecommons.org/publicdomain/zero/1.0/",
         }
@@ -768,6 +779,10 @@ class Vocabulary(object):
         behaviour; what's in here is just the source format-independent
         material.
         """
+        # licensehtml is an HTML literal; parse it first so the elements
+        # don't get escaped
+        license_element = etree.fromstring(
+            '<p id="license">'+self.licensehtml+'</p>')
         doc = T.html(xmlns="http://www.w3.org/1999/xhtml")[
         T.head[
             T.title["IVOA Vocabulary: "+self.title],
@@ -795,19 +810,8 @@ class Vocabulary(object):
                     ", ",
                     T.a(href=self.name+".desise")["desise"],
                     " (non-RDF json)."],
-                T.p(id="license")["This vocabulary is made"
-                    " available under ", 
-                    T.a(href=self.licenseuri)[
-                        self.licensename],
-                    " by the ",
-                    T.a(href="https://wiki.ivoa.net/twiki/bin/"
-                        "view/IVOA/IvoaSemantics")[
-                        "IVOA Semantics Working Group"],
-                    ".  To learn how to improve and amend this"
-                    " vocabulary, see ",
-                    T.a(href="http://ivoa.net/documents/Vocabularies/"
-                        "20200326/")["Vocabularies in the VO 2"], "."
-       ]]]
+                license_element
+       ]]
 
         with open(self.name+".html", "wb") as f:
             doc.dump(dest_file=f)
