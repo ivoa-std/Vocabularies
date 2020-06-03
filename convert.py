@@ -1047,22 +1047,21 @@ def to_desise_dict(voc):
     res = {}
     res["uri"] = voc.baseuri
     res["flavour"] = voc.flavour
+    res["terms"] = {}
 
-    res["terms"] = {t.term: {
+    for t in voc.terms.values():
+        d = {
             "label": t.label, 
             "description": t.description}
-        for t in voc.terms.values()}
-    
-    res["deprecated_terms"], res["preliminary_terms"] = [], []
-    res["wider_terms"] = {}
-    for t in voc.terms.values():
         if ("ivoasem:deprecated", None) in t.relations:
-            res["deprecated_terms"].append(t.term)
+            d["decprecated"] = ""
         if ("ivoasem:preliminary", None) in t.relations:
-            res["preliminary_terms"].append(t.term)
+            d["preliminary"] = ""
+        d["wider"] = []
         for w in t.get_objects_for(voc.wider_predicate):
-            res["wider_terms"].setdefault(t.term, []).append(
-                w.lstrip("#"))
+            d["wider_terms"].append(w.lstrip("#"))
+
+        res["terms"][t.term] = d
 
     return res
 
