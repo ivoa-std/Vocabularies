@@ -1041,6 +1041,58 @@ class SKOSVocabulary(Vocabulary):
 
 ############# dead simple semantics support
 
+def _expand_transitively(rn, cur_term, to_process):
+    """helps close_transitively.
+
+    See the explanation of the strategy there.
+    """
+    for narrower_term in rn.get(cur_term, []):
+        if narrower_term in to_process:
+            _expand_transitively(rn, narrower_term, to_process)
+            to_process.remove(narrower_term)
+        rn[cur_term].extend(rn.get(narrower_term, []))
+    
+
+def close_transitively(raw_narrower):
+    """closes raw_narrower transitively.
+
+    raw_narrower is a dict of lists; for every item i in a value list, 
+    that list is expanded by raw_narrower[i].
+
+    This helps add_desise_narrowser in the case of non-SKOS vocabularies;
+    it will not do anything sensible if d doesn't describe a tree.  In 
+    particular, it will not detect cycles and may go down in flames if
+    there are any.
+    """
+    # our strategy: Pick a term to process and expand it and the subtree
+    # below it post-order, removing anything visited from from our to-do list.
+    # Repeat until we're done.
+    to_process = set(raw_narrower)
+
+    while to_process:
+        _expand_transitively(raw_narrower, to_process.pop(), to_process)
+
+
+def add_desise_narrower(voc):
+    """adds "narrower" lists to term dicts in desise dictionaries.
+
+    This contains either the simple inversion of wider in the SKOS
+    case (where arbitrary graphs are possible and wider isn't transitive
+    anyway) or its transitive closure (i.e., all terms reachable from t
+    when following the branches).
+    """
+    inverted_wider = {}
+    for term, props in voc["terms"].items():
+        for wider in props["wider"]:
+            inverted_wider.setdefault(wider, []).append(term)
+
+    if voc["flavour"]!="SKOS":
+        close_transitively(inverted_wider)
+
+    for t, props in voc["terms"].items():
+        props["narrower"] = inverted_wider.get(t, [])
+
+
 def to_desise_dict(voc):
     """returns a vocabulary as a dead simple semantics dictionary.
     """
@@ -1059,9 +1111,11 @@ def to_desise_dict(voc):
             d["preliminary"] = ""
         d["wider"] = []
         for w in t.get_objects_for(voc.wider_predicate):
-            d["wider_terms"].append(w.lstrip("#"))
+            d["wider"].append(w.lstrip("#"))
 
         res["terms"][t.term] = d
+
+    add_desise_narrower(res)
 
     return res
 
