@@ -68,7 +68,7 @@ HT_ACCESS_TEMPLATE_CSV = """# .htaccess for content negotiation
 
 AddType application/rdf+xml .rdf
 AddType text/turtle .ttl
-AddType application/x-desise+xml .desise
+AddType application/x-desise+json .desise
 AddCharset UTF-8 .ttl
 AddCharset UTF-8 .html
 AddCharset UTF-8 .desise
@@ -76,13 +76,13 @@ AddCharset UTF-8 .desise
 RewriteEngine On
 RewriteBase {install_base}
 
-RewriteCond %{{HTTP_ACCEPT}} application/rdf\+xml
+RewriteCond %{{HTTP_ACCEPT}} application/rdf\\+xml
 RewriteRule ^$ {timestamp}/{name}.rdf [R=303]
 
 RewriteCond %{{HTTP_ACCEPT}} text/turtle
 RewriteRule ^$ {timestamp}/{name}.ttl [R=303]
 
-RewriteCond %{{HTTP_ACCEPT}} text/json;content=desise
+RewriteCond %{{HTTP_ACCEPT}} application/x-desise\\+json
 RewriteRule ^$ {timestamp}/{name}.desise [R=303]
 
 # No accept conditions: make the .html version the default
