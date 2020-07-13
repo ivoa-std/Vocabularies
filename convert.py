@@ -154,6 +154,10 @@ tr {
     border-bottom: 1pt solid #ccc;
 }
 
+tr:target {
+		border: 2pt solid yellow;
+}
+
 thead tr {
     border-top: 1pt solid black;
     border-bottom: 1pt solid black;
