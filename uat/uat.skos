@@ -103,7 +103,7 @@
     <skos:altLabel xml:lang="en">Martian moons</skos:altLabel>
     <skos:altLabel xml:lang="en">Moons of Mars</skos:altLabel>
     <skos:altLabel xml:lang="en">Phobos</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:prefLabel xml:lang="en">Martian satellites</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#mars" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1009" /></skos:Concept>
@@ -207,7 +207,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrophysical-masers" />
     <skos:prefLabel xml:lang="en">Megamasers</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1023" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#mercury-planet-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#mercury-planet">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-29T14:51:36.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Mercury</skos:altLabel>
@@ -744,7 +744,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#h-beta-photometry" />
     <skos:prefLabel xml:lang="en">Narrow band photometry</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1088" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-30T21:32:06.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Moons (Solar system)</skos:altLabel>
@@ -760,7 +760,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#irregular-satellites" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#jovian-satellites" />
     <skos:prefLabel xml:lang="en">Natural satellites (Solar system)</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1089" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ataxites">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#meteorites" />
@@ -858,7 +858,7 @@
     <skos:altLabel xml:lang="en">Neptunian moons</skos:altLabel>
     <skos:altLabel xml:lang="en">Nereid</skos:altLabel>
     <skos:altLabel xml:lang="en">Triton</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:prefLabel xml:lang="en">Neptunian satellites</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#neptune" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1098" /></skos:Concept>
@@ -2208,7 +2208,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#spectropolarimetry" />
     <skos:prefLabel xml:lang="en">Polarimetry</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1278" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#polarimetry-exoplanets-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#polarimetry-exoplanets">
     <rdfs:label xml:lang="en">Polarimetry [Exoplanets]</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
   <skos:prefLabel xml:lang="en">Polarimetry [Exoplanets]</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#polarimetry" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1279" /><ivoasem:deprecated /></skos:Concept>
@@ -2659,7 +2659,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrometry" />
     <skos:prefLabel xml:lang="en">Radial velocity</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1332" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radial-velocity-methods-exoplanets-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radial-velocity-methods-exoplanets">
     <rdfs:label xml:lang="en">Radial velocity methods [Exoplanets]</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
   <skos:prefLabel xml:lang="en">Radial velocity methods [Exoplanets]</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#radial-velocity" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1333" /><ivoasem:deprecated /></skos:Concept>
@@ -2877,7 +2877,7 @@
     <rdfs:label xml:lang="en">RC Aurigae stars</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
   <skos:prefLabel xml:lang="en">RC Aurigae stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1364" /><ivoasem:deprecated /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#recombination-cosmology-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#recombination-cosmology">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T20:34:15.000Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#big-bang-theory" />
@@ -3324,7 +3324,7 @@
     <skos:altLabel xml:lang="en">Ring shepherds</skos:altLabel>
     <skos:altLabel xml:lang="en">Saturnian moons</skos:altLabel>
     <skos:altLabel xml:lang="en">Titan</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:prefLabel xml:lang="en">Saturnian satellites</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#saturn" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1427" /></skos:Concept>
@@ -4076,7 +4076,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#origin-of-the-universe" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#cosmology" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#photon-decoupling" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#recombination-cosmology-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#recombination-cosmology" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#reionization" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#big-bang-nucleosynthesis" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#cosmological-perturbation-theory" />
@@ -4140,7 +4140,7 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T16:44:31.000Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-system-astronomy" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#meteoroids" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#oort-cloud" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-rings" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#solar-system-planets" />
@@ -5544,10 +5544,10 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-30T21:27:12.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Earth's Moon</skos:altLabel>
     <skos:altLabel xml:lang="en">Luna</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-system" />
     <skos:prefLabel xml:lang="en">The Moon</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#earth-planet-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#earth-planet" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#lunar-science" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1692" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#the-sun">
@@ -5930,7 +5930,7 @@
     <skos:altLabel xml:lang="en">Oberon</skos:altLabel>
     <skos:altLabel xml:lang="en">Titania</skos:altLabel>
     <skos:altLabel xml:lang="en">Uranian moons</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:prefLabel xml:lang="en">Uranian satellites</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#uranus" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1750" /></skos:Concept>
@@ -7038,7 +7038,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#bootstrap" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#classification" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#clustering" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#cross-validation-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#cross-validation" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#deconvolution" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#detection" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#model-selection" />
@@ -7225,7 +7225,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrostatistics-techniques" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#uncertainty-bounds" />
     <skos:prefLabel xml:lang="en">Bootstrap</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#cross-validation-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#cross-validation" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1906" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#classification">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:52:07.000Z</ns2:created>
@@ -7245,7 +7245,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#single-linkage-hierarchical-clustering" />
     <skos:prefLabel xml:lang="en">Clustering</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1908" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cross-validation-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cross-validation">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:52:15.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -7325,8 +7325,8 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-25T18:35:01.099Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrostatistics-techniques" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#irregular-cadence" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#light-curve-classification-" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#period-search-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#light-curve-classification" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#period-search" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#red-noise" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#transient-detection" />
     <skos:prefLabel xml:lang="en">Time series analysis</skos:prefLabel>
@@ -7606,7 +7606,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#time-series-analysis" />
     <skos:prefLabel xml:lang="en">Irregular cadence</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1953" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#light-curve-classification-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#light-curve-classification">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:57:58.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -7615,7 +7615,7 @@
     <skos:prefLabel xml:lang="en">Light curve classification </skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#light-curves" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1954" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#period-search-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#period-search">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:58:02.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#time-series-analysis" />
@@ -7639,13 +7639,13 @@
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#fast-fourier-transform">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:58:25.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#period-search-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#period-search" />
     <skos:prefLabel xml:lang="en">Fast Fourier transform</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1958" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#lomb-scargle-periodogram">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:58:29.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#period-search-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#period-search" />
     <skos:prefLabel xml:lang="en">Lomb-Scargle periodogram</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1959" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#carbon-dioxide">
@@ -7657,7 +7657,7 @@
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#phase-dispersion-minimization">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-27T18:58:33.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#period-search-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#period-search" />
     <skos:prefLabel xml:lang="en">Phase dispersion minimization</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1960" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#confidence-interval">
@@ -8196,7 +8196,7 @@
     <skos:prefLabel xml:lang="en">Exoplanet atmospheric variability</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-variability" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2020" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-composition-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-composition">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-30T21:20:36.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -8223,7 +8223,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#exoplanets" />
     <skos:prefLabel xml:lang="en">Extrasolar ice giants</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2024" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#irregular-natural-satellites-extrasolar-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#irregular-natural-satellites-extrasolar">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-30T21:30:04.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -8232,7 +8232,7 @@
     <skos:altLabel xml:lang="en">Irregular extrasolar natural satellites</skos:altLabel>
     <skos:altLabel xml:lang="en">Irregular moons (Extrasolar)</skos:altLabel>
     <skos:altLabel xml:lang="en">Irregular natural extrasolar satellites</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar" />
     <skos:prefLabel xml:lang="en">Irregular natural satellites (Extrasolar)</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#irregular-satellites" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2025" /></skos:Concept>
@@ -8249,9 +8249,9 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-30T21:38:45.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Irregular moons (Solar system)</skos:altLabel>
     <skos:altLabel xml:lang="en">Irregular natural satellites</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:prefLabel xml:lang="en">Irregular satellites</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#irregular-natural-satellites-extrasolar-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#irregular-natural-satellites-extrasolar" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2027" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cooling-flows">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -9254,7 +9254,7 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-02T20:29:23.449Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
     <skos:prefLabel xml:lang="en">Atmospheric composition</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-composition-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-composition" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2120" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#post-asymptotic-giant-branch-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -9608,7 +9608,7 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-13T21:38:45.001Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#comets" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#comet-surfaces" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#comet-volatiles-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#comet-volatiles" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#comet-interiors" />
     <skos:prefLabel xml:lang="en">Comet nuclei</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2160" /></skos:Concept>
@@ -9618,7 +9618,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#comet-nuclei" />
     <skos:prefLabel xml:lang="en">Comet surfaces</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2161" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#comet-volatiles-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#comet-volatiles">
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-13T21:39:17.809Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#comet-nuclei" />
@@ -10396,7 +10396,7 @@
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T20:37:03.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">CBR</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#recombination-cosmology-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#recombination-cosmology" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#cosmic-microwave-background-radiation" />
     <skos:prefLabel xml:lang="en">Cosmic background radiation</skos:prefLabel>
     <skos:scopeNote xml:lang="en">Use for cosmic background radiations other than microwave, i.e. Cosmic gamma-ray background radiation or Cosmic ultraviolet background radiation, etc.</skos:scopeNote>
@@ -11323,7 +11323,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#neutrino-decoupling" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#photon-decoupling" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#primordial-galaxies" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#recombination-cosmology-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#recombination-cosmology" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#baryogenesis" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#baryon-acoustic-oscillations" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#reionization" />
@@ -11368,7 +11368,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#trojan-asteroids" />
     <skos:prefLabel xml:lang="en">Earth trojans</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/438" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#earth-planet-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#earth-planet">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-30T21:27:12.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Planet Earth</skos:altLabel>
@@ -11692,14 +11692,14 @@
     <rdfs:label xml:lang="en">Exobiology</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
   <skos:prefLabel xml:lang="en">Exobiology</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#astrobiology" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/482" /><ivoasem:deprecated /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T19:34:41.000Z</ns2:modified>
     <skos:altLabel xml:lang="en">Exomoons</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-astronomy" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#irregular-natural-satellites-extrasolar-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#irregular-natural-satellites-extrasolar" />
     <skos:prefLabel xml:lang="en">Natural satellites (Extrasolar)</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#exoplanets" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/483" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-systems">
@@ -11714,7 +11714,7 @@
   <skos:prefLabel xml:lang="en">Exoplanet astrometry</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#astrometry" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/485" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exoplanet-astronomy">
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planet-hosting-stars" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-systems" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-catalogs" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-detection-methods" />
@@ -11731,7 +11731,7 @@
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-07T14:26:36.000Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-structure" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-variability" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-composition-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exoplanet-atmospheric-composition" />
     <skos:prefLabel xml:lang="en">Exoplanet atmospheres</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/487" /></skos:Concept>
@@ -11832,7 +11832,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#hot-neptunes" />
     <skos:prefLabel xml:lang="en">Exoplanets</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#solar-system-planets" />
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-extrasolar" />
     <skos:scopeNote xml:lang="en">Specifically planets and related bodies found orbiting stars that are not the Sun.</skos:scopeNote>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/498" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#exosphere">
@@ -13307,7 +13307,7 @@
     <skos:prefLabel xml:lang="en">Gravitational microlensing</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#free-floating-planets" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/672" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gravitational-microlensing-exoplanets-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gravitational-microlensing-exoplanets">
     <rdfs:label xml:lang="en">Gravitational microlensing [Exoplanets]</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
   <skos:prefLabel xml:lang="en">Gravitational microlensing [Exoplanets]</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#gravitational-microlensing" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/673" /><ivoasem:deprecated /></skos:Concept>
@@ -14218,9 +14218,9 @@
     <skos:altLabel xml:lang="en">Terrestrial planet</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-system-planets" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#mars" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#mercury-planet-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#mercury-planet" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#venus" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#earth-planet-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#earth-planet" />
     <skos:prefLabel xml:lang="en">Inner planets</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/797" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#instability-strip">
@@ -14444,7 +14444,7 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astrophysical-black-holes" />
     <skos:prefLabel xml:lang="en">Intermediate-mass black holes</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/816" /></skos:Concept>
-  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-population-stars-">
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-population-stars">
     <rdfs:label xml:lang="en">Intermediate population stars</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
   <skos:prefLabel xml:lang="en">Intermediate population stars`</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/817" /><ivoasem:deprecated /></skos:Concept>
@@ -14921,7 +14921,7 @@
     <skos:altLabel xml:lang="en">Classical satellites</skos:altLabel>
     <skos:altLabel xml:lang="en">Jovian moons</skos:altLabel>
     <skos:altLabel xml:lang="en">Moons of Jupiter</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system-" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellites-solar-system" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#galilean-satellites" />
     <skos:prefLabel xml:lang="en">Jovian satellites</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#jupiter" />
@@ -15334,7 +15334,7 @@
     <skos:altLabel xml:lang="en">Lightcurves</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#photometry" />
     <skos:prefLabel xml:lang="en">Light curves</skos:prefLabel>
-    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#light-curve-classification-" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#light-curve-classification" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/918" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#light-year">
     <skos:altLabel xml:lang="en">Light-year</skos:altLabel>
