@@ -1,0 +1,10 @@
+photon;     1;Photon;          Carrier particles of the electromagnetic interaction
+radio;      2;Radio;           Photon with a wavelength longer than 10 mm (or ν<30 GHz)
+millimeter; 2;Millimeter;      Photon with a wavelength between 0.1 mm and 10 mm (or 30 GHz<=ν<300 GHz)
+infrared;   2;Infrared;        Photon with a wavelength between 1 µm and 100 µm
+optical;    2;Optical;         Photon with a wavelength between 300 nm and 1000 nm
+uv;         2;Ultraviolet;     Photon with a wavelength between 100 nm and 300 nm
+euv;        3;Extreme UV;      Photon with an energy between 12 eV and 120 eV
+x-ray;      2;X-Ray;           Photon with an energy between 120 eV and 120 keV
+gamma-ray;  2;Gamma Ray;       Photon with an energy above 120 keV
+neutrino;   1;Neutrino;        This term comprises all generation of neutrinos (electron, µ, τ), and particles as well as antiparticles.
