@@ -39,7 +39,7 @@ cutout;2;Cutout;a subsection of the primary data
 documentation;1;Documentation;Extra information on the item in human-readable text form, ranging from processing logs to weather reports to technical documents on instruments to related publications.
 
 # VEP-005
-coderived;1;Coderived Data;Data products sharing one or more progenitors with #this.  This could be a lightcurve for an object catalog derived from repeated observations, the dataset processed using a different pipeline, or the like.;ivoasem:preliminary
+coderived;1;Coderived Data;Data products sharing one or more progenitors with #this.  This could be a lightcurve for an object catalog derived from repeated observations, the dataset processed using a different pipeline, or the like.
 
 # VEP-004
-counterpart;1;Counterpart;Data products sharing the target of the experiment or observation that led to #this but of unrelated provenance.  This could be observations of the same object in different wavelengths or along different axes (time, spectrum), but spectra of dust of common origin but different laboratories would be #counterparts as well.;ivoasem:preliminary
+counterpart;1;Counterpart;Data products sharing the target of the experiment or observation that led to #this but of unrelated provenance.  This could be observations of the same object in different wavelengths or along different axes (time, spectrum), but spectra of dust of common origin but different laboratories would be #counterparts as well.

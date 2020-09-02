@@ -5,6 +5,6 @@ Infrared;   2;Infrared;        Photon with a wavelength between 1 µm and 100 µ
 Optical;    2;Optical;         Photon with a wavelength between 300 nm and 1000 nm
 UV;         2;Ultraviolet;     Photon with a wavelength between 100 nm and 300 nm
 EUV;        3;Extreme UV;      Photon with an energy between 12 eV and 120 eV
-x-ray;      2;X-Ray;           Photon with an energy between 120 eV and 120 keV
+X-ray;      2;X-Ray;           Photon with an energy between 120 eV and 120 keV
 Gamma-ray;  2;Gamma Ray;       Photon with an energy above 120 keV
-Neutrino;   1;Neutrino;        This term comprises all generation of neutrinos (electron, µ, τ), and particles as well as antiparticles.
+Neutrino;   1;Neutrino;        This term comprises all generations of neutrinos (electron, µ, τ), and particles as well as antiparticles.
