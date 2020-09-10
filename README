@@ -104,7 +104,7 @@ serve your vocabularies; since we currently generate apache .htaccess
 files only, this should be served by an apache HTTP server.  Then, call
 ``make local`` with ROOT_URI set to that root URL, e.g.,::
 
-  python convert.py --root-uri http://localhost/rdf ALL
+  python3 convert.py --root-uri http://localhost/rdf ALL
 
 In order for the .htaccess configuration to work, the toplevel directory
 has to be configured to interpret FileInfo content in the apache

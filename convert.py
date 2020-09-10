@@ -50,7 +50,9 @@ KNOWN_PREDICATES = frozenset([
     "ivoasem:preliminary", "ivoasem:deprecated", "ivoasem:useInstead",
     "rdfs:subClassOf",
     "rdfs:subPropertyOf",
-    "skos:broader", "skos:exactMatch"])
+    "skos:broader", "skos:exactMatch",
+    # well, this one isn't quite in VocInVO2 in late 2020.  Let's see.
+    "skos:related"])
 
 # an RE our term URIs must match (we're not very diligent yet)
 FULL_TERM_PATTERN = "[\w\d#:/_.-]+"
@@ -216,10 +218,49 @@ td:nth-child(5) {
 ul.compactlist {
     list-style-type: none;
     padding-left: 0pt;
+    margin-block-start: 0pt;
+    margin-block-end: 0pt;
 }
 
 ul.compactlist li {
     margin-bottom: 0.3ex;
+}
+
+label.popup {
+	position: relative;
+}
+
+input.popup-control {
+	display: none;
+}
+
+.popup-head {
+	display: inline-block;
+}
+
+.popup-body {
+	display: none;
+}
+
+.popup-control:checked ~ .popup-body {
+	display: block;
+	position: absolute;
+	top: 0pt;
+	left: 0pt;
+	background: white;
+	border: 1pt solid #555;
+	z-index: 500;
+	padding: 0.4rem 0.2rem;
+	width: 20rem;
+}
+
+.proplabel {
+	background: #442266;
+	color: white;
+	padding: 0.4rem 0.4rem;
+	border-radius: 0.2em;
+	white-space: nowrap;
+	margin: 0.5rem 0.2rem;
 }
 
 #license {
@@ -303,6 +344,57 @@ def pick_exactly_one(iter, errmsg, default=None):
     else:
         raise ReportableError("Expected exactly one {} but got {}".format(
             errmsg, len(res)))
+
+
+def _expand_transitively(rn, cur_term, to_process):
+    """helps close_transitively.
+
+    See the explanation of the strategy there.
+    """
+    for narrower_term in rn.get(cur_term, []):
+        if narrower_term in to_process:
+            _expand_transitively(rn, narrower_term, to_process)
+            to_process.remove(narrower_term)
+        rn[cur_term].extend(rn.get(narrower_term, []))
+    
+
+def close_transitively(raw_narrower):
+    """closes raw_narrower transitively.
+
+    raw_narrower is a dict of lists; for every item i in a value list, 
+    that list is expanded by raw_narrower[i].
+
+    This helps add_desise_narrowser in the case of non-SKOS vocabularies;
+    it will not do anything sensible if d doesn't describe a tree.  In 
+    particular, it will not detect cycles and may go down in flames if
+    there are any.
+    """
+    # our strategy: Pick a term to process and expand it and the subtree
+    # below it post-order, removing anything visited from from our to-do list.
+    # Repeat until we're done.
+    to_process = set(raw_narrower)
+
+    while to_process:
+        _expand_transitively(raw_narrower, to_process.pop(), to_process)
+
+
+def invert_wider(voc):
+    """returns the inverse of the wider relationship on voc.
+
+    This is either the simple inversion of wider in the SKOS
+    case (where arbitrary graphs are possible and wider isn't transitive
+    anyway) or its transitive closure (i.e., all terms reachable from t
+    when following the branches).
+    """
+    inverted_wider = {}
+    for t, term in voc.terms.items():
+        for wider in term.get_objects_for(voc.wider_predicate):
+            inverted_wider.setdefault(wider.lstrip("#"), []).append(t)
+
+    if voc.flavour!="SKOS":
+        close_transitively(inverted_wider)
+    
+    return inverted_wider
 
 
 ############ tiny DOM start (snarfed and simplified from DaCHS stanxml)
@@ -546,7 +638,45 @@ class Term(object):
             return T.a(href="#"+term)[term]
         else:
             return term
-        
+    
+    def _format_more_relations(self):
+        """yields HTML elements for the non-parent relationships
+        this term has.
+
+        We only select the relationships VocInVO2 talks about.
+        """
+        for prop, label in [
+               ("ivoasem:useInstead", "Use Instead"),
+               ("ivoasem:deprecated", "Deprecated Term"),
+               ("skos:exactMatch", "Same As"),
+               ("skos:related", "Related"),
+               ("built-in:narrower", "Narrower")]:
+
+            if prop=="built-in:narrower":
+                objs = [self._format_term_as_html(t)
+                    for t in self.vocabulary.inverted_wider.get(
+                            self.term, [])]
+            else:
+                objs = [self._format_term_as_html(ob) 
+                    for ob in self.get_objects_for(prop)]
+
+            if objs:
+                # we have the property...
+                non_nulls = [o for o in objs if o is not None]
+                if non_nulls:
+                    # ...and the property has non-blank objects
+                    yield T.label(class_="popup")[
+                        T.input(type="checkbox", class_="popup-control"),
+                        T.span(class_="popup-head proplabel")[
+                            label],
+                        T.div(class_="popup-body")[
+                            T.ul(class_="compactlist")[[
+                                T.li[obj] for obj in objs]]]]
+                                    
+                else:
+                    #... and the property only has blank nodes as objects
+                    yield T.span(class_="proplabel")[label]
+
     def as_html(self):
         """returns elementtree for an HTML table line for this term.
         """
@@ -554,21 +684,8 @@ class Term(object):
         deprecated = ("ivoasem:deprecated", None) in self.relations
 
         formatted_relations = []
-        for prop, label in [
-               ("ivoasem:useInstead", "Use Instead"),
-               ("ivoasem:deprecated", "Deprecated Term"),
-               ("skos:exactMatch", "Same As")]:
-            objs = [self._format_term_as_html(ob) 
-                for ob in self.get_objects_for(prop)]
-            if objs:
-                non_nulls = [o for o in objs if o is not None]
-                if non_nulls:
-                    append_with_sep(formatted_relations,
-                        [T.em[label+": "], [obj
-                            for obj in non_nulls]], T.br)
-                else:
-                    append_with_sep(formatted_relations, 
-                        T.em[label], T.br)
+        for rel in self._format_more_relations():
+            append_with_sep(formatted_relations, rel, T.br)
 
         if preliminary:
             row_class = "preliminary"
@@ -662,6 +779,8 @@ class Vocabulary(object):
             setattr(self, key, value)
         
         self._load_terms()
+
+        self.inverted_wider = invert_wider(self)
    
     def _read_terms_source(self):
         """must add a terms attribute self containing Term instances.
@@ -993,32 +1112,32 @@ class SKOSVocabulary(Vocabulary):
         parents = list(self._get_skos_objects_for(voc,
             "http://www.w3.org/2004/02/skos/core#broader",
             term))
-        
+      
         more_relations = []
-        for match in self._get_skos_objects_for(voc,
-                "http://www.w3.org/2004/02/skos/core#exactMatch",
-                term):
-            more_relations.append(
-                "skos:exactMatch({})".format(match))
 
-        for match in self._get_skos_objects_for(voc,
-                "http://www.ivoa.net/rdf/ivoasem#useInstead",
-                term):
-            more_relations.append(
-                "ivoasem:useInstead({})".format(match))
+        # extra properties taking objects
+        for prop_url, short_term in [
+                ("http://www.w3.org/2004/02/skos/core#exactMatch",
+                    "skos:exactMatch"),
+                ("http://www.w3.org/2004/02/skos/core#related",
+                    "skos:related"),
+                ("http://www.ivoa.net/rdf/ivoasem#useInstead",
+                    "ivoasem:useInstead")]:
+            for match in self._get_skos_objects_for(
+                    voc, prop_url, term):
+                more_relations.append(
+                    f"{short_term}({match})".format(match))
 
-        for match in self._get_skos_objects_for(voc,
-                "http://www.ivoa.net/rdf/ivoasem#deprecated",
-                term):
-            more_relations.append(
-                "ivoasem:deprecated")
+        # extra properties not taking objects
+        for prop_url, short_term in [
+                ("http://www.ivoa.net/rdf/ivoasem#deprecated",
+                    "ivoasem:deprecated"),
+                ("http://www.ivoa.net/rdf/ivoasem#preliminary",
+                    "ivoasem:preliminary")]:
+            for match in self._get_skos_objects_for(
+                    voc, prop_url, term):
+                more_relations.append(short_term)
 
-        for match in self._get_skos_objects_for(voc,
-                "http://www.ivoa.net/rdf/ivoasem#preliminary",
-                term):
-            more_relations.append(
-                "ivoasem:preliminary")
-       
         return Term(self, 
             self._normalise_uri(term), 
             label, 
@@ -1045,58 +1164,6 @@ class SKOSVocabulary(Vocabulary):
 
 ############# dead simple semantics support
 
-def _expand_transitively(rn, cur_term, to_process):
-    """helps close_transitively.
-
-    See the explanation of the strategy there.
-    """
-    for narrower_term in rn.get(cur_term, []):
-        if narrower_term in to_process:
-            _expand_transitively(rn, narrower_term, to_process)
-            to_process.remove(narrower_term)
-        rn[cur_term].extend(rn.get(narrower_term, []))
-    
-
-def close_transitively(raw_narrower):
-    """closes raw_narrower transitively.
-
-    raw_narrower is a dict of lists; for every item i in a value list, 
-    that list is expanded by raw_narrower[i].
-
-    This helps add_desise_narrowser in the case of non-SKOS vocabularies;
-    it will not do anything sensible if d doesn't describe a tree.  In 
-    particular, it will not detect cycles and may go down in flames if
-    there are any.
-    """
-    # our strategy: Pick a term to process and expand it and the subtree
-    # below it post-order, removing anything visited from from our to-do list.
-    # Repeat until we're done.
-    to_process = set(raw_narrower)
-
-    while to_process:
-        _expand_transitively(raw_narrower, to_process.pop(), to_process)
-
-
-def add_desise_narrower(voc):
-    """adds "narrower" lists to term dicts in desise dictionaries.
-
-    This contains either the simple inversion of wider in the SKOS
-    case (where arbitrary graphs are possible and wider isn't transitive
-    anyway) or its transitive closure (i.e., all terms reachable from t
-    when following the branches).
-    """
-    inverted_wider = {}
-    for term, props in voc["terms"].items():
-        for wider in props["wider"]:
-            inverted_wider.setdefault(wider, []).append(term)
-
-    if voc["flavour"]!="SKOS":
-        close_transitively(inverted_wider)
-
-    for t, props in voc["terms"].items():
-        props["narrower"] = inverted_wider.get(t, [])
-
-
 def to_desise_dict(voc):
     """returns a vocabulary as a dead simple semantics dictionary.
     """
@@ -1119,7 +1186,8 @@ def to_desise_dict(voc):
 
         res["terms"][t.term] = d
 
-    add_desise_narrower(res)
+    for t, props in res["terms"].items():
+        props["narrower"] = voc.inverted_wider.get(t, [])
 
     return res
 
