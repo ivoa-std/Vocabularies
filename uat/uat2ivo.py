@@ -183,7 +183,7 @@ EXTRA_TRIPLES = {
     IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"voids",
 },
 "817": {
-    SKOS_PREF_LABEL_TAG: "Intermediate population stars`",
+    SKOS_PREF_LABEL_TAG: "Intermediate population stars",
 },
 "926": {
     SKOS_PREF_LABEL_TAG: "Lithium abundance",
@@ -467,6 +467,7 @@ def make_ivoa_input_skos(
             ElementTree.SubElement(
                 concept,
                 IVOA_DEPRECATED_TAG)
+
 
 def main():
     concept_mapping = ConceptMapping()

@@ -14447,7 +14447,7 @@
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-population-stars">
     <rdfs:label xml:lang="en">Intermediate population stars</rdfs:label>
     <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-  <skos:prefLabel xml:lang="en">Intermediate population stars`</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/817" /><ivoasem:deprecated /></skos:Concept>
+  <skos:prefLabel xml:lang="en">Intermediate population stars</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/817" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#intermediate-type-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-17T19:46:54.000Z</ns2:modified>
