@@ -89,7 +89,7 @@ href="http://ivoa.net/documents/Vocabularies/20200326/">Vocabularies in the VO
         <a href="/astronomers/" class="left"><img src="/css/images/ivoa_astronomers.jpg" alt="" /></a>
         <p><a class="blueback" href="/astronomers/getting_started.html">Getting Started</a> / <a href="/astronomers/using_the_vo.html" class="blueback">Using the VO<br />
         </a><a href="/astronomers/vo_glossary.html" class="blueback">VO Glossary</a> / <a href="../astronomers/applications.html" class="blueback">VO Applications</a><br />
-        <a href="/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="http://www.ivoa.net/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br />
+        <a href="/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br />
         <a href="/astronomers" class="more"></a></p>
         
       </div>
@@ -97,16 +97,16 @@ href="http://ivoa.net/documents/Vocabularies/20200326/">Vocabularies in the VO
       <!-- Feature 2 -->
       <div class="feature less-padding">
         <h2>For Deployers/Developers</h2>
-        <a href="/deployers/" class="left"><img src="http://www.ivoa.net/css/images/ivoa_deployers.jpg" alt="" /></a>
-        <p><a href="/deployers/intro_to_vo_concepts.html" class="blueback">Intro to VO Concepts</a> / <a href="http://www.ivoa.net/documents" class="blueback"><br />
-IVOA Standards</a> / <a href="/cgi-bin/twiki/bin/view/IVOA/PublishingInTheVONew" class="blueback">Guide to Publishing in the VO</a> / <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/VOGlossary" class="blueback"> Technical Glossary</a><a href="http://www.ivoa.net/deployers/" class="more"></a></p>
+        <a href="/deployers/" class="left"><img src="/css/images/ivoa_deployers.jpg" alt="" /></a>
+        <p><a href="/deployers/intro_to_vo_concepts.html" class="blueback">Intro to VO Concepts</a> / <a href="/documents" class="blueback"><br />
+IVOA Standards</a> / <a href="/cgi-bin/twiki/bin/view/IVOA/PublishingInTheVONew" class="blueback">Guide to Publishing in the VO</a> / <a href="/cgi-bin/twiki/bin/view/IVOA/VOGlossary" class="blueback"> Technical Glossary</a><a href="/deployers/" class="more"></a></p>
       </div>
       <!-- End Feature 2 -->
       <!-- Feature 3 -->
       <div class="feature no-padding">
 <h2>For Members</h2>
-        <a href="/members/" class="left"><img src="http://www.ivoa.net/css/images/ivoa_members.jpg" alt="" /></a>
-        <p><a href="/cgi-bin/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="http://www.ivoa.net/members/index.html" class="blueback">Working Groups</a>/ <a href="http://www.ivoa.net/cgi-bin/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="http://www.ivoa.net/documents" class="blueback">Documents in Progress</a> / <a href="http://www.ivoa.net/members/index.html" class="blueback">Mailing Lists</a> / <a href="../about/roadmap.html" class="blueback">IVOA Roadmap</a><a href="http://www.ivoa.net/members/" class="more"></a></p>
+        <a href="/members/" class="left"><img src="/css/images/ivoa_members.jpg" alt="" /></a>
+        <p><a href="/cgi-bin/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="/members/index.html" class="blueback">Working Groups</a>/ <a href="/cgi-bin/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="/documents" class="blueback">Documents in Progress</a> / <a href="/members/index.html" class="blueback">Mailing Lists</a> / <a href="../about/roadmap.html" class="blueback">IVOA Roadmap</a><a href="/members/" class="more"></a></p>
         
       </div>
       <!-- End Feature 3 -->
