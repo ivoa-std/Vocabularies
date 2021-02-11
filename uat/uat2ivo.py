@@ -467,6 +467,17 @@ def make_ivoa_input_skos(
             ElementTree.SubElement(
                 concept,
                 IVOA_DEPRECATED_TAG)
+        
+        # UAT upstram sometimes has multiple description elements.
+        # They ought to fix that, but meanwhile we just merge them.
+        defs = concept.findall("skos:definition", NS_MAPPING)
+        if len(defs)>1:
+            new_def = "\n\n".join(d.text for d in defs)
+            for d in defs:
+                concept.remove(d)
+            def_el = ElementTree.SubElement(concept,
+                ElementTree.QName(NS_MAPPING["skos"], "definition"))
+            def_el.text = new_def
 
 
 def main():
