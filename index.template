@@ -52,9 +52,9 @@
 </center><br/>
 <table width="85%" border="0" align="center" cellspacing="5">
   <tr>
-    <td align="center"><a href="index.html">DOCUMENTS</a></td>
-    <td align="center"><a href="../xml/index.html">XML SCHEMA</a></td>
-    <td align="center"><a href="/templates/index.html">TEMPLATES</a></td>
+    <td align="center"><a href="/documents/">DOCUMENTS</a></td>
+    <td align="center"><a href="/xml/">XML SCHEMA</a></td>
+    <td align="center"><a href="/rdf/">VOCABULARIES</a></td>
     <td align="center"><a href="/cgi-bin/up.cgi">DOC SUBMISSION</a></td>
   </tr>
 </table>
