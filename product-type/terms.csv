@@ -1,8 +1,11 @@
-image;1;Image;An astronomical image, typically a 2D image with two spatial axes, e.g., a FITS image. The image content may be complex.  For instance, an objective-prism observation would be considered a type of image, even though an extracted spectrum would be a spectrum data product.
-cube;1;Cube;A multidimensional astronomical image with 3 or more axes, e.g., a spectral image cube, a polarization cube, a full Stokes radio data cube, a time image cube, etc.
-spectrum;1;Spectrum;Any dataset for which spectral coverage is the primary attribute, e.g., a 1D spectrum or a long slit spectrum.
-sed;2;SED;"A spectral energy distribution, i.e., a set of calibrated fluxes over a typically wide part of the spectrum.  An SED is usually produced by combining data from multiple observations."
-timeseries;1;Time Series;A one dimensional array presenting some quantity as a function of time. A light curve is a typical example of a time series dataset.
+array;1;Array;"A dataset primarily consisting of numbers in a rectangular grid addressed by dense integer indices; the number of such indices is called the array's dimension here.  A single data product may contain more than one such array, usually all of the same size (e.g., for per-pixel error estimates); this term is mainly for grouping and should in general not be used for direct annotation."
+two-d-array;2;2D Array;"Array-like data with two dimensions; this term is mainly for grouping and should in general not be used for direct annotation."
+image;3;Image;An astronomical image, typically a 2D image with two spatial axes, e.g., a FITS image. The image content may be complex.  For instance, an objective-prism observation would be considered a type of image, even though an extracted spectrum would be a spectrum data product.
+cube;2;Cube;A multidimensional astronomical image with 3 or more axes, e.g., a spectral image cube, a polarization cube, a full Stokes radio data cube, a time image cube, etc.
+scalar-map;1;Scalar Map;"Data that maps a scalar to one or a few related scalars (e.g. magnitudes in different bands); this term is mainly for grouping and should in general not be used for direct annotation."
+spectrum;2;Spectrum;Fluxes or magnitudes given as a function of a spectral coordinate.  Use this for spectra even when the serialisation happens to be an array (as in IRAF spectra).
+sed;3;SED;"A spectral energy distribution, i.e., a set of calibrated fluxes over a typically wide part of the spectrum.  An SED is usually produced by combining data from multiple observations."
+timeseries;2;Time Series;One or a few scalar observables as a function of time.
 visibilitiy;1;Visibility;An interferometric radio observation given in Fourier space.
 event;1;Events;A collection of some sort of observed events, such as high-energy particles observed.  An event is typically characterised by spatial, spectral, and time information.
 measurements;1;Measurements;  Generic tabular data not fitting any of the other terms.  Because of its lack of specificity, this term should generally be avoided, and new, more precise terms should be introduced instead.
