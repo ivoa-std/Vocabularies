@@ -55,7 +55,7 @@ KNOWN_PREDICATES = frozenset([
     "skos:related"])
 
 # an RE our term URIs must match (we're not very diligent yet)
-FULL_TERM_PATTERN = "[\w\d#:/_.-]+"
+FULL_TERM_PATTERN = "[\w\d#:/_.*%-]+"
 
 # an RE our terms themselves must match
 TERM_PATTERN = "[\w\d_-]+"
@@ -739,6 +739,8 @@ class Vocabulary(object):
       instances.
     * licenseuri: a license URI.  Only use for externally managed 
       vocabularies; IVOA vocabularies are always CC-0.
+    * hidden: if True, no META.INF is being written (meaning:
+      the vocabulary will not show up in the repo).
     * licensehtml: a human-readable license text that is reproduced
       verbatim in HTML.  Again, only use for externally managed vocabularies.
     
@@ -762,6 +764,7 @@ class Vocabulary(object):
                     ", ".join(missing_keys)))
 
         self.draft = bool(meta.pop("draft", False))
+        self.hidden = bool(meta.pop("hidden", False))
 
         path = meta.get("path", meta["name"])
         defaults = {
@@ -943,6 +946,9 @@ class Vocabulary(object):
         """writes a "short" META.INF for use by the vocabulary TOC generator
         at the IVOA web page to the current directory.
         """
+        if self.hidden:
+            return
+
         with open("META.INF", "w", encoding="utf-8") as f:
             f.write("Name: {}\n{}\n".format(
             self.title,
