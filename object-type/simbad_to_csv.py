@@ -15,6 +15,8 @@ necessary.
 """
 
 import json
+import re
+import urllib.parse as urlparse
 
 
 class Term:
@@ -64,14 +66,41 @@ def get_forest():
 	return [t for t in terms.values() if t.parent is None]
 
 
+def ivoafy_term_form(form):
+	"""returns an experimental IVOA-ized term form, taking out, un-camel-casing,
+	replacing odd characters, etc.
+	"""
+	# a few special cases
+	form = {"HI": "h-i", "HII": "h-ii", "HII_G": "h-ii-g",
+		"**": "multiple-star", "LINER": "liner", "QSO": "qso",
+		"LMXB": "lmxb",	"HMXB": "hmxb", "ISM": "ism",
+		"LPV*": "lpv-star", "LSB_G": "lsb-g", "MIR": "m-ir",
+		"YSO": "yso", "AGB*": "agb-star", "AGN": "agn"}.get(form, form)
+	# Three uppercase at the start: almost certainly a variable star class
+	form = re.sub("^([A-Z][A-Z])([A-Z])", r"\1-\2", form)
+	# Camel-case -> dashes
+	form = re.sub("([a-z])([A-Z])", r"\1-\2", form).lower()
+	# We can't have * in the label
+	form = form.replace("*", "-star-")
+	# Relations to words
+	form = form.replace(">", "-above-")
+	form = form.replace("<", "-below-")
+	# Some special characters are well represented by dashes
+	form = re.sub("[/_]", "-", form)
+	# parens: dashify (they're always at the end of terms)
+	form = re.sub(r"\(([^)]+)\)", r"-\1", form)
+	return form.strip("-")
+	
+
 def write_to(terms, dest_file, cur_level=1):
 	"""produces our CSV output for a sequence of Term-s.
 	"""
 	for term in terms:
-		sim_link = f"http://simbad.u-strasbg.fr/simbad/otypes#{term.simbad_id}"
+		sim_link = "http://simbad.u-strasbg.fr/simbad/otypes#{}".format(
+			urlparse.quote(term.simbad_id))
 		dest_file.write("{};{};{};{};{}\n".format(
-			term.form, cur_level, term.label, term.description,
-			f"skos:exactMatch({sim_link})"))
+			ivoafy_term_form(term.form), cur_level, term.label, 
+			term.description, f"skos:exactMatch({sim_link})"))
 		write_to(term.children, dest_file, cur_level+1)
 
 
