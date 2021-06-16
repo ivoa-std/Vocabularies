@@ -121,7 +121,8 @@ recommended to work like this:
 
 (1) Edit vocabs.conf, update the timestamp of the respective vocabulary to 
     today (if applicable)
-(2) Do the edit to the vocabulary source. 
+(2) Do the edit to the vocabulary source; don't forget the
+    ivoasem:preliminary property on newly added terms.
 (3) Run ``python3 convert.py <vocname>``, paying attention to any
     diagnostics.
 (4) Inspect the files newly left in ``build`` as to whether they reflect

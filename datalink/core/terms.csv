@@ -37,6 +37,8 @@ cutout;2;Cutout;a subsection of the primary data
 
 # VEP-002
 documentation;1;Documentation;Extra information on the item in human-readable text form, ranging from processing logs to weather reports to technical documents on instruments to related publications.
+# VEP-007
+detached-header;2;Detached Header;Machine-readable metadata for #this, which in general will be necessary for its scientific use.  Examples include FITS headers distributed without their data blocks or PDS label files.;ivoasem:preliminary
 
 # VEP-005
 coderived;1;Coderived Data;Data products sharing one or more progenitors with #this.  This could be a lightcurve for an object catalog derived from repeated observations, the dataset processed using a different pipeline, or the like.
