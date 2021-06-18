@@ -9,4 +9,4 @@ timeseries;2;Time Series;One or a few scalar observables as a function of time.
 visibilitiy;1;Visibility;An interferometric radio observation given in Fourier space.
 event;1;Events;A collection of some sort of observed events, such as high-energy particles observed.  An event is typically characterised by spatial, spectral, and time information.
 measurements;1;Measurements;  Generic tabular data not fitting any of the other terms.  Because of its lack of specificity, this term should generally be avoided, and new, more precise terms should be introduced instead.
-
+dynamic-spectrum;1;Dynamic Spectrum; Consecutive spectral measurements through time,organized as a time series of successive spectra of the same target or field of view.
