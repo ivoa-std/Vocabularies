@@ -1183,7 +1183,7 @@ def to_desise_dict(voc):
             "label": t.label, 
             "description": t.description}
         if ("ivoasem:deprecated", None) in t.relations:
-            d["decprecated"] = ""
+            d["deprecated"] = ""
         if ("ivoasem:preliminary", None) in t.relations:
             d["preliminary"] = ""
         d["wider"] = []
