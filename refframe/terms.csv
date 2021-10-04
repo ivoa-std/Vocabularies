@@ -17,5 +17,5 @@ AZ_EL;1;Azimuth/elevation;"Local azimuth and elevation. (Ground-based observatio
 BODY;1;Body Coordinates;"Generic bodycentric coordinates. Data annotated in this way cannot be automatically combined with any other data.  Use or create more specific terms if at all possible."
 UNKNOWN;1;Unknown reference frame;"Unknown reference frame. Only to be used as a last resort or for simulations. Data annotated in this way cannot be automatically combined with any other data."
 xy;1;Unknown reference frame;Old VOTable COOSYS term for UNKNOWN;ivoasem:deprecated ivoasem:useInstead(UNKNOWN)
-barycentric;1;?;Old VOTable COOSYS term TO BE CLARIFIED
-geo_app;1;?;Old VOTable COOSYS term TO BE CLARIFIED
+barycentric;1;ICRS/Bary;Old VOTable COOSYS term indicating ICRS at BARYCENTER reference position.  In the modern VO, refpos and refframe are no longer represented together.  Do not use this any more.;ivoasem:deprecated ivoasem:useInstead(ICRS)
+geo_app;1;(Obscure);An old VOTable COOSYS term, the meaning of which has been lost in time.;ivoasem:deprecated
