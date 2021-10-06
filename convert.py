@@ -255,6 +255,8 @@ input.popup-control {
 }
 
 .proplabel {
+  display: inline-block;
+  position: relative;
 	background: #442266;
 	color: white;
 	padding: 0.4rem 0.4rem;
