@@ -1,1 +1,950 @@
-[{"id":"*","label":"Star","description":"Star","comment":""},{"id":"**","label":"**","description":"Double or Multiple Star","comment":"Interacting binaries and close CPM systems"},{"id":"?","label":"Unknown","description":"Object of Unknown Nature","comment":""},{"id":"AB*","label":"AGB*","description":"Asymptotic Giant Branch Star","comment":""},{"id":"AGN","label":"AGN","description":"Active Galaxy Nucleus","comment":""},{"id":"AM*","label":"AMHer","description":"CV of AM Her type","comment":""},{"id":"Ae*","label":"Ae*","description":"Herbig Ae/Be Star","comment":""},{"id":"Al*","label":"EB*Algol","description":"Eclipsing Binary of Algol type","comment":""},{"id":"As*","label":"Assoc*","description":"Association of Stars","comment":""},{"id":"BD*","label":"brownD*","description":"Brown Dwarf","comment":"SpT L,T or Y"},{"id":"BH","label":"BH","description":"Black Hole","comment":""},{"id":"BLL","label":"BLLac","description":"BL Lac","comment":""},{"id":"BS*","label":"BlueStraggler","description":"Blue Straggler","comment":""},{"id":"BY*","label":"BYDra","description":"BY Dra Variable","comment":""},{"id":"Be*","label":"Be*","description":"Be Star","comment":""},{"id":"BiC","label":"BClG","description":"Brightest Galaxy in a Cluster (BCG)","comment":""},{"id":"Bla","label":"Blazar","description":"Blazar","comment":""},{"id":"C*","label":"C*","description":"Carbon Star","comment":"Mostly AGB or RGB. SpT like C,N,R C-N,C-R, or C-rich"},{"id":"CGG","label":"Compact_Gr_G","description":"Compact Group of Galaxies","comment":""},{"id":"CGb","label":"ComGlob","description":"Cometary Globule / Pillar","comment":""},{"id":"CV*","label":"CataclyV*","description":"Cataclysmic Variable","comment":""},{"id":"Ce*","label":"Cepheid","description":"Cepheid Variable","comment":"Includes anomalous Cepheids"},{"id":"Cl*","label":"Cl*","description":"Cluster of Stars","comment":""},{"id":"ClG","label":"ClG","description":"Cluster of Galaxies","comment":""},{"id":"Cld","label":"Cloud","description":"Cloud","comment":""},{"id":"DN*","label":"DwarfNova","description":"Dwarf Nova","comment":""},{"id":"DNe","label":"DkNeb","description":"Dark Cloud (nebula)","comment":""},{"id":"DQ*","label":"DQHer","description":"CV of DQ Her type","comment":""},{"id":"EB*","label":"EB*","description":"Eclipsing Binary","comment":""},{"id":"El*","label":"EllipVar","description":"Ellipsoidal Variable","comment":""},{"id":"Em*","label":"Em*","description":"Emission-line Star","comment":"Can be sg*, YSO, Be*, AB*, Sy*, etc..."},{"id":"EmG","label":"EmG","description":"Emission-line galaxy","comment":""},{"id":"EmO","label":"EmObj","description":"Emission Object","comment":"Mostly YSO, Em*, PNe, WR*, Sy*, Galaxies, AGN, QSO"},{"id":"Er*","label":"Eruptive*","description":"Eruptive Variable","comment":""},{"id":"Ev*","label":"Ev*","description":"Evolved Star","comment":"Post-Main Sequence"},{"id":"FIR","label":"FIR","description":"Far-IR source (λ >= 30 µm)","comment":"e.g. IRAS 60/100, AKARI-FIS, Hershel"},{"id":"G","label":"Galaxy","description":"Galaxy","comment":""},{"id":"GNe","label":"GalNeb","description":"Nebula","comment":""},{"id":"GWE","label":"GravWaveEvent","description":"Gravitational Wave Event","comment":""},{"id":"GiC","label":"GinCl","description":"Galaxy towards a Cluster of Galaxies","comment":"Check hierarchical links"},{"id":"GiG","label":"GinGroup","description":"Galaxy towards a Group of Galaxies","comment":"Check hierarchical links"},{"id":"GiP","label":"GinPair","description":"Galaxy in Pair of Galaxies","comment":""},{"id":"GlC","label":"GlCl","description":"Globular Cluster","comment":""},{"id":"GrG","label":"GroupG","description":"Group of Galaxies","comment":""},{"id":"H2G","label":"HII_G","description":"HII Galaxy","comment":""},{"id":"HB*","label":"HB*","description":"Horizontal Branch Star","comment":""},{"id":"HH","label":"HH","description":"Herbig-Haro Object","comment":""},{"id":"HI","label":"HI","description":"HI (21cm) Source","comment":""},{"id":"HII","label":"HII","description":"HII Region","comment":""},{"id":"HS*","label":"HotSubdwarf","description":"Hot Subdwarf","comment":"SpT like sdB, sdO"},{"id":"HV*","label":"HV*","description":"High Velocity Star","comment":""},{"id":"HVC","label":"HVCld","description":"High-velocity Cloud","comment":"Vlsr > ~90 km/s"},{"id":"HXB","label":"HMXB","description":"High Mass X-ray Binary","comment":""},{"id":"IG","label":"IG","description":"Interacting Galaxies","comment":""},{"id":"IR","label":"IR","description":"Infra-Red Source","comment":""},{"id":"ISM","label":"ISM","description":"Interstellar Medium Object","comment":""},{"id":"Ir*","label":"Irregular_V*","description":"Irregular Variable","comment":""},{"id":"LIN","label":"LINER","description":"LINER-type Active Galaxy Nucleus","comment":""},{"id":"LM*","label":"low-mass*","description":"Low-mass Star and substellar objects","comment":"M ~< 1 Mo"},{"id":"LP*","label":"LPV*","description":"Long-Period Variable","comment":"AB*, RG*, or s*r. Includes L, SR, and OSARG"},{"id":"LSB","label":"LSB_G","description":"Low Surface Brightness Galaxy","comment":""},{"id":"LXB","label":"LMXB","description":"Low Mass X-ray Binary","comment":""},{"id":"LeG","label":"LensedG","description":"Gravitationally Lensed Image of a Galaxy","comment":""},{"id":"LeI","label":"LensedImage","description":"Gravitationally Lensed Image","comment":""},{"id":"LeQ","label":"LensedQ","description":"Gravitationally Lensed Image of a Quasar","comment":""},{"id":"Lev","label":"LensingEv","description":"(Micro)Lensing Event","comment":""},{"id":"MGr","label":"MouvGroup","description":"Moving Group","comment":""},{"id":"MIR","label":"MIR","description":"Mid-IR Source (3 to 30 µm)","comment":"e.g. IRAS 12/25, AKARI-IRC, WISE, Spitzer-IRAC-MIPS"},{"id":"MS*","label":"MS*","description":"Main Sequence Star","comment":"Main Sequence"},{"id":"Ma*","label":"Ma*","description":"Massive Star or its Remnant","comment":"Initial mass > 8-10 Mo"},{"id":"Mas","label":"Maser","description":"Maser","comment":""},{"id":"Mi*","label":"Mira","description":"Mira Variable","comment":""},{"id":"MoC","label":"MolCld","description":"Molecular Cloud","comment":""},{"id":"N*","label":"Neutron*","description":"Neutron Star","comment":""},{"id":"NIR","label":"NIR","description":"Near-IR Source (λ < 3 µm)","comment":"JHK, 2MASS, UKIDSS, ..."},{"id":"NL*","label":"Nova-like","description":"Nova-like Star","comment":""},{"id":"No*","label":"Nova","description":"Nova","comment":""},{"id":"OH*","label":"OH/IR","description":"OH/IR Star","comment":"O-rich AGB or PAGB, doubled-peaked OH maser profile"},{"id":"OpC","label":"OpCl","description":"Open Cluster","comment":""},{"id":"Opt","label":"Opt","description":"Optical Source","comment":"Corresponding to BVRI range"},{"id":"Or*","label":"Orion_V*","description":"Orion Variable","comment":""},{"id":"PM*","label":"PM*","description":"High Proper Motion Star","comment":"Total proper motion >= 50 mas/yr"},{"id":"PN","label":"PN","description":"Planetary Nebula","comment":"Includes the progenitor Star when knwon"},{"id":"PaG","label":"PairG","description":"Pair of Galaxies","comment":""},{"id":"Pe*","label":"Pec*","description":"Chemically Peculiar Star","comment":"Includes metal-poor stars"},{"id":"Pl","label":"Planet","description":"Extra-solar Planet","comment":""},{"id":"PoC","label":"PartofCloud","description":"Part of Cloud","comment":""},{"id":"PoG","label":"PartofG","description":"Part of a Galaxy","comment":""},{"id":"Psr","label":"Pulsar","description":"Pulsar","comment":""},{"id":"Pu*","label":"PulsV*","description":"Pulsating Variable","comment":"Non LPV Pulsating Star"},{"id":"QSO","label":"QSO","description":"Quasar","comment":""},{"id":"RC*","label":"Erupt*RCrB","description":"R CrB Variable","comment":""},{"id":"RG*","label":"RGB*","description":"Red Giant Branch star","comment":""},{"id":"RNe","label":"RfNeb","description":"Reflection Nebula","comment":""},{"id":"RR*","label":"RRLyr","description":"RR Lyrae Variable","comment":""},{"id":"RS*","label":"RSCVn","description":"RS CVn Variable","comment":""},{"id":"RV*","label":"PulsV*RVTau","description":"RV Tauri Variable","comment":""},{"id":"Rad","label":"Radio","description":"Radio Source","comment":""},{"id":"Ro*","label":"RotV*","description":"Rotating Variable","comment":""},{"id":"S*","label":"S*","description":"S Star","comment":"Mostly AGB or RGB. SpT like S,SC,MS"},{"id":"SB*","label":"SB*","description":"Spectroscopic Binary","comment":""},{"id":"SBG","label":"StarburstG","description":"Starburst Galaxy","comment":""},{"id":"SCG","label":"SuperClG","description":"Supercluster of Galaxies","comment":""},{"id":"SFR","label":"SFregion","description":"Star Forming Region","comment":""},{"id":"SN*","label":"SN","description":"SuperNova","comment":""},{"id":"SNR","label":"SNR","description":"SuperNova Remnant","comment":""},{"id":"SX*","label":"pulsV*SX","description":"SX Phe Variable","comment":"See Pu* for candidate"},{"id":"St*","label":"Stream*","description":"Stellar Stream","comment":""},{"id":"Sy*","label":"Symbiotic*","description":"Symbiotic Star","comment":""},{"id":"Sy1","label":"Seyfert_1","description":"Seyfert 1 Galaxy","comment":""},{"id":"Sy2","label":"Seyfert_2","description":"Seyfert 2 Galaxy","comment":""},{"id":"SyG","label":"Seyfert","description":"Seyfert Galaxy","comment":""},{"id":"TT*","label":"TTau*","description":"T Tauri Star","comment":"Includes classical and weak-line T Tauri"},{"id":"ULX","label":"ULX","description":"Ultra-luminous X-ray Source","comment":""},{"id":"UV","label":"UV","description":"UV-emission Source","comment":""},{"id":"V*","label":"V*","description":"Variable Star","comment":""},{"id":"WD*","label":"WD*","description":"White Dwarf","comment":"SpT like D and PG1159"},{"id":"WR*","label":"WR*","description":"Wolf-Rayet","comment":"SpT like W"},{"id":"WU*","label":"EB*WUMa","description":"Eclipsing Binary of W UMa type","comment":""},{"id":"WV*","label":"PulsV*WVir","description":"Type II Cepheid Variable","comment":"Includes W Wir and BL Her subtypes"},{"id":"X","label":"X","description":"X-ray Source","comment":""},{"id":"XB*","label":"XB","description":"X-ray Binary","comment":""},{"id":"Y*O","label":"YSO","description":"Young Stellar Object","comment":"Pre-Main Sequence"},{"id":"a2*","label":"RotV*alf2CVn","description":"alpha2 CVn Variable","comment":"Ap stars; magnetic"},{"id":"bC*","label":"PulsV*bCep","description":"beta Cep Variable","comment":""},{"id":"bCG","label":"BlueCompG","description":"Blue Compact Galaxy","comment":""},{"id":"bL*","label":"EB*betLyr","description":"Eclipsing Binary of beta Lyr type","comment":""},{"id":"blu","label":"Blue","description":"Blue Object","comment":"Mostly WD*, HS*, blue HB*, QSO"},{"id":"bub","label":"Bubble","description":"Bubble","comment":""},{"id":"cC*","label":"deltaCep","description":"Classical Cepheid Variable","comment":"delta Cep type"},{"id":"cm","label":"Radio(cm)","description":"Centimetric Radio Source","comment":""},{"id":"cor","label":"denseCore","description":"Dense Core","comment":"N(H) > ~1D23 at/cm2, or detection of NH3,HCN,CS,HCO,.."},{"id":"dS*","label":"PulsV*delSct","description":"delta Sct Variable","comment":"See Pu* for candidate"},{"id":"err","label":"Inexistent","description":"Not an Object (Error, Artefact, ...)","comment":""},{"id":"ev","label":"Transient","description":"Transient Event","comment":""},{"id":"flt","label":"flt","description":"Interstellar Filament","comment":""},{"id":"gB","label":"gammaBurst","description":"Gamma-ray Burst","comment":""},{"id":"gD*","label":"gammaDor","description":"gamma Dor Variable","comment":"See Pu* for candidate"},{"id":"gLS","label":"GravLensSystem","description":"Gravitational Lens System (lens+images)","comment":""},{"id":"gLe","label":"GravLens","description":"Gravitational Lens","comment":""},{"id":"gam","label":"gamma","description":"Gamma-ray Source","comment":""},{"id":"glb","label":"Globule","description":"Globule (low-mass dark cloud)","comment":""},{"id":"grv","label":"Gravitation","description":"Gravitational Source","comment":""},{"id":"mR","label":"Radio(m)","description":"Metric Radio Source","comment":""},{"id":"mm","label":"Radio(mm)","description":"Millimetric Radio Source","comment":""},{"id":"mul","label":"multiple_object","description":"Composite Object, Blend","comment":""},{"id":"out","label":"Outflow","description":"Outflow","comment":""},{"id":"pA*","label":"post-AGB*","description":"Post-AGB Star","comment":""},{"id":"rB","label":"radioBurst","description":"Radio Burst","comment":""},{"id":"rG","label":"RadioG","description":"Radio Galaxy","comment":""},{"id":"reg","label":"Region","description":"Region defined in the Sky","comment":""},{"id":"s*b","label":"BlueSG*","description":"Blue Supergiant","comment":"SpT like O/B 0,Ia,Iab,(I)"},{"id":"s*r","label":"RedSG*","description":"Red Supergiant","comment":"SpT like K/M 0,Ia,Iab,(I)"},{"id":"s*y","label":"YellowSG*","description":"Yellow Supergiant","comment":"SpT like F/G 0,Ia,Iab,(I)"},{"id":"sg*","label":"SG*","description":"Evolved Supergiant","comment":"Luminosity type 0,Ia,Iab,(I). Includes A-type SG"},{"id":"sh","label":"HIshell","description":"Interstellar Shell","comment":""},{"id":"smm","label":"Radio(sub-mm)","description":"Sub-Millimetric Source","comment":""},{"id":"vid","label":"Void","description":"Underdense Region of the Universe","comment":""}]
+[
+   {
+      "comment" : "",
+      "description" : "Star",
+      "id" : "*",
+      "label" : "Star"
+   },
+   {
+      "comment" : "Interacting binaries and close CPM systems",
+      "description" : "Double or Multiple Star",
+      "id" : "**",
+      "label" : "**"
+   },
+   {
+      "comment" : "",
+      "description" : "Object of Unknown Nature",
+      "id" : "?",
+      "label" : "Unknown"
+   },
+   {
+      "comment" : "",
+      "description" : "Asymptotic Giant Branch Star",
+      "id" : "AB*",
+      "label" : "AGB*"
+   },
+   {
+      "comment" : "",
+      "description" : "Active Galaxy Nucleus",
+      "id" : "AGN",
+      "label" : "AGN"
+   },
+   {
+      "comment" : "",
+      "description" : "CV of AM Her type",
+      "id" : "AM*",
+      "label" : "AMHer"
+   },
+   {
+      "comment" : "",
+      "description" : "Herbig Ae/Be Star",
+      "id" : "Ae*",
+      "label" : "Ae*"
+   },
+   {
+      "comment" : "",
+      "description" : "Eclipsing Binary of Algol type",
+      "id" : "Al*",
+      "label" : "EB*Algol"
+   },
+   {
+      "comment" : "",
+      "description" : "Association of Stars",
+      "id" : "As*",
+      "label" : "Assoc*"
+   },
+   {
+      "comment" : "SpT L,T or Y",
+      "description" : "Brown Dwarf",
+      "id" : "BD*",
+      "label" : "brownD*"
+   },
+   {
+      "comment" : "",
+      "description" : "Black Hole",
+      "id" : "BH",
+      "label" : "BH"
+   },
+   {
+      "comment" : "",
+      "description" : "BL Lac",
+      "id" : "BLL",
+      "label" : "BLLac"
+   },
+   {
+      "comment" : "",
+      "description" : "Blue Straggler",
+      "id" : "BS*",
+      "label" : "BlueStraggler"
+   },
+   {
+      "comment" : "",
+      "description" : "BY Dra Variable",
+      "id" : "BY*",
+      "label" : "BYDra"
+   },
+   {
+      "comment" : "",
+      "description" : "Be Star",
+      "id" : "Be*",
+      "label" : "Be*"
+   },
+   {
+      "comment" : "",
+      "description" : "Brightest Galaxy in a Cluster (BCG)",
+      "id" : "BiC",
+      "label" : "BClG"
+   },
+   {
+      "comment" : "",
+      "description" : "Blazar",
+      "id" : "Bla",
+      "label" : "Blazar"
+   },
+   {
+      "comment" : "Mostly AGB or RGB. SpT like C,N,R C-N,C-R, or C-rich",
+      "description" : "Carbon Star",
+      "id" : "C*",
+      "label" : "C*"
+   },
+   {
+      "comment" : "",
+      "description" : "Compact Group of Galaxies",
+      "id" : "CGG",
+      "label" : "Compact_Gr_G"
+   },
+   {
+      "comment" : "",
+      "description" : "Cometary Globule / Pillar",
+      "id" : "CGb",
+      "label" : "ComGlob"
+   },
+   {
+      "comment" : "",
+      "description" : "Cataclysmic Variable",
+      "id" : "CV*",
+      "label" : "CataclyV*"
+   },
+   {
+      "comment" : "Includes anomalous Cepheids",
+      "description" : "Cepheid Variable",
+      "id" : "Ce*",
+      "label" : "Cepheid"
+   },
+   {
+      "comment" : "",
+      "description" : "Cluster of Stars",
+      "id" : "Cl*",
+      "label" : "Cl*"
+   },
+   {
+      "comment" : "",
+      "description" : "Cluster of Galaxies",
+      "id" : "ClG",
+      "label" : "ClG"
+   },
+   {
+      "comment" : "",
+      "description" : "Cloud",
+      "id" : "Cld",
+      "label" : "Cloud"
+   },
+   {
+      "comment" : "",
+      "description" : "Dwarf Nova",
+      "id" : "DN*",
+      "label" : "DwarfNova"
+   },
+   {
+      "comment" : "",
+      "description" : "Dark Cloud (nebula)",
+      "id" : "DNe",
+      "label" : "DkNeb"
+   },
+   {
+      "comment" : "",
+      "description" : "CV of DQ Her type",
+      "id" : "DQ*",
+      "label" : "DQHer"
+   },
+   {
+      "comment" : "",
+      "description" : "Eclipsing Binary",
+      "id" : "EB*",
+      "label" : "EB*"
+   },
+   {
+      "comment" : "",
+      "description" : "Ellipsoidal Variable",
+      "id" : "El*",
+      "label" : "EllipVar"
+   },
+   {
+      "comment" : "Can be sg*, YSO, Be*, AB*, Sy*, etc...",
+      "description" : "Emission-line Star",
+      "id" : "Em*",
+      "label" : "Em*"
+   },
+   {
+      "comment" : "",
+      "description" : "Emission-line galaxy",
+      "id" : "EmG",
+      "label" : "EmG"
+   },
+   {
+      "comment" : "Mostly YSO, Em*, PNe, WR*, Sy*, Galaxies, AGN, QSO",
+      "description" : "Emission Object",
+      "id" : "EmO",
+      "label" : "EmObj"
+   },
+   {
+      "comment" : "",
+      "description" : "Eruptive Variable",
+      "id" : "Er*",
+      "label" : "Eruptive*"
+   },
+   {
+      "comment" : "Post-Main Sequence",
+      "description" : "Evolved Star",
+      "id" : "Ev*",
+      "label" : "Ev*"
+   },
+   {
+      "comment" : "e.g. IRAS 60/100, AKARI-FIS, Hershel",
+      "description" : "Far-IR source (λ >= 30 µm)",
+      "id" : "FIR",
+      "label" : "FIR"
+   },
+   {
+      "comment" : "",
+      "description" : "Galaxy",
+      "id" : "G",
+      "label" : "Galaxy"
+   },
+   {
+      "comment" : "",
+      "description" : "Nebula",
+      "id" : "GNe",
+      "label" : "GalNeb"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitational Wave Event",
+      "id" : "GWE",
+      "label" : "GravWaveEvent"
+   },
+   {
+      "comment" : "Check hierarchical links",
+      "description" : "Galaxy towards a Cluster of Galaxies",
+      "id" : "GiC",
+      "label" : "GinCl"
+   },
+   {
+      "comment" : "Check hierarchical links",
+      "description" : "Galaxy towards a Group of Galaxies",
+      "id" : "GiG",
+      "label" : "GinGroup"
+   },
+   {
+      "comment" : "",
+      "description" : "Galaxy in Pair of Galaxies",
+      "id" : "GiP",
+      "label" : "GinPair"
+   },
+   {
+      "comment" : "",
+      "description" : "Globular Cluster",
+      "id" : "GlC",
+      "label" : "GlCl"
+   },
+   {
+      "comment" : "",
+      "description" : "Group of Galaxies",
+      "id" : "GrG",
+      "label" : "GroupG"
+   },
+   {
+      "comment" : "",
+      "description" : "HII Galaxy",
+      "id" : "H2G",
+      "label" : "HII_G"
+   },
+   {
+      "comment" : "",
+      "description" : "Horizontal Branch Star",
+      "id" : "HB*",
+      "label" : "HB*"
+   },
+   {
+      "comment" : "",
+      "description" : "Herbig-Haro Object",
+      "id" : "HH",
+      "label" : "HH"
+   },
+   {
+      "comment" : "",
+      "description" : "HI (21cm) Source",
+      "id" : "HI",
+      "label" : "HI"
+   },
+   {
+      "comment" : "",
+      "description" : "HII Region",
+      "id" : "HII",
+      "label" : "HII"
+   },
+   {
+      "comment" : "SpT like sdB, sdO",
+      "description" : "Hot Subdwarf",
+      "id" : "HS*",
+      "label" : "HotSubdwarf"
+   },
+   {
+      "comment" : "",
+      "description" : "High Velocity Star",
+      "id" : "HV*",
+      "label" : "HV*"
+   },
+   {
+      "comment" : "Vlsr > ~90 km/s",
+      "description" : "High-velocity Cloud",
+      "id" : "HVC",
+      "label" : "HVCld"
+   },
+   {
+      "comment" : "",
+      "description" : "High Mass X-ray Binary",
+      "id" : "HXB",
+      "label" : "HMXB"
+   },
+   {
+      "comment" : "",
+      "description" : "Interacting Galaxies",
+      "id" : "IG",
+      "label" : "IG"
+   },
+   {
+      "comment" : "",
+      "description" : "Infra-Red Source",
+      "id" : "IR",
+      "label" : "IR"
+   },
+   {
+      "comment" : "",
+      "description" : "Interstellar Medium Object",
+      "id" : "ISM",
+      "label" : "ISM"
+   },
+   {
+      "comment" : "",
+      "description" : "Irregular Variable",
+      "id" : "Ir*",
+      "label" : "Irregular_V*"
+   },
+   {
+      "comment" : "",
+      "description" : "LINER-type Active Galaxy Nucleus",
+      "id" : "LIN",
+      "label" : "LINER"
+   },
+   {
+      "comment" : "M ~< 1 Mo",
+      "description" : "Low-mass Star and substellar objects",
+      "id" : "LM*",
+      "label" : "low-mass*"
+   },
+   {
+      "comment" : "AB*, RG*, or s*r. Includes L, SR, and OSARG",
+      "description" : "Long-Period Variable",
+      "id" : "LP*",
+      "label" : "LPV*"
+   },
+   {
+      "comment" : "",
+      "description" : "Low Surface Brightness Galaxy",
+      "id" : "LSB",
+      "label" : "LSB_G"
+   },
+   {
+      "comment" : "",
+      "description" : "Low Mass X-ray Binary",
+      "id" : "LXB",
+      "label" : "LMXB"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitationally Lensed Image of a Galaxy",
+      "id" : "LeG",
+      "label" : "LensedG"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitationally Lensed Image",
+      "id" : "LeI",
+      "label" : "LensedImage"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitationally Lensed Image of a Quasar",
+      "id" : "LeQ",
+      "label" : "LensedQ"
+   },
+   {
+      "comment" : "",
+      "description" : "(Micro)Lensing Event",
+      "id" : "Lev",
+      "label" : "LensingEv"
+   },
+   {
+      "comment" : "",
+      "description" : "Moving Group",
+      "id" : "MGr",
+      "label" : "MouvGroup"
+   },
+   {
+      "comment" : "e.g. IRAS 12/25, AKARI-IRC, WISE, Spitzer-IRAC-MIPS",
+      "description" : "Mid-IR Source (3 to 30 µm)",
+      "id" : "MIR",
+      "label" : "MIR"
+   },
+   {
+      "comment" : "Main Sequence",
+      "description" : "Main Sequence Star",
+      "id" : "MS*",
+      "label" : "MS*"
+   },
+   {
+      "comment" : "Initial mass > 8-10 Mo",
+      "description" : "Massive Star or its Remnant",
+      "id" : "Ma*",
+      "label" : "Ma*"
+   },
+   {
+      "comment" : "",
+      "description" : "Maser",
+      "id" : "Mas",
+      "label" : "Maser"
+   },
+   {
+      "comment" : "",
+      "description" : "Mira Variable",
+      "id" : "Mi*",
+      "label" : "Mira"
+   },
+   {
+      "comment" : "",
+      "description" : "Molecular Cloud",
+      "id" : "MoC",
+      "label" : "MolCld"
+   },
+   {
+      "comment" : "",
+      "description" : "Neutron Star",
+      "id" : "N*",
+      "label" : "Neutron*"
+   },
+   {
+      "comment" : "JHK, 2MASS, UKIDSS, ...",
+      "description" : "Near-IR Source (λ < 3 µm)",
+      "id" : "NIR",
+      "label" : "NIR"
+   },
+   {
+      "comment" : "",
+      "description" : "Nova-like Star",
+      "id" : "NL*",
+      "label" : "Nova-like"
+   },
+   {
+      "comment" : "",
+      "description" : "Nova",
+      "id" : "No*",
+      "label" : "Nova"
+   },
+   {
+      "comment" : "O-rich AGB or PAGB, doubled-peaked OH maser profile",
+      "description" : "OH/IR Star",
+      "id" : "OH*",
+      "label" : "OH/IR"
+   },
+   {
+      "comment" : "",
+      "description" : "Open Cluster",
+      "id" : "OpC",
+      "label" : "OpCl"
+   },
+   {
+      "comment" : "Corresponding to BVRI range",
+      "description" : "Optical Source",
+      "id" : "Opt",
+      "label" : "Opt"
+   },
+   {
+      "comment" : "",
+      "description" : "Orion Variable",
+      "id" : "Or*",
+      "label" : "Orion_V*"
+   },
+   {
+      "comment" : "Total proper motion >= 50 mas/yr",
+      "description" : "High Proper Motion Star",
+      "id" : "PM*",
+      "label" : "PM*"
+   },
+   {
+      "comment" : "Includes the progenitor Star when knwon",
+      "description" : "Planetary Nebula",
+      "id" : "PN",
+      "label" : "PN"
+   },
+   {
+      "comment" : "",
+      "description" : "Pair of Galaxies",
+      "id" : "PaG",
+      "label" : "PairG"
+   },
+   {
+      "comment" : "Includes metal-poor stars",
+      "description" : "Chemically Peculiar Star",
+      "id" : "Pe*",
+      "label" : "Pec*"
+   },
+   {
+      "comment" : "",
+      "description" : "Extra-solar Planet",
+      "id" : "Pl",
+      "label" : "Planet"
+   },
+   {
+      "comment" : "",
+      "description" : "Part of Cloud",
+      "id" : "PoC",
+      "label" : "PartofCloud"
+   },
+   {
+      "comment" : "",
+      "description" : "Part of a Galaxy",
+      "id" : "PoG",
+      "label" : "PartofG"
+   },
+   {
+      "comment" : "",
+      "description" : "Pulsar",
+      "id" : "Psr",
+      "label" : "Pulsar"
+   },
+   {
+      "comment" : "Non LPV Pulsating Star",
+      "description" : "Pulsating Variable",
+      "id" : "Pu*",
+      "label" : "PulsV*"
+   },
+   {
+      "comment" : "",
+      "description" : "Quasar",
+      "id" : "QSO",
+      "label" : "QSO"
+   },
+   {
+      "comment" : "",
+      "description" : "R CrB Variable",
+      "id" : "RC*",
+      "label" : "Erupt*RCrB"
+   },
+   {
+      "comment" : "",
+      "description" : "Red Giant Branch star",
+      "id" : "RG*",
+      "label" : "RGB*"
+   },
+   {
+      "comment" : "",
+      "description" : "Reflection Nebula",
+      "id" : "RNe",
+      "label" : "RfNeb"
+   },
+   {
+      "comment" : "",
+      "description" : "RR Lyrae Variable",
+      "id" : "RR*",
+      "label" : "RRLyr"
+   },
+   {
+      "comment" : "",
+      "description" : "RS CVn Variable",
+      "id" : "RS*",
+      "label" : "RSCVn"
+   },
+   {
+      "comment" : "",
+      "description" : "RV Tauri Variable",
+      "id" : "RV*",
+      "label" : "PulsV*RVTau"
+   },
+   {
+      "comment" : "",
+      "description" : "Radio Source",
+      "id" : "Rad",
+      "label" : "Radio"
+   },
+   {
+      "comment" : "",
+      "description" : "Rotating Variable",
+      "id" : "Ro*",
+      "label" : "RotV*"
+   },
+   {
+      "comment" : "Mostly AGB or RGB. SpT like S,SC,MS",
+      "description" : "S Star",
+      "id" : "S*",
+      "label" : "S*"
+   },
+   {
+      "comment" : "",
+      "description" : "Spectroscopic Binary",
+      "id" : "SB*",
+      "label" : "SB*"
+   },
+   {
+      "comment" : "",
+      "description" : "Starburst Galaxy",
+      "id" : "SBG",
+      "label" : "StarburstG"
+   },
+   {
+      "comment" : "",
+      "description" : "Supercluster of Galaxies",
+      "id" : "SCG",
+      "label" : "SuperClG"
+   },
+   {
+      "comment" : "",
+      "description" : "Star Forming Region",
+      "id" : "SFR",
+      "label" : "SFregion"
+   },
+   {
+      "comment" : "",
+      "description" : "SuperNova",
+      "id" : "SN*",
+      "label" : "SN"
+   },
+   {
+      "comment" : "",
+      "description" : "SuperNova Remnant",
+      "id" : "SNR",
+      "label" : "SNR"
+   },
+   {
+      "comment" : "See Pu* for candidate",
+      "description" : "SX Phe Variable",
+      "id" : "SX*",
+      "label" : "pulsV*SX"
+   },
+   {
+      "comment" : "",
+      "description" : "Stellar Stream",
+      "id" : "St*",
+      "label" : "Stream*"
+   },
+   {
+      "comment" : "",
+      "description" : "Symbiotic Star",
+      "id" : "Sy*",
+      "label" : "Symbiotic*"
+   },
+   {
+      "comment" : "",
+      "description" : "Seyfert 1 Galaxy",
+      "id" : "Sy1",
+      "label" : "Seyfert_1"
+   },
+   {
+      "comment" : "",
+      "description" : "Seyfert 2 Galaxy",
+      "id" : "Sy2",
+      "label" : "Seyfert_2"
+   },
+   {
+      "comment" : "",
+      "description" : "Seyfert Galaxy",
+      "id" : "SyG",
+      "label" : "Seyfert"
+   },
+   {
+      "comment" : "Includes classical and weak-line T Tauri",
+      "description" : "T Tauri Star",
+      "id" : "TT*",
+      "label" : "TTau*"
+   },
+   {
+      "comment" : "",
+      "description" : "Ultra-luminous X-ray Source",
+      "id" : "ULX",
+      "label" : "ULX"
+   },
+   {
+      "comment" : "",
+      "description" : "UV-emission Source",
+      "id" : "UV",
+      "label" : "UV"
+   },
+   {
+      "comment" : "",
+      "description" : "Variable Star",
+      "id" : "V*",
+      "label" : "V*"
+   },
+   {
+      "comment" : "SpT like D and PG1159",
+      "description" : "White Dwarf",
+      "id" : "WD*",
+      "label" : "WD*"
+   },
+   {
+      "comment" : "SpT like W",
+      "description" : "Wolf-Rayet",
+      "id" : "WR*",
+      "label" : "WR*"
+   },
+   {
+      "comment" : "",
+      "description" : "Eclipsing Binary of W UMa type",
+      "id" : "WU*",
+      "label" : "EB*WUMa"
+   },
+   {
+      "comment" : "Includes W Wir and BL Her subtypes",
+      "description" : "Type II Cepheid Variable",
+      "id" : "WV*",
+      "label" : "PulsV*WVir"
+   },
+   {
+      "comment" : "",
+      "description" : "X-ray Source",
+      "id" : "X",
+      "label" : "X"
+   },
+   {
+      "comment" : "",
+      "description" : "X-ray Binary",
+      "id" : "XB*",
+      "label" : "XB"
+   },
+   {
+      "comment" : "Pre-Main Sequence",
+      "description" : "Young Stellar Object",
+      "id" : "Y*O",
+      "label" : "YSO"
+   },
+   {
+      "comment" : "Ap stars; magnetic",
+      "description" : "alpha2 CVn Variable",
+      "id" : "a2*",
+      "label" : "RotV*alf2CVn"
+   },
+   {
+      "comment" : "",
+      "description" : "beta Cep Variable",
+      "id" : "bC*",
+      "label" : "PulsV*bCep"
+   },
+   {
+      "comment" : "",
+      "description" : "Blue Compact Galaxy",
+      "id" : "bCG",
+      "label" : "BlueCompG"
+   },
+   {
+      "comment" : "",
+      "description" : "Eclipsing Binary of beta Lyr type",
+      "id" : "bL*",
+      "label" : "EB*betLyr"
+   },
+   {
+      "comment" : "Mostly WD*, HS*, blue HB*, QSO",
+      "description" : "Blue Object",
+      "id" : "blu",
+      "label" : "Blue"
+   },
+   {
+      "comment" : "",
+      "description" : "Bubble",
+      "id" : "bub",
+      "label" : "Bubble"
+   },
+   {
+      "comment" : "delta Cep type",
+      "description" : "Classical Cepheid Variable",
+      "id" : "cC*",
+      "label" : "deltaCep"
+   },
+   {
+      "comment" : "",
+      "description" : "Centimetric Radio Source",
+      "id" : "cm",
+      "label" : "Radio(cm)"
+   },
+   {
+      "comment" : "N(H) > ~1D23 at/cm2, or detection of NH3,HCN,CS,HCO,..",
+      "description" : "Dense Core",
+      "id" : "cor",
+      "label" : "denseCore"
+   },
+   {
+      "comment" : "See Pu* for candidate",
+      "description" : "delta Sct Variable",
+      "id" : "dS*",
+      "label" : "PulsV*delSct"
+   },
+   {
+      "comment" : "",
+      "description" : "Not an Object (Error, Artefact, ...)",
+      "id" : "err",
+      "label" : "Inexistent"
+   },
+   {
+      "comment" : "",
+      "description" : "Transient Event",
+      "id" : "ev",
+      "label" : "Transient"
+   },
+   {
+      "comment" : "",
+      "description" : "Interstellar Filament",
+      "id" : "flt",
+      "label" : "flt"
+   },
+   {
+      "comment" : "",
+      "description" : "Gamma-ray Burst",
+      "id" : "gB",
+      "label" : "gammaBurst"
+   },
+   {
+      "comment" : "See Pu* for candidate",
+      "description" : "gamma Dor Variable",
+      "id" : "gD*",
+      "label" : "gammaDor"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitational Lens System (lens+images)",
+      "id" : "gLS",
+      "label" : "GravLensSystem"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitational Lens",
+      "id" : "gLe",
+      "label" : "GravLens"
+   },
+   {
+      "comment" : "",
+      "description" : "Gamma-ray Source",
+      "id" : "gam",
+      "label" : "gamma"
+   },
+   {
+      "comment" : "",
+      "description" : "Globule (low-mass dark cloud)",
+      "id" : "glb",
+      "label" : "Globule"
+   },
+   {
+      "comment" : "",
+      "description" : "Gravitational Source",
+      "id" : "grv",
+      "label" : "Gravitation"
+   },
+   {
+      "comment" : "",
+      "description" : "Metric Radio Source",
+      "id" : "mR",
+      "label" : "Radio(m)"
+   },
+   {
+      "comment" : "",
+      "description" : "Millimetric Radio Source",
+      "id" : "mm",
+      "label" : "Radio(mm)"
+   },
+   {
+      "comment" : "",
+      "description" : "Composite Object, Blend",
+      "id" : "mul",
+      "label" : "multiple_object"
+   },
+   {
+      "comment" : "",
+      "description" : "Outflow",
+      "id" : "out",
+      "label" : "Outflow"
+   },
+   {
+      "comment" : "",
+      "description" : "Post-AGB Star",
+      "id" : "pA*",
+      "label" : "post-AGB*"
+   },
+   {
+      "comment" : "",
+      "description" : "Radio Burst",
+      "id" : "rB",
+      "label" : "radioBurst"
+   },
+   {
+      "comment" : "",
+      "description" : "Radio Galaxy",
+      "id" : "rG",
+      "label" : "RadioG"
+   },
+   {
+      "comment" : "",
+      "description" : "Region defined in the Sky",
+      "id" : "reg",
+      "label" : "Region"
+   },
+   {
+      "comment" : "SpT like O/B 0,Ia,Iab,(I)",
+      "description" : "Blue Supergiant",
+      "id" : "s*b",
+      "label" : "BlueSG*"
+   },
+   {
+      "comment" : "SpT like K/M 0,Ia,Iab,(I)",
+      "description" : "Red Supergiant",
+      "id" : "s*r",
+      "label" : "RedSG*"
+   },
+   {
+      "comment" : "SpT like F/G 0,Ia,Iab,(I)",
+      "description" : "Yellow Supergiant",
+      "id" : "s*y",
+      "label" : "YellowSG*"
+   },
+   {
+      "comment" : "Luminosity type 0,Ia,Iab,(I). Includes A-type SG",
+      "description" : "Evolved Supergiant",
+      "id" : "sg*",
+      "label" : "SG*"
+   },
+   {
+      "comment" : "",
+      "description" : "Interstellar Shell",
+      "id" : "sh",
+      "label" : "HIshell"
+   },
+   {
+      "comment" : "",
+      "description" : "Sub-Millimetric Source",
+      "id" : "smm",
+      "label" : "Radio(sub-mm)"
+   },
+   {
+      "comment" : "",
+      "description" : "Underdense Region of the Universe",
+      "id" : "vid",
+      "label" : "Void"
+   }
+]

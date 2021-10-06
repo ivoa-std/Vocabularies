@@ -16,6 +16,7 @@ necessary.
 
 import json
 import re
+import sys
 import urllib.parse as urlparse
 
 
@@ -31,15 +32,16 @@ class Term:
 	* skip: ignore this term in export
 	* parent: None or a single other Term
 	* children: sequence of Terms
+	* uat_counterpart: UAT concept identifier as a string
 	"""
 	def __init__(self, node_dict):
 		self.simbad_id = node_dict["id"]
 		self.form = node_dict["label"]
 		self.description = node_dict["description"]
 		self.label = node_dict["label"]
-		self.skip = node_dict["status"]=="old"
 		self.children = []
 		self.parent = None
+		self.uat_counterpart = None
 	
 	def add_child(self, term):
 		if term.parent is not None:
@@ -59,11 +61,34 @@ def get_forest():
 		links = json.load(f)
 	
 	for d in links:
-		parent, child = terms[d["parent"]], terms[d["child"]]
-		parent.add_child(child)
+		try:
+			parent, child = terms[d["parent"]], terms[d["child"]]
+			parent.add_child(child)
+		except KeyError:
+			print(f"Bad link: {d['parent']} <- {d['child']}", file=sys.stderr)
 	
 	# only return root terms; everything else is in children
-	return [t for t in terms.values() if t.parent is None]
+	return [t for t in terms.values() if t.parent is None], terms
+
+
+def add_uat_links(terms):
+	"""adds links to UAT equivalents to the terms in dicts.
+	"""
+	with open("uat-mapping.csv", encoding="utf-8") as f:
+		for l in f:
+			uat_concept, simbad_id = l.split("\t")[:2]
+			if uat_concept.strip() in ['0', '']:
+				continue
+
+			# TODO: work out what to actually do with semicolons
+			uat_concept = uat_concept.split(";")[0]
+
+			simbad_id = re.sub("[{[](.*)[]}]", r"\1", simbad_id.strip()).strip()
+			if simbad_id in terms:
+				terms[simbad_id].uat_counterpart = (
+					f"http://astrothesaurus.org/uat/{uat_concept}")
+			else:
+				print(f"No base for UAT mapping: {simbad_id}", file=sys.stderr)
 
 
 def ivoafy_term_form(form):
@@ -98,14 +123,20 @@ def write_to(terms, dest_file, cur_level=1):
 	for term in terms:
 		sim_link = "http://simbad.u-strasbg.fr/simbad/otypes#{}".format(
 			urlparse.quote(term.simbad_id))
+
+		relations = f"skos:exactMatch({sim_link})"
+		if term.uat_counterpart:
+			relations = f"{relations} skos:exactMatch({term.uat_counterpart})"
+
 		dest_file.write("{};{};{};{};{}\n".format(
 			ivoafy_term_form(term.form), cur_level, term.label, 
-			term.description, f"skos:exactMatch({sim_link})"))
+			term.description, relations))
 		write_to(term.children, dest_file, cur_level+1)
 
 
 def main():
-	forest = get_forest()
+	forest, terms = get_forest()
+	add_uat_links(terms)
 	with open("terms.csv", "w", encoding="utf-8") as f:
 		write_to(forest, f)
 
