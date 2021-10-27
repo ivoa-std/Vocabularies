@@ -1,950 +1,1965 @@
 [
-   {
-      "comment" : "",
-      "description" : "Star",
-      "id" : "*",
-      "label" : "Star"
-   },
-   {
-      "comment" : "Interacting binaries and close CPM systems",
-      "description" : "Double or Multiple Star",
-      "id" : "**",
-      "label" : "**"
-   },
-   {
-      "comment" : "",
-      "description" : "Object of Unknown Nature",
-      "id" : "?",
-      "label" : "Unknown"
-   },
-   {
-      "comment" : "",
-      "description" : "Asymptotic Giant Branch Star",
-      "id" : "AB*",
-      "label" : "AGB*"
-   },
-   {
-      "comment" : "",
-      "description" : "Active Galaxy Nucleus",
-      "id" : "AGN",
-      "label" : "AGN"
-   },
-   {
-      "comment" : "",
-      "description" : "CV of AM Her type",
-      "id" : "AM*",
-      "label" : "AMHer"
-   },
-   {
-      "comment" : "",
-      "description" : "Herbig Ae/Be Star",
-      "id" : "Ae*",
-      "label" : "Ae*"
-   },
-   {
-      "comment" : "",
-      "description" : "Eclipsing Binary of Algol type",
-      "id" : "Al*",
-      "label" : "EB*Algol"
-   },
-   {
-      "comment" : "",
-      "description" : "Association of Stars",
-      "id" : "As*",
-      "label" : "Assoc*"
-   },
-   {
-      "comment" : "SpT L,T or Y",
-      "description" : "Brown Dwarf",
-      "id" : "BD*",
-      "label" : "brownD*"
-   },
-   {
-      "comment" : "",
-      "description" : "Black Hole",
-      "id" : "BH",
-      "label" : "BH"
-   },
-   {
-      "comment" : "",
-      "description" : "BL Lac",
-      "id" : "BLL",
-      "label" : "BLLac"
-   },
-   {
-      "comment" : "",
-      "description" : "Blue Straggler",
-      "id" : "BS*",
-      "label" : "BlueStraggler"
-   },
-   {
-      "comment" : "",
-      "description" : "BY Dra Variable",
-      "id" : "BY*",
-      "label" : "BYDra"
-   },
-   {
-      "comment" : "",
-      "description" : "Be Star",
-      "id" : "Be*",
-      "label" : "Be*"
-   },
-   {
-      "comment" : "",
-      "description" : "Brightest Galaxy in a Cluster (BCG)",
-      "id" : "BiC",
-      "label" : "BClG"
-   },
-   {
-      "comment" : "",
-      "description" : "Blazar",
-      "id" : "Bla",
-      "label" : "Blazar"
-   },
-   {
-      "comment" : "Mostly AGB or RGB. SpT like C,N,R C-N,C-R, or C-rich",
-      "description" : "Carbon Star",
-      "id" : "C*",
-      "label" : "C*"
-   },
-   {
-      "comment" : "",
-      "description" : "Compact Group of Galaxies",
-      "id" : "CGG",
-      "label" : "Compact_Gr_G"
-   },
-   {
-      "comment" : "",
-      "description" : "Cometary Globule / Pillar",
-      "id" : "CGb",
-      "label" : "ComGlob"
-   },
-   {
-      "comment" : "",
-      "description" : "Cataclysmic Variable",
-      "id" : "CV*",
-      "label" : "CataclyV*"
-   },
-   {
-      "comment" : "Includes anomalous Cepheids",
-      "description" : "Cepheid Variable",
-      "id" : "Ce*",
-      "label" : "Cepheid"
-   },
-   {
-      "comment" : "",
-      "description" : "Cluster of Stars",
-      "id" : "Cl*",
-      "label" : "Cl*"
-   },
-   {
-      "comment" : "",
-      "description" : "Cluster of Galaxies",
-      "id" : "ClG",
-      "label" : "ClG"
-   },
-   {
-      "comment" : "",
-      "description" : "Cloud",
-      "id" : "Cld",
-      "label" : "Cloud"
-   },
-   {
-      "comment" : "",
-      "description" : "Dwarf Nova",
-      "id" : "DN*",
-      "label" : "DwarfNova"
-   },
-   {
-      "comment" : "",
-      "description" : "Dark Cloud (nebula)",
-      "id" : "DNe",
-      "label" : "DkNeb"
-   },
-   {
-      "comment" : "",
-      "description" : "CV of DQ Her type",
-      "id" : "DQ*",
-      "label" : "DQHer"
-   },
-   {
-      "comment" : "",
-      "description" : "Eclipsing Binary",
-      "id" : "EB*",
-      "label" : "EB*"
-   },
-   {
-      "comment" : "",
-      "description" : "Ellipsoidal Variable",
-      "id" : "El*",
-      "label" : "EllipVar"
-   },
-   {
-      "comment" : "Can be sg*, YSO, Be*, AB*, Sy*, etc...",
-      "description" : "Emission-line Star",
-      "id" : "Em*",
-      "label" : "Em*"
-   },
-   {
-      "comment" : "",
-      "description" : "Emission-line galaxy",
-      "id" : "EmG",
-      "label" : "EmG"
-   },
-   {
-      "comment" : "Mostly YSO, Em*, PNe, WR*, Sy*, Galaxies, AGN, QSO",
-      "description" : "Emission Object",
-      "id" : "EmO",
-      "label" : "EmObj"
-   },
-   {
-      "comment" : "",
-      "description" : "Eruptive Variable",
-      "id" : "Er*",
-      "label" : "Eruptive*"
-   },
-   {
-      "comment" : "Post-Main Sequence",
-      "description" : "Evolved Star",
-      "id" : "Ev*",
-      "label" : "Ev*"
-   },
-   {
-      "comment" : "e.g. IRAS 60/100, AKARI-FIS, Hershel",
-      "description" : "Far-IR source (λ >= 30 µm)",
-      "id" : "FIR",
-      "label" : "FIR"
-   },
-   {
-      "comment" : "",
-      "description" : "Galaxy",
-      "id" : "G",
-      "label" : "Galaxy"
-   },
-   {
-      "comment" : "",
-      "description" : "Nebula",
-      "id" : "GNe",
-      "label" : "GalNeb"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitational Wave Event",
-      "id" : "GWE",
-      "label" : "GravWaveEvent"
-   },
-   {
-      "comment" : "Check hierarchical links",
-      "description" : "Galaxy towards a Cluster of Galaxies",
-      "id" : "GiC",
-      "label" : "GinCl"
-   },
-   {
-      "comment" : "Check hierarchical links",
-      "description" : "Galaxy towards a Group of Galaxies",
-      "id" : "GiG",
-      "label" : "GinGroup"
-   },
-   {
-      "comment" : "",
-      "description" : "Galaxy in Pair of Galaxies",
-      "id" : "GiP",
-      "label" : "GinPair"
-   },
-   {
-      "comment" : "",
-      "description" : "Globular Cluster",
-      "id" : "GlC",
-      "label" : "GlCl"
-   },
-   {
-      "comment" : "",
-      "description" : "Group of Galaxies",
-      "id" : "GrG",
-      "label" : "GroupG"
-   },
-   {
-      "comment" : "",
-      "description" : "HII Galaxy",
-      "id" : "H2G",
-      "label" : "HII_G"
-   },
-   {
-      "comment" : "",
-      "description" : "Horizontal Branch Star",
-      "id" : "HB*",
-      "label" : "HB*"
-   },
-   {
-      "comment" : "",
-      "description" : "Herbig-Haro Object",
-      "id" : "HH",
-      "label" : "HH"
-   },
-   {
-      "comment" : "",
-      "description" : "HI (21cm) Source",
-      "id" : "HI",
-      "label" : "HI"
-   },
-   {
-      "comment" : "",
-      "description" : "HII Region",
-      "id" : "HII",
-      "label" : "HII"
-   },
-   {
-      "comment" : "SpT like sdB, sdO",
-      "description" : "Hot Subdwarf",
-      "id" : "HS*",
-      "label" : "HotSubdwarf"
-   },
-   {
-      "comment" : "",
-      "description" : "High Velocity Star",
-      "id" : "HV*",
-      "label" : "HV*"
-   },
-   {
-      "comment" : "Vlsr > ~90 km/s",
-      "description" : "High-velocity Cloud",
-      "id" : "HVC",
-      "label" : "HVCld"
-   },
-   {
-      "comment" : "",
-      "description" : "High Mass X-ray Binary",
-      "id" : "HXB",
-      "label" : "HMXB"
-   },
-   {
-      "comment" : "",
-      "description" : "Interacting Galaxies",
-      "id" : "IG",
-      "label" : "IG"
-   },
-   {
-      "comment" : "",
-      "description" : "Infra-Red Source",
-      "id" : "IR",
-      "label" : "IR"
-   },
-   {
-      "comment" : "",
-      "description" : "Interstellar Medium Object",
-      "id" : "ISM",
-      "label" : "ISM"
-   },
-   {
-      "comment" : "",
-      "description" : "Irregular Variable",
-      "id" : "Ir*",
-      "label" : "Irregular_V*"
-   },
-   {
-      "comment" : "",
-      "description" : "LINER-type Active Galaxy Nucleus",
-      "id" : "LIN",
-      "label" : "LINER"
-   },
-   {
-      "comment" : "M ~< 1 Mo",
-      "description" : "Low-mass Star and substellar objects",
-      "id" : "LM*",
-      "label" : "low-mass*"
-   },
-   {
-      "comment" : "AB*, RG*, or s*r. Includes L, SR, and OSARG",
-      "description" : "Long-Period Variable",
-      "id" : "LP*",
-      "label" : "LPV*"
-   },
-   {
-      "comment" : "",
-      "description" : "Low Surface Brightness Galaxy",
-      "id" : "LSB",
-      "label" : "LSB_G"
-   },
-   {
-      "comment" : "",
-      "description" : "Low Mass X-ray Binary",
-      "id" : "LXB",
-      "label" : "LMXB"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitationally Lensed Image of a Galaxy",
-      "id" : "LeG",
-      "label" : "LensedG"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitationally Lensed Image",
-      "id" : "LeI",
-      "label" : "LensedImage"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitationally Lensed Image of a Quasar",
-      "id" : "LeQ",
-      "label" : "LensedQ"
-   },
-   {
-      "comment" : "",
-      "description" : "(Micro)Lensing Event",
-      "id" : "Lev",
-      "label" : "LensingEv"
-   },
-   {
-      "comment" : "",
-      "description" : "Moving Group",
-      "id" : "MGr",
-      "label" : "MouvGroup"
-   },
-   {
-      "comment" : "e.g. IRAS 12/25, AKARI-IRC, WISE, Spitzer-IRAC-MIPS",
-      "description" : "Mid-IR Source (3 to 30 µm)",
-      "id" : "MIR",
-      "label" : "MIR"
-   },
-   {
-      "comment" : "Main Sequence",
-      "description" : "Main Sequence Star",
-      "id" : "MS*",
-      "label" : "MS*"
-   },
-   {
-      "comment" : "Initial mass > 8-10 Mo",
-      "description" : "Massive Star or its Remnant",
-      "id" : "Ma*",
-      "label" : "Ma*"
-   },
-   {
-      "comment" : "",
-      "description" : "Maser",
-      "id" : "Mas",
-      "label" : "Maser"
-   },
-   {
-      "comment" : "",
-      "description" : "Mira Variable",
-      "id" : "Mi*",
-      "label" : "Mira"
-   },
-   {
-      "comment" : "",
-      "description" : "Molecular Cloud",
-      "id" : "MoC",
-      "label" : "MolCld"
-   },
-   {
-      "comment" : "",
-      "description" : "Neutron Star",
-      "id" : "N*",
-      "label" : "Neutron*"
-   },
-   {
-      "comment" : "JHK, 2MASS, UKIDSS, ...",
-      "description" : "Near-IR Source (λ < 3 µm)",
-      "id" : "NIR",
-      "label" : "NIR"
-   },
-   {
-      "comment" : "",
-      "description" : "Nova-like Star",
-      "id" : "NL*",
-      "label" : "Nova-like"
-   },
-   {
-      "comment" : "",
-      "description" : "Nova",
-      "id" : "No*",
-      "label" : "Nova"
-   },
-   {
-      "comment" : "O-rich AGB or PAGB, doubled-peaked OH maser profile",
-      "description" : "OH/IR Star",
-      "id" : "OH*",
-      "label" : "OH/IR"
-   },
-   {
-      "comment" : "",
-      "description" : "Open Cluster",
-      "id" : "OpC",
-      "label" : "OpCl"
-   },
-   {
-      "comment" : "Corresponding to BVRI range",
-      "description" : "Optical Source",
-      "id" : "Opt",
-      "label" : "Opt"
-   },
-   {
-      "comment" : "",
-      "description" : "Orion Variable",
-      "id" : "Or*",
-      "label" : "Orion_V*"
-   },
-   {
-      "comment" : "Total proper motion >= 50 mas/yr",
-      "description" : "High Proper Motion Star",
-      "id" : "PM*",
-      "label" : "PM*"
-   },
-   {
-      "comment" : "Includes the progenitor Star when knwon",
-      "description" : "Planetary Nebula",
-      "id" : "PN",
-      "label" : "PN"
-   },
-   {
-      "comment" : "",
-      "description" : "Pair of Galaxies",
-      "id" : "PaG",
-      "label" : "PairG"
-   },
-   {
-      "comment" : "Includes metal-poor stars",
-      "description" : "Chemically Peculiar Star",
-      "id" : "Pe*",
-      "label" : "Pec*"
-   },
-   {
-      "comment" : "",
-      "description" : "Extra-solar Planet",
-      "id" : "Pl",
-      "label" : "Planet"
-   },
-   {
-      "comment" : "",
-      "description" : "Part of Cloud",
-      "id" : "PoC",
-      "label" : "PartofCloud"
-   },
-   {
-      "comment" : "",
-      "description" : "Part of a Galaxy",
-      "id" : "PoG",
-      "label" : "PartofG"
-   },
-   {
-      "comment" : "",
-      "description" : "Pulsar",
-      "id" : "Psr",
-      "label" : "Pulsar"
-   },
-   {
-      "comment" : "Non LPV Pulsating Star",
-      "description" : "Pulsating Variable",
-      "id" : "Pu*",
-      "label" : "PulsV*"
-   },
-   {
-      "comment" : "",
-      "description" : "Quasar",
-      "id" : "QSO",
-      "label" : "QSO"
-   },
-   {
-      "comment" : "",
-      "description" : "R CrB Variable",
-      "id" : "RC*",
-      "label" : "Erupt*RCrB"
-   },
-   {
-      "comment" : "",
-      "description" : "Red Giant Branch star",
-      "id" : "RG*",
-      "label" : "RGB*"
-   },
-   {
-      "comment" : "",
-      "description" : "Reflection Nebula",
-      "id" : "RNe",
-      "label" : "RfNeb"
-   },
-   {
-      "comment" : "",
-      "description" : "RR Lyrae Variable",
-      "id" : "RR*",
-      "label" : "RRLyr"
-   },
-   {
-      "comment" : "",
-      "description" : "RS CVn Variable",
-      "id" : "RS*",
-      "label" : "RSCVn"
-   },
-   {
-      "comment" : "",
-      "description" : "RV Tauri Variable",
-      "id" : "RV*",
-      "label" : "PulsV*RVTau"
-   },
-   {
-      "comment" : "",
-      "description" : "Radio Source",
-      "id" : "Rad",
-      "label" : "Radio"
-   },
-   {
-      "comment" : "",
-      "description" : "Rotating Variable",
-      "id" : "Ro*",
-      "label" : "RotV*"
-   },
-   {
-      "comment" : "Mostly AGB or RGB. SpT like S,SC,MS",
-      "description" : "S Star",
-      "id" : "S*",
-      "label" : "S*"
-   },
-   {
-      "comment" : "",
-      "description" : "Spectroscopic Binary",
-      "id" : "SB*",
-      "label" : "SB*"
-   },
-   {
-      "comment" : "",
-      "description" : "Starburst Galaxy",
-      "id" : "SBG",
-      "label" : "StarburstG"
-   },
-   {
-      "comment" : "",
-      "description" : "Supercluster of Galaxies",
-      "id" : "SCG",
-      "label" : "SuperClG"
-   },
-   {
-      "comment" : "",
-      "description" : "Star Forming Region",
-      "id" : "SFR",
-      "label" : "SFregion"
-   },
-   {
-      "comment" : "",
-      "description" : "SuperNova",
-      "id" : "SN*",
-      "label" : "SN"
-   },
-   {
-      "comment" : "",
-      "description" : "SuperNova Remnant",
-      "id" : "SNR",
-      "label" : "SNR"
-   },
-   {
-      "comment" : "See Pu* for candidate",
-      "description" : "SX Phe Variable",
-      "id" : "SX*",
-      "label" : "pulsV*SX"
-   },
-   {
-      "comment" : "",
-      "description" : "Stellar Stream",
-      "id" : "St*",
-      "label" : "Stream*"
-   },
-   {
-      "comment" : "",
-      "description" : "Symbiotic Star",
-      "id" : "Sy*",
-      "label" : "Symbiotic*"
-   },
-   {
-      "comment" : "",
-      "description" : "Seyfert 1 Galaxy",
-      "id" : "Sy1",
-      "label" : "Seyfert_1"
-   },
-   {
-      "comment" : "",
-      "description" : "Seyfert 2 Galaxy",
-      "id" : "Sy2",
-      "label" : "Seyfert_2"
-   },
-   {
-      "comment" : "",
-      "description" : "Seyfert Galaxy",
-      "id" : "SyG",
-      "label" : "Seyfert"
-   },
-   {
-      "comment" : "Includes classical and weak-line T Tauri",
-      "description" : "T Tauri Star",
-      "id" : "TT*",
-      "label" : "TTau*"
-   },
-   {
-      "comment" : "",
-      "description" : "Ultra-luminous X-ray Source",
-      "id" : "ULX",
-      "label" : "ULX"
-   },
-   {
-      "comment" : "",
-      "description" : "UV-emission Source",
-      "id" : "UV",
-      "label" : "UV"
-   },
-   {
-      "comment" : "",
-      "description" : "Variable Star",
-      "id" : "V*",
-      "label" : "V*"
-   },
-   {
-      "comment" : "SpT like D and PG1159",
-      "description" : "White Dwarf",
-      "id" : "WD*",
-      "label" : "WD*"
-   },
-   {
-      "comment" : "SpT like W",
-      "description" : "Wolf-Rayet",
-      "id" : "WR*",
-      "label" : "WR*"
-   },
-   {
-      "comment" : "",
-      "description" : "Eclipsing Binary of W UMa type",
-      "id" : "WU*",
-      "label" : "EB*WUMa"
-   },
-   {
-      "comment" : "Includes W Wir and BL Her subtypes",
-      "description" : "Type II Cepheid Variable",
-      "id" : "WV*",
-      "label" : "PulsV*WVir"
-   },
-   {
-      "comment" : "",
-      "description" : "X-ray Source",
-      "id" : "X",
-      "label" : "X"
-   },
-   {
-      "comment" : "",
-      "description" : "X-ray Binary",
-      "id" : "XB*",
-      "label" : "XB"
-   },
-   {
-      "comment" : "Pre-Main Sequence",
-      "description" : "Young Stellar Object",
-      "id" : "Y*O",
-      "label" : "YSO"
-   },
-   {
-      "comment" : "Ap stars; magnetic",
-      "description" : "alpha2 CVn Variable",
-      "id" : "a2*",
-      "label" : "RotV*alf2CVn"
-   },
-   {
-      "comment" : "",
-      "description" : "beta Cep Variable",
-      "id" : "bC*",
-      "label" : "PulsV*bCep"
-   },
-   {
-      "comment" : "",
-      "description" : "Blue Compact Galaxy",
-      "id" : "bCG",
-      "label" : "BlueCompG"
-   },
-   {
-      "comment" : "",
-      "description" : "Eclipsing Binary of beta Lyr type",
-      "id" : "bL*",
-      "label" : "EB*betLyr"
-   },
-   {
-      "comment" : "Mostly WD*, HS*, blue HB*, QSO",
-      "description" : "Blue Object",
-      "id" : "blu",
-      "label" : "Blue"
-   },
-   {
-      "comment" : "",
-      "description" : "Bubble",
-      "id" : "bub",
-      "label" : "Bubble"
-   },
-   {
-      "comment" : "delta Cep type",
-      "description" : "Classical Cepheid Variable",
-      "id" : "cC*",
-      "label" : "deltaCep"
-   },
-   {
-      "comment" : "",
-      "description" : "Centimetric Radio Source",
-      "id" : "cm",
-      "label" : "Radio(cm)"
-   },
-   {
-      "comment" : "N(H) > ~1D23 at/cm2, or detection of NH3,HCN,CS,HCO,..",
-      "description" : "Dense Core",
-      "id" : "cor",
-      "label" : "denseCore"
-   },
-   {
-      "comment" : "See Pu* for candidate",
-      "description" : "delta Sct Variable",
-      "id" : "dS*",
-      "label" : "PulsV*delSct"
-   },
-   {
-      "comment" : "",
-      "description" : "Not an Object (Error, Artefact, ...)",
-      "id" : "err",
-      "label" : "Inexistent"
-   },
-   {
-      "comment" : "",
-      "description" : "Transient Event",
-      "id" : "ev",
-      "label" : "Transient"
-   },
-   {
-      "comment" : "",
-      "description" : "Interstellar Filament",
-      "id" : "flt",
-      "label" : "flt"
-   },
-   {
-      "comment" : "",
-      "description" : "Gamma-ray Burst",
-      "id" : "gB",
-      "label" : "gammaBurst"
-   },
-   {
-      "comment" : "See Pu* for candidate",
-      "description" : "gamma Dor Variable",
-      "id" : "gD*",
-      "label" : "gammaDor"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitational Lens System (lens+images)",
-      "id" : "gLS",
-      "label" : "GravLensSystem"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitational Lens",
-      "id" : "gLe",
-      "label" : "GravLens"
-   },
-   {
-      "comment" : "",
-      "description" : "Gamma-ray Source",
-      "id" : "gam",
-      "label" : "gamma"
-   },
-   {
-      "comment" : "",
-      "description" : "Globule (low-mass dark cloud)",
-      "id" : "glb",
-      "label" : "Globule"
-   },
-   {
-      "comment" : "",
-      "description" : "Gravitational Source",
-      "id" : "grv",
-      "label" : "Gravitation"
-   },
-   {
-      "comment" : "",
-      "description" : "Metric Radio Source",
-      "id" : "mR",
-      "label" : "Radio(m)"
-   },
-   {
-      "comment" : "",
-      "description" : "Millimetric Radio Source",
-      "id" : "mm",
-      "label" : "Radio(mm)"
-   },
-   {
-      "comment" : "",
-      "description" : "Composite Object, Blend",
-      "id" : "mul",
-      "label" : "multiple_object"
-   },
-   {
-      "comment" : "",
-      "description" : "Outflow",
-      "id" : "out",
-      "label" : "Outflow"
-   },
-   {
-      "comment" : "",
-      "description" : "Post-AGB Star",
-      "id" : "pA*",
-      "label" : "post-AGB*"
-   },
-   {
-      "comment" : "",
-      "description" : "Radio Burst",
-      "id" : "rB",
-      "label" : "radioBurst"
-   },
-   {
-      "comment" : "",
-      "description" : "Radio Galaxy",
-      "id" : "rG",
-      "label" : "RadioG"
-   },
-   {
-      "comment" : "",
-      "description" : "Region defined in the Sky",
-      "id" : "reg",
-      "label" : "Region"
-   },
-   {
-      "comment" : "SpT like O/B 0,Ia,Iab,(I)",
-      "description" : "Blue Supergiant",
-      "id" : "s*b",
-      "label" : "BlueSG*"
-   },
-   {
-      "comment" : "SpT like K/M 0,Ia,Iab,(I)",
-      "description" : "Red Supergiant",
-      "id" : "s*r",
-      "label" : "RedSG*"
-   },
-   {
-      "comment" : "SpT like F/G 0,Ia,Iab,(I)",
-      "description" : "Yellow Supergiant",
-      "id" : "s*y",
-      "label" : "YellowSG*"
-   },
-   {
-      "comment" : "Luminosity type 0,Ia,Iab,(I). Includes A-type SG",
-      "description" : "Evolved Supergiant",
-      "id" : "sg*",
-      "label" : "SG*"
-   },
-   {
-      "comment" : "",
-      "description" : "Interstellar Shell",
-      "id" : "sh",
-      "label" : "HIshell"
-   },
-   {
-      "comment" : "",
-      "description" : "Sub-Millimetric Source",
-      "id" : "smm",
-      "label" : "Radio(sub-mm)"
-   },
-   {
-      "comment" : "",
-      "description" : "Underdense Region of the Universe",
-      "id" : "vid",
-      "label" : "Void"
-   }
+  {
+    "id": "*",
+    "candidate": "",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": null,
+    "label": "Star",
+    "description": "Star",
+    "comment": "",
+    "status": null,
+    "priority": 40,
+    "nbobj": 4110139
+  },
+  {
+    "id": "**",
+    "candidate": "**?",
+    "position": 8,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "**",
+    "description": "Double or Multiple Star",
+    "comment": "Interacting binaries and close CPM systems",
+    "status": null,
+    "priority": 39,
+    "nbobj": 56252
+  },
+  {
+    "id": "?",
+    "candidate": "",
+    "position": 32,
+    "category": "-BLENDS, ERRORS, NOT WELL DEFINED OBJECTS-",
+    "subcategory": null,
+    "label": "Unknown",
+    "description": "Object of Unknown Nature",
+    "comment": "",
+    "status": null,
+    "priority": 90,
+    "nbobj": 30391
+  },
+  {
+    "id": "AB*",
+    "candidate": "AB?",
+    "position": 9,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "AGB*",
+    "description": "Asymptotic Giant Branch Star",
+    "comment": "",
+    "status": null,
+    "priority": 5,
+    "nbobj": 3489
+  },
+  {
+    "id": "AGN",
+    "candidate": "AG?",
+    "position": 6,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "AGN",
+    "description": "Active Galaxy Nucleus",
+    "comment": "",
+    "status": null,
+    "priority": 9,
+    "nbobj": 42419
+  },
+  {
+    "id": "Ae*",
+    "candidate": "Ae?",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Young Stellar Objects .. Pre.Main Sequence Stars.",
+    "label": "Ae*",
+    "description": "Herbig Ae/Be Star",
+    "comment": "",
+    "status": null,
+    "priority": 3,
+    "nbobj": 173
+  },
+  {
+    "id": "As*",
+    "candidate": "As?",
+    "position": 5,
+    "category": "-SETS OF STARS",
+    "subcategory": null,
+    "label": "Assoc*",
+    "description": "Association of Stars",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 5888
+  },
+  {
+    "id": "BD*",
+    "candidate": "BD?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Low mass Stars and substellar Objects",
+    "label": "brownD*",
+    "description": "Brown Dwarf",
+    "comment": "SpT L,T or Y",
+    "status": null,
+    "priority": 1,
+    "nbobj": 2657
+  },
+  {
+    "id": "BH",
+    "candidate": "BH?",
+    "position": 3,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "BH",
+    "description": "Black Hole",
+    "comment": "",
+    "status": "new",
+    "priority": 40,
+    "nbobj": 1
+  },
+  {
+    "id": "BLL",
+    "candidate": "BL?",
+    "position": 1,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "BLLac",
+    "description": "BL Lac",
+    "comment": "",
+    "status": null,
+    "priority": 4,
+    "nbobj": 5738
+  },
+  {
+    "id": "BS*",
+    "candidate": "BS?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Main Sequence Stars",
+    "label": "BlueStraggler",
+    "description": "Blue Straggler",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 4318
+  },
+  {
+    "id": "BY*",
+    "candidate": "BY?",
+    "position": 4,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "BYDra",
+    "description": "BY Dra Variable",
+    "comment": "",
+    "status": null,
+    "priority": 9,
+    "nbobj": 1098
+  },
+  {
+    "id": "Be*",
+    "candidate": "Be?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Main Sequence Stars",
+    "label": "Be*",
+    "description": "Be Star",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 2216
+  },
+  {
+    "id": "BiC",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": "Environment properties",
+    "label": "BClG",
+    "description": "Brightest Galaxy in a Cluster (BCG)",
+    "comment": "",
+    "status": null,
+    "priority": 16,
+    "nbobj": 165280
+  },
+  {
+    "id": "Bla",
+    "candidate": "Bz?",
+    "position": 1,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "Blazar",
+    "description": "Blazar",
+    "comment": "",
+    "status": null,
+    "priority": 5,
+    "nbobj": 1523
+  },
+  {
+    "id": "C*",
+    "candidate": "C*?",
+    "position": 6,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "C*",
+    "description": "Carbon Star",
+    "comment": "Mostly AGB or RGB. SpT like C,N,R C-N,C-R, or C-rich",
+    "status": null,
+    "priority": 3,
+    "nbobj": 21769
+  },
+  {
+    "id": "CGG",
+    "candidate": "",
+    "position": 1,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "Compact_Gr_G",
+    "description": "Compact Group of Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 37,
+    "nbobj": 79013
+  },
+  {
+    "id": "CGb",
+    "candidate": "",
+    "position": 5,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "ComGlob",
+    "description": "Cometary Globule / Pillar",
+    "comment": "",
+    "status": null,
+    "priority": 41,
+    "nbobj": 60
+  },
+  {
+    "id": "CV*",
+    "candidate": "CV?",
+    "position": 8,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "CataclyV*",
+    "description": "Cataclysmic Binary",
+    "comment": "",
+    "status": null,
+    "priority": 4,
+    "nbobj": 3481
+  },
+  {
+    "id": "Ce*",
+    "candidate": "Ce?",
+    "position": 5,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "Cepheid",
+    "description": "Cepheid Variable",
+    "comment": "Includes anomalous Cepheids",
+    "status": null,
+    "priority": 2,
+    "nbobj": 9837
+  },
+  {
+    "id": "Cl*",
+    "candidate": "C?*",
+    "position": 4,
+    "category": "-SETS OF STARS",
+    "subcategory": null,
+    "label": "Cl*",
+    "description": "Cluster of Stars",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 16038
+  },
+  {
+    "id": "ClG",
+    "candidate": "C?G",
+    "position": 14,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "ClG",
+    "description": "Cluster of Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 39,
+    "nbobj": 104979
+  },
+  {
+    "id": "Cld",
+    "candidate": "",
+    "position": 3,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "Cloud",
+    "description": "Cloud",
+    "comment": "",
+    "status": null,
+    "priority": 34,
+    "nbobj": 2662
+  },
+  {
+    "id": "DNe",
+    "candidate": "",
+    "position": 3,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "DkNeb",
+    "description": "Dark Cloud (nebula)",
+    "comment": "",
+    "status": null,
+    "priority": 39,
+    "nbobj": 27972
+  },
+  {
+    "id": "EB*",
+    "candidate": "EB?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "EB*",
+    "description": "Eclipsing Binary",
+    "comment": "",
+    "status": null,
+    "priority": 12,
+    "nbobj": 566371
+  },
+  {
+    "id": "El*",
+    "candidate": "El?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "EllipVar",
+    "description": "Ellipsoidal Variable",
+    "comment": "",
+    "status": null,
+    "priority": 16,
+    "nbobj": 27412
+  },
+  {
+    "id": "Em*",
+    "candidate": "",
+    "position": 13,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Spectral properties",
+    "label": "Em*",
+    "description": "Emission-line Star",
+    "comment": "Can be sg*, YSO, Be*, AB*, Sy*, etc...",
+    "status": null,
+    "priority": 21,
+    "nbobj": 16174
+  },
+  {
+    "id": "EmG",
+    "candidate": "",
+    "position": 5,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "EmG",
+    "description": "Emission-line galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 13,
+    "nbobj": 50204
+  },
+  {
+    "id": "EmO",
+    "candidate": "",
+    "position": 1,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "EmObj",
+    "description": "Emission Object",
+    "comment": "Mostly YSO, Em*, PNe, WR*, Sy*, Galaxies, AGN, QSO",
+    "status": null,
+    "priority": 51,
+    "nbobj": 7167
+  },
+  {
+    "id": "Er*",
+    "candidate": "Er?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Properties . variability. spectral. kinematic or environment",
+    "label": "Eruptive*",
+    "description": "Eruptive Variable",
+    "comment": "",
+    "status": null,
+    "priority": 20,
+    "nbobj": 3833
+  },
+  {
+    "id": "Ev*",
+    "candidate": "Ev?",
+    "position": 6,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "Ev*",
+    "description": "Evolved Star",
+    "comment": "Post-Main Sequence",
+    "status": "new",
+    "priority": 10,
+    "nbobj": 1
+  },
+  {
+    "id": "FIR",
+    "candidate": "",
+    "position": 1,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "FIR",
+    "description": "Far-IR source (λ >= 30 µm)",
+    "comment": "e.g. IRAS 60/100, AKARI-FIS, Hershel",
+    "status": null,
+    "priority": 67,
+    "nbobj": 63550
+  },
+  {
+    "id": "G",
+    "candidate": "G?",
+    "position": 9,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "Galaxy",
+    "description": "Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 40,
+    "nbobj": 2952162
+  },
+  {
+    "id": "GNe",
+    "candidate": "",
+    "position": 1,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "GalNeb",
+    "description": "Nebula",
+    "comment": "",
+    "status": null,
+    "priority": 37,
+    "nbobj": 125
+  },
+  {
+    "id": "GWE",
+    "candidate": "",
+    "position": 4,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "GravWaveEvent",
+    "description": "Gravitational Wave Event",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 37
+  },
+  {
+    "id": "GiC",
+    "candidate": "",
+    "position": 11,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": "Environment properties",
+    "label": "GinCl",
+    "description": "Galaxy towards a Cluster of Galaxies",
+    "comment": "Check hierarchical links",
+    "status": null,
+    "priority": 17,
+    "nbobj": 457698
+  },
+  {
+    "id": "GiG",
+    "candidate": "",
+    "position": 10,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": "Environment properties",
+    "label": "GinGroup",
+    "description": "Galaxy towards a Group of Galaxies",
+    "comment": "Check hierarchical links",
+    "status": null,
+    "priority": 18,
+    "nbobj": 18943
+  },
+  {
+    "id": "GiP",
+    "candidate": "",
+    "position": 9,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": "Environment properties",
+    "label": "GinPair",
+    "description": "Galaxy in Pair of Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 15,
+    "nbobj": 3307
+  },
+  {
+    "id": "GlC",
+    "candidate": "Gl?",
+    "position": 1,
+    "category": "-SETS OF STARS",
+    "subcategory": null,
+    "label": "GlCl",
+    "description": "Globular Cluster",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 22156
+  },
+  {
+    "id": "GrG",
+    "candidate": "Gr?",
+    "position": 13,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "GroupG",
+    "description": "Group of Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 38,
+    "nbobj": 25517
+  },
+  {
+    "id": "H2G",
+    "candidate": "",
+    "position": 4,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "HII_G",
+    "description": "HII Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 14,
+    "nbobj": 1064
+  },
+  {
+    "id": "HB*",
+    "candidate": "HB?",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "HB*",
+    "description": "Horizontal Branch Star",
+    "comment": "",
+    "status": null,
+    "priority": 5,
+    "nbobj": 42377
+  },
+  {
+    "id": "HH",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Young Stellar Objects .. Pre.Main Sequence Stars.",
+    "label": "HH",
+    "description": "Herbig-Haro Object",
+    "comment": "",
+    "status": null,
+    "priority": 11,
+    "nbobj": 3283
+  },
+  {
+    "id": "HI",
+    "candidate": "",
+    "position": 5,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "HI",
+    "description": "HI (21cm) Source",
+    "comment": "",
+    "status": null,
+    "priority": 58,
+    "nbobj": 4691
+  },
+  {
+    "id": "HII",
+    "candidate": "",
+    "position": 2,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "HII",
+    "description": "HII Region",
+    "comment": "",
+    "status": null,
+    "priority": 32,
+    "nbobj": 37401
+  },
+  {
+    "id": "HS*",
+    "candidate": "HS?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "HotSubdwarf",
+    "description": "Hot Subdwarf",
+    "comment": "SpT like sdB, sdO",
+    "status": null,
+    "priority": 5,
+    "nbobj": 5254
+  },
+  {
+    "id": "HV*",
+    "candidate": "",
+    "position": 15,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Kinematic and Environment Properties",
+    "label": "HV*",
+    "description": "High Velocity Star",
+    "comment": "",
+    "status": null,
+    "priority": 24,
+    "nbobj": 663
+  },
+  {
+    "id": "HVC",
+    "candidate": "",
+    "position": 6,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "HVCld",
+    "description": "High-velocity Cloud",
+    "comment": "Vlsr > ~90 km/s",
+    "status": null,
+    "priority": 42,
+    "nbobj": 5811
+  },
+  {
+    "id": "HXB",
+    "candidate": "HX?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "HMXB",
+    "description": "High Mass X-ray Binary",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 1439
+  },
+  {
+    "id": "IG",
+    "candidate": "",
+    "position": 11,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "IG",
+    "description": "Interacting Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 35,
+    "nbobj": 1823
+  },
+  {
+    "id": "IR",
+    "candidate": "",
+    "position": 22,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "IR",
+    "description": "Infra-Red Source",
+    "comment": "",
+    "status": null,
+    "priority": 68,
+    "nbobj": 68655
+  },
+  {
+    "id": "ISM",
+    "candidate": "",
+    "position": 7,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "ISM",
+    "description": "Interstellar Medium Object",
+    "comment": "",
+    "status": null,
+    "priority": 50,
+    "nbobj": 1856
+  },
+  {
+    "id": "Ir*",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Properties . variability. spectral. kinematic or environment",
+    "label": "Irregular_V*",
+    "description": "Irregular Variable",
+    "comment": "",
+    "status": null,
+    "priority": 29,
+    "nbobj": 691
+  },
+  {
+    "id": "LIN",
+    "candidate": "",
+    "position": 3,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "LINER",
+    "description": "LINER-type Active Galaxy Nucleus",
+    "comment": "",
+    "status": null,
+    "priority": 7,
+    "nbobj": 15487
+  },
+  {
+    "id": "LM*",
+    "candidate": "LM?",
+    "position": 10,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Low mass Stars and substellar Objects",
+    "label": "low-mass*",
+    "description": "Low-mass Star and substellar objects",
+    "comment": "M ~< 1 Mo",
+    "status": null,
+    "priority": 2,
+    "nbobj": 48338
+  },
+  {
+    "id": "LP*",
+    "candidate": "LP?",
+    "position": 8,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "LPV*",
+    "description": "Long-Period Variable",
+    "comment": "AB*, RG*, or s*r. Includes L, SR, and OSARG",
+    "status": null,
+    "priority": 9,
+    "nbobj": 134433
+  },
+  {
+    "id": "LSB",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "LSB_G",
+    "description": "Low Surface Brightness Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 10,
+    "nbobj": 10131
+  },
+  {
+    "id": "LXB",
+    "candidate": "LX?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "LMXB",
+    "description": "Low Mass X-ray Binary",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 627
+  },
+  {
+    "id": "LeG",
+    "candidate": "",
+    "position": 1,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "LensedG",
+    "description": "Gravitationally Lensed Image of a Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 37,
+    "nbobj": 2427
+  },
+  {
+    "id": "LeI",
+    "candidate": "LI?",
+    "position": 2,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "LensedImage",
+    "description": "Gravitationally Lensed Image",
+    "comment": "",
+    "status": null,
+    "priority": 38,
+    "nbobj": 2172
+  },
+  {
+    "id": "LeQ",
+    "candidate": "",
+    "position": 2,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "LensedQ",
+    "description": "Gravitationally Lensed Image of a Quasar",
+    "comment": "",
+    "status": null,
+    "priority": 36,
+    "nbobj": 194
+  },
+  {
+    "id": "Lev",
+    "candidate": "",
+    "position": 1,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "LensingEv",
+    "description": "(Micro)Lensing Event",
+    "comment": "",
+    "status": null,
+    "priority": 41,
+    "nbobj": 1696
+  },
+  {
+    "id": "MGr",
+    "candidate": "",
+    "position": 2,
+    "category": "-SETS OF STARS",
+    "subcategory": null,
+    "label": "MouvGroup",
+    "description": "Moving Group",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 60
+  },
+  {
+    "id": "MIR",
+    "candidate": "",
+    "position": 2,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "MIR",
+    "description": "Mid-IR Source (3 to 30 µm)",
+    "comment": "e.g. IRAS 12/25, AKARI-IRC, WISE, Spitzer-IRAC-MIPS",
+    "status": null,
+    "priority": 66,
+    "nbobj": 1
+  },
+  {
+    "id": "MS*",
+    "candidate": "MS?",
+    "position": 5,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Main Sequence Stars",
+    "label": "MS*",
+    "description": "Main Sequence Star",
+    "comment": "Main Sequence",
+    "status": "new",
+    "priority": 10,
+    "nbobj": 1
+  },
+  {
+    "id": "Ma*",
+    "candidate": "Ma?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "Ma*",
+    "description": "Massive Star or its Remnant",
+    "comment": "Initial mass > 8-10 Mo",
+    "status": "new",
+    "priority": 10,
+    "nbobj": 1
+  },
+  {
+    "id": "Mas",
+    "candidate": "",
+    "position": 7,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Maser",
+    "description": "Maser",
+    "comment": "",
+    "status": null,
+    "priority": 54,
+    "nbobj": 3735
+  },
+  {
+    "id": "Mi*",
+    "candidate": "Mi?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "Mira",
+    "description": "Mira Variable",
+    "comment": "",
+    "status": null,
+    "priority": 4,
+    "nbobj": 25491
+  },
+  {
+    "id": "MoC",
+    "candidate": "",
+    "position": 2,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "MolCld",
+    "description": "Molecular Cloud",
+    "comment": "",
+    "status": null,
+    "priority": 38,
+    "nbobj": 36469
+  },
+  {
+    "id": "N*",
+    "candidate": "N*?",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "Neutron*",
+    "description": "Neutron Star",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 6
+  },
+  {
+    "id": "NIR",
+    "candidate": "",
+    "position": 3,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "NIR",
+    "description": "Near-IR Source (λ < 3 µm)",
+    "comment": "JHK, 2MASS, UKIDSS, ...",
+    "status": null,
+    "priority": 65,
+    "nbobj": 11713
+  },
+  {
+    "id": "No*",
+    "candidate": "No?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "Nova",
+    "description": "Classical Nova",
+    "comment": "",
+    "status": null,
+    "priority": 3,
+    "nbobj": 1973
+  },
+  {
+    "id": "OH*",
+    "candidate": "OH?",
+    "position": 10,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "OH/IR",
+    "description": "OH/IR Star",
+    "comment": "O-rich AGB or PAGB, doubled-peaked OH maser profile",
+    "status": null,
+    "priority": 3,
+    "nbobj": 1309
+  },
+  {
+    "id": "OpC",
+    "candidate": "",
+    "position": 2,
+    "category": "-SETS OF STARS",
+    "subcategory": null,
+    "label": "OpCl",
+    "description": "Open Cluster",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 4308
+  },
+  {
+    "id": "Opt",
+    "candidate": "",
+    "position": 23,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Opt",
+    "description": "Optical Source",
+    "comment": "Corresponding to BVRI range",
+    "status": "new",
+    "priority": 69,
+    "nbobj": 1
+  },
+  {
+    "id": "Or*",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Young Stellar Objects .. Pre.Main Sequence Stars.",
+    "label": "Orion_V*",
+    "description": "Orion Variable",
+    "comment": "",
+    "status": null,
+    "priority": 5,
+    "nbobj": 2870
+  },
+  {
+    "id": "PM*",
+    "candidate": "",
+    "position": 14,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Kinematic and Environment Properties",
+    "label": "PM*",
+    "description": "High Proper Motion Star",
+    "comment": "Total proper motion >= 50 mas/yr",
+    "status": null,
+    "priority": 25,
+    "nbobj": 367893
+  },
+  {
+    "id": "PN",
+    "candidate": "PN?",
+    "position": 13,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "PN",
+    "description": "Planetary Nebula",
+    "comment": "Includes the progenitor Star when knwon",
+    "status": null,
+    "priority": 1,
+    "nbobj": 12363
+  },
+  {
+    "id": "PaG",
+    "candidate": "",
+    "position": 12,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "PairG",
+    "description": "Pair of Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 36,
+    "nbobj": 10364
+  },
+  {
+    "id": "Pe*",
+    "candidate": "Pe?",
+    "position": 7,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Chemically Peculiar Stars",
+    "label": "Pec*",
+    "description": "Chemically Peculiar Star",
+    "comment": "Includes metal-poor stars",
+    "status": null,
+    "priority": 8,
+    "nbobj": 199142
+  },
+  {
+    "id": "Pl",
+    "candidate": "Pl?",
+    "position": 11,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Low mass Stars and substellar Objects",
+    "label": "Planet",
+    "description": "Extra-solar Planet",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 4189
+  },
+  {
+    "id": "PoC",
+    "candidate": "",
+    "position": 30,
+    "category": "-BLENDS, ERRORS, NOT WELL DEFINED OBJECTS-",
+    "subcategory": null,
+    "label": "PartofCloud",
+    "description": "Part of Cloud",
+    "comment": "",
+    "status": null,
+    "priority": 90,
+    "nbobj": 4418
+  },
+  {
+    "id": "PoG",
+    "candidate": "",
+    "position": 31,
+    "category": "-BLENDS, ERRORS, NOT WELL DEFINED OBJECTS-",
+    "subcategory": null,
+    "label": "PartofG",
+    "description": "Part of a Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 90,
+    "nbobj": 2890
+  },
+  {
+    "id": "Psr",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "Pulsar",
+    "description": "Pulsar",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 3038
+  },
+  {
+    "id": "Pu*",
+    "candidate": "Pu?",
+    "position": 4,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Properties . variability. spectral. kinematic or environment",
+    "label": "PulsV*",
+    "description": "Pulsating Variable",
+    "comment": "Non LPV Pulsating Star",
+    "status": null,
+    "priority": 27,
+    "nbobj": 9832
+  },
+  {
+    "id": "QSO",
+    "candidate": "Q?",
+    "position": 4,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "QSO",
+    "description": "Quasar",
+    "comment": "",
+    "status": null,
+    "priority": 6,
+    "nbobj": 574324
+  },
+  {
+    "id": "RC*",
+    "candidate": "RC?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Chemically Peculiar Stars",
+    "label": "Erupt*RCrB",
+    "description": "R CrB Variable",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 142
+  },
+  {
+    "id": "RG*",
+    "candidate": "RB?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "RGB*",
+    "description": "Red Giant Branch star",
+    "comment": "",
+    "status": null,
+    "priority": 5,
+    "nbobj": 87129
+  },
+  {
+    "id": "RNe",
+    "candidate": "",
+    "position": 2,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "RfNeb",
+    "description": "Reflection Nebula",
+    "comment": "",
+    "status": null,
+    "priority": 35,
+    "nbobj": 1273
+  },
+  {
+    "id": "RR*",
+    "candidate": "RR?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "RRLyr",
+    "description": "RR Lyrae Variable",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 172794
+  },
+  {
+    "id": "RS*",
+    "candidate": "RS?",
+    "position": 5,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "RSCVn",
+    "description": "RS CVn Variable",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 2054
+  },
+  {
+    "id": "RV*",
+    "candidate": "RV?",
+    "position": 12,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "PulsV*RVTau",
+    "description": "RV Tauri Variable",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 397
+  },
+  {
+    "id": "Rad",
+    "candidate": "",
+    "position": 21,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Radio",
+    "description": "Radio Source",
+    "comment": "",
+    "status": null,
+    "priority": 63,
+    "nbobj": 461159
+  },
+  {
+    "id": "Ro*",
+    "candidate": "Ro?",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Properties . variability. spectral. kinematic or environment",
+    "label": "RotV*",
+    "description": "Rotating Variable",
+    "comment": "",
+    "status": null,
+    "priority": 28,
+    "nbobj": 51971
+  },
+  {
+    "id": "S*",
+    "candidate": "S*?",
+    "position": 7,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "S*",
+    "description": "S Star",
+    "comment": "Mostly AGB or RGB. SpT like S,SC,MS",
+    "status": null,
+    "priority": 3,
+    "nbobj": 1484
+  },
+  {
+    "id": "SB*",
+    "candidate": "SB?",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "SB*",
+    "description": "Spectroscopic Binary",
+    "comment": "",
+    "status": null,
+    "priority": 11,
+    "nbobj": 5942
+  },
+  {
+    "id": "SBG",
+    "candidate": "",
+    "position": 3,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "StarburstG",
+    "description": "Starburst Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 12,
+    "nbobj": 781
+  },
+  {
+    "id": "SCG",
+    "candidate": "SC?",
+    "position": 15,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "SuperClG",
+    "description": "Supercluster of Galaxies",
+    "comment": "",
+    "status": null,
+    "priority": 31,
+    "nbobj": 1219
+  },
+  {
+    "id": "SFR",
+    "candidate": "",
+    "position": 1,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "SFregion",
+    "description": "Star Forming Region",
+    "comment": "",
+    "status": null,
+    "priority": 33,
+    "nbobj": 428
+  },
+  {
+    "id": "SN*",
+    "candidate": "SN?",
+    "position": 9,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "SuperNovae",
+    "label": "SN",
+    "description": "SuperNova",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 17283
+  },
+  {
+    "id": "SNR",
+    "candidate": "SR?",
+    "position": 6,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "SNR",
+    "description": "SuperNova Remnant",
+    "comment": "",
+    "status": null,
+    "priority": 43,
+    "nbobj": 1764
+  },
+  {
+    "id": "SX*",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Main Sequence Stars",
+    "label": "pulsV*SX",
+    "description": "SX Phe Variable",
+    "comment": "See Pu* for candidate",
+    "status": null,
+    "priority": 1,
+    "nbobj": 487
+  },
+  {
+    "id": "St*",
+    "candidate": "",
+    "position": 1,
+    "category": "-SETS OF STARS",
+    "subcategory": null,
+    "label": "Stream*",
+    "description": "Stellar Stream",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 91
+  },
+  {
+    "id": "Sy*",
+    "candidate": "Sy?",
+    "position": 6,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "Symbiotic*",
+    "description": "Symbiotic Star",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 266
+  },
+  {
+    "id": "Sy1",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "Seyfert_1",
+    "description": "Seyfert 1 Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 30093
+  },
+  {
+    "id": "Sy2",
+    "candidate": "",
+    "position": 2,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "Seyfert_2",
+    "description": "Seyfert 2 Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 12909
+  },
+  {
+    "id": "SyG",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "Seyfert",
+    "description": "Seyfert Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 3,
+    "nbobj": 1260
+  },
+  {
+    "id": "TT*",
+    "candidate": "TT?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Young Stellar Objects .. Pre.Main Sequence Stars.",
+    "label": "TTau*",
+    "description": "T Tauri Star",
+    "comment": "Includes classical and weak-line T Tauri",
+    "status": null,
+    "priority": 3,
+    "nbobj": 5081
+  },
+  {
+    "id": "ULX",
+    "candidate": "UX?",
+    "position": 1,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "ULX",
+    "description": "Ultra-luminous X-ray Source",
+    "comment": "",
+    "status": null,
+    "priority": 52,
+    "nbobj": 130
+  },
+  {
+    "id": "UV",
+    "candidate": "",
+    "position": 24,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "UV",
+    "description": "UV-emission Source",
+    "comment": "",
+    "status": null,
+    "priority": 64,
+    "nbobj": 8328
+  },
+  {
+    "id": "V*",
+    "candidate": "V*?",
+    "position": 12,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Properties . variability. spectral. kinematic or environment",
+    "label": "V*",
+    "description": "Variable Star",
+    "comment": "",
+    "status": null,
+    "priority": 30,
+    "nbobj": 196899
+  },
+  {
+    "id": "WD*",
+    "candidate": "WD?",
+    "position": 14,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "WD*",
+    "description": "White Dwarf",
+    "comment": "SpT like D and PG1159",
+    "status": null,
+    "priority": 5,
+    "nbobj": 40226
+  },
+  {
+    "id": "WR*",
+    "candidate": "WR?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "WR*",
+    "description": "Wolf-Rayet",
+    "comment": "SpT like W",
+    "status": null,
+    "priority": 2,
+    "nbobj": 1572
+  },
+  {
+    "id": "WV*",
+    "candidate": "WV?",
+    "position": 4,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "PulsV*WVir",
+    "description": "Type II Cepheid Variable",
+    "comment": "Includes W Wir and BL Her subtypes",
+    "status": null,
+    "priority": 2,
+    "nbobj": 2567
+  },
+  {
+    "id": "X",
+    "candidate": "",
+    "position": 25,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "X",
+    "description": "X-ray Source",
+    "comment": "",
+    "status": null,
+    "priority": 57,
+    "nbobj": 161494
+  },
+  {
+    "id": "XB*",
+    "candidate": "XB?",
+    "position": 7,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Interacting Binaries and close Common Proper Motion Systems",
+    "label": "XB",
+    "description": "X-ray Binary",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 1320
+  },
+  {
+    "id": "Y*O",
+    "candidate": "Y*?",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Young Stellar Objects .. Pre.Main Sequence Stars.",
+    "label": "YSO",
+    "description": "Young Stellar Object",
+    "comment": "Pre-Main Sequence",
+    "status": null,
+    "priority": 10,
+    "nbobj": 49966
+  },
+  {
+    "id": "a2*",
+    "candidate": "a2?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Chemically Peculiar Stars",
+    "label": "RotV*alf2CVn",
+    "description": "alpha2 CVn Variable",
+    "comment": "Ap stars; magnetic",
+    "status": null,
+    "priority": 1,
+    "nbobj": 1155
+  },
+  {
+    "id": "bC*",
+    "candidate": "bC?",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "PulsV*bCep",
+    "description": "beta Cep Variable",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 259
+  },
+  {
+    "id": "bCG",
+    "candidate": "",
+    "position": 2,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "BlueCompG",
+    "description": "Blue Compact Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 11,
+    "nbobj": 465
+  },
+  {
+    "id": "blu",
+    "candidate": "",
+    "position": 2,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Blue",
+    "description": "Blue Object",
+    "comment": "Mostly WD*, HS*, blue HB*, QSO",
+    "status": null,
+    "priority": 50,
+    "nbobj": 31042
+  },
+  {
+    "id": "bub",
+    "candidate": "",
+    "position": 5,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "Bubble",
+    "description": "Bubble",
+    "comment": "",
+    "status": null,
+    "priority": 31,
+    "nbobj": 6326
+  },
+  {
+    "id": "cC*",
+    "candidate": "",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "deltaCep",
+    "description": "Classical Cepheid Variable",
+    "comment": "delta Cep type",
+    "status": null,
+    "priority": 1,
+    "nbobj": 14093
+  },
+  {
+    "id": "cm",
+    "candidate": "",
+    "position": 2,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Radio(cm)",
+    "description": "Centimetric Radio Source",
+    "comment": "",
+    "status": null,
+    "priority": 61,
+    "nbobj": 5951
+  },
+  {
+    "id": "cor",
+    "candidate": "",
+    "position": 4,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "denseCore",
+    "description": "Dense Core",
+    "comment": "N(H) > ~1D23 at/cm2, or detection of NH3,HCN,CS,HCO,..",
+    "status": null,
+    "priority": 30,
+    "nbobj": 11224
+  },
+  {
+    "id": "dS*",
+    "candidate": "",
+    "position": 4,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Main Sequence Stars",
+    "label": "PulsV*delSct",
+    "description": "delta Sct Variable",
+    "comment": "See Pu* for candidate",
+    "status": null,
+    "priority": 1,
+    "nbobj": 7895
+  },
+  {
+    "id": "err",
+    "candidate": "",
+    "position": 29,
+    "category": "-BLENDS, ERRORS, NOT WELL DEFINED OBJECTS-",
+    "subcategory": null,
+    "label": "Inexistent",
+    "description": "Not an Object (Error, Artefact, ...)",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 506
+  },
+  {
+    "id": "ev",
+    "candidate": "",
+    "position": 20,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Transient",
+    "description": "Transient Event",
+    "comment": "",
+    "status": null,
+    "priority": 90,
+    "nbobj": 2821
+  },
+  {
+    "id": "flt",
+    "candidate": "",
+    "position": 8,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "flt",
+    "description": "Interstellar Filament",
+    "comment": "",
+    "status": null,
+    "priority": 44,
+    "nbobj": 1
+  },
+  {
+    "id": "gB",
+    "candidate": "",
+    "position": 1,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "gammaBurst",
+    "description": "Gamma-ray Burst",
+    "comment": "",
+    "status": null,
+    "priority": 53,
+    "nbobj": 11053
+  },
+  {
+    "id": "gD*",
+    "candidate": "",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Main Sequence Stars",
+    "label": "gammaDor",
+    "description": "gamma Dor Variable",
+    "comment": "See Pu* for candidate",
+    "status": null,
+    "priority": 1,
+    "nbobj": 849
+  },
+  {
+    "id": "gLS",
+    "candidate": "LS?",
+    "position": 2,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "GravLensSystem",
+    "description": "Gravitational Lens System (lens+images)",
+    "comment": "",
+    "status": null,
+    "priority": 40,
+    "nbobj": 1076
+  },
+  {
+    "id": "gLe",
+    "candidate": "Le?",
+    "position": 1,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "GravLens",
+    "description": "Gravitational Lens",
+    "comment": "",
+    "status": null,
+    "priority": 39,
+    "nbobj": 532
+  },
+  {
+    "id": "gam",
+    "candidate": "",
+    "position": 26,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "gamma",
+    "description": "Gamma-ray Source",
+    "comment": "",
+    "status": null,
+    "priority": 56,
+    "nbobj": 4358
+  },
+  {
+    "id": "glb",
+    "candidate": "",
+    "position": 4,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "Globule",
+    "description": "Globule (low-mass dark cloud)",
+    "comment": "",
+    "status": null,
+    "priority": 40,
+    "nbobj": 204
+  },
+  {
+    "id": "grv",
+    "candidate": "",
+    "position": 18,
+    "category": "-GRAVITATION",
+    "subcategory": null,
+    "label": "Gravitation",
+    "description": "Gravitational Source",
+    "comment": "",
+    "status": null,
+    "priority": 42,
+    "nbobj": 5
+  },
+  {
+    "id": "mR",
+    "candidate": "",
+    "position": 1,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Radio(m)",
+    "description": "Metric Radio Source",
+    "comment": "",
+    "status": null,
+    "priority": 62,
+    "nbobj": 1
+  },
+  {
+    "id": "mm",
+    "candidate": "",
+    "position": 3,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Radio(mm)",
+    "description": "Millimetric Radio Source",
+    "comment": "",
+    "status": null,
+    "priority": 60,
+    "nbobj": 9240
+  },
+  {
+    "id": "mul",
+    "candidate": "",
+    "position": 28,
+    "category": "-BLENDS, ERRORS, NOT WELL DEFINED OBJECTS-",
+    "subcategory": null,
+    "label": "multiple_object",
+    "description": "Composite Object, Blend",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 2215
+  },
+  {
+    "id": "out",
+    "candidate": "of?",
+    "position": 4,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Young Stellar Objects .. Pre.Main Sequence Stars.",
+    "label": "Outflow",
+    "description": "Outflow",
+    "comment": "",
+    "status": null,
+    "priority": 12,
+    "nbobj": 342
+  },
+  {
+    "id": "pA*",
+    "candidate": "pA?",
+    "position": 11,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Evolved Stars",
+    "label": "post-AGB*",
+    "description": "Post-AGB Star",
+    "comment": "",
+    "status": null,
+    "priority": 2,
+    "nbobj": 331
+  },
+  {
+    "id": "rB",
+    "candidate": "",
+    "position": 6,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "radioBurst",
+    "description": "Radio Burst",
+    "comment": "",
+    "status": null,
+    "priority": 55,
+    "nbobj": 113
+  },
+  {
+    "id": "rG",
+    "candidate": "",
+    "position": 2,
+    "category": "-TAXONOMY OF GALAXIES",
+    "subcategory": null,
+    "label": "RadioG",
+    "description": "Radio Galaxy",
+    "comment": "",
+    "status": null,
+    "priority": 8,
+    "nbobj": 20516
+  },
+  {
+    "id": "reg",
+    "candidate": "",
+    "position": 33,
+    "category": "-BLENDS, ERRORS, NOT WELL DEFINED OBJECTS-",
+    "subcategory": null,
+    "label": "Region",
+    "description": "Region defined in the Sky",
+    "comment": "",
+    "status": null,
+    "priority": 90,
+    "nbobj": 625
+  },
+  {
+    "id": "s*b",
+    "candidate": "s?b",
+    "position": 3,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "BlueSG*",
+    "description": "Blue Supergiant",
+    "comment": "SpT like O/B 0,Ia,Iab,(I)",
+    "status": null,
+    "priority": 3,
+    "nbobj": 864
+  },
+  {
+    "id": "s*r",
+    "candidate": "s?r",
+    "position": 1,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "RedSG*",
+    "description": "Red Supergiant",
+    "comment": "SpT like K/M 0,Ia,Iab,(I)",
+    "status": null,
+    "priority": 3,
+    "nbobj": 1376
+  },
+  {
+    "id": "s*y",
+    "candidate": "s?y",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "YellowSG*",
+    "description": "Yellow Supergiant",
+    "comment": "SpT like F/G 0,Ia,Iab,(I)",
+    "status": null,
+    "priority": 3,
+    "nbobj": 258
+  },
+  {
+    "id": "sg*",
+    "candidate": "sg?",
+    "position": 2,
+    "category": "-TAXONOMY OF STARS",
+    "subcategory": "Massive Stars and their Remnants",
+    "label": "SG*",
+    "description": "Evolved Supergiant",
+    "comment": "Luminosity type 0,Ia,Iab,(I). Includes A-type SG",
+    "status": null,
+    "priority": 4,
+    "nbobj": 328
+  },
+  {
+    "id": "sh",
+    "candidate": "",
+    "position": 7,
+    "category": "-INTERSTELLAR MEDIUM",
+    "subcategory": null,
+    "label": "HIshell",
+    "description": "Interstellar Shell",
+    "comment": "",
+    "status": null,
+    "priority": 44,
+    "nbobj": 2613
+  },
+  {
+    "id": "smm",
+    "candidate": "",
+    "position": 4,
+    "category": "-GENERAL SPECTRAL PROPERTIES",
+    "subcategory": null,
+    "label": "Radio(sub-mm)",
+    "description": "Sub-Millimetric Source",
+    "comment": "",
+    "status": null,
+    "priority": 59,
+    "nbobj": 19350
+  },
+  {
+    "id": "vid",
+    "candidate": "",
+    "position": 16,
+    "category": "-SETS OF GALAXIES",
+    "subcategory": null,
+    "label": "Void",
+    "description": "Underdense Region of the Universe",
+    "comment": "",
+    "status": null,
+    "priority": 1,
+    "nbobj": 2527
+  }
 ]

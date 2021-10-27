@@ -108,8 +108,6 @@ def ivoafy_term_form(form):
 	# We can't have * in the label
 	form = form.replace("*", "-star-")
 	# Relations to words
-	form = form.replace(">", "-above-")
-	form = form.replace("<", "-below-")
 	# Some special characters are well represented by dashes
 	form = re.sub("[/_]", "-", form)
 	# parens: dashify (they're always at the end of terms)
