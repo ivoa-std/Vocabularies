@@ -8,10 +8,10 @@ weight;2;Weight map;resource with array(s) containing weighting values
 error;2;Error map;resource with array(s) containing error values
 noise;2;Noise map;resource with array(s) containing noise values
 
-calibration;1;Calibration data;resource used to calibrate the primary data
-bias;2;Bias calibration data;used to subtract the detector offset level
-dark;2;Dark calibration data;used to subtract the accumulated detector dark current
-flat;2;Flat field calibration data;used to calibrate variations in detector sensitivity
+calibration;1;Applicable Calibration; Data products that can be used to remove instrumental signatures from #this.  Note that the calibration steps such data products feed have not been applied to #this yet.
+bias;2;Data products that can be used to remove detector offset levels from #this.
+dark;2;Data products that can be used to remove detector dark current from #this.
+flat;2;Data products that can be used to remove the signature of non-homogeneous detector sensitivity from #this.
 
 preview;1;Preview;low fidelity but easily viewed representation of the data 
 preview-image;2;Image preview;preview of the data as a 2-dimensional image
