@@ -9,9 +9,9 @@ error;2;Error map;resource with array(s) containing error values
 noise;2;Noise map;resource with array(s) containing noise values
 
 calibration;1;Applicable Calibration; Data products that can be used to remove instrumental signatures from #this.  Note that the calibration steps such data products feed have not been applied to #this yet.
-bias;2;Data products that can be used to remove detector offset levels from #this.
-dark;2;Data products that can be used to remove detector dark current from #this.
-flat;2;Data products that can be used to remove the signature of non-homogeneous detector sensitivity from #this.
+bias;2;Bias Frame;Data products that can be used to remove detector offset levels from #this.
+dark;2;Dark Frame;Data products that can be used to remove detector dark current from #this.
+flat;2;Flat Field;Data products that can be used to remove the signature of non-homogeneous detector sensitivity from #this.
 
 preview;1;Preview;low fidelity but easily viewed representation of the data 
 preview-image;2;Image preview;preview of the data as a 2-dimensional image
@@ -37,9 +37,9 @@ cutout;2;Cutout;a subsection of the primary data
 #proprietary;2;ProprietaryModel;A link to a data model in some non-IVOA syntax
 
 # VEP-002
-documentation;1;Documentation;Extra information on the item in human-readable text form, ranging from processing logs to weather reports to technical documents on instruments to related publications.
+documentation;1;Documentation;Structured or unstructured metadata helping to understand, interpret, or work with #this.  Such information can range from processing logs to weather reports to technical documents on instruments to related publications.
 # VEP-007
-detached-header;2;Detached Header;Machine-readable metadata for #this, which in general will be necessary for its scientific use.  Examples include FITS headers distributed without their data blocks or PDS label files.;ivoasem:preliminary
+detached-header;2;Detached Header;Machine-readable metadata for #this, which in general will be necessary for its scientific use.  Examples include FITS headers distributed without their data blocks or PDS label files.
 
 # VEP-005
 coderived;1;Coderived Data;Data products sharing one or more progenitors with #this.  This could be a lightcurve for an object catalog derived from repeated observations, the dataset processed using a different pipeline, or the like.
