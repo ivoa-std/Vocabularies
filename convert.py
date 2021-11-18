@@ -1077,17 +1077,20 @@ class RDFSClassVocabulary(RDFSVocabulary):
     flavour = "RDF Class"
 
 
-class SKOSVocabulary(Vocabulary):
-    """A SKOS vocabulary.
+class SKOSMixin:
+    """A mixin for the SKOS vocabulary classes.
 
-    These are currently quite special, as they can't yet be read from
-    CSV files but rather from RDF/X via skosify.  I suppose we should have
-    a separate class for getting these from CSV.
+    This gives the the basic classes and properties for SKOS.
     """
     term_class = "skos:Concept"
     wider_predicate = "skos:broader"
     label_property = "skos:prefLabel"
     description_property = "skos:definition"
+
+
+class SKOSVocabulary(SKOSMixin, Vocabulary):
+    """A SKOS vocabulary read from some sort of input SKOS via skosify.
+    """
     flavour = "SKOS"
 
     def _normalise_uri(self, term):
@@ -1170,6 +1173,12 @@ class SKOSVocabulary(Vocabulary):
             self.original_rdfx = f.read()
 
 
+class SKOSCSVVocabulary(SKOSMixin, CSVBasedVocabulary):
+    """A SKOS vocabulary read from CSV.
+    """
+    flavour = "SKOS CSV"
+
+
 ############# dead simple semantics support
 
 def to_desise_dict(voc):
@@ -1203,11 +1212,11 @@ def to_desise_dict(voc):
 ############# Top-level control
 
 # a dictionary mapping vocabulary flavour to implementing class
-VOCABULARY_CLASSES = {
-    "RDF Class": RDFSClassVocabulary,
-    "RDF Property": RDFPropertyVocabulary,
-    "SKOS": SKOSVocabulary,
-}
+VOCABULARY_CLASSES = dict((cls.flavour, cls)
+    for cls in globals().values()
+    if isinstance(cls, type)
+        and issubclass(cls, Vocabulary)
+        and getattr(cls, "flavour", None))
 
 
 def get_vocabulary(config, vocab_name):
