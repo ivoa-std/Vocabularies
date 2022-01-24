@@ -581,7 +581,7 @@ class Term(object):
            
             prop, obj = mat.group(1), mat.group(2)
             # a little hack: URI-fy plain objects by making them part of
-            # the current namespace
+            # the current vocabulary
             if obj and re.match(TERM_PATTERN+"$", obj):
                 obj = "#"+obj
 
@@ -922,7 +922,7 @@ class Vocabulary(object):
         T.body[
             T.h1["IVOA Vocabulary: "+self.title],
             T.div(class_="intro")[
-                T.p["This is the description of the namespace ",
+                T.p["This is the description of the vocabulary ",
                     T.code[self.baseuri],
                 " as of {}.".format(self.timestamp)],
                 T.p(class_="draftwarning")["This vocabulary is not"

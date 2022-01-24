@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This script transforms the upstream UAT to an IVOA version.
 

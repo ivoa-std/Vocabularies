@@ -129,6 +129,7 @@ recommended to work like this:
     the intended changes. 
 (5) Commit the result.  In the commit message, specify what caused
     the change ("mail by person@example.org"; "TCG telecon of 2020-02-11")
+(6a) Markus has a script rebuild.sh that does steps (6)-(9) 
 (6) Run ``sshfs semantics@ivoa.info:rdf ivoa-repo`` (you'll have to
     mkdir ``ivoa-repo`` if it doesn't exist yet, of course)
 (7) Run ``python3 convert.py --dest-dir ivoa-repo <vocname>`` to update
