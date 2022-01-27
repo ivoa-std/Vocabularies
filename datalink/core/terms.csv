@@ -16,7 +16,7 @@ flat;2;Flat Field;Data products that can be used to remove the signature of non-
 preview;1;Preview;low fidelity but easily viewed representation of the data 
 preview-image;2;Image preview;preview of the data as a 2-dimensional image
 preview-plot;2;Plot preview;preview of the data as a plot (e.g. spectrum or light-curve)
-thumbnail;2;Small Graphical Representation;A very small preview suitable for displaying many at one time;ivoasem:preliminary
+thumbnail;2;Small Graphical Representation;A very small preview suitable for displaying many at one time.
 
 #config;1;Observing configuration;Can also be other instrumental data
 #det-psf;2;Point spread function;(or lsf)
@@ -48,4 +48,4 @@ coderived;1;Coderived Data;Data products sharing one or more progenitors with #t
 counterpart;1;Counterpart;Data products sharing the target of the experiment or observation that led to #this but of unrelated provenance.  This could be observations of the same object in different wavelengths or along different axes (time, spectrum), but spectra of dust of common origin but different laboratories would be #counterparts as well.
 
 # VEP-010
-package;1;Single Download Package;All file-like items related to #this and #this itself packaged together in a single downloadable archive.;ivoasem:preliminary
+package;1;Single Download Package;All file-like items related to #this and #this itself packaged together in a single downloadable archive.
