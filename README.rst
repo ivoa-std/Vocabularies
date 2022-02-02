@@ -1,7 +1,19 @@
-This directory contains "generic" vocabularies not (or no longer)
-associated to a single standard, as well as the recommended
-infrastructure to build and maintain vocabularies (you *can*
-use other RDF tools as well, of course).
+These are the sources for the IVOA vocabularies as specified in
+`Vocabularies in the VO 2`_.  This repository is maintained by the
+chairs of the Semantics Working Group; other persons usually have no
+reason to interact with it.
+
+.. _Vocabularies in the VO 2: https://ivoa.net/documents/Vocabularies/
+
+Vocabulary users would use the built vocabularies from
+http://www.ivoa.net/rdf.  To propose changes, please follow the `VEP
+process`_.
+
+.. _VEP process: https://ivoa.net/documents/Vocabularies/20210525/REC-Vocabularies-2.0.html#tth_sEc5.2.1
+
+The rest of the README essentially is a crib sheet for the maintainers,
+and it is to be read together with Appendix A of the Vocabularies
+recommendation.
 
 
 Repository Organisation
@@ -129,7 +141,6 @@ recommended to work like this:
     the intended changes. 
 (5) Commit the result.  In the commit message, specify what caused
     the change ("mail by person@example.org"; "TCG telecon of 2020-02-11")
-(6a) Markus has a script rebuild.sh that does steps (6)-(9) 
 (6) Run ``sshfs semantics@ivoa.info:rdf ivoa-repo`` (you'll have to
     mkdir ``ivoa-repo`` if it doesn't exist yet, of course)
 (7) Run ``python3 convert.py --dest-dir ivoa-repo <vocname>`` to update
@@ -138,3 +149,6 @@ recommended to work like this:
 (9) Unmount the vocabulary repo: ``fusermount -u ivoa-repo``.
 (10) Update https://wiki.ivoa.net/twiki/bin/view/IVOA/VEPs as
      appropriate.
+
+
+(Markus has a script rebuild.sh that does steps (6)-(9))
