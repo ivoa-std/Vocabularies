@@ -1,2 +1,4 @@
 build
 rebuild.sh
+*.swp
+ivoa-repo
