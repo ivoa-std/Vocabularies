@@ -11,5 +11,6 @@ Updated;1;Updated;"The date of the last update to the resource;  when the resour
 update;1;Update;A date on which the resource was updated (deprecated in favour of Updated);ivoasem:useInstead(Updated) ivoasem:deprecated
 Valid;1;Valid;A date of validitiy.  This is probably not useful in the VOResource context.
 
-# VEP-012
-Validated;1;Last validated;Dates with this role indicate when the resource has last undergone a non-formal validation.  This will usually involve a human ensuring that the resource still works as expectable, both technically and as regards science content.  The prototypical case is when tutors ensure a written tutorial still describes the real behaviour of clients and services.;ivoasem:preliminary
+# VEP-013
+Inspected;1;Last Inspected;Dates with this role indicate when the resource has last undergone a non-formal inspection, typically by a human, as to whether it is still working as expectable, both technically and as regards science content.;ivoasem:preliminary
+
