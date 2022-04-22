@@ -12,5 +12,4 @@ update;1;Update;A date on which the resource was updated (deprecated in favour o
 Valid;1;Valid;A date of validitiy.  This is probably not useful in the VOResource context.
 
 # VEP-013
-Inspected;1;Last Inspected;Dates with this role indicate when the resource has last undergone a non-formal inspection, typically by a human, as to whether it is still working as expectable, both technically and as regards science content.;ivoasem:preliminary
-
+Inspected;1;Last Inspected;Dates with this role indicate when the resource has last undergone a non-formal inspection, typically by a human, as to whether it is still working as expectable, both technically and as regards its science content.
