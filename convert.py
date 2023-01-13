@@ -1193,10 +1193,11 @@ def to_desise_dict(voc):
         d = {
             "label": t.label, 
             "description": t.description}
-        if ("ivoasem:deprecated", None) in t.relations:
-            d["deprecated"] = ""
-        if ("ivoasem:preliminary", None) in t.relations:
-            d["preliminary"] = ""
+
+        for prop, obj in t.relations:
+            if prop.startswith("ivoasem:"):
+                d[prop[8:]] = (obj or "").lstrip("#")
+
         d["wider"] = []
         for w in t.get_objects_for(voc.wider_predicate):
             d["wider"].append(w.lstrip("#"))
