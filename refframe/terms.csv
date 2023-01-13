@@ -12,7 +12,7 @@ GALACTIC_I;2;Old Galactic;"Old, pre-1958, Galactic coordinates.  See 1960MNRAS.1
 GALACTIC;2;Galactic;"Galactic coordinates, modern definition: Pole at precisely FK4 B1950 192.25, 27.4, origin at approximately FK4 B1950 265.55, -28.92.  See 1960MNRAS.121..123B for details."
 galactic;2;Galactic;"Old VOTable COOSYS term for GALACTIC.";ivoasem:deprecated ivoasem:useInstead(GALACTIC)
 SUPER_GALACTIC;1;Supergalactic;"Supergalactic coordinates (pole at GALACTIC 47.37, +6.32, origin at GALACTIC 137.37, 0."
-supergalactic;1;Supergalactic;Old VOTable COOSYS term for SUPER_GALACTIC;ivoasem:deprecated ivoasem:useInstead(SUPER_GALACITC)
+supergalactic;1;Supergalactic;Old VOTable COOSYS term for SUPER_GALACTIC;ivoasem:deprecated ivoasem:useInstead(SUPER_GALACTIC)
 AZ_EL;1;Azimuth/elevation;"Local azimuth and elevation. (Ground-based observations; Azimuth from North through East.)"
 BODY;1;Body Coordinates;"Generic bodycentric coordinates. Data annotated in this way cannot be automatically combined with any other data.  Use or create more specific terms if at all possible."
 UNKNOWN;1;Unknown reference frame;"Unknown reference frame. Only to be used as a last resort or for simulations. Data annotated in this way cannot be automatically combined with any other data."
