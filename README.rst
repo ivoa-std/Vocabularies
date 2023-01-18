@@ -149,6 +149,7 @@ recommended to work like this:
 (9) Unmount the vocabulary repo: ``fusermount -u ivoa-repo``.
 (10) Update https://wiki.ivoa.net/twiki/bin/view/IVOA/VEPs as
      appropriate.
-
+(11) Run the validator from vocino2/validator on the new vocabulary:
+     ``../vocinvo/validator/vocvalidator.py http://www.ivoa.net/rdf/...``
 
 (Markus has a script rebuild.sh that does steps (6)-(9))
