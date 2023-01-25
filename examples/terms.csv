@@ -1,5 +1,5 @@
 name;1;Example Name;A short title of the example, suitable for display in space-limited labels.;
-capability;1;Complies with;The IVOID of the standard that the example is written against.;
+capability;1;Underlying Standard;The IVOID of the standard that the example is written against.;
 generic-parameter;1;Parameter;A parameter to pass to the service to reproduce the example.  The object of such a triple must have one triple each with a #key and #value property (that's the keyval type that should be defined here but is not yet).;
 key;1;Parameter Key;The name of a parameter to pass into a service.  The subject of a triple with #key should also have exactly one triple with a #value property.;
 value;1;Parameter Value;The value of a parameter to pass into a service, serialised into a string. The subject of a triple with #value should also have exactly one triple with a #key property.;
