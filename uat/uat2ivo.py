@@ -286,6 +286,103 @@ EXTRA_TRIPLES = {
 "2071": {
     SKOS_PREF_LABEL_TAG: "Deprecated: Radiative Processes",
     IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"radiative-processes"},
+
+"2043": {
+    SKOS_PREF_LABEL_TAG: "Stellar M coronal regions",
+},
+"1002": {
+    SKOS_PREF_LABEL_TAG: "Makemake",
+},
+"1065": {
+    SKOS_PREF_LABEL_TAG: "Minor planets",
+},
+"1115": {
+    SKOS_PREF_LABEL_TAG: "Noctilucent clouds",
+},
+"1185": {
+    SKOS_PREF_LABEL_TAG: "Orcus",
+},
+"1315": {
+    SKOS_PREF_LABEL_TAG: "Quaoar",
+},
+"1440": {
+    SKOS_PREF_LABEL_TAG: "Sedna",
+},
+"1575": {
+    SKOS_PREF_LABEL_TAG: "Stephan's quintet",
+},
+"1685": {
+    SKOS_PREF_LABEL_TAG: "Teharonhiawako",
+},
+"175": {
+    SKOS_PREF_LABEL_TAG: "Borasisi",
+},
+"1762": {
+    SKOS_PREF_LABEL_TAG: "Varuna",
+},
+"1778": {
+    SKOS_PREF_LABEL_TAG: "Visual observation",
+},
+"1830": {
+    SKOS_PREF_LABEL_TAG: "Yerkes classification",
+},
+"222": {
+    SKOS_PREF_LABEL_TAG: "19521 Chaos (Kuiper Belt object)",
+},
+"243": {
+    SKOS_PREF_LABEL_TAG: "Cirrus castellanus",
+},
+"244": {
+    SKOS_PREF_LABEL_TAG: "Cirrus fibratus",
+},
+"245": {
+    SKOS_PREF_LABEL_TAG: "Cirrus floccus",
+},
+"246": {
+    SKOS_PREF_LABEL_TAG: "Cirrus spissatus",
+},
+"247": {
+    SKOS_PREF_LABEL_TAG: "Cirrus uncinus",
+},
+"248": {
+    SKOS_PREF_LABEL_TAG: "Cirrus vertebratus",
+},
+"377": {
+    SKOS_PREF_LABEL_TAG: "Deucalion",
+},
+"473": {
+    SKOS_PREF_LABEL_TAG: "Eris",
+},
+"702": {
+    SKOS_PREF_LABEL_TAG: "Haumea",
+},
+"714": {
+    SKOS_PREF_LABEL_TAG: "Helium-poor stars",
+},
+"766": {
+    SKOS_PREF_LABEL_TAG: "Huya",
+},
+"862": {
+    SKOS_PREF_LABEL_TAG: "IRAS galaxies",
+},
+"868": {
+    SKOS_PREF_LABEL_TAG: "Ixion",
+},
+"930": {
+    SKOS_PREF_LABEL_TAG: "Logos",
+},
+"2070": {
+    SKOS_PREF_LABEL_TAG: "Natural Decay",
+},
+"2075": {
+    SKOS_PREF_LABEL_TAG: "Molecule Destruction",
+},
+"2076": {
+    SKOS_PREF_LABEL_TAG: "Molecule Formation",
+},
+"2098": {
+    SKOS_PREF_LABEL_TAG: "Experimental Models",
+},
 }
 
 
@@ -305,7 +402,7 @@ def label_to_term(label:str):
 
     ConceptMapping makes sure what's resulting is unique within the IVOA UAT.
     """
-    return re.sub("[^a-z0-9]+", "-", 
+    return re.sub("[^a-z0-9]+", "-",
         unidecode.unidecode(label).lower())
 
 
@@ -335,7 +432,7 @@ class ConceptMapping:
     def __init__(self):
         self.uat_mapping = {}
         self.ivo_mapping = {}
-        
+
         if not BOOTSTRAP:
             self._fill_from_ivoa()
 
@@ -353,9 +450,9 @@ class ConceptMapping:
         """bootstraps the UAT <-> IOVA term mappings.
         """
         tree = ElementTree.parse(
-            requests.get(IVOA_RDF_SOURCE, stream=True, 
+            requests.get(IVOA_RDF_SOURCE, stream=True,
                 headers={"accept": "application/rdf+xml"}).raw)
-        
+
         for concept in tree.iter(DESCRIPTION_TAG):
             em_el = concept.find("skos:exactMatch", NS_MAPPING)
             if em_el is None:
@@ -394,6 +491,7 @@ class ConceptMapping:
         overrides = EXTRA_TRIPLES.get(uat_uri.split("/")[-1], {})
 
         label = desc_node.find("skos:prefLabel[@xml:lang='en']", NS_MAPPING)
+
         if SKOS_PREF_LABEL_TAG in overrides:
             label = overrides[SKOS_PREF_LABEL_TAG]
 
@@ -425,7 +523,7 @@ class ConceptMapping:
 
 
 def make_ivoa_input_skos(
-        tree:ElementTree.ElementTree, 
+        tree:ElementTree.ElementTree,
         concept_mapping:ConceptMapping):
     """changes the tree in-place to have ivoa-style concepts and
     exactMatch declarations to the UAT concepts.
@@ -448,7 +546,7 @@ def make_ivoa_input_skos(
                     new_rel,
                     attrib={XML_LANG_ATTR: "en"}).text = new_ob
 
-        # change UAT URIs of resources that our element references to 
+        # change UAT URIs of resources that our element references to
         # the IVOA ones; leave everything we don't know how to map alone.
         for child in concept.findall("*"):
             related = child.get(RESOURCE_ATTR)
@@ -468,7 +566,14 @@ def make_ivoa_input_skos(
             ElementTree.SubElement(
                 concept,
                 IVOA_DEPRECATED_TAG)
-        
+
+        # since 2022, there are sometimes en-gb prefLabels.  We can't
+        # have them in the IVOA version, so remove all prefLabels that
+        # are not plain en
+        for node in concept.findall("skos:prefLabel", NS_MAPPING):
+            if node.get(XML_LANG_ATTR)!="en":
+                concept.remove(node)
+
         # UAT upstram sometimes has multiple description elements.
         # They ought to fix that, but meanwhile we just merge them.
         defs = concept.findall("skos:definition", NS_MAPPING)

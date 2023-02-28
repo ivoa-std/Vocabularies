@@ -1,5 +1,4 @@
-This is a technology study for a bridge between the UAT and IVOA
-vocabularies.
+This is the bridge between the UAT and IVOA vocabularies.
 
 The basic interest is:
 
@@ -17,9 +16,30 @@ To let us do emergency fixes for things that are problematic for us but
 that cannot (easily) be fixed upstream, there is an EXTRA_TRIPLES dict
 in uat2ivo.py.  Use it sparingly.
 
-Here's what we're using it for so far:
+Here's what we're using EXTRA_TRIPLES for so far:
 
 (a) In the early history of the UAT, some duplicate labels were given.
 This would kill us here, since we generate the IVOA concept ids from
 the labels.  To fix this, we override these labels (which all belong
 to deprecated concepts).
+
+
+Updating the UAT
+----------------
+
+When there is a new upstream release:
+
+(0) check out git@github.com:ivoa-std/Vocabularies.git, go to the uat
+    directory.
+
+(1) run ``python uat2ivo.py``  This will pull the UAT's SKOS source from
+    github, match it with the IVOA side and create new records in the
+    local uat.skos.
+
+(2) review the output (i.e., the new mappings)
+
+(3) if all is fine, go one up and say ``python3 convert.py uat``; this
+    is going to throw warnings from skosify but should otherwise work
+    fine.
+
+(4) now follow the usual vocabulary update procedures.
