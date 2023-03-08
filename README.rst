@@ -87,7 +87,7 @@ The fields mean:
   This is a longer explanation of what the term means.  We do not
   support any markup here, not even paragraphs, so there is probably a
   limit how much can be communicated here.
-:more_relations: 
+:more_relations:
   This column enables the declaration of non-hierarchical relationships
   and contains whitespace-separated declarations.  Each declaration has
   the form property[(term)].  See below for the common properties
@@ -131,14 +131,14 @@ Also, mod_rewrite must be enabled.
 If you are the administrator of the IVOA semantics repository, it is
 recommended to work like this:
 
-(1) Edit vocabs.conf, update the timestamp of the respective vocabulary to 
+(1) Edit vocabs.conf, update the timestamp of the respective vocabulary to
     today (if applicable)
 (2) Do the edit to the vocabulary source; don't forget the
     ivoasem:preliminary property on newly added terms.
 (3) Run ``python3 convert.py <vocname>``, paying attention to any
     diagnostics.
 (4) Inspect the files newly left in ``build`` as to whether they reflect
-    the intended changes. 
+    the intended changes.
 (5) Commit the result.  In the commit message, specify what caused
     the change ("mail by person@example.org"; "TCG telecon of 2020-02-11")
 (6) Run ``sshfs semantics@ivoa.info:rdf ivoa-repo`` (you'll have to
