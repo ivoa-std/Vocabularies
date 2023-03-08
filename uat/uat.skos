@@ -958,7 +958,7 @@
         <rdfs:comment>http://astrothesaurus.org/uat/1066</rdfs:comment>
       </rdf:Description>
     </skos:changeNote>
-  <skos:prefLabel xml:lang="en">Deprecated: Mira Variables</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#mira-variables" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1067" /><ivoasem:deprecated /></skos:Concept>
+  <skos:prefLabel xml:lang="en">Deprecated: Mira Variables</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#mira-variable-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1067" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#missing-mass">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-10T19:36:44.485Z</ns2:modified>
@@ -5477,7 +5477,7 @@
         <rdfs:comment>http://astrothesaurus.org/uat/1413</rdfs:comment>
       </rdf:Description>
     </skos:changeNote>
-  <skos:prefLabel xml:lang="en">RRA stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#rrab-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1412" /><ivoasem:deprecated /></skos:Concept>
+  <skos:prefLabel xml:lang="en">RRA stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#rrab-variable-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1412" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rrab-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T15:50:44.618Z</ns2:modified>
@@ -5503,7 +5503,7 @@
         <rdfs:comment>http://astrothesaurus.org/uat/1413</rdfs:comment>
       </rdf:Description>
     </skos:changeNote>
-  <skos:prefLabel xml:lang="en">RRb stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#rrab-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1414" /><ivoasem:deprecated /></skos:Concept>
+  <skos:prefLabel xml:lang="en">RRb stars</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#rrab-variable-stars" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1414" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#rrc-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-02T16:32:03.470Z</ns2:modified>
@@ -6521,7 +6521,7 @@
         <rdfs:comment>http://astrothesaurus.org/uat/1474</rdfs:comment>
       </rdf:Description>
     </skos:changeNote>
-  <skos:prefLabel xml:lang="en">Deprecated: Solar composition</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#solar-composition" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1480" /><ivoasem:deprecated /></skos:Concept>
+  <skos:prefLabel xml:lang="en">Deprecated: Solar composition</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#solar-abundances" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1480" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-constant">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />

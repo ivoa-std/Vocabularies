@@ -202,7 +202,7 @@ EXTRA_TRIPLES = {
 },
 "1067": {
     SKOS_PREF_LABEL_TAG: "Deprecated: Mira Variables",
-    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"mira-variables"
+    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"mira-variable-stars"
 },
 "1103": {
     SKOS_PREF_LABEL_TAG: "Neutrino oscillation",
@@ -229,11 +229,11 @@ EXTRA_TRIPLES = {
 },
 "1412": {
     SKOS_PREF_LABEL_TAG: "RRA stars",
-    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"rrab-stars",
+    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"rrab-variable-stars",
 },
 "1414": {
     SKOS_PREF_LABEL_TAG: "RRb stars",
-    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"rrab-stars",
+    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"rrab-variable-stars",
 },
 "1422": {
     SKOS_PREF_LABEL_TAG: "S Vulpeculae stars",
@@ -243,7 +243,7 @@ EXTRA_TRIPLES = {
 },
 "1480": {
     SKOS_PREF_LABEL_TAG: "Deprecated: Solar composition",
-    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"solar-composition",
+    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"solar-abundances",
 },
 "1505": {
     SKOS_PREF_LABEL_TAG: "Solar magnetism",
