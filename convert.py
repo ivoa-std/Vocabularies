@@ -862,7 +862,6 @@ class Vocabulary(object):
         with open(self.name+".rdf", "wb") as f:
             triples.serialize(f, "xml")
 
-
     def write_desise(self):
         """writes a dead simple semantics json into the current directory
         as <name>.desise.
@@ -1171,15 +1170,26 @@ class SKOSCSVVocabulary(SKOSMixin, CSVBasedVocabulary):
     """
     flavour = "SKOS CSV"
 
+    def get_meta_dict(self):
+        # overridden because we want our products to say we are
+        # SKOS and not SKOS CSV
+        res = super().get_meta_dict()
+        res["flavour"] = "SKOS"
+        return res
+
 
 ############# dead simple semantics support
 
 def to_desise_dict(voc):
     """returns a vocabulary as a dead simple semantics dictionary.
     """
+    # take items from a vocabulary's meta dict rather than directly
+    # from the class so we're always in sync with whatever the turtle
+    # template gets.
+    meta = voc.get_meta_dict()
     res = {}
-    res["uri"] = voc.baseuri
-    res["flavour"] = voc.flavour
+    res["uri"] = meta["baseuri"]
+    res["flavour"] = meta["flavour"]
     res["terms"] = {}
 
     for t in voc.terms.values():

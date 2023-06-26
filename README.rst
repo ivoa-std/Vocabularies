@@ -124,6 +124,7 @@ configuration.  This would look like this::
 
     <Directory /var/www/docs/rdf>
           AllowOverride FileInfo
+          Options Indexes FollowSymLinks
     </Directory>
 
 Also, mod_rewrite must be enabled.
