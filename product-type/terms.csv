@@ -1,9 +1,20 @@
-image;1;Image;An astronomical image, typically a 2D image with two spatial axes, e.g., a FITS image. The image content may be complex.  For instance, an objective-prism observation would be considered a type of image, even though an extracted spectrum would be a spectrum data product.
-cube;1;Cube;A multidimensional astronomical image with 3 or more axes, e.g., a spectral image cube, a polarization cube, a full Stokes radio data cube, a time image cube.
-spectrum;1;Spectrum;Fluxes or magnitudes given as a function of a spectral coordinate.
+spatially-resolved-dataset;1;Spatially Resolved;A dataset that has one or more spatial axes. This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
+image;2;Image;An astronomical image, typically with exactly two spatial axes. The image content may be complex.  For instance, an objective-prism observation would be considered a type of image, even though an extracted spectrum would be a spectrum data product.
+cube;2;Cube;A multidimensional astronomical image with 3 or more axes, e.g., a spectral image cube, a polarization cube, a full Stokes radio data cube, a time image cube.
+spectral-cube;3;Spectral Cube;A 3-dimensional astronomical image with two spatial  and one spectral axis.;skos:broader(spatially-resolved-dataset) skos:broader(spectrally-resolved-dataset)
+time-cube;3;Time Cube;A 3-dimensional astronomical image with two spatial  and one temporal axis.;skos:broader(spatially-resolved-dataset) skos:broader(temporally-resolved-dataset)
+polarization-cube;3;Polarization Cube;A 3-dimensional astronomical image with two spatial  and one polarization axis.;skos:broader(spatially-resolved-dataset) skos:broader(polarization-resolved-dataset)
+polarization-resolved-dataset;1;Polarization Resolved;A dataset that resolves polarization. This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
+spectrally-resolved-dataset;1;Spectrally Resolved;A dataset that has a spectral axis. This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
+spectrum;2;Spectrum;Flux or magnitude as a function of a spectral coordinate.
+slit-spectrum;2;Slit Spectrum;Spectral measurements along a slit in space, organized as a set of successive spectra along the slit.;skos:broader(spatially-resolved-dataset)
+polarized-spectrum;2;Polarization Spectrum;Spectral Measurements containing polarization information;skos:broader(polarization-resolved-dataset)
 sed;2;SED;"A spectral energy distribution, i.e., a set of calibrated fluxes over a typically wide part of the spectrum.  An SED is usually produced by combining data from multiple observations."
-timeseries;1;Time Series;One or a few scalar observables as a function of time.
-dynamic-spectrum;2;Dynamic Spectrum; Consecutive spectral measurements through time,organized as a time series of successive spectra of the same target or field of view.;skos:broader(spectrum)
+dynamic-spectrum;2;Dynamic Spectrum; Consecutive spectral measurements through time,organized as a time series of successive spectra of the same target or field of view.;skos:broader(temporally-resolved-dataset)
 visibility;1;Visibility;An interferometric radio observation given in Fourier space.
-event;1;Event;A collection of some sort of observed events, such as high-energy particles observed.  An event is typically characterised by spatial, spectral, and time information.
-measurements;1;Measurements;  Generic tabular data not fitting any of the other terms.  Because of its lack of specificity, this term should generally be avoided, and new, more precise terms should be introduced instead.
+temporally-resolved-dataset;1;Temporally Resolved;A dataset with a time axis.  This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
+event;2;Event;A collection of some sort of observed events, such as high-energy particles observed.  A row in an event list is typically characterised by spatial, spectral, and time information.
+timeseries;2;Time Series;One or a few scalar observables as a function of time.  Prefer narrower terms if there is one for your observable(s).
+light-curve;3;Light Curve;Flux or magnitude as a function of time;skos:broader(temporally-resolved-dataset)
+velocity-curve;3;Velocity Curve;Radial velocities or redshifts as a function of time;skos:broader(temporally-resolved-dataset)
+measurements;1;Measurements;  Generic tabular data not fitting any of the other terms.  For instance, a list of sources extracted from an image might be a measurement.  Because of its lack of specificity, this term should generally be avoided, and new, more precise terms should be introduced instead.
