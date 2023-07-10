@@ -256,6 +256,18 @@ input.popup-control {
     padding: 0.5rem;
     font-size: 80%;
 }
+
+/* to a bit lighter with link underlines: we have a high link density
+in our documents (and I don't care if this is a no-op on old browsers */
+td a {
+    text-decoration-color: transparent;
+}
+
+td a:hover {
+    text-decoration-color: currentcolor;
+    transition: all 0.2s ease-in;
+}
+
 """
 
 
@@ -664,6 +676,11 @@ class Term(object):
                     #... and the property only has blank nodes as objects
                     yield T.span(class_="proplabel")[label]
 
+    def get_url(self):
+        """returns this term's full RDF URI.
+        """
+        return self.vocabulary.baseuri+"#"+self.term
+
     def as_html(self):
         """returns elementtree for an HTML table line for this term.
         """
@@ -686,9 +703,11 @@ class Term(object):
             append_with_sep(parents, self._format_term_as_html(name), ", ")
 
         el =  T.tr(class_=row_class, id=self.term)[
-            T.td(class_="term")[self.term
-                +(" (Preliminary)" if preliminary else "")
-                +(" (Deprecated)" if deprecated else "")],
+            T.td(class_="term")[
+                T.a(title="Copy the link URL for this term's RDF URI",
+                    href=self.get_url())[self.term],
+                " (Preliminary)" if preliminary else "",
+                " (Deprecated)" if deprecated else ""],
             T.td(class_="label")[self.label],
             T.td(class_="description")[self.description],
             T.td(class_="parent")[parents],
