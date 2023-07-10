@@ -123,23 +123,6 @@ dc:description a owl:AnnotationProperty.
 
 
 JAVASCRIPT = """
-current_highlight = null;
-
-function highlight_fragment(ev) {
-	var parts = document.URL.split("#");
-	if (parts.length==2) {
-	  if (current_highlight) {
-		  var oldEl = document.getElementById(current_highlight);
-		  oldEl.setAttribute("style", "");
-		}
-		current_highlight = parts[parts.length-1];
-		var el = document.getElementById(current_highlight);
-		el.setAttribute("style", "border: 2pt solid yellow");
-	}
-}
-
-window.addEventListener("load", highlight_fragment);
-window.addEventListener("hashchange", highlight_fragment);
 """
 
 CSS_STYLE = """
