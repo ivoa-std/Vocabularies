@@ -5,7 +5,7 @@
 """
 A script to convert the CSV input format to various outputs.
 
-Dependencies: python3, rapper, skosify (not packaged yet; see
+Dependencies: python3, python3-rdflib, skosify (not packaged yet; see
 https://pypi.org/project/skosify/)
 
 See Appendix A of Vocabularies in the VO 2 for what this is and what
@@ -32,6 +32,8 @@ import shutil
 import sys
 import urllib.parse
 import weakref
+
+import rdflib
 
 try:
     import skosify
@@ -848,27 +850,16 @@ class Vocabulary(object):
         """writes an RDF/X representation of the current vocabulary
         to current directory as <name>.rdf
 
-        This currently uses rapper to turn the generated turtle file RDF/X, so
-        write_turtle has to run before it.
-
-        I guess this little uglyness is worth it, because this way we at least
-        get a tiny bit of validation on our ttls.
+        Since we never actually deal with proper RDF triples in here (so
+        far), we create the RDF/X as an export of our turtle code.  Perhaps
+        that's even for the better.
         """
-        with open(self.name+".rdf", "w", encoding="utf-8") as f:
-            rapper = subprocess.Popen([
-                "rapper",
-                "-iturtle",
-                "-ordfxml-abbrev",
-                self.name+".ttl"],
-                stdout=f,
-                stderr=subprocess.PIPE)
-            _, msgs = rapper.communicate()
+        triples = rdflib.Graph()
+        with open(self.name+".ttl", "r", encoding="utf-8") as f:
+            triples.parse(file=f, format="turtle")
+        with open(self.name+".rdf", "wb") as f:
+            triples.serialize(f, "xml")
 
-        if rapper.returncode!=0:
-            sys.stderr.write("Output of the failed rapper run:\n")
-            sys.stderr.buffer.write(msgs)
-            raise ReportableError(
-                "Conversion to RDF+XML failed; see output above.")
 
     def write_desise(self):
         """writes a dead simple semantics json into the current directory
