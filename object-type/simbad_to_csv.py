@@ -10,7 +10,7 @@ maintainers of this vocabulary and hence whether this script will become
 part of vocabulary operations.  Whoever touches this: Please update
 this status statement.
 
-Sorry for not documenting our input here; contact the SIMBAD staff if 
+Sorry for not documenting our input here; contact the SIMBAD staff if
 necessary.
 """
 
@@ -127,7 +127,7 @@ def write_to(terms, dest_file, cur_level=1):
 			relations = f"{relations} skos:exactMatch({term.uat_counterpart})"
 
 		dest_file.write("{};{};{};{};{}\n".format(
-			ivoafy_term_form(term.form), cur_level, term.label, 
+			ivoafy_term_form(term.form), cur_level, term.label,
 			term.description, relations))
 		write_to(term.children, dest_file, cur_level+1)
 

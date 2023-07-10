@@ -22,7 +22,7 @@ For external or irregular vocabularies, there are two additional keys:
   YYYY-MM-DD
 * URI -- the vocabulary URI.
 
-META.INF files have one key-value pair per line; indented lines are 
+META.INF files have one key-value pair per line; indented lines are
 continuation lines.
 
 Here's an example:
@@ -109,7 +109,7 @@ class _Element(object):
             raise Exception("%s element %s cannot be added to %s node"%(
                 type(child), repr(child), self.node.tag))
         return self
-    
+
     def __call__(self, **kwargs):
         for k, v in kwargs.items():
             if k.endswith("_"):
@@ -174,7 +174,7 @@ def parse_meta(f):
 
         raise ReportableError("Syntax error in {}, {}: neither key-value"
             " pair nor continuation line".format(f.name, ln_no))
-   
+
     return res
 
 
@@ -267,8 +267,8 @@ span.status {
                     "Description"]],
             T.tbody[[
                 T.tr(class_="status-"+voc.get("status", "stable"))[
-                    T.td[voc["name"], 
-                        [T.br, T.span(class_="status")["DRAFT"]] 
+                    T.td[voc["name"],
+                        [T.br, T.span(class_="status")["DRAFT"]]
                             if voc.get("status")=="Draft" else ""],
                     T.td(class_="date-cell")[voc["last change"]],
                     T.td(class_="url-cell")[
@@ -288,7 +288,7 @@ def fill_template(template, vocabs):
     vocabs is a sequence of vocabulary descriptors as returned by
     iter_voc_descriptors.
     """
-    return template.replace("VOCAB_LIST_HERE", 
+    return template.replace("VOCAB_LIST_HERE",
         get_vocab_table(vocabs))
 
 
