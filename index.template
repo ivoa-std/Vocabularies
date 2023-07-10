@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <div id="navigation">
       <ul>
-        
+
         <li><a href="/"><span>Home</span></a></li>
         <li ><a href="/astronomers/"><span>Astronomers</span></a></li>
         <li><a href="/deployers"><span>Deployers</span></a></li>
@@ -62,9 +62,9 @@
 VOCAB_LIST_HERE
 
 <p id="license">Unless specified otherwise on the vocabulary page,
-IVOA vocabularies and their metadata are made available under 
-<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC-0</a> by the 
-<a href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA 
+IVOA vocabularies and their metadata are made available under
+<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC-0</a> by the
+<a href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA
 Semantics Working Group</a>.  To learn how to work with and improve
 IVOA vocabularies, see <a
 href="http://ivoa.net/documents/Vocabularies/20200326/">Vocabularies in the VO
@@ -91,7 +91,7 @@ href="http://ivoa.net/documents/Vocabularies/20200326/">Vocabularies in the VO
         </a><a href="/astronomers/vo_glossary.html" class="blueback">VO Glossary</a> / <a href="../astronomers/applications.html" class="blueback">VO Applications</a><br />
         <a href="/newsletter/index.html" class="blueback">IVOA newsletter</a> / <a href="/astronomers/vo_for_public.html" class="blueback">VO for Students &amp; Public</a><br />
         <a href="/astronomers" class="more"></a></p>
-        
+
       </div>
       <!-- End Feature 1 -->
       <!-- Feature 2 -->
@@ -107,7 +107,7 @@ IVOA Standards</a> / <a href="/cgi-bin/twiki/bin/view/IVOA/PublishingInTheVONew"
 <h2>For Members</h2>
         <a href="/members/" class="left"><img src="/css/images/ivoa_members.jpg" alt="" /></a>
         <p><a href="/cgi-bin/twiki/bin/view/IVOA/IvoaEvents" class="blueback">IVOA Calendar </a>/ <a href="/members/index.html" class="blueback">Working Groups</a>/ <a href="/cgi-bin/twiki/bin/view/IVOA/WebHome" class="blueback">Twiki</a> / <a href="/documents" class="blueback">Documents in Progress</a> / <a href="/members/index.html" class="blueback">Mailing Lists</a> / <a href="../about/roadmap.html" class="blueback">IVOA Roadmap</a><a href="/members/" class="more"></a></p>
-        
+
       </div>
       <!-- End Feature 3 -->
       <div class="cl">&#xa0;</div>

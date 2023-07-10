@@ -13,7 +13,7 @@ it's for.
 
 This program is in the public domain.
 
-In case of problems, please contact Markus Demleitner 
+In case of problems, please contact Markus Demleitner
 <msdemlei@ari.uni-heidelberg.de>
 """
 
@@ -275,8 +275,8 @@ input.popup-control {
 
 
 DEFAULT_LICENSE_HTML = """This vocabulary is made available under
-<a href="">CC-0</a> by the <a 
-href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA 
+<a href="">CC-0</a> by the <a
+href="https://wiki.ivoa.net/twiki/bin/view/IVOA/IvoaSemantics">IVOA
 Semantics Working Group</a>.  To learn how to improve and amend this
 vocabulary, see <a href="http://ivoa.net/documents/Vocabularies/20200326/"
 >Vocabularies in the VO 2</a>."""
@@ -358,16 +358,16 @@ def _expand_transitively(rn, cur_term, to_process):
             _expand_transitively(rn, narrower_term, to_process)
             to_process.remove(narrower_term)
         rn[cur_term].extend(rn.get(narrower_term, []))
-    
+
 
 def close_transitively(raw_narrower):
     """closes raw_narrower transitively.
 
-    raw_narrower is a dict of lists; for every item i in a value list, 
+    raw_narrower is a dict of lists; for every item i in a value list,
     that list is expanded by raw_narrower[i].
 
     This helps add_desise_narrowser in the case of non-SKOS vocabularies;
-    it will not do anything sensible if d doesn't describe a tree.  In 
+    it will not do anything sensible if d doesn't describe a tree.  In
     particular, it will not detect cycles and may go down in flames if
     there are any.
     """
@@ -395,7 +395,7 @@ def invert_wider(voc):
 
     if voc.flavour!="SKOS":
         close_transitively(inverted_wider)
-    
+
     return inverted_wider
 
 
@@ -449,7 +449,7 @@ class _Element(object):
                         raise Exception("%s element %s cannot be added to %s node"%(
                                 type(child), repr(child), self.node.tag))
                 return self
-        
+
         def __call__(self, **kwargs):
                 for k, v in kwargs.items():
                         if k.endswith("_"):
@@ -514,11 +514,11 @@ class Term(object):
     self.relations is a set of pairs of (predicate, object),
     where None in object is a blank node.
     """
-    def __init__(self, 
-            vocabulary, 
-            term, 
-            label, 
-            description, 
+    def __init__(self,
+            vocabulary,
+            term,
+            label,
+            description,
             parent=None,
             more_relations=None):
 
@@ -557,7 +557,7 @@ class Term(object):
         There is a special case here for skos; there, parent_term
         can be a list, and a term can have multiple parents.
         """
-        if (self.vocabulary.wider_predicate=="skos:broader" 
+        if (self.vocabulary.wider_predicate=="skos:broader"
                     and isinstance(parent_term, list)):
                 for term in parent_term:
                     self._add_relation(
@@ -578,7 +578,7 @@ class Term(object):
             if not mat:
                 raise ReportableError("Invalid extra relationship on"
                     " term {}: '{}'".format(self.term, rel))
-           
+
             prop, obj = mat.group(1), mat.group(2)
             # a little hack: URI-fy plain objects by making them part of
             # the current vocabulary
@@ -588,7 +588,7 @@ class Term(object):
             self._add_relation(prop, obj or None)
 
     def get_objects_for(self, predicate):
-        """yields term names for which (predicate term) is in 
+        """yields term names for which (predicate term) is in
         relationships.
         """
         for pred, term in self.relations:
@@ -615,7 +615,7 @@ class Term(object):
             if object is None:
                 object = ":__"
             template.append("{} {}".format(
-                predicate, 
+                predicate,
                 make_ttl_literal(object)))
 
         return ";\n  ".join(template).format(**fillers)+"."
@@ -623,7 +623,7 @@ class Term(object):
     def _format_term_as_html(self, term):
         """returns HTML for a term.
 
-        This is going to be a link if the term exists in the parent 
+        This is going to be a link if the term exists in the parent
         vocabulary, or, for now, just the term.
 
         Passing in None (the blank node) is ok, too.  You'll get back None.
@@ -640,7 +640,7 @@ class Term(object):
             return T.a(href="#"+term)[term]
         else:
             return term
-    
+
     def _format_more_relations(self):
         """yields HTML elements for the non-parent relationships
         this term has.
@@ -659,7 +659,7 @@ class Term(object):
                     for t in self.vocabulary.inverted_wider.get(
                             self.term, [])]
             else:
-                objs = [self._format_term_as_html(ob) 
+                objs = [self._format_term_as_html(ob)
                     for ob in self.get_objects_for(prop)]
 
             if objs:
@@ -674,7 +674,7 @@ class Term(object):
                         T.div(class_="popup-body")[
                             T.ul(class_="compactlist")[[
                                 T.li[obj] for obj in objs]]]]
-                                    
+
                 else:
                     #... and the property only has blank nodes as objects
                     yield T.span(class_="proplabel")[label]
@@ -708,7 +708,7 @@ class Term(object):
             T.td(class_="description")[self.description],
             T.td(class_="parent")[parents],
             T.td(class_="morerels")[formatted_relations],]
-        
+
         return el
 
 
@@ -721,8 +721,8 @@ class Term(object):
 class Vocabulary(object):
     """The base class of Vocabularies.
 
-    Vocabularies are constructed with the keys from vocabs.conf in a 
-    dictionary (which then show up in attributes).  See 
+    Vocabularies are constructed with the keys from vocabs.conf in a
+    dictionary (which then show up in attributes).  See
     VOCABULARY_MANDATORY_KEYS for the minimal required keys.
 
     The attributes you can rely on here are:
@@ -739,20 +739,20 @@ class Vocabulary(object):
     * draft: true if there's a key draft in vocabs.conf
     * terms: a dictionary of the terms as strings to the respective Term
       instances.
-    * licenseuri: a license URI.  Only use for externally managed 
+    * licenseuri: a license URI.  Only use for externally managed
       vocabularies; IVOA vocabularies are always CC-0.
     * hidden: if True, no META.INF is being written (meaning:
       the vocabulary will not show up in the repo).
     * licensehtml: a human-readable license text that is reproduced
       verbatim in HTML.  Again, only use for externally managed vocabularies.
-    
+
     To derive a subclass, you need to define:
 
     * term_class -- the class of terms in this vocabulary
     * wider_predicate -- the predicate to link a term to its parent
     * label_property -- the predicate to assign a human-readable label
       to a term
-    * description_property -- the predicate to assign a human-readable 
+    * description_property -- the predicate to assign a human-readable
       definition to a term
     * flavour -- a string that becomes the object to ivoasem:vocflavour
     """
@@ -762,7 +762,7 @@ class Vocabulary(object):
         if missing_keys:
             raise ReportableError("Vocabulary definition for {} incomplete:"
                 " {} missing.".format(
-                    meta.get("name", "<unnamed>"), 
+                    meta.get("name", "<unnamed>"),
                     ", ".join(missing_keys)))
 
         self.draft = bool(meta.pop("draft", False))
@@ -774,7 +774,7 @@ class Vocabulary(object):
             "baseuri": IVOA_RDF_URI+path,
             "filename": os.path.join(path, "terms.csv"),
             "licensehtml": DEFAULT_LICENSE_HTML,
-            "licenseuri": 
+            "licenseuri":
                 "http://creativecommons.org/publicdomain/zero/1.0/",
         }
         defaults.update(meta)
@@ -782,11 +782,11 @@ class Vocabulary(object):
 
         for key, value in meta.items():
             setattr(self, key, value)
-        
+
         self._load_terms()
 
         self.inverted_wider = invert_wider(self)
-   
+
     def _read_terms_source(self):
         """must add a terms attribute self containing Term instances.
 
@@ -843,21 +843,21 @@ class Vocabulary(object):
             for _, term in sorted(self.terms.items()):
                 f.write(term.as_ttl())
                 f.write("\n\n")
-     
+
     def write_rdfx(self):
         """writes an RDF/X representation of the current vocabulary
         to current directory as <name>.rdf
-        
+
         This currently uses rapper to turn the generated turtle file RDF/X, so
         write_turtle has to run before it.
-        
+
         I guess this little uglyness is worth it, because this way we at least
         get a tiny bit of validation on our ttls.
         """
         with open(self.name+".rdf", "w", encoding="utf-8") as f:
             rapper = subprocess.Popen([
-                "rapper", 
-                "-iturtle", 
+                "rapper",
+                "-iturtle",
                 "-ordfxml-abbrev",
                 self.name+".ttl"],
                 stdout=f,
@@ -869,7 +869,7 @@ class Vocabulary(object):
             sys.stderr.buffer.write(msgs)
             raise ReportableError(
                 "Conversion to RDF+XML failed; see output above.")
-  
+
     def write_desise(self):
         """writes a dead simple semantics json into the current directory
         as <name>.desise.
@@ -914,7 +914,7 @@ class Vocabulary(object):
         doc = T.html(xmlns="http://www.w3.org/1999/xhtml")[
         T.head[
             T.title["IVOA Vocabulary: "+self.title],
-            T.meta(http_equiv="content-type", 
+            T.meta(http_equiv="content-type",
                 content="text/html;charset=utf-8"),
             T.script(type="text/javascript") [JAVASCRIPT],
             T.style(type="text/css")[
@@ -927,7 +927,7 @@ class Vocabulary(object):
                 " as of {}.".format(self.timestamp)],
                 T.p(class_="draftwarning")["This vocabulary is not"
                     " yet approved by the IVOA.  This means that"
-                    " terms can still disappear without prior notice."] 
+                    " terms can still disappear without prior notice."]
                     if self.draft else "",
                 T.p(class_="description")[self.description]],
                 self.get_html_body(),
@@ -955,7 +955,7 @@ class Vocabulary(object):
             f.write("Name: {}\n{}\n".format(
             self.title,
             textwrap.fill(
-                self.description, 
+                self.description,
                 initial_indent="Description: ",
                 subsequent_indent="  ")))
             if self.draft:
@@ -980,8 +980,8 @@ class Vocabulary(object):
         """
         with work_dir(
                 os.path.join(
-                    fs_root, 
-                    self.path, 
+                    fs_root,
+                    self.path,
                     self.timestamp),
                 clear_first=True):
             self.write_turtle()
@@ -1038,13 +1038,13 @@ class CSVBasedVocabulary(Vocabulary):
                         parent = None
 
                     more_relations = None if len(rec)<5 else rec[4]
-                    
+
                     new_term = Term(
                         self,
-                        rec[0], 
-                        rec[2], 
-                        rec[3], 
-                        parent, 
+                        rec[0],
+                        rec[2],
+                        rec[3],
+                        parent,
                         more_relations)
 
                     self.terms[new_term.term] = new_term
@@ -1123,7 +1123,7 @@ class SKOSVocabulary(SKOSMixin, Vocabulary):
         parents = list(self._get_skos_objects_for(voc,
             "http://www.w3.org/2004/02/skos/core#broader",
             term))
-      
+
         more_relations = []
 
         # extra properties taking objects
@@ -1149,10 +1149,10 @@ class SKOSVocabulary(SKOSMixin, Vocabulary):
                     voc, prop_url, term):
                 more_relations.append(short_term)
 
-        return Term(self, 
-            self._normalise_uri(term), 
-            label, 
-            description, 
+        return Term(self,
+            self._normalise_uri(term),
+            label,
+            description,
             parents,
             " ".join(more_relations))
 
@@ -1168,7 +1168,7 @@ class SKOSVocabulary(SKOSMixin, Vocabulary):
                 continue
             n = self._read_one_term(voc, term)
             self.terms[n.term] = n
-       
+
         with open(self.filename, "r", encoding="utf-8") as f:
             self.original_rdfx = f.read()
 
@@ -1191,7 +1191,7 @@ def to_desise_dict(voc):
 
     for t in voc.terms.values():
         d = {
-            "label": t.label, 
+            "label": t.label,
             "description": t.description}
 
         for prop, obj in t.relations:
@@ -1241,7 +1241,7 @@ def get_vocabulary(config, vocab_name):
 
 
 def build_vocab_repr(config, vocab_name, dest_dir):
-    """writes the representation of the vocabulary vocab_name (a section 
+    """writes the representation of the vocabulary vocab_name (a section
     within config) as defined in the ConfigParser instance config.
 
     dest_dir is the root of the vocabularies repository (i.e., the
@@ -1274,7 +1274,7 @@ def parse_command_line():
     parser = argparse.ArgumentParser(
         description='Creates RDF/X, HTML and turtle representations'
             ' for IVOA vocabularies.')
-    parser.add_argument("vocab_name", 
+    parser.add_argument("vocab_name",
         help="Name (i.e., vocabs.conf section) of vocabulary to build."
         "  Use ALL to rebuild everything in the configuration file"
         " (e.g., after an update of the tooling).",
@@ -1282,15 +1282,15 @@ def parse_command_line():
     parser.add_argument("--config",
         help="Name of the vocabulary config file.  This defaults"
         " to vocabs.conf in the current directory.",
-        type=str, 
+        type=str,
         dest="config_name",
         default="vocabs.conf")
-    parser.add_argument("--root-uri", 
+    parser.add_argument("--root-uri",
         help="Use URI as the common root of the vocabularies instead of"
         " the official IVOA location as the root of the vocabulary"
         " hierarchy.  This is for test installations at this point.",
-        action="store", 
-        dest="root_uri", 
+        action="store",
+        dest="root_uri",
         default="http://www.ivoa.net/rdf/",
         metavar="URI")
     parser.add_argument("--dest-dir",
@@ -1300,17 +1300,17 @@ def parse_command_line():
         default="build",
         metavar="PATH")
     args = parser.parse_args()
-    
+
     if not args.root_uri.endswith("/"):
         args.root_uri = args.root_uri+"/"
-    
+
     return args
 
 
 def main():
     args = parse_command_line()
     config = parse_config(args.config_name)
-    
+
     if args.vocab_name=="ALL":
         to_build = config.sections()
     else:
