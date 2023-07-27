@@ -13,7 +13,7 @@ polarized-spectrum;2;Polarization Spectrum;Fluxes or magnitudes given as a funct
 dynamic-spectrum;2;Dynamic Spectrum;Consecutive spectral measurements through time,organized as a sequence of successive spectra;skos:broader(temporally-resolved-dataset)
 visibility;1;Visibility;An interferometric radio observation given in Fourier space.
 temporally-resolved-dataset;1;Temporally Resolved;A dataset with a time axis.  This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
-event;2;Event;A collection of some sort of observed events, such as high-energy particles observed.  A row in an event list is typically characterised by spatial, spectral, and time information.
+event-list;2;Event List; A collection of observed events, such as incoming high-energy particles. A row in an event list is typically characterised by a spatial position, a time and an energy.
 timeseries;2;Time Series;One or a few scalar observables as a function of time.  Prefer narrower terms if there is one for your observable(s).
 light-curve;3;Light Curve;Flux or magnitude as a function of time;skos:broader(temporally-resolved-dataset)
 velocity-curve;3;Velocity Curve;Radial velocities or redshifts as a function of time;skos:broader(temporally-resolved-dataset)
