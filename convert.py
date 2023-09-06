@@ -390,7 +390,7 @@ def invert_wider(voc):
         for wider in term.get_objects_for(voc.wider_predicate):
             inverted_wider.setdefault(wider.lstrip("#"), []).append(t)
 
-    if voc.flavour!="SKOS":
+    if voc.flavour not in ["SKOS", "SKOS CSV"]:
         close_transitively(inverted_wider)
 
     return inverted_wider
@@ -653,8 +653,8 @@ class Term(object):
 
             if prop=="built-in:narrower":
                 objs = [self._format_term_as_html(t)
-                    for t in self.vocabulary.inverted_wider.get(
-                            self.term, [])]
+                    for t in sorted(self.vocabulary.inverted_wider.get(
+                            self.term, []))]
             else:
                 objs = [self._format_term_as_html(ob)
                     for ob in self.get_objects_for(prop)]
