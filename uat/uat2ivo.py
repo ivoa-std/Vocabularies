@@ -51,7 +51,8 @@ del _prefix, _uri
 
 ABOUT_ATTR = ElementTree.QName(NS_MAPPING["rdf"], "about")
 RESOURCE_ATTR = ElementTree.QName(NS_MAPPING["rdf"], "resource")
-DESCRIPTION_TAG = ElementTree.QName(NS_MAPPING["skos"], "Concept")
+DESCRIPTION_TAG = ElementTree.QName(NS_MAPPING["rdf"], "Description")
+CONCEPT_TAG = ElementTree.QName(NS_MAPPING["skos"], "Concept")
 IVOA_DEPRECATED_TAG = ElementTree.QName(NS_MAPPING["ivoasem"], "deprecated")
 IVOA_USE_INSTEAD_TAG = ElementTree.QName(NS_MAPPING["ivoasem"], "useInstead")
 SKOS_PREF_LABEL_TAG = ElementTree.QName(NS_MAPPING["skos"], "prefLabel")
@@ -411,7 +412,7 @@ def iter_uat_concepts(tree:ElementTree.ElementTree, chatty:bool):
 
     If chatty is passed, various diagnostics may be generated.
     """
-    for desc_node in tree.iter(DESCRIPTION_TAG):
+    for desc_node in tree.iter(CONCEPT_TAG):
         concept_uri = desc_node.get(ABOUT_ATTR)
 
         if not concept_uri.startswith(UAT_TERM_PREFIX):
@@ -454,6 +455,10 @@ class ConceptMapping:
                 headers={"accept": "application/rdf+xml"}).raw)
 
         for concept in tree.iter(DESCRIPTION_TAG):
+            ivo_uri = concept.get(ABOUT_ATTR)
+            if ivo_uri is None or not ivo_uri.startswith("http://www.ivoa.net/rdf/uat#"):
+                continue
+
             em_el = concept.find("skos:exactMatch", NS_MAPPING)
             if em_el is None:
                 warnings.warn("IVOA Concept without a UAT match: {}".format(
@@ -461,7 +466,7 @@ class ConceptMapping:
             else:
                 self.add_pair(
                     em_el.get(RESOURCE_ATTR),
-                    concept.get(ABOUT_ATTR))
+                    ivo_uri)
 
     def add_pair(self, uat_uri:str, ivo_uri:str):
         """enters a mapping between uat_uri and ivo_uri to our mappings.
