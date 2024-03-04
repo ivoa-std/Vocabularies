@@ -54,7 +54,9 @@ KNOWN_PREDICATES = frozenset([
     "rdfs:subPropertyOf",
     "skos:broader", "skos:exactMatch",
     # well, this one isn't quite in VocInVO2 in late 2020.  Let's see.
-    "skos:related"])
+    "skos:related",
+    # ..and neither is this (which we need of facilities
+    "skos:altLabel"])
 
 # an RE our term URIs must match (we're not very diligent yet)
 FULL_TERM_PATTERN = "[\w\d#:/_.*%-]+"
@@ -486,7 +488,9 @@ def make_ttl_literal(ob):
     if isinstance(ob, bool):
         return "true" if ob else "false"
 
-    assert isinstance(ob, str)
+    if not isinstance(ob, str):
+        raise ValueError(f"Cannot make a literal from: {ob}")
+
     if is_URI(ob):
         return "<{}>".format(ob)
 
@@ -532,7 +536,16 @@ class Term(object):
         if parent:
             self._set_parent_term(parent)
         if more_relations:
-            self._parse_relations(more_relations)
+            try:
+                self._parse_relations(more_relations)
+            except Exception as msg:
+                raise ReportableError("While parsing relations of"
+                    f" {term}: {msg}")
+
+        if not self.term:
+            raise ValueError("Term with empty identifier")
+        if not self.label.strip():
+            raise ValueError(f"Term {self.term} has no label")
 
     def _add_relation(self, predicate, object):
         """adds a relation (self, predicate, object).
@@ -564,25 +577,80 @@ class Term(object):
             self._add_relation(
                 self.vocabulary.wider_predicate, parent_term)
 
+    @staticmethod
+    def _iter_relationship_literals(relations):
+        """yields paris of (predicate, object) for our relationship
+        input format.
+
+        That's a space-separated sequence of either predicate names or
+        predicate-name(object-spec) specifications, where object-spec
+        has balanced parentheses.
+
+        The actual interpretation of object-spec happens in _parse_relations
+        and by is_URI.  This should probably be improved to be less
+        ad-hoc.
+
+        And if our grammar gets any more complex, we should use a proper
+        parser generator.
+        """
+        predicate, token_stack = None, None
+        for mat in re.finditer(r"\(|\)|[^()]+", relations):
+            token = mat.group(0).strip()
+
+            if predicate is None:
+                if not re.match(FULL_TERM_PATTERN+"$", token):
+                    raise ValueError("Invalid predicate at {}: {}".format(
+                            mat.start(), token))
+                predicate = token
+
+            else:
+                # we have a predicate...
+                if token_stack is None:
+                    # ...and are not parsing an argument
+                    if token=='(':
+                        token_stack = []
+                    elif token==')':
+                        raise ValueError("Unexpected ) at {}".format(
+                            mat.start()))
+                    else:
+                        # current predicate has no object
+                        yield predicate, None
+
+                        if not re.match(FULL_TERM_PATTERN+"$", token):
+                            raise ValueError(
+                                "Invalid predicate at {}: {}"
+                                    .format(mat.start(), token))
+                        predicate = token
+
+                else:
+                    # ...we are parsing argument
+                    if token=='(':
+                        token_stack.append(token)
+                    elif token==')':
+                        arg = token_stack.pop()+')'
+                        if token_stack:
+                            token_stack[-1] += arg
+                        else:
+                            # argument complete, reset parser
+                            yield predicate, arg
+                            predicate, token_stack = None, None
+                    else:
+                        # don't discard whitespace here
+                        token_stack.append(mat.group())
+
+
     def _parse_relations(self, relations):
         """adds relations passed in through the last column of our CSV.
 
         This parses {predicate[(object)]}.
         """
-        for rel in relations.split():
-            mat = re.match(r"({})(?:\(({})\))?$".format(
-                FULL_TERM_PATTERN, FULL_TERM_PATTERN), rel)
-            if not mat:
-                raise ReportableError("Invalid extra relationship on"
-                    " term {}: '{}'".format(self.term, rel))
-
-            prop, obj = mat.group(1), mat.group(2)
+        for predicate, obj in self._iter_relationship_literals(relations):
             # a little hack: URI-fy plain objects by making them part of
             # the current vocabulary
             if obj and re.match(TERM_PATTERN+"$", obj):
                 obj = "#"+obj
 
-            self._add_relation(prop, obj or None)
+            self._add_relation(predicate, obj)
 
     def get_objects_for(self, predicate):
         """yields term names for which (predicate term) is in
@@ -598,7 +666,7 @@ class Term(object):
         fillers = {
             "term": self.term,
             "label": make_ttl_literal(self.label),
-            "comment": make_ttl_literal(self.description),
+            "comment": make_ttl_literal(self.description or "N/D"),
             "term_type": self.vocabulary.term_class,
             "label_property": self.vocabulary.label_property,
             "description_property": self.vocabulary.description_property,

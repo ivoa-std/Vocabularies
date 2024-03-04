@@ -1,0 +1,12 @@
+This is a bridge between a curated list of observation facilities based
+on Wikidata and IVOA vocabularies.
+
+As of Dec 2023, the upstream sits on https://raw.githubusercontent.com/epn-vespa/FacilityList/master/data/obs-facilities_vocabulary/obs-facilities_vocabulary.json
+
+This is written in a custom JSON serialisation of the relationships,
+which we basically simply translate in our CSV.
+
+This has exactMatch links in particular to Wikidata.  Over current
+(V2.1) VocInVO2, we employ skos:altLabel relationships to give other
+names that the facilities are known as; if we keep it that way, this
+would need to be documented there.
