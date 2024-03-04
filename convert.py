@@ -1112,9 +1112,11 @@ class SKOSVocabulary(SKOSMixin, Vocabulary):
         description = pick_exactly_one(self._get_skos_objects_for(voc,
             "http://www.w3.org/2004/02/skos/core#definition",
             term), "description for {}".format(term), "")
-        parents = list(self._get_skos_objects_for(voc,
-            "http://www.w3.org/2004/02/skos/core#broader",
-            term))
+        parents = list("#"+t
+            for t in self._get_skos_objects_for(
+                voc,
+                "http://www.w3.org/2004/02/skos/core#broader",
+                term))
 
         more_relations = []
 
