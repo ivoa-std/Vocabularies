@@ -579,7 +579,7 @@ class Term(object):
 
     @staticmethod
     def _iter_relationship_literals(relations):
-        """yields paris of (predicate, object) for our relationship
+        """yields pairs of (predicate, object) for our relationship
         input format.
 
         That's a space-separated sequence of either predicate names or
@@ -632,12 +632,15 @@ class Term(object):
                             token_stack[-1] += arg
                         else:
                             # argument complete, reset parser
-                            yield predicate, arg
+                            yield predicate, arg[:-1]
                             predicate, token_stack = None, None
                     else:
                         # don't discard whitespace here
                         token_stack.append(mat.group())
 
+        if predicate:
+            # yield a singleton if you don't have yet
+            yield predicate, None
 
     def _parse_relations(self, relations):
         """adds relations passed in through the last column of our CSV.
