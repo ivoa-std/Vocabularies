@@ -121,6 +121,7 @@ dc:created a owl:AnnotationProperty.
 dc:creator a owl:AnnotationProperty.
 dc:title a owl:AnnotationProperty.
 dc:description a owl:AnnotationProperty.
+
 """
 
 
@@ -820,6 +821,8 @@ class Vocabulary(object):
       the vocabulary will not show up in the repo).
     * licensehtml: a human-readable license text that is reproduced
       verbatim in HTML.  Again, only use for externally managed vocabularies.
+    * topconcepts: space-separated identifiers that are declared as SKOS
+      top concepts.
 
     To derive a subclass, you need to define:
 
@@ -851,6 +854,7 @@ class Vocabulary(object):
             "licensehtml": DEFAULT_LICENSE_HTML,
             "licenseuri":
                 "http://creativecommons.org/publicdomain/zero/1.0/",
+            "topconcepts": "",
         }
         defaults.update(meta)
         meta = defaults
@@ -914,6 +918,9 @@ class Vocabulary(object):
                     '[ foaf:name {} ]'.format(make_ttl_literal(n.strip()))
                 for n in self.authors.split(";"))
             f.write(TTL_HEADER_TEMPLATE.format(**meta_items))
+
+            for top_concept in self.topconcepts.split():
+                f.write(f"<> skos:hasTopConcept <#{top_concept}>.\n")
 
             for _, term in sorted(self.terms.items()):
                 f.write(term.as_ttl())

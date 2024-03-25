@@ -107,6 +107,10 @@ Defining Vocabulary Metadata
 
 See Vocabularies in the VO 2, Appendix A.2.
 
+In addition to what's there, in 2024-03, we're prototyping a
+topconcepts key, which is a space-separated list of vocabulary terms
+that should become objects in (vocab, skos:hasTopConcept, .) triples.
+
 
 Deployment
 ==========
