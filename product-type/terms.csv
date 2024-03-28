@@ -4,6 +4,7 @@ cube;2;Cube;A multidimensional astronomical image with 3 or more axes, e.g., a s
 spectral-cube;3;Spectral Cube;A 3-dimensional astronomical image with two spatial  and one spectral axis.;skos:broader(spatially-resolved-dataset) skos:broader(spectrally-resolved-dataset)
 time-cube;3;Time Cube;A 3-dimensional astronomical image with two spatial  and one temporal axis.;skos:broader(spatially-resolved-dataset) skos:broader(temporally-resolved-dataset)
 polarization-cube;3;Polarization Cube;A 3-dimensional astronomical image with two spatial  and one polarization axis.;skos:broader(spatially-resolved-dataset) skos:broader(polarization-resolved-dataset)
+spatial-profile;2;Spatial Profile;An observable obtained along a one-dimensional spatial path.;ivoasem:preliminary
 polarization-resolved-dataset;1;Polarization Resolved;Sets of fluxes for different polarization states.  This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
 spectrally-resolved-dataset;1;Spectrally Resolved;A dataset that has a spectral axis. This term is mainly intended for retrieval.  To annotate datasets, use a narrower term.
 spectrum;2;Spectrum;Flux or magnitude as a function of a spectral coordinate.

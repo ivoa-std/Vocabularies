@@ -121,6 +121,7 @@ dc:created a owl:AnnotationProperty.
 dc:creator a owl:AnnotationProperty.
 dc:title a owl:AnnotationProperty.
 dc:description a owl:AnnotationProperty.
+
 """
 
 
@@ -579,7 +580,7 @@ class Term(object):
 
     @staticmethod
     def _iter_relationship_literals(relations):
-        """yields paris of (predicate, object) for our relationship
+        """yields pairs of (predicate, object) for our relationship
         input format.
 
         That's a space-separated sequence of either predicate names or
@@ -632,12 +633,15 @@ class Term(object):
                             token_stack[-1] += arg
                         else:
                             # argument complete, reset parser
-                            yield predicate, arg
+                            yield predicate, arg[:-1]
                             predicate, token_stack = None, None
                     else:
                         # don't discard whitespace here
                         token_stack.append(mat.group())
 
+        if predicate:
+            # yield a singleton if you don't have yet
+            yield predicate, None
 
     def _parse_relations(self, relations):
         """adds relations passed in through the last column of our CSV.
@@ -817,6 +821,8 @@ class Vocabulary(object):
       the vocabulary will not show up in the repo).
     * licensehtml: a human-readable license text that is reproduced
       verbatim in HTML.  Again, only use for externally managed vocabularies.
+    * topconcepts: space-separated identifiers that are declared as SKOS
+      top concepts.
 
     To derive a subclass, you need to define:
 
@@ -848,6 +854,7 @@ class Vocabulary(object):
             "licensehtml": DEFAULT_LICENSE_HTML,
             "licenseuri":
                 "http://creativecommons.org/publicdomain/zero/1.0/",
+            "topconcepts": "",
         }
         defaults.update(meta)
         meta = defaults
@@ -911,6 +918,9 @@ class Vocabulary(object):
                     '[ foaf:name {} ]'.format(make_ttl_literal(n.strip()))
                 for n in self.authors.split(";"))
             f.write(TTL_HEADER_TEMPLATE.format(**meta_items))
+
+            for top_concept in self.topconcepts.split():
+                f.write(f"<> skos:hasTopConcept <#{top_concept}>.\n")
 
             for _, term in sorted(self.terms.items()):
                 f.write(term.as_ttl())

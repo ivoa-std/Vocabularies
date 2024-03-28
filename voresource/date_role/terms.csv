@@ -13,3 +13,6 @@ Valid;1;Valid;A date of validitiy.  This is probably not useful in the VOResourc
 
 # VEP-013
 Inspected;1;Last Inspected;Dates with this role indicate when the resource has last undergone a non-formal inspection, typically by a human, as to whether it is still working as expectable, both technically and as regards its science content.
+
+# VEP-016
+ExportRequested;1;Export Requested;The date the publisher has requested non-VO bibliographic services to pick up and index the metadata of the resource as per the BibVO note.;ivoasem:preliminary
