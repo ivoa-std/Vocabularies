@@ -1891,7 +1891,7 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1144" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#observational-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T15:32:32.000Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-03T18:28:24.077Z</ns2:modified>
     <skos:altLabel xml:lang="en">Imaging of stars</skos:altLabel>
     <skos:altLabel xml:lang="en">Stellar imaging</skos:altLabel>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
@@ -4341,7 +4341,19 @@
     <skos:prefLabel xml:lang="en">R stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1328" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radar-astronomy">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:30:07.657Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:30:50.071Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
+    <skos:definition xml:lang="en">Astronomy in which celestial bodies in the solar system are studied by analyzing the return of radio waves directed at them.</skos:definition>
+    <skos:editorialNote>
+      <rdf:Description>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:30:50.064Z</ns2:created>
+        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+        <ns2:title>Definition Provenance</ns2:title>
+        <rdfs:comment>Merriam-Webster Dictionary</rdfs:comment>
+      </rdf:Description>
+    </skos:editorialNote>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#radar-observations" />
     <skos:prefLabel xml:lang="en">Radar astronomy</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1329" /></skos:Concept>
@@ -4464,10 +4476,18 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1337" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radio-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T20:08:43.029Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T20:08:53.759Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:28:18.383Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:28:36.545Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
-    <skos:definition xml:lang="en">The branch of astronomy that deals with the study of the Universe by means of radio waves.</skos:definition>
+    <skos:definition xml:lang="en">The branch of astronomy that deals with the study of the Universe by means of radio waves. Radio waves are the electromagnetic radiation with the longest wavelengths (and lowest energies), ranging from 0.3 mm to several km. Radio waves form a very broad category, which includes the submillimeter waves (with a wavelengths of 0.3-1 mm) and microwave regions (1mm to several cm).</skos:definition>
+    <skos:editorialNote>
+      <rdf:Description>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:28:36.539Z</ns2:created>
+        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+        <ns2:title>Definition Provenance</ns2:title>
+        <rdfs:comment>Modified from An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
+      </rdf:Description>
+    </skos:editorialNote>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T20:08:53.728Z</ns2:created>
@@ -6346,11 +6366,18 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/147" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#sociology-of-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-24T17:27:55.805Z</ns2:modified>
-    <skos:altLabel xml:lang="en">Astrosociology</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#cultural-astronomy" />
-    <skos:prefLabel xml:lang="en">Sociology of astronomy</skos:prefLabel>
-  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1470" /></skos:Concept>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:23:54.021Z</ns2:modified>
+    <rdfs:label xml:lang="en">Sociology of astronomy</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:changeNote>
+      <rdf:Description>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:23:54.016Z</ns2:created>
+        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+        <ns2:title>Use instead</ns2:title>
+        <rdfs:comment>http://astrothesaurus.org/uat/477</rdfs:comment>
+      </rdf:Description>
+    </skos:changeNote>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1470" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#soft-gamma-ray-repeaters">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T19:50:29.000Z</ns2:modified>
@@ -8096,6 +8123,8 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#m-stars" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1589" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#black-hole-physics">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-03T18:28:24.077Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#high-energy-astrophysics" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#penrose-process" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#photon-sphere" />
@@ -9796,11 +9825,12 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1704" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#trans-neptunian-objects">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-09T15:42:00.745Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-02-21T20:27:14.885Z</ns2:modified>
     <skos:altLabel xml:lang="en">Kuiper belt objects</skos:altLabel>
     <skos:altLabel xml:lang="en">TNO</skos:altLabel>
     <skos:altLabel xml:lang="en">Trans Neptunian objects</skos:altLabel>
     <skos:altLabel xml:lang="en">Transneptunian objects</skos:altLabel>
+    <skos:altLabel xml:lang="en">Trans–Neptunian objects</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#small-solar-system-bodies" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#kuiper-belt" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#neptune-trojans" />
@@ -10747,14 +10777,22 @@
     <skos:prefLabel xml:lang="en">Visibility function</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1775" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#visible-astronomy">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T22:17:48.899Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T22:18:03.495Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:26:26.880Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:27:02.855Z</ns2:modified>
     <skos:altLabel xml:lang="en">Visible astronomical observations</skos:altLabel>
     <skos:altLabel xml:lang="en">Visible astronomy</skos:altLabel>
     <skos:altLabel xml:lang="en">Visible telescopes</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
-    <skos:definition xml:lang="en">Optical astronomy is the part of astronomy that uses optical instruments (mirrors, lenses, and solid-state detectors) to observe light from near-infrared to near-ultraviolet wavelengths. Visible-light astronomy, using wavelengths detectable with the human eyes (about 400–700 nm), falls in the middle of this spectrum.</skos:definition>
+    <skos:definition xml:lang="en">An area of astronomy where astronomers observe and analyse light from the Universe that falls within the wavelength range that the human eye is sensitive to, about 400 nm (violet) to 750 nm (red), which is also referred to as visible light.</skos:definition>
+    <skos:editorialNote>
+      <rdf:Description>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:27:02.849Z</ns2:created>
+        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+        <ns2:title>Definition Provenance</ns2:title>
+        <rdfs:comment>Combined and modified from ESA and An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malay</rdfs:comment>
+      </rdf:Description>
+    </skos:editorialNote>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T22:18:03.463Z</ns2:created>
@@ -10855,9 +10893,10 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1781" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#vy-sculpturis-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-23T19:28:27.000Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:31:47.203Z</ns2:modified>
+    <skos:altLabel xml:lang="en">VY Sculpturis stars</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#nova-like-variable-stars" />
-    <skos:prefLabel xml:lang="en">VY Sculpturis stars</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">VY Sculptoris stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1782" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#w-ursae-majoris-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
@@ -11298,11 +11337,11 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/181" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#x-ray-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T17:08:13.168Z</ns2:modified>
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T17:08:23.203Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:12:03.020Z</ns2:modified>
     <skos:altLabel xml:lang="en">X-ray galaxies</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
-    <skos:definition xml:lang="en">The study of celestial bodies using their X-ray emission. X-ray astronomy deals mainly with Galactic and extragalactic phenomena involving very high-energy photon emissions, covering a band of energies between 0.1 keV and 500 keV. The research field includes: X-ray binaries, cataclysmic variables, pulsars, black holes, dark matter, active galaxies, galactic clusters X-ray transients. The Earth's atmosphere absorbs most X-rays coming from outer space. X-ray astronomy therefore requires observations to be done above atmosphere. The first rocket flight which successfully detected a cosmic source of X-ray emission was launched in 1962 by an American research group. A very bright source was detected that they named Scorpius X-1. Since then several dedicated X-ray astronomy satellites have been launched, among which: Uhuru, INTEGRAL, ROSAT, Rossi X-ray Timing Explorer (RXTE), Chandra X-ray Observatory, and XMM-Newton, which have contributed to important advances in astronomy.</skos:definition>
+    <skos:definition xml:lang="en">The study of celestial bodies using their X-ray emission. X-ray astronomy deals mainly with Galactic and extragalactic phenomena involving very high-energy photon emissions, covering a band of energies between 0.1 keV and 500 keV. The research field includes: X-ray binaries, cataclysmic variables, pulsars, black holes, dark matter, active galaxies, galactic clusters X-ray transients. The Earth's atmosphere absorbs most X-rays coming from outer space. X-ray astronomy therefore requires observations to be done above atmosphere.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T17:08:23.172Z</ns2:created>
@@ -17268,10 +17307,11 @@
     <skos:prefLabel xml:lang="en">Planetary thermal histories</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2290" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#james-webb-space-telescope">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T19:26:45.836Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-15T19:27:31.491Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:33:00.473Z</ns2:modified>
+    <skos:altLabel xml:lang="en">JWST</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#space-observatories" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#infrared-observatories" />
     <skos:prefLabel xml:lang="en">James Webb Space Telescope</skos:prefLabel>
@@ -17407,8 +17447,10 @@
     <skos:prefLabel xml:lang="en">Planetary mineralogy</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2304" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#astronomy-data-sonification">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-16T14:38:08.137Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T20:55:34.676Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomy-data-analysis" />
     <skos:prefLabel xml:lang="en">Astronomy data sonification</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2305" /></skos:Concept>
@@ -17643,7 +17685,7 @@
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-21T18:56:17.113Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-21T18:56:44.485Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-30T20:55:22.584Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#early-astronomical-instruments" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#gnomons" />
     <skos:prefLabel xml:lang="en">Sundials</skos:prefLabel>
@@ -17885,10 +17927,9 @@
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-22T19:49:10.393Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-24T17:27:50.213Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:24:39.951Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#interdisciplinary-astronomy" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-research" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#sociology-of-astronomy" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ethnoastronomy" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#archaeoastronomy" />
     <skos:prefLabel xml:lang="en">Cultural astronomy</skos:prefLabel>
@@ -21421,7 +21462,9 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T20:59:43.943Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-24T17:24:59.604Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:23:24.763Z</ns2:modified>
+    <skos:altLabel xml:lang="en">Astrosociology</skos:altLabel>
+    <skos:altLabel xml:lang="en">Sociology of astronomy</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#cultural-astronomy" />
     <skos:definition xml:lang="en">The study of the beliefs, interpretations, and practices of specific cultures regarding celestial objects or phenomena. Ethnoastronomy uses the tools and methodologies of ethnology in the study of astronomical conceptions.</skos:definition>
     <skos:editorialNote>
@@ -23367,21 +23410,21 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/627" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#gamma-ray-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T15:05:31.240Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T15:05:42.299Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:15:01.829Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:16:50.636Z</ns2:modified>
     <skos:altLabel xml:lang="en">Gamma astronomy</skos:altLabel>
     <skos:altLabel xml:lang="en">Gamma ray astronomical observations</skos:altLabel>
     <skos:altLabel xml:lang="en">Gamma ray astronomy</skos:altLabel>
     <skos:altLabel xml:lang="en">Gamma-ray astronomical observations</skos:altLabel>
     <skos:altLabel xml:lang="en">γ-ray astronomy</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
-    <skos:definition xml:lang="en">The study of gamma rays from extraterrestrial sources, especially gamma-ray bursts.</skos:definition>
+    <skos:definition xml:lang="en">The study of gamma rays from extraterrestrial sources, especially gamma-ray bursts.  Gamma-rays are an electromagnetic wave with a typical wavelength less than 10-2Å (10-12 m), corresponding to frequencies above 1019 Hz and photon energies above 100 keV.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
-        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T15:05:42.266Z</ns2:created>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T13:16:46.551Z</ns2:created>
         <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
         <ns2:title>Definition Provenance</ns2:title>
-        <rdfs:comment>An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
+        <rdfs:comment>Modified from An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
     <skos:prefLabel xml:lang="en">Gamma-ray astronomy</skos:prefLabel>
@@ -24905,10 +24948,20 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/728" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#hickson-compact-group">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-20T15:27:16.559Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:32:24.578Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:32:38.079Z</ns2:modified>
     <skos:altLabel xml:lang="en">Compact group of galaxies</skos:altLabel>
     <skos:altLabel xml:lang="en">HCG</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#galaxy-groups" />
+    <skos:definition xml:lang="en">A list of 100 compact groups of galaxies that were identified by a systematic search of the Palomar Observatory Sky Survey red prints. Each group contains four or more galaxies, has an estimated mean surface brightness brighter than 26.0 magnitude per arcsec2 and satisfies an isolation criterion.</skos:definition>
+    <skos:editorialNote>
+      <rdf:Description>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:32:38.072Z</ns2:created>
+        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+        <ns2:title>Definition Provenance</ns2:title>
+        <rdfs:comment>Hickson, Paul, 1982, ApJ 255, 382</rdfs:comment>
+      </rdf:Description>
+    </skos:editorialNote>
     <skos:prefLabel xml:lang="en">Hickson compact group</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/729" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#asteroseismology">
@@ -25783,11 +25836,18 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/785" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#infrared-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T16:58:12.797Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-03T20:29:08.372Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:21:09.636Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:22:01.410Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
-    <skos:definition xml:lang="en">The study of infrared properties of astronomical objects.</skos:definition>
+    <skos:definition xml:lang="en">The study of infrared properties of astronomical objects. Infrared is the invisible part of electromagnetic spectrum possessing wavelengths between those of visible light and those of radio waves, i.e. approximately between about 0.75 and 1000 μm.</skos:definition>
+    <skos:editorialNote>
+      <rdf:Description>
+        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:22:01.397Z</ns2:created>
+        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+        <ns2:title>Definition Provenance</ns2:title>
+        <rdfs:comment>Modified from An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
+      </rdf:Description>
+    </skos:editorialNote>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T16:58:12.767Z</ns2:created>
