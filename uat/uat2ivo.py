@@ -64,6 +64,12 @@ XML_LANG_ATTR = ElementTree.QName(NS_MAPPING["xml"], "lang")
 # The keys are UAT identifiers, the values are dicts mapping properties
 # to values; if these values start with http:, they count as resources,
 # else they're considered string literals.
+#
+# In recent releases, the UAT folks have started to include proper
+# owl:deprecated triples and even (free-text) use-insteads.  They
+# still drop preferred labels; perhaps we should have logic to
+# accept some random label for deprecated concepts (which we hopefully
+# already have in the mapping)?  But then we couldn't bootstrap any more...
 EXTRA_TRIPLES = {
 "13": {
     SKOS_PREF_LABEL_TAG: "Accreting Binary Stars",
@@ -383,6 +389,10 @@ EXTRA_TRIPLES = {
 },
 "2098": {
     SKOS_PREF_LABEL_TAG: "Experimental Models",
+},
+"1470": {
+    SKOS_PREF_LABEL_TAG: "Sociology of astronomy",
+    IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"ethnoastronomy"
 },
 }
 
