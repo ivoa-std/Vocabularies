@@ -1,1 +1,6 @@
-
+obscore;1;Obscoe calibration levels;.;
+0;2;Raw data;proprietary;;;
+1;2;Instrumental  data;;;
+2;2;Calibrated;;;
+3;2;Enhanced data product;;;
+4;2;Analysis  data  products ;;;
