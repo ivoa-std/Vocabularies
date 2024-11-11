@@ -1,4 +1,4 @@
-obscore;1;Obscore calibration levels;Level definitions from Obscore 1.1;
+obscore;1;Obscore calibration levels;Obscore 1.1 calibration levels;
 raw;2;Raw instrumental data;(0) Raw instrumental data, in a proprietary or internal data provider defined format, that needs instrument specific tools to be handled.;
 instrumetal;2;Instrumental data;(1) Instrumental  data  in  a  standard  format  (FITS,  VOTable,  SDFITS,  ASDM,  etc.) which could be manipulated with standard astronomical packages.;
 calibrated;2;Calibrated data;(2) Calibrated, science ready data with the instrument signature removed.;
