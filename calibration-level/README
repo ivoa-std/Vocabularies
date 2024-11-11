@@ -1,5 +1,6 @@
-This vocubulary is based on the calibration levels as defined in Obcore1.1.
+This vocabulary is based on the calibration levels as defined in Obcore1.1.
 
 - Its purpose is to replace the MANGO literal enumeration for the calibration level of physical properties.
-- Calibration-level vocabulary has one root which is specific for Obscore because it might be extended whith levels defined in 
-  other standards (EPN-TAP2 CODMAC PSA  NASA  PDS). The equivalences between these are detailed in EPN-AP 2.0 section 2.1.2. 
+- Calibration-level vocabulary has one root which is specific for Obscore.
+- It might be extended whith levels defined in other standards (EPN-TAP2 CODMAC PSA  NASA  PDS). 
+- The equivalences between these are detailed in EPN-AP 2.0 section 2.1.2. 
