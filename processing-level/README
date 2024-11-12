@@ -1,0 +1,7 @@
+This vocabulary names processing levels that are defined in different contexts.
+This currrent version is limited to the calibration levels as defined in Obcore1.1.
+
+- Its purpose is to replace the MANGO literal enumeration for the calibration level of physical properties.
+- Current processing-level vocabulary has only one root that is specific to Obscore.
+- It might be extended whith levels defined in other standards (EPN-TAP2, CODMAC, PSA, NASA, PDS ...). 
+- The equivalences between these are detailed in EPN-TAP 2.0 section 2.1.2. 

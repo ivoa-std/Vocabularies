@@ -1,0 +1,6 @@
+obscore-level;1;Obscore calibration level;Obscore 1.1 calibration level;
+obscore-raw;2;Raw instrumental data;(0) Raw instrumental data, in a proprietary or internal data provider defined format, that needs instrument specific tools to be handled;
+obscore-instrumental;2;Instrumental data;(1) Instrumental data in a standard format (FITS, VOTable, SDFITS, ASDM, etc.) which could be manipulated with standard astronomical packages;
+obscore-calibrated;2;Calibrated data;(2) Calibrated, science ready data with the instrument signature removed;
+obscore-enhanced;2;Enhanced data;(3) Enhanced data products like mosaics, resampled or drizzled images, or heavily processed survey fields.  Level 3 data products may represent the combination of data from multiple primary observations;
+obscore-analysis;2;Analysis data;(4) Analysis data products generated after some scientific data manipulation or interpretation;
