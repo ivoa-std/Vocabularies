@@ -80,6 +80,8 @@ def add_uat_links(terms):
 			if uat_concept.strip() in ['0', '']:
 				continue
 
+			simbad_id = simbad_id.strip("{}").strip()
+
 			# TODO: work out what to actually do with semicolons
 			uat_concept = uat_concept.split(";")[0]
 
