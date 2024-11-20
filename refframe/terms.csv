@@ -1,4 +1,5 @@
 EQUATORIAL;1;Equatorial;"Umbrella term of all equatorial frames.  Only use for old, pre-FK4 equatorial coordinates."
+geo_app;2;"Geocentric Apparent Positions";"Positions given as observed by a fictitious observer at the Earth's centre for the equator of observation."
 ICRS;2;ICRS;"International Celestial Reference System as defined by 1998AJ....116..516M."
 FK4;2;FK4;"Positions based on the 4th Fundamental Katalog. If no equinox is defined with this frame, assume B1950.0."
 FK5;2;FK5;"Positions based on the 5th Fundamental Katalog. If no equinox is defined with this frame, assume J2000.0.  Applications not requiring extremely high precision can identify FK5 at J2000 with ICRS."
@@ -18,4 +19,3 @@ BODY;1;Body Coordinates;"Generic bodycentric coordinates. Data annotated in this
 UNKNOWN;1;Unknown reference frame;"Unknown reference frame. Only to be used as a last resort or for simulations. Data annotated in this way cannot be automatically combined with any other data."
 xy;1;Unknown reference frame;Old VOTable COOSYS term for UNKNOWN;ivoasem:deprecated ivoasem:useInstead(UNKNOWN)
 barycentric;1;ICRS/Bary;Old VOTable COOSYS term indicating ICRS at BARYCENTER reference position.  In the modern VO, refpos and refframe are no longer represented together.  Do not use this any more.;ivoasem:deprecated ivoasem:useInstead(ICRS)
-geo_app;1;(Obscure);An old VOTable COOSYS term, the meaning of which has been lost in time.;ivoasem:deprecated
