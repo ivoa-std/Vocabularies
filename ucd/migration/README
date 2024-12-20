@@ -1,0 +1,8 @@
+The UCD vocabulary was migrated in 202? from the then-current ASCII
+UCD list, published back then in an endorsed note, <TODO>.
+
+This is the tooling that did the migration.  The commandline is
+
+python convert_list_to_csv.py > ../terms.csv
+
+You do not want to repeat this after the initial migration.
