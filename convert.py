@@ -66,33 +66,18 @@ TERM_PATTERN = "[\w\d_-]+"
 
 IVOA_RDF_URI = "http://www.ivoa.net/rdf/"
 
-HT_ACCESS_TEMPLATE_CSV = """# .htaccess for content negotiation
 
-# This file is patterned after Recipe 3 in the W3C document 'Best
-# Practice Recipes for Publishing RDF Vocabularies', at
-# <http://www.w3.org/TR/swbp-vocab-pub/>
-
-AddType application/rdf+xml .rdf
-AddType text/turtle .ttl
-AddType application/x-desise+json .desise
-AddCharset UTF-8 .ttl
-AddCharset UTF-8 .html
-AddCharset UTF-8 .desise
-
-RewriteEngine On
-RewriteBase {install_base}
-
+HT_ACCESS_TEMPLATE = """# rewrite conditions for {name}
 RewriteCond %{{HTTP_ACCEPT}} application/rdf\\+xml
-RewriteRule ^$ {timestamp}/{name}.rdf [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.rdf [R=303]
 
 RewriteCond %{{HTTP_ACCEPT}} text/turtle
-RewriteRule ^$ {timestamp}/{name}.ttl [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.ttl [R=303]
 
 RewriteCond %{{HTTP_ACCEPT}} application/x-desise\\+json
-RewriteRule ^$ {timestamp}/{name}.desise [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.desise [R=303]
 
-# No accept conditions: make the .html version the default
-RewriteRule ^$ {timestamp}/{name}.html [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.html [R=303]
 """
 
 
@@ -595,7 +580,7 @@ class Term(object):
         parser generator.
         """
         predicate, token_stack = None, None
-        for mat in re.finditer(r"\(|\)|[^()]+", relations):
+        for mat in re.finditer(r"\(|\)|[^()\s]+", relations):
             token = mat.group(0).strip()
 
             if predicate is None:
@@ -779,7 +764,7 @@ class Term(object):
                 T.a(title="Copy the link URL for this term's RDF URI",
                     href=self.get_url(),
                     onclick=f"window.location.hash = '#{self.term}';"
-                        " return False")[self.term],
+                        " return false")[self.term],
                 " (Preliminary)" if preliminary else "",
                 " (Deprecated)" if deprecated else ""],
             T.td(class_="label")[self.label],
@@ -820,7 +805,10 @@ class Vocabulary(object):
     * licenseuri: a license URI.  Only use for externally managed
       vocabularies; IVOA vocabularies are always CC-0.
     * hidden: if True, no META.INF is being written (meaning:
-      the vocabulary will not show up in the repo).
+      the vocabulary will not show up in the repo).  Note at that right
+      now hidden vocabularies will not install the right redirects into
+      apache.  This should probably be fixed by making hidden-ness an
+      explicit property in META.INF.
     * licensehtml: a human-readable license text that is reproduced
       verbatim in HTML.  Again, only use for externally managed vocabularies.
     * topconcepts: space-separated identifiers that are declared as SKOS
@@ -1034,13 +1022,19 @@ class Vocabulary(object):
                 f.write("Status: Draft\n")
 
     def write_htaccess(self):
-        """writes a customised .htaccess for content negotiation.
+        """writes a fragment for the RDF .htaccess for content negotiation.
+
+        This does not write a complete htaccess file; instead,
+        make-rdf-index.py picks this up and combines it to the .htaccess in
+        on directory up.
+
+        This architecture is necessary because we want to rewrite
+        vocabulary URIs before they get mangled by apache's DirectorySlash.
         """
-        install_base = urllib.parse.urlparse(self.baseuri).path+"/"
-        with open(".htaccess", "w", encoding="utf-8") as f:
-            f.write(HT_ACCESS_TEMPLATE_CSV.format(
-                install_base=install_base,
+        with open("htaccess-fragment.txt", "w", encoding="utf-8") as f:
+            f.write(HT_ACCESS_TEMPLATE.format(
                 timestamp=self.timestamp,
+                path=self.path,
                 name=self.name))
 
     def write_representation(self, fs_root):
