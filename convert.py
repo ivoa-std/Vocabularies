@@ -706,7 +706,7 @@ class Term(object):
             term = term[1:]
 
         if term in self.vocabulary.terms:
-            return T.a(href="#"+term)[term]
+            return T.a(href="#"+term)
         else:
             return term
 
@@ -777,7 +777,9 @@ class Term(object):
         el =  T.tr(class_=row_class, id=self.term)[
             T.td(class_="term")[
                 T.a(title="Copy the link URL for this term's RDF URI",
-                    href=self.get_url())[self.term],
+                    href=self.get_url(),
+                    onclick=f"window.location.hash = '#{self.term}';"
+                        " return False")[self.term],
                 " (Preliminary)" if preliminary else "",
                 " (Deprecated)" if deprecated else ""],
             T.td(class_="label")[self.label],
