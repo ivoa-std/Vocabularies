@@ -443,7 +443,7 @@ class _Element(object):
                         self.node.attrib[k] = v
                 return self
 
-        def dump(self, encoding="utf-8", dest_file=sys.stdout):
+        def dump(self, encoding="utf-8", dest_file=sys.stdout.buffer):
             etree.ElementTree(self.node).write(
                 dest_file, encoding=encoding)
 
@@ -691,7 +691,7 @@ class Term(object):
             term = term[1:]
 
         if term in self.vocabulary.terms:
-            return T.a(href="#"+term)
+            return T.a(href="#"+term)["#"+term]
         else:
             return term
 
