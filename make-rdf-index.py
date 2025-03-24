@@ -1,5 +1,7 @@
 """
-This script creates an index.html for the www.ivoa.net/rdf.
+This script creates an index.html for the www.ivoa.net/rdf.  It also federates
+apache config snippets from the individual vocabularies and puts them into a
+bespoke place.
 
 It does this by recursively looking for META.INF files below the directory
 passed in its argument.  From these, it extracts vocabulary metadata, which
@@ -38,6 +40,10 @@ Description: This vocabulary enumerates the intended audiences for
 index.template is just treated as a text file, and we will replace the
 string VOCAB_LIST_HERE with rendered HTML.
 
+The generation of the apache config for the RDF repo works by picking up
+files named htaccess-fragment.txt from the vocabulary directories and
+retaining the most recent one for each vocabulary.
+
 Written by Markus Demleitner <msdemlei@ari.uni-heidelberg.de>, August 2018
 """
 
@@ -56,7 +62,7 @@ from xml.etree import ElementTree as etree
 IVOA_RDF_BASE = "http://www.ivoa.net/rdf"
 
 
-HT_ACCESS_HEADER = """# .htaccess for content negotiation
+HT_ACCESS_HEADER = """# apache config for RDF content negotiation
 
 # This file is patterned after Recipe 3 in the W3C document 'Best
 # Practice Recipes for Publishing RDF Vocabularies', at
@@ -356,7 +362,7 @@ def main():
         ht_access = [HT_ACCESS_HEADER]
         for v in vocabs:
             ht_access.extend(["", v["htaccess"]])
-        with open(".htaccess", "w", encoding="utf-8") as f:
+        with open("rdfrepo.conf", "w", encoding="utf-8") as f:
             f.write("\n".join(ht_access))
 
     except ReportableError as msg:
