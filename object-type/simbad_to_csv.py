@@ -80,6 +80,8 @@ def add_uat_links(terms):
 			if uat_concept.strip() in ['0', '']:
 				continue
 
+			simbad_id = simbad_id.strip("{}").strip()
+
 			# TODO: work out what to actually do with semicolons
 			uat_concept = uat_concept.split(";")[0]
 
@@ -119,7 +121,7 @@ def write_to(terms, dest_file, cur_level=1):
 	"""produces our CSV output for a sequence of Term-s.
 	"""
 	for term in terms:
-		sim_link = "http://simbad.u-strasbg.fr/simbad/otypes#{}".format(
+		sim_link = "https://simbad.cds.unistra.fr/simbad/otypes#{}".format(
 			urlparse.quote(term.simbad_id))
 
 		relations = f"skos:exactMatch({sim_link})"
