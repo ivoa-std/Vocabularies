@@ -1,0 +1,17 @@
+time-format;1;This vocabulary specifies how an instant of time can be represented (derived from Astropy Time.FORMATS: https://docs.astropy.org/en/stable/time/index.html#time-format).;
+byear;2;Besselian Epoch year as  decimal value; Besselian Epoch year as decimal value(s) like 1950.0. For information about this epoch format, see: https://en.wikipedia.org/wiki/Epoch_(astronomy)#Besselian_years.(0) 
+byear_str;3;Besselian Epoch year as a string; Besselian Epoch year as string value(s) like ‘B1950.0’. For information about this epoch format, see: https://en.wikipedia.org/wiki/Epoch_(astronomy)#Besselian_years.(0) 
+cxcsec;2;Chandra X-ray Center;Seconds from 1998-01-01 00:00:00 TT. For example, 63072064.184 is midnight on January 1, 2000.
+decimalyear;2;Time as a decimal year;Time as a decimal year, with integer values corresponding to midnight of the first day of each year. The fractional part represents the exact fraction of the year,
+fits;2;FITS time format;FITS format: “[±Y]YYYY-MM-DD[THH:MM:SS[.sss]]”.
+gps;2;GPS time;Seconds from 1980-01-06 00:00:00 UTC. For example, 630720013.0 is midnight on January 1, 2000.
+iso;2;ISO 8601 compliant date-time;Format “YYYY-MM-DD HH:MM:SS.sss…”. For example, 2000-01-01 00:00:00.000 is midnight on January 1, 2000.
+isot;3;ISO 8601 compliant date-time with a T as separator;Format “YYYY-MM-DDTHH:MM:SS.sss…”. This is the same as TimeISO except for a “T” instead of space between the date and time. 
+jd;2;Julian Date time format; This represents the number of days since the beginning of the Julian Period. For example, 2451544.5 in JD is midnight on January 1, 2000.
+jyear;2;Julian epoch year as decimal value;Julian epoch year as decimal value(s) like 2000.0. This format is based the Julian year which is exactly 365.25 days/year and a day is exactly 86400 SI seconds.
+jyear_str;3;Julian Epoch year as string value;Julian Epoch year as string value like ‘J2000.0’.
+mjd;2;Modified Julian Date time format;This represents the number of days since midnight on November 17, 1858. For example, 51544.0 in MJD is midnight on January 1, 2000.
+unix;2;Unix time (UTC);Unix time (UTC): seconds from 1970-01-01 00:00:00 UTC, ignoring leap seconds. For example, 946684800.0 in Unix time is midnight on January 1, 2000.
+unix_tai;3;Unix time (TAI); SI seconds elapsed since 1970-01-01 00:00:00 TAI. This will generally differ from standard (UTC) Unix time by the cumulative integral number of leap seconds introduced into UTC since 1972-01-01 UTC plus the initial offset of 10 seconds at that date.
+yday;2;Year, day-of-year and time; As “YYYY:DOY:HH:MM:SS.sss…”. The day-of-year (DOY) goes from 001 to 365 (366 in leap years). For example, 2000:001:00:00:00.000 is midnight on January 1, 2000.
+
