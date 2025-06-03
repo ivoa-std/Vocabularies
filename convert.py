@@ -50,6 +50,7 @@ VOCABULARY_MANDATORY_KEYS = frozenset([
 # this is defined in Vocabularies in the VO 2
 KNOWN_PREDICATES = frozenset([
     "ivoasem:preliminary", "ivoasem:deprecated", "ivoasem:useInstead",
+    "ivoasem:UCDSyntaxCode",
     "rdfs:subClassOf",
     "rdfs:subPropertyOf",
     "skos:broader", "skos:exactMatch",
@@ -62,7 +63,7 @@ KNOWN_PREDICATES = frozenset([
 FULL_TERM_PATTERN = "[\w\d#:/_.*%-]+"
 
 # an RE our terms themselves must match
-TERM_PATTERN = "[\w\d_-]+"
+TERM_PATTERN = "[\w\d_.-]+"
 
 IVOA_RDF_URI = "http://www.ivoa.net/rdf/"
 
@@ -635,9 +636,15 @@ class Term(object):
         """
         for predicate, obj in self._iter_relationship_literals(relations):
             # a little hack: URI-fy plain objects by making them part of
-            # the current vocabulary
+            # the current vocabulary; use a backquote (*almost* LISP,
+            # but we don't want to confuse CSV format sniffers) to
+            # suppress that; of course, we need to hex away that backquote
+            # again.
             if obj and re.match(TERM_PATTERN+"$", obj):
                 obj = "#"+obj
+
+            if obj.startswith("`"):
+                obj = obj[1:]
 
             self._add_relation(predicate, obj)
 
@@ -706,7 +713,9 @@ class Term(object):
                ("ivoasem:deprecated", "Deprecated Term"),
                ("skos:exactMatch", "Same As"),
                ("skos:related", "Related"),
-               ("built-in:narrower", "Narrower")]:
+               ("built-in:narrower", "Narrower"),
+               ("ivoasem:UCDSyntaxCode", "UCD Syntax"),
+            ]:
 
             if prop=="built-in:narrower":
                 objs = [self._format_term_as_html(t)
