@@ -59,54 +59,46 @@ KNOWN_PREDICATES = frozenset([
     "skos:altLabel"])
 
 # an RE our term URIs must match (we're not very diligent yet)
-FULL_TERM_PATTERN = "[\w\d#:/_.*%-]+"
+FULL_TERM_PATTERN = r"[\w\d#:/_.*%-]+"
 
 # an RE our terms themselves must match
-TERM_PATTERN = "[\w\d_-]+"
+TERM_PATTERN = r"[\w\d_-]+"
 
 IVOA_RDF_URI = "http://www.ivoa.net/rdf/"
 
-HT_ACCESS_TEMPLATE_CSV = """# .htaccess for content negotiation
 
-# This file is patterned after Recipe 3 in the W3C document 'Best
-# Practice Recipes for Publishing RDF Vocabularies', at
-# <http://www.w3.org/TR/swbp-vocab-pub/>
-
-AddType application/rdf+xml .rdf
-AddType text/turtle .ttl
-AddType application/x-desise+json .desise
-AddCharset UTF-8 .ttl
-AddCharset UTF-8 .html
-AddCharset UTF-8 .desise
-
-RewriteEngine On
-RewriteBase {install_base}
-
+HT_ACCESS_TEMPLATE = """# rewrite conditions for {name}
 RewriteCond %{{HTTP_ACCEPT}} application/rdf\\+xml
-RewriteRule ^$ {timestamp}/{name}.rdf [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.rdf [R=303]
 
 RewriteCond %{{HTTP_ACCEPT}} text/turtle
-RewriteRule ^$ {timestamp}/{name}.ttl [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.ttl [R=303]
+
+RewriteCond %{{HTTP_ACCEPT}} application/ld\\+json
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.json [R=303]
 
 RewriteCond %{{HTTP_ACCEPT}} application/x-desise\\+json
-RewriteRule ^$ {timestamp}/{name}.desise [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.desise [R=303]
 
-# No accept conditions: make the .html version the default
-RewriteRule ^$ {timestamp}/{name}.html [R=303]
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.html [R=303]
 """
 
+NAMESPACES = {"dc": "http://purl.org/dc/terms/",
+              "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+              "owl": "http://www.w3.org/2002/07/owl#",
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+              "foaf": "http://xmlns.com/foaf/0.1/",
+              "ivoasem": "http://www.ivoa.net/rdf/ivoasem#",
+              "skos": "http://www.w3.org/2004/02/skos/core#"}
 
 TTL_HEADER_TEMPLATE = """@base {baseuri}.
 @prefix : <#>.
 
-@prefix dc: <http://purl.org/dc/terms/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix ivoasem: <http://www.ivoa.net/rdf/ivoasem#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+""" + \
+'\n'.join([f"@prefix {prefix}: <{namespace}> ."
+           for prefix, namespace in NAMESPACES.items()]) + \
+"""
 
 <> a owl:Ontology;
     dc:created {timestamp};
@@ -458,7 +450,7 @@ class _Element(object):
                         self.node.attrib[k] = v
                 return self
 
-        def dump(self, encoding="utf-8", dest_file=sys.stdout):
+        def dump(self, encoding="utf-8", dest_file=sys.stdout.buffer):
             etree.ElementTree(self.node).write(
                 dest_file, encoding=encoding)
 
@@ -595,7 +587,7 @@ class Term(object):
         parser generator.
         """
         predicate, token_stack = None, None
-        for mat in re.finditer(r"\(|\)|[^()]+", relations):
+        for mat in re.finditer(r"\(|\)|[^()\s]+", relations):
             token = mat.group(0).strip()
 
             if predicate is None:
@@ -706,7 +698,7 @@ class Term(object):
             term = term[1:]
 
         if term in self.vocabulary.terms:
-            return T.a(href="#"+term)[term]
+            return T.a(href="#"+term)["#"+term]
         else:
             return term
 
@@ -777,7 +769,9 @@ class Term(object):
         el =  T.tr(class_=row_class, id=self.term)[
             T.td(class_="term")[
                 T.a(title="Copy the link URL for this term's RDF URI",
-                    href=self.get_url())[self.term],
+                    href=self.get_url(),
+                    onclick=f"window.location.hash = '#{self.term}';"
+                        " return false")[self.term],
                 " (Preliminary)" if preliminary else "",
                 " (Deprecated)" if deprecated else ""],
             T.td(class_="label")[self.label],
@@ -818,7 +812,10 @@ class Vocabulary(object):
     * licenseuri: a license URI.  Only use for externally managed
       vocabularies; IVOA vocabularies are always CC-0.
     * hidden: if True, no META.INF is being written (meaning:
-      the vocabulary will not show up in the repo).
+      the vocabulary will not show up in the repo).  Note at that right
+      now hidden vocabularies will not install the right redirects into
+      apache.  This should probably be fixed by making hidden-ness an
+      explicit property in META.INF.
     * licensehtml: a human-readable license text that is reproduced
       verbatim in HTML.  Again, only use for externally managed vocabularies.
     * topconcepts: space-separated identifiers that are declared as SKOS
@@ -926,6 +923,19 @@ class Vocabulary(object):
                 f.write(term.as_ttl())
                 f.write("\n\n")
 
+    def write_jsonld(self):
+        """writes a json-ld representation of the current vocabulary
+        to current directory as <name>.
+
+        rdflib's JSON-LD serializer does not support base URI.
+        """
+        triples = rdflib.Graph()
+        with open(self.name+".ttl", "r", encoding="utf-8") as f:
+            triples.parse(file=f, format="turtle")
+        with open(self.name+".json", "wb") as f:
+            triples.serialize(f, "json-ld",
+                              context=NAMESPACES)
+
     def write_rdfx(self):
         """writes an RDF/X representation of the current vocabulary
         to current directory as <name>.rdf
@@ -1002,9 +1012,11 @@ class Vocabulary(object):
                 T.p(class_="description")[self.description]],
                 self.get_html_body(),
                 T.p(class_="outro")["Alternate formats: ",
-                    T.a(href=self.name+".rdf")["RDF"],
+                    T.a(href=self.name+".rdf")["RDF/XML"],
                     ", ",
                     T.a(href=self.name+".ttl")["Turtle"],
+                    ", ",
+                    T.a(href=self.name+".json")["JSON-LD"],
                     ", ",
                     T.a(href=self.name+".desise")["desise"],
                     " (non-RDF json)."],
@@ -1032,13 +1044,19 @@ class Vocabulary(object):
                 f.write("Status: Draft\n")
 
     def write_htaccess(self):
-        """writes a customised .htaccess for content negotiation.
+        """writes a fragment for the RDF .htaccess for content negotiation.
+
+        This does not write a complete htaccess file; instead,
+        make-rdf-index.py picks this up and combines it to the .htaccess in
+        on directory up.
+
+        This architecture is necessary because we want to rewrite
+        vocabulary URIs before they get mangled by apache's DirectorySlash.
         """
-        install_base = urllib.parse.urlparse(self.baseuri).path+"/"
-        with open(".htaccess", "w", encoding="utf-8") as f:
-            f.write(HT_ACCESS_TEMPLATE_CSV.format(
-                install_base=install_base,
+        with open("htaccess-fragment.txt", "w", encoding="utf-8") as f:
+            f.write(HT_ACCESS_TEMPLATE.format(
                 timestamp=self.timestamp,
+                path=self.path,
                 name=self.name))
 
     def write_representation(self, fs_root):
@@ -1056,6 +1074,7 @@ class Vocabulary(object):
                 clear_first=True):
             self.write_turtle()
             self.write_html()
+            self.write_jsonld()
             self.write_rdfx()
             self.write_desise()
 

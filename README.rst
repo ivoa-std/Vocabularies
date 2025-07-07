@@ -47,9 +47,12 @@ This will leave a deployable hierarchy for the vocabulary in the
 
   python3 convert.py refposition
 
-there will be a subdirectory ``build/refposition``, containing an
-htaccess configured for ivoa.net, and the actual vocabulary artefacts in
-a child named for the vocabulary version.
+there will be a subdirectory ``build/refposition`` containing the
+vocabulary artefacts in a child named for the vocabulary version.  In
+order to make a web server work with this, you also need to update the
+.htaccess in the build directory.  This happens by calling::
+
+  python3 make-rdf-index.py build
 
 See below for actual deployment.
 
@@ -118,9 +121,11 @@ Deployment
 To have a local installation, decide on a location from where you'll
 serve your vocabularies; since we currently generate apache .htaccess
 files only, this should be served by an apache HTTP server.  Then, call
-``make local`` with ROOT_URI set to that root URL, e.g.,::
+convert with its ``--root-uri`` set to where the tree will show up,
+e.g.::
 
   python3 convert.py --root-uri http://localhost/rdf ALL
+  python3 make-rdf-index.py build
 
 In order for the .htaccess configuration to work, the toplevel directory
 has to be configured to interpret FileInfo content in the apache
