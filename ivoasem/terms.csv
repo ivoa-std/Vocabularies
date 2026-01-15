@@ -2,4 +2,4 @@ vocflavour;1;Vocabulary Flavour;The object of this property indicates what sorts
 preliminary;1;Preliminary;The subject of an RDF triple with this property is a term that is still under review and may disappear again.
 deprecated;1;Deprecated;The subject of an RDF triple with this property is a term that should no longer be used.
 useInstead;1;Replace with;Used in RDFs triples to indicate that the object should be used in new annotation where previously the subject was used.
-ucd-syntax-code;1;has UCD syntax code;UCD atoms canot be freely combined. Rather, each atom has a syntax code, which is one of p (only primary position), s (not in primary position), q (freely positionable), e (can be followed by a spectral atom), c (can be followed by two spectral atoms), or v (can be followed by a frame or axis atom).
+ucd-syntax-code;1;has UCD syntax code;UCD atoms canot be freely combined. Rather, each atom has a syntax code, which is one of p (only primary position), s (not in primary position), q (freely positionable), e (can be followed by a spectral atom), c (can be followed by two spectral atoms), or v (can be followed by a frame or axis atom).;ivoasem:preliminary
