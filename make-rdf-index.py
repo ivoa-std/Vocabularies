@@ -72,7 +72,7 @@ HT_ACCESS_HEADER = """# apache config for RDF content negotiation
 # by convert.py.
 
 AddType application/rdf+xml .rdf
-AddType text/turtle .ttl
+AddType otext/turtle .ttl
 AddType application/x-desise+json .desise
 AddCharset UTF-8 .ttl
 AddCharset UTF-8 .html
@@ -81,6 +81,7 @@ AddCharset UTF-8 .desise
 RewriteEngine On
 RewriteBase /rdf/
 DirectorySlash Off
+RedirectMatch 302 ^/rdf$ /rdf/
 
 """
 

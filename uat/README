@@ -23,6 +23,9 @@ This would kill us here, since we generate the IVOA concept ids from
 the labels.  To fix this, we override these labels (which all belong
 to deprecated concepts).
 
+(b) UAT deprecated concepts never have prefLabel-s.  We supply these
+(although we should probably not create new URIs deprecated concepts).
+
 
 Updating the UAT
 ----------------
@@ -42,4 +45,5 @@ When there is a new upstream release:
     is going to throw warnings from skosify but should otherwise work
     fine.
 
-(4) now follow the usual vocabulary update procedures.
+(4) now follow the usual vocabulary update procedures; in particular,
+    don't forget to update the date in vocabs.conf.

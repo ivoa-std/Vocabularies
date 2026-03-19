@@ -31,15 +31,15 @@
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/Rick-Hessman" />
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/Robyn-Shobbrook" />
     <ns2:description xml:lang="en">The Unified Astronomy Thesaurus (UAT) is an open, interoperable and community-supported thesaurus which unifies existing, divergent, and isolated controlled vocabularies in astronomy and astrophysics into a single high-quality, freely-available open thesaurus formalizing astronomical concepts and their inter-relationships. The UAT builds upon the IAU Thesaurus with major contributions from the Astronomy portions of the thesauri developed by the Institute of Physics Publishing and the American Institute of Physics. The Unified Astronomy Thesaurus will be further enhanced and updated through a collaborative effort involving broad community participation.</ns2:description>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-06T03:28:18.000Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:03:09.441Z</ns2:modified>
     <ns2:publisher rdf:resource="http://editor.vocabs.ands.org.au/user/American-Astronomical-Society" />
     <ns2:subject xml:lang="en">Astronomy</ns2:subject>
     <ns2:title xml:lang="en">The Unified Astronomy Thesaurus</ns2:title>
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/104" />
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/1145" />
-    <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/1476" />
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/1529" />
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/1583" />
+    <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/2373" />
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/343" />
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/486" />
     <skos:hasTopConcept rdf:resource="http://astrothesaurus.org/uat/563" />
@@ -443,10 +443,11 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/103" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#mesosphere">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-10T19:27:09.377Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-10T19:27:18.639Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:16:48.260Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#earth-atmosphere" />
-    <skos:definition xml:lang="en">The layer of the atmosphere located between the stratosphere and the ionosphere, where temperature drops rapidly with increasing height. It extends between 17 to 80 kilometers above the Earth's surface.</skos:definition>
+    <skos:definition xml:lang="en">The layer of the atmosphere located between the stratosphere and the ionosphere, where temperature drops rapidly with increasing height. It extends between 17 and 80 kilometers above the Earth's surface.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-10T19:27:18.609Z</ns2:created>
@@ -1628,12 +1629,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1126" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#novae">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T19:43:17.433Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T19:44:00.165Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:14:08.896Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-remnants" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-types" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#cataclysmic-variable-stars" />
-    <skos:definition xml:lang="en">A star that experiences a sudden increase in luminosity, by a s much as 10^6. The outburst ejects a shell of matter but does not disrupt the star.</skos:definition>
+    <skos:definition xml:lang="en">A star that experiences a sudden increase in luminosity, by as much as 10^6. The outburst ejects a shell of matter but does not disrupt the star.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T19:44:00.136Z</ns2:created>
@@ -3168,9 +3170,10 @@
     <skos:prefLabel xml:lang="en">Planetary alignment</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1243" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#planetary-atmospheres">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-11T18:31:08.727Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:34:28.947Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#heliophysics" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-tides" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-boundary-layers" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#scale-height" />
@@ -3179,7 +3182,6 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-variability" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-composition" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-clouds" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-ionospheres" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#lightning" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-dynamics" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-evolution" />
@@ -3196,10 +3198,12 @@
     <skos:prefLabel xml:lang="en">Planetary boundary layers</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1245" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#planetary-bow-shocks">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-20T16:50:30.000Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:13:10.111Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-planetary-interactions" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#shocks" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-physics" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
     <skos:prefLabel xml:lang="en">Planetary bow shocks</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1246" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#planetary-cores">
@@ -3268,9 +3272,9 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1254" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#planetary-science">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T19:35:34.233Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-21T17:54:09.433Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:27:22.986Z</ns2:modified>
     <skos:altLabel xml:lang="en">Planetology</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-system-astronomy" />
     <skos:definition xml:lang="en">The branch of astronomy that deals with the science of planets, or planetary systems, and the solar system.</skos:definition>
@@ -3293,6 +3297,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#surface-gravity" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-dynamics" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-climates" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-ionospheres" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#comet-origins" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-disk-interactions" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-migration" />
@@ -3393,9 +3398,10 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1263" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#plasmapause">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T19:36:40.468Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T19:36:50.077Z</ns2:modified>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:21:31.138Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
     <skos:definition xml:lang="en">The sharp outer boundary of the plasmasphere, at which the plasma density decreases by a factor of 100 or more.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -3488,11 +3494,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1272" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#polar-caps">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-05T20:15:45.862Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-05T20:16:26.327Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:35:44.233Z</ns2:modified>
     <skos:altLabel xml:lang="en">Polar ice caps</skos:altLabel>
     <skos:altLabel xml:lang="en">Polar icecaps</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-structure" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
     <skos:definition xml:lang="en">Either of the regions around the poles of a planet.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -4180,15 +4188,16 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1318" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#quasars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T21:01:18.903Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T19:20:23.826Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:16:12.345Z</ns2:modified>
     <skos:altLabel xml:lang="en">QSO</skos:altLabel>
     <skos:altLabel xml:lang="en">Quasi-stellar galaxies</skos:altLabel>
     <skos:altLabel xml:lang="en">Quasi-stellar object</skos:altLabel>
     <skos:altLabel xml:lang="en">Quasi-stellar radio sources</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#active-galactic-nuclei" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#supermassive-black-holes" />
-    <skos:definition xml:lang="en">An compact, extragalactic object which is highly luminous and looks like a star. Their redshifts can be large and their brightness varies. Quasars have an intrinsic luminosity which can reach some 100 times that of bright galaxies. They are thought to be active galactic nuclei with a size a little larger than the solar system. The first quasar to be identified as such, in 1963, was the radio source 3C 273 at a redshift of 0.158. With its 13th magnitude, it is the optically brightest quasar as observed from Earth. Some quasars are strong radio sources.</skos:definition>
+    <skos:definition xml:lang="en">A compact, extragalactic object which is highly luminous and looks like a star. Their redshifts can be large and their brightness varies. Quasars have an intrinsic luminosity which can reach some 100 times that of bright galaxies. They are thought to be active galactic nuclei with a size a little larger than the solar system. The first quasar to be identified as such, in 1963, was the radio source 3C 273 at a redshift of 0.158. With its 13th magnitude, it is the optically brightest quasar as observed from Earth. Some quasars are strong radio sources.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T21:01:18.869Z</ns2:created>
@@ -4476,8 +4485,9 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1337" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#radio-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:28:18.383Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:28:36.545Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T15:28:10.805Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
     <skos:definition xml:lang="en">The branch of astronomy that deals with the study of the Universe by means of radio waves. Radio waves are the electromagnetic radiation with the longest wavelengths (and lowest energies), ranging from 0.3 mm to several km. Radio waves form a very broad category, which includes the submillimeter waves (with a wavelengths of 0.3-1 mm) and microwave regions (1mm to several cm).</skos:definition>
     <skos:editorialNote>
@@ -4486,14 +4496,6 @@
         <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
         <ns2:title>Definition Provenance</ns2:title>
         <rdfs:comment>Modified from An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
-      </rdf:Description>
-    </skos:editorialNote>
-    <skos:editorialNote>
-      <rdf:Description>
-        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T20:08:53.728Z</ns2:created>
-        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-        <ns2:title>Definition Provenance</ns2:title>
-        <rdfs:comment>An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#millimeter-astronomy" />
@@ -6389,27 +6391,32 @@
     <skos:prefLabel xml:lang="en">Soft gamma-ray repeaters</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1471" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-planetary-interactions">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-04T15:09:19.406Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:14:37.730Z</ns2:modified>
     <skos:altLabel xml:lang="en">Solar planetary interactions</skos:altLabel>
     <skos:altLabel xml:lang="en">Solar planetary relation</skos:altLabel>
     <skos:altLabel xml:lang="en">Solar-planetary relation</skos:altLabel>
     <skos:altLabel xml:lang="en">Solar/planetary interactions</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#heliophysics" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-bow-shocks" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#solar-terrestrial-interactions" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-ionospheres" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
     <skos:prefLabel xml:lang="en">Solar-planetary interactions</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#space-weather" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#star-planet-interactions" />
     <skos:scopeNote xml:lang="en">Specific to interactions between the Sun and Solar system planets.  The similar concept "Star-planet interactions" is about exoplanets and their stars.</skos:scopeNote>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1472" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-terrestrial-interactions">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-17T16:27:56.610Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:25:52.170Z</ns2:modified>
     <skos:altLabel xml:lang="en">Solar terrestrial relation</skos:altLabel>
     <skos:altLabel xml:lang="en">Solar/terrestrial relations</skos:altLabel>
     <skos:altLabel xml:lang="en">Sun-Earth interactions</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-planetary-interactions" />
     <skos:prefLabel xml:lang="en">Solar-terrestrial interactions</skos:prefLabel>
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#space-weather" />
     <skos:scopeNote xml:lang="en">Specific to interactions between the Sun and Earth.  The similar concept "Solar-planetary interactions" is about interactions between the Sun and other Solar system planets, or all of them more generally.</skos:scopeNote>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1473" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-abundances">
@@ -6445,11 +6452,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1475" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-physics">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T15:57:11.898Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-03-29T17:21:25.592Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:03:09.441Z</ns2:modified>
     <skos:altLabel xml:lang="en">Astrophysics of the sun</skos:altLabel>
     <skos:altLabel xml:lang="en">Solar astronomy</skos:altLabel>
     <skos:altLabel xml:lang="en">Solar astrophysics</skos:altLabel>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#heliophysics" />
     <skos:definition xml:lang="en">The branch of astrophysics concerned with the study of the physical properties of the Sun based on the most detailed observations which can be obtained for a star.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -6488,7 +6497,6 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#the-sun" />
     <skos:scopeNote xml:lang="en">Specifically the study of the Sun.</skos:scopeNote>
     <skos:scopeNote xml:lang="en">The Sun is not primarily thought of as a subclass of star, because it is discussed with different words in a different literature by a different group of scientists. - jegpeek</skos:scopeNote>
-    <skos:topConceptOf rdf:resource="http://astrothesaurus.org/uat/1" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1476" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-atmosphere">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
@@ -6575,10 +6583,11 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1482" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-corona">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T15:39:17.521Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T15:39:28.328Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:18:01.909Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-atmosphere" />
-    <skos:definition xml:lang="en">The outermost atmosphere of the Sun immediately above the chromosphere, which can be seen during a total solar eclipse. It consists of hot, extremely tenuous gas extending for millions of kilometer from the Sun's surface.</skos:definition>
+    <skos:definition xml:lang="en">The outermost atmosphere of the Sun immediately above the chromosphere, which can be seen during a total solar eclipse. It consists of hot, extremely tenuous gas extending for millions of kilometers from the Sun's surface.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T15:39:28.299Z</ns2:created>
@@ -6796,12 +6805,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1495" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-flares">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T15:21:36.554Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-24T17:38:19.329Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:18:37.183Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-activity" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-physics" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-storm" />
-    <skos:definition xml:lang="en">A bright eruption form the Sun's chromosphere in the vicinity of a sunspot. Solar flares are caused by tremendous explosions on the surface of the Sun. In a matter of just a few minutes they heat the material to many millions of degrees and release as much energy as a billion megatons of TNT.</skos:definition>
+    <skos:definition xml:lang="en">A bright eruption from the Sun's chromosphere in the vicinity of a sunspot. Solar flares are caused by tremendous explosions on the surface of the Sun. In a matter of just a few minutes they heat the material to many millions of degrees and release as much energy as a billion megatons of TNT.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T15:21:36.530Z</ns2:created>
@@ -7259,6 +7269,7 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#the-moon" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#the-sun" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#space-weather" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#unmagnetized-solar-system-bodies" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#dwarf-planets" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#asteroid-belt" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#heliosphere" />
@@ -7330,8 +7341,9 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1533" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-wind">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T16:00:57.493Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T16:01:14.964Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:53:20.251Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-physics" />
     <skos:definition xml:lang="en">A mass outflow, consisting of protons, electrons, and other subatomic particles, expelled constantly from the solar corona at about 500 km per second. The solar mass-loss rate in this phenomenon amounts to about 2 x 10^-14 solar masses per year, or about 106 tons per second.</skos:definition>
     <skos:editorialNote>
@@ -8788,6 +8800,7 @@
         <rdfs:comment>An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#polar-vortex" />
     <skos:prefLabel xml:lang="en">Stratosphere</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1640" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stromgren-photometric-system">
@@ -8922,12 +8935,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1649" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#blue-compact-dwarf-galaxies">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-01T17:29:34.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-26T20:18:37.095Z</ns2:modified>
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-26T20:20:33.677Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:20:41.746Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#compact-dwarf-galaxies" />
-    <skos:definition xml:lang="en">An small irregular galaxy undergoing violent star formation activity. These objects appear blue by reason of containing clusters of hot, massive stars which ionize the surrounding interstellar gas. They are chemically unevolved since their metallicity is only 1/3 to 1/30 of the solar value.</skos:definition>
+    <skos:definition xml:lang="en">A small irregular galaxy undergoing violent star formation activity. These objects appear blue by reason of containing clusters of hot, massive stars which ionize the surrounding interstellar gas. They are chemically unevolved since their metallicity is only 1/3 to 1/30 of the solar value.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-26T20:20:33.649Z</ns2:created>
@@ -8969,12 +8983,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1652" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#sunspots">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T18:50:12.933Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-16T20:39:45.185Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:17:24.057Z</ns2:modified>
     <skos:altLabel xml:lang="en">Sun spots</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-physics" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-active-regions" />
-    <skos:definition xml:lang="en">An area seen as a dark patch on the Sun's surface. Sunspots appear dark because they are cooler (of about 4000 °C) than the surrounding photosphere (about 6000 °C). They range in size from a few hundred kilometers to several times the Earth's diameter and last from a few hours to a few months. Very small sunspots are called pores. The number of sunspots varies from maximum to minimum in about 11 years, the sunspot cycle. Their appearance during a cycle follows the Sporer law. A typical spot has a central umbra surrounded by a penumbra, although either features can exist without the other. Sunspots are associated with strong magnetic fields of 0.2 to 0.4 tesla. A given sunspot has a single magnetic polarity. The opposite polarity may be found in other sunspots or in the bright and diffuse facular region adjacent to the sunspot. The first recorded naked-eye sightings of sunspots were by Chinese astronomers in the first century B.C. Johannes Fabricius (1587-1617) was the first to argue that sunspots are areas on the solar surface.</skos:definition>
+    <skos:definition xml:lang="en">An area seen as a dark patch on the Sun's surface. Sunspots appear dark because they are cooler (of about 4000 °C) than the surrounding photosphere (about 6000 °C). They range in size from a few hundred kilometers to several times the Earth's diameter and last from a few hours to a few months. Very small sunspots are called pores. The number of sunspots varies from maximum to minimum in about 11 years, the sunspot cycle. Their appearance during a cycle follows the Sporer law. A typical spot has a central umbra surrounded by a penumbra, although either feature can exist without the other. Sunspots are associated with strong magnetic fields of 0.2 to 0.4 tesla. A given sunspot has a single magnetic polarity. The opposite polarity may be found in other sunspots or in the bright and diffuse facular region adjacent to the sunspot. The first recorded naked-eye sightings of sunspots were by Chinese astronomers in the first century B.C. Johannes Fabricius (1587-1617) was the first to argue that sunspots are areas on the solar surface.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T18:50:12.904Z</ns2:created>
@@ -10522,11 +10537,12 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1757" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#van-allen-radiation-belt">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T21:35:50.051Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T21:36:01.728Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:22:06.291Z</ns2:modified>
     <skos:altLabel xml:lang="en">Radiation belts</skos:altLabel>
     <skos:altLabel xml:lang="en">Van Allen belts</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
     <skos:definition xml:lang="en">The ring-shaped regions of charged particles surrounding the Earth from 1 to 6 Earth radii into space. The charged particles are trapped in by the Earth's magnetic field. The inner belt is between 1.2 and 4.5 Earth radii and contains high-energy electrons and protons which originate mainly from interactions between cosmic rays and the upper atmosphere. The outer belt, located between 4.5 and 6.0 Earth radii, contains lower-energy charged particles mainly coming from the solar wind.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -10536,6 +10552,8 @@
         <rdfs:comment>An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#inner-radiation-belts" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#outer-radiation-belts" />
     <skos:prefLabel xml:lang="en">Van Allen radiation belts</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1758" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#variable-radiation-sources">
@@ -10778,8 +10796,9 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1775" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#visible-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:26:26.880Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:27:02.855Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T15:28:25.685Z</ns2:modified>
     <skos:altLabel xml:lang="en">Visible astronomical observations</skos:altLabel>
     <skos:altLabel xml:lang="en">Visible astronomy</skos:altLabel>
     <skos:altLabel xml:lang="en">Visible telescopes</skos:altLabel>
@@ -10791,14 +10810,6 @@
         <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
         <ns2:title>Definition Provenance</ns2:title>
         <rdfs:comment>Combined and modified from ESA and An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malay</rdfs:comment>
-      </rdf:Description>
-    </skos:editorialNote>
-    <skos:editorialNote>
-      <rdf:Description>
-        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T22:18:03.463Z</ns2:created>
-        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-        <ns2:title>Definition Provenance</ns2:title>
-        <rdfs:comment>Wikipedia</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#optical-identification" />
@@ -10874,12 +10885,12 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1780" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#von-zeipel-theorem">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T16:59:12.832Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-24T17:31:52.824Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:19:42.229Z</ns2:modified>
     <skos:altLabel xml:lang="en">von Zeipel's theorem</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#analytical-mathematics" />
-    <skos:definition xml:lang="en">A theorem that establishes a relation between the radiative flux at some colatitude on the surface of a rotating star and the local effective gravity (which is a function of the angular velocity and colatitude). For a rotating star in which centrifugal forces are not negligible, the equipotentials where gravity, centrifugal force, and pressure are balanced will no longer be spheres. The theorem states that the radiative flux is proportional to the local effective gravity at the considered colatitude, F(θ) ∝ g_eff (θ)α, where α is the gravity darkening coefficient. As a consequence, the stellar surface will not be uniformly bright, because there is a much larger flux and a higher effective temperature at the pole than at the equator (T_eff (θ) ∝ g_eff (θ)β, where β is the gravity darkening exponent. In massive stars this latitudinal dependence of the temperature leads to asymmetric mass loss and also to enhanced average mass loss rates.</skos:definition>
+    <skos:definition xml:lang="en">A theorem that establishes a relation between the radiative flux at some colatitude on the surface of a rotating star and the local effective gravity (which is a function of the angular velocity and colatitude). For a rotating star in which centrifugal forces are not negligible, the equipotentials where gravity, centrifugal force, and pressure are balanced will no longer be spheres. The theorem states that the radiative flux is proportional to the local effective gravity at the considered colatitude, F(θ) ∝ g_eff (θ)α, where α is the gravity darkening coefficient. As a consequence, the stellar surface will not be uniformly bright, because there is a much larger flux and a higher effective temperature at the pole than at the equator (T_eff (θ) ∝ g_eff (θ)β, where β is the gravity darkening exponent). In massive stars this latitudinal dependence of the temperature leads to asymmetric mass loss and also to enhanced average mass loss rates.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T16:59:12.800Z</ns2:created>
@@ -11121,14 +11132,15 @@
   <skos:prefLabel xml:lang="en">White dwarf evolution</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/1798" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#white-dwarf-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T21:11:39.147Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T21:11:51.581Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:15:33.422Z</ns2:modified>
     <skos:altLabel xml:lang="en">Degenerate dwarf</skos:altLabel>
     <skos:altLabel xml:lang="en">Degenerate dwarf stars</skos:altLabel>
     <skos:altLabel xml:lang="en">White dwarfs</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-evolutionary-types" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#compact-objects" />
-    <skos:definition xml:lang="en">A compact star of high surface temperature, low luminosity, and high density (10^5 - 10^8 g cm^-3), with roughly the mass of the Sun (mean mass ~ 0.6 M_sun) and the radius of the Earth (R ~ 0.01 R_sun), representing the end-point of the evolution of all stars with masses less then ~ 5-9 solar masses. A white dwarf is what remains after the central star of a planetary nebula fades and becomes cool. The Chandrasekhar limit of 1.43 solar masses is the highest mass that a white dwarf can achieve before electron degeneracy pressure is unable to support it. In the Hertzsprung-Russell diagram, white dwarfs form a well-defined sequence around 8 magnitudes fainter than the main sequence. They are composed of a core of carbon and oxygen nuclei and degenerate electrons surrounded by a thin shell of helium and an outer skin of hydrogen. White dwarf's radiation is the leftover heat from the star's past when its core was an active nuclear reactor. The star slowly cools as heat escapes through the non-degenerate envelope. The first white dwarf to be discovered was Sirius B, the companion of Sirius. White dwarfs are divided into several types, according to their spectral features, which depend on the type of shell burning that dominated as it became a planetary nebula: DA white dwarf; DB white dwarf; DC white dwarf; DO white dwarf; DZ white dwarf; DQ white dwarf.</skos:definition>
+    <skos:definition xml:lang="en">A compact star of high surface temperature, low luminosity, and high density (10^5 - 10^8 g cm^-3), with roughly the mass of the Sun (mean mass ~ 0.6 M_sun) and the radius of the Earth (R ~ 0.01 R_sun), representing the end-point of the evolution of all stars with masses less than ~ 5-9 solar masses. A white dwarf is what remains after the central star of a planetary nebula fades and becomes cool. The Chandrasekhar limit of 1.43 solar masses is the highest mass that a white dwarf can achieve before electron degeneracy pressure is unable to support it. In the Hertzsprung-Russell diagram, white dwarfs form a well-defined sequence around 8 magnitudes fainter than the main sequence. They are composed of a core of carbon and oxygen nuclei and degenerate electrons surrounded by a thin shell of helium and an outer skin of hydrogen. White dwarf's radiation is the leftover heat from the star's past when its core was an active nuclear reactor. The star slowly cools as heat escapes through the non-degenerate envelope. The first white dwarf to be discovered was Sirius B, the companion of Sirius. White dwarfs are divided into several types, according to their spectral features, which depend on the type of shell burning that dominated as it became a planetary nebula: DA white dwarf; DB white dwarf; DC white dwarf; DO white dwarf; DZ white dwarf; DQ white dwarf.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T21:11:51.552Z</ns2:created>
@@ -11718,11 +11730,12 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/184" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#zenith-telescopes">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T20:51:54.981Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T20:52:09.462Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:20:12.954Z</ns2:modified>
     <skos:altLabel xml:lang="en">Zenith sectors</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#transit-instruments" />
-    <skos:definition xml:lang="en">A telescope that is mounted on a vertical axis or moves only a small amount from the vertical. It is primarily used to determine positional measurement of stars moving near the zenith. The advantage is that there is no atmospheric refraction occurring at the zenith. If a star on one night passes through the center of eyepiece, one must observe it six month later, and see if the star has been offset by the center. A shift would mean a measure of parallax.</skos:definition>
+    <skos:definition xml:lang="en">A telescope that is mounted on a vertical axis or moves only a small amount from the vertical. It is primarily used to determine positional measurement of stars moving near the zenith. The advantage is that there is no atmospheric refraction occurring at the zenith. If a star on one night passes through the center of eyepiece, one must observe it six months later, and see if the star has been offset by the center. A shift would mean a measure of parallax.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-04T20:52:09.420Z</ns2:created>
@@ -14044,12 +14057,13 @@
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2036" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#space-weather">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-06T14:45:49.000Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-19T16:04:51.468Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-04T15:09:19.406Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:30:46.924Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-system" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#heliophysics" />
     <skos:definition xml:lang="en">The varying conditions in space and specifically in the near-Earth environment. Space weather is chiefly solar driven, resulting from solar activities such as solar flares, solar wind, and coronal mass ejections that affect magnetosphere, ionosphere, and thermosphere. Non-solar sources such as Galactic cosmic rays, meteoroids, and space debris can all be considered as altering space weather conditions at the Earth. Space weather may affect the performance and reliability of space-borne and ground-based technological systems and can endanger human life or health. The research in this field aims at monitoring and diagnosis of space weather conditions and constructing reliable numerical prediction models.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -14061,6 +14075,8 @@
     </skos:editorialNote>
     <skos:prefLabel xml:lang="en">Space weather</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#solar-planetary-interactions" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#solar-terrestrial-interactions" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-physics" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2037" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-coronal-lines">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
@@ -16113,9 +16129,13 @@
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2184" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#planetary-ionospheres">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-02T22:01:27.987Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:29:05.132Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-planetary-interactions" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
     <skos:prefLabel xml:lang="en">Planetary ionospheres</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2185" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#titan">
@@ -17563,9 +17583,11 @@
     <skos:prefLabel xml:lang="en">Light pollution</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2318" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetic-poles">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-21T18:32:25.565Z</ns2:created>
     <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:21:02.271Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
     <skos:prefLabel xml:lang="en">Magnetic poles</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2319" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#cii-region">
@@ -18002,14 +18024,224 @@
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#laboratory-astrophysics" />
     <skos:prefLabel xml:lang="en">Theoretical data</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2372" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#heliophysics">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:01:47.909Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:34:28.947Z</ns2:modified>
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#solar-planetary-interactions" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#solar-physics" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#space-weather" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-magnetic-fields" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-physics" />
+    <skos:prefLabel xml:lang="en">Heliophysics</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="http://astrothesaurus.org/uat/1" />
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2373" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#unmagnetized-solar-system-bodies">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:08:44.018Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:22:31.236Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-system" />
+    <skos:prefLabel xml:lang="en">Unmagnetized Solar System bodies</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2374" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#alfven-wings">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:15:47.930Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Alfven wings</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2375" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetosphere-cusps">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:16:43.474Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:23:09.426Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetosphere cusps</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2376" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetosphere-foreshocks">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:17:14.072Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:23:50.985Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetosphere foreshocks</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2377" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetosphere-lobes">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:17:35.437Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:24:08.170Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetosphere lobes</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2378" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetodisk">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:18:06.830Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetodisk</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2379" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#circumstellar-gas">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#circumstellar-matter" />
     <skos:prefLabel xml:lang="en">Circumstellar gas</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/238" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetopause">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:18:24.216Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetopause</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2380" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetosheath">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:18:47.481Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetosheath</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2381" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetotail">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:19:11.428Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetotail-current-sheet" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetotail-kink" />
+    <skos:prefLabel xml:lang="en">Magnetotail</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2382" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#natural-satellite-wakes">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:19:32.397Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:27:23.813Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Natural satellite wakes</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2383" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#inner-magnetosphere">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:19:59.416Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:21:47.663Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-magnetosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#plasmapause" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#van-allen-radiation-belt" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetic-poles" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetosphere-plasma-toruses" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#warm-plasma-cloak" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#plasmasphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ring-current" />
+    <skos:prefLabel xml:lang="en">Inner magnetosphere</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2384" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#inner-radiation-belts">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:22:24.922Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#van-allen-radiation-belt" />
+    <skos:prefLabel xml:lang="en">Inner radiation belts</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2385" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#outer-radiation-belts">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:23:12.956Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#van-allen-radiation-belt" />
+    <skos:prefLabel xml:lang="en">Outer radiation belts</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2386" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetosphere-plasma-toruses">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:23:51.174Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:24:38.085Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Magnetosphere plasma toruses</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2387" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#warm-plasma-cloak">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:24:20.141Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Warm plasma cloak</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2388" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#plasmasphere">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:24:40.464Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Plasmasphere</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2389" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#circumstellar-grains">
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#circumstellar-matter" />
     <skos:prefLabel xml:lang="en">Circumstellar grains</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/239" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ring-current">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:25:25.023Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
+    <skos:prefLabel xml:lang="en">Ring current</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2390" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetotail-current-sheet">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:26:00.045Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#magnetotail" />
+    <skos:prefLabel xml:lang="en">Magnetotail current sheet</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2391" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#magnetotail-kink">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:26:28.649Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#magnetotail" />
+    <skos:prefLabel xml:lang="en">Magnetotail kink</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2392" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#mid-latitude-ionosphere">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:34:35.862Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
+    <skos:prefLabel xml:lang="en">Mid-latitude ionosphere</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2393" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#low-latitude-ionosphere">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:34:51.880Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:35:16.131Z</ns2:modified>
+    <skos:altLabel xml:lang="en">Equatorial ionosphere</skos:altLabel>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
+    <skos:prefLabel xml:lang="en">Low-latitude ionosphere</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2394" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#auroral-region">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:36:22.822Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#poleward-boundary" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#equatorward-boundary" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#auroral-oval" />
+    <skos:prefLabel xml:lang="en">Auroral region</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2395" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#subauroral-ionosphere">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:36:51.962Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
+    <skos:prefLabel xml:lang="en">Subauroral ionosphere</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2396" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ionosphere-current-systems">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:37:20.116Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:30:00.538Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#pedersen-current-ionospheric-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#hall-current-ionospheric-" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#sq-current" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#auroral-electrojet" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#equatorial-electrojet" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#substorm-current-wedge" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#region-1-current" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#region-2-current" />
+    <skos:prefLabel xml:lang="en">Ionosphere current systems</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2397" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#poleward-boundary">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:37:59.781Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#auroral-region" />
+    <skos:prefLabel xml:lang="en">Poleward boundary</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2398" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#equatorward-boundary">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:38:17.920Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#auroral-region" />
+    <skos:prefLabel xml:lang="en">Equatorward boundary</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2399" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#algol-variable-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-05T19:59:26.109Z</ns2:modified>
@@ -18035,6 +18267,76 @@
     </skos:editorialNote>
     <skos:prefLabel xml:lang="en">Circumstellar masers</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/240" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#auroral-oval">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:38:33.516Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#auroral-region" />
+    <skos:prefLabel xml:lang="en">Auroral oval</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2400" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#pedersen-current-ionospheric-">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:39:10.438Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:26:55.995Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Pedersen current (Ionospheric)</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2401" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#hall-current-ionospheric-">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:39:28.174Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:27:08.801Z</ns2:modified>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Hall current (Ionospheric)</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2402" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#sq-current">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:39:47.523Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Sq current</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2403" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#auroral-electrojet">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:40:12.284Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Auroral electrojet</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2404" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#equatorial-electrojet">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:40:32.491Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Equatorial electrojet</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2405" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#substorm-current-wedge">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:41:03.598Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Substorm current wedge</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2406" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#region-1-current">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:42:41.986Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:42:56.630Z</ns2:modified>
+    <skos:altLabel xml:lang="en">Region 1 field-aligned current</skos:altLabel>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Region 1 current</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2407" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#region-2-current">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:43:13.468Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:43:30.642Z</ns2:modified>
+    <skos:altLabel xml:lang="en">Region 2 field-aligned current</skos:altLabel>
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
+    <skos:prefLabel xml:lang="en">Region 2 current</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2408" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#polar-vortex">
+    <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:44:23.724Z</ns2:created>
+    <ns2:creator rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stratosphere" />
+    <skos:prefLabel xml:lang="en">Polar vortex</skos:prefLabel>
+  <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2409" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#circumstellar-matter">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T19:18:34.564Z</ns2:modified>
@@ -18059,6 +18361,14 @@
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#circumstellar-shells" />
     <skos:prefLabel xml:lang="en">Circumstellar matter</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/241" /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#solar-wind-heating">
+    <rdfs:label xml:lang="en">Solar wind heating</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Solar wind heating</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2410" /><ivoasem:deprecated /></skos:Concept>
+  <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#stochastic-heating">
+    <rdfs:label xml:lang="en">Stochastic heating</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+  <skos:prefLabel xml:lang="en">Stochastic heating</skos:prefLabel><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/2411" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#circumstellar-shells">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-26T19:48:53.059Z</ns2:modified>
@@ -20802,8 +21112,8 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <skos:prefLabel xml:lang="en">Earth-moon system</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/436" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#earth-atmosphere">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-21T18:19:17.357Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:28:42.462Z</ns2:modified>
     <skos:altLabel xml:lang="en">Terrestrial atmosphere</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-atmospheres" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#mesopause" />
@@ -20823,7 +21133,6 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#diffuse-radiation" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#exosphere" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#humidity" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#land-atmosphere-interactions" />
     <skos:prefLabel xml:lang="en">Earth atmosphere</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#atmospheric-extinction" />
@@ -22184,12 +22493,13 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/529" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#aperture-synthesis">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T18:05:27.537Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T18:05:44.291Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:19:11.695Z</ns2:modified>
     <skos:altLabel xml:lang="en">Synthesis imaging</skos:altLabel>
     <skos:altLabel xml:lang="en">Synthetic aperture</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#interferometry" />
-    <skos:definition xml:lang="en">The method of combining the signals received by several smaller telescopes distributed over a very large area or baseline to provide the high angular resolution of a much large telescope.</skos:definition>
+    <skos:definition xml:lang="en">The method of combining the signals received by several smaller telescopes distributed over a very large area or baseline to provide the high angular resolution of a much larger telescope.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T18:05:44.265Z</ns2:created>
@@ -25836,8 +26146,9 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/785" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#infrared-astronomy">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:21:09.636Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T12:22:01.410Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-06-20T15:27:47.656Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#astronomical-methods" />
     <skos:definition xml:lang="en">The study of infrared properties of astronomical objects. Infrared is the invisible part of electromagnetic spectrum possessing wavelengths between those of visible light and those of radio waves, i.e. approximately between about 0.75 and 1000 μm.</skos:definition>
     <skos:editorialNote>
@@ -25846,14 +26157,6 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
         <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
         <ns2:title>Definition Provenance</ns2:title>
         <rdfs:comment>Modified from An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
-      </rdf:Description>
-    </skos:editorialNote>
-    <skos:editorialNote>
-      <rdf:Description>
-        <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-09T16:58:12.767Z</ns2:created>
-        <ns2:creator rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-        <ns2:title>Definition Provenance</ns2:title>
-        <rdfs:comment>An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#near-infrared-astronomy" />
@@ -26476,9 +26779,11 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/823" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#interplanetary-magnetic-fields">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T16:06:26.504Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T16:06:41.122Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:09:35.674Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#heliophysics" />
     <skos:definition xml:lang="en">The magnetic field that is carried along with the solar wind and fills the solar system space. It is wound into a spiral structure by the rotation of the Sun. At the Earth's distance from the Sun, it has a strength of about 5 x 10^-5 gauss.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -26520,9 +26825,10 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <skos:prefLabel xml:lang="en">Interplanetary particle acceleration</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/826" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#interplanetary-physics">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-11T20:50:50.206Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:30:46.924Z</ns2:modified>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#heliophysics" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#pickup-ions" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-bow-shocks" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#solar-energetic-particles" />
@@ -26534,6 +26840,7 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-turbulence" />
     <skos:prefLabel xml:lang="en">Interplanetary physics</skos:prefLabel>
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#solar-wind" />
+    <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#space-weather" />
     <skos:related rdf:resource="http://www.ivoa.net/rdf/uat#interplanetary-magnetic-fields" />
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/827" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#interplanetary-scintillation">
@@ -26880,6 +27187,8 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <skos:prefLabel xml:lang="en">Interstellar phases</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/850" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#interstellar-plasma">
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T19:52:52.071Z</ns2:modified>
     <skos:altLabel xml:lang="en">Highly ionised interstellar gas</skos:altLabel>
     <skos:altLabel xml:lang="en">Highly ionized interstellar gas</skos:altLabel>
     <skos:altLabel xml:lang="en">Interstellar ionized gas</skos:altLabel>
@@ -27009,11 +27318,11 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/86" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#ionosphere">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-10T17:57:47.303Z</ns2:modified>
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-09T19:19:15.838Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:35:44.233Z</ns2:modified>
     <skos:altLabel xml:lang="en">Earth's ionosphere</skos:altLabel>
-    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#earth-atmosphere" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-ionospheres" />
     <skos:definition xml:lang="en">The region of the Earth's upper atmosphere containing a small percentage of free electrons and ions produced by photoionization of the constituents of the atmosphere by solar ultraviolet radiation.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
@@ -27023,6 +27332,13 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
         <rdfs:comment>An Etymological Dictionary of Astronomy and Astrophysics, by M. Heydari-Malayeri</rdfs:comment>
       </rdf:Description>
     </skos:editorialNote>
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#polar-caps" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetosphere-cusps" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#mid-latitude-ionosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#low-latitude-ionosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#auroral-region" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#subauroral-ionosphere" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#ionosphere-current-systems" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#d-layer" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#e-layer" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#f-layer" />
@@ -28748,13 +29064,14 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
   <skos:prefLabel xml:lang="en">Solar M coronal region</skos:prefLabel><ivoasem:useInstead rdf:resource="http://www.ivoa.net/rdf/uat#solar-coronal-holes" /><skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/984" /><ivoasem:deprecated /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#m-stars">
     <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie_Admin" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T16:56:23.335Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
     <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T16:56:36.013Z</ns2:modified>
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T20:14:48.873Z</ns2:modified>
     <skos:altLabel xml:lang="en">Class M stars</skos:altLabel>
     <skos:altLabel xml:lang="en">M-type stars</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#stellar-spectral-types" />
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#late-type-stars" />
-    <skos:definition xml:lang="en">A cool, red star of spectral type M with a surface temperatures of less than 3600 K. The spectra of M stars are dominated by molecular bands, especially those of TiO. Naked-eye examples are Betelgeuse and Antares.</skos:definition>
+    <skos:definition xml:lang="en">A cool, red star of spectral type M with a surface temperature less than 3600 K. The spectra of M stars are dominated by molecular bands, especially those of TiO. Naked-eye examples are Betelgeuse and Antares.</skos:definition>
     <skos:editorialNote>
       <rdf:Description>
         <ns2:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-03T16:56:35.968Z</ns2:created>
@@ -28929,15 +29246,24 @@ https://en.wikipedia.org/wiki/Diffuse_sky_radiation</rdfs:comment>
     <skos:prefLabel xml:lang="en">Magnetic variable stars</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/996" /></skos:Concept>
   <skos:Concept rdf:about="http://www.ivoa.net/rdf/uat#planetary-magnetosphere">
-    <ns2:contributor rdf:resource="http://editor.vocabs.ands.org.au/user/AAS_Frey.Katie" />
-    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-26T21:34:22.213Z</ns2:modified>
+    <ns2:contributor rdf:resource="http://editor.vocabs.ardc.edu.au/user/829848bd-c5e5-4a4f-8dab-a4a93998df19" />
+    <ns2:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-12-16T18:22:06.291Z</ns2:modified>
     <skos:altLabel xml:lang="en">Planetary magnetosphere</skos:altLabel>
     <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#planetary-science" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#plasmapause" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#van-allen-radiation-belt" />
+    <skos:broader rdf:resource="http://www.ivoa.net/rdf/uat#solar-planetary-interactions" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#planetary-bow-shocks" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#aurorae" />
-    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetic-poles" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetic-storms" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#alfven-wings" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetosphere-cusps" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetosphere-foreshocks" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetosphere-lobes" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetodisk" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetopause" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetosheath" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetotail" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#natural-satellite-wakes" />
+    <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#inner-magnetosphere" />
     <skos:narrower rdf:resource="http://www.ivoa.net/rdf/uat#magnetospheric-radio-emissions" />
     <skos:prefLabel xml:lang="en">Planetary magnetospheres</skos:prefLabel>
   <skos:exactMatch rdf:resource="http://astrothesaurus.org/uat/997" /></skos:Concept>
