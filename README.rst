@@ -151,8 +151,10 @@ recommended to work like this:
     the intended changes.
 (5) Commit the result.  In the commit message, specify what caused
     the change ("mail by person@example.org"; "TCG telecon of 2020-02-11")
-(6) Run ``sshfs semantics@ivoa.info:rdf ivoa-repo`` (you'll have to
-    mkdir ``ivoa-repo`` if it doesn't exist yet, of course)
+(6) Run ``sshfs semantics@ivoa:rdf ivoa-repo`` (you'll have to
+    mkdir ``ivoa-repo`` if it doesn't exist yet, of course; you will
+    have to have a suitable, but sometimes changing Host stanza for ivoa
+    in ~/.ssh/config, which Markus can probably help you out with)
 (7) Run ``python3 convert.py --dest-dir ivoa-repo <vocname>`` to update
     the vocabulary itself.
 (8) Update the vocabulary index: ``python3 make-rdf-index.py ivoa-repo``
