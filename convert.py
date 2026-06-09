@@ -74,6 +74,9 @@ RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.rdf [R=303]
 RewriteCond %{{HTTP_ACCEPT}} text/turtle
 RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.ttl [R=303]
 
+RewriteCond %{{HTTP_ACCEPT}} application/ld\\+json
+RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.json [R=303]
+
 RewriteCond %{{HTTP_ACCEPT}} application/x-desise\\+json
 RewriteRule ^{path}/?$ {path}/{timestamp}/{name}.desise [R=303]
 
@@ -1012,6 +1015,8 @@ class Vocabulary(object):
                     T.a(href=self.name+".rdf")["RDF"],
                     ", ",
                     T.a(href=self.name+".ttl")["Turtle"],
+                    ", ",
+                    T.a(href=self.name+".json")["JSON-LD"],
                     ", ",
                     T.a(href=self.name+".desise")["desise"],
                     " (non-RDF json)."],
