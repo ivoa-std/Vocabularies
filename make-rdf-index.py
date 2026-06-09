@@ -81,6 +81,7 @@ AddCharset UTF-8 .desise
 RewriteEngine On
 RewriteBase /rdf/
 DirectorySlash Off
+RedirectMatch 302 ^/rdf$ /rdf/
 
 """
 

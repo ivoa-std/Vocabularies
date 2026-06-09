@@ -47,9 +47,12 @@ This will leave a deployable hierarchy for the vocabulary in the
 
   python3 convert.py refposition
 
-there will be a subdirectory ``build/refposition``, containing an
-htaccess configured for ivoa.net, and the actual vocabulary artefacts in
-a child named for the vocabulary version.
+there will be a subdirectory ``build/refposition`` containing the
+vocabulary artefacts in a child named for the vocabulary version.  In
+order to make a web server work with this, you also need to update the
+.htaccess in the build directory.  This happens by calling::
+
+  python3 make-rdf-index.py build
 
 See below for actual deployment.
 
@@ -118,9 +121,11 @@ Deployment
 To have a local installation, decide on a location from where you'll
 serve your vocabularies; since we currently generate apache .htaccess
 files only, this should be served by an apache HTTP server.  Then, call
-``make local`` with ROOT_URI set to that root URL, e.g.,::
+convert with its ``--root-uri`` set to where the tree will show up,
+e.g.::
 
   python3 convert.py --root-uri http://localhost/rdf ALL
+  python3 make-rdf-index.py build
 
 In order for the .htaccess configuration to work, the toplevel directory
 has to be configured to interpret FileInfo content in the apache
@@ -146,8 +151,10 @@ recommended to work like this:
     the intended changes.
 (5) Commit the result.  In the commit message, specify what caused
     the change ("mail by person@example.org"; "TCG telecon of 2020-02-11")
-(6) Run ``sshfs semantics@ivoa.info:rdf ivoa-repo`` (you'll have to
-    mkdir ``ivoa-repo`` if it doesn't exist yet, of course)
+(6) Run ``sshfs semantics@ivoa:rdf ivoa-repo`` (you'll have to
+    mkdir ``ivoa-repo`` if it doesn't exist yet, of course; you will
+    have to have a suitable, but sometimes changing Host stanza for ivoa
+    in ~/.ssh/config, which Markus can probably help you out with)
 (7) Run ``python3 convert.py --dest-dir ivoa-repo <vocname>`` to update
     the vocabulary itself.
 (8) Update the vocabulary index: ``python3 make-rdf-index.py ivoa-repo``
