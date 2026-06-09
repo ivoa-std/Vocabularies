@@ -1012,7 +1012,7 @@ class Vocabulary(object):
                 T.p(class_="description")[self.description]],
                 self.get_html_body(),
                 T.p(class_="outro")["Alternate formats: ",
-                    T.a(href=self.name+".rdf")["RDF"],
+                    T.a(href=self.name+".rdf")["RDF/XML"],
                     ", ",
                     T.a(href=self.name+".ttl")["Turtle"],
                     ", ",

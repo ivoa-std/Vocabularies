@@ -394,6 +394,13 @@ EXTRA_TRIPLES = {
     SKOS_PREF_LABEL_TAG: "Sociology of astronomy",
     IVOA_USE_INSTEAD_TAG: IVO_TERM_PREFIX+"ethnoastronomy"
 },
+"2410": {
+    SKOS_PREF_LABEL_TAG: "Solar wind heating",
+},
+"2411": {
+    SKOS_PREF_LABEL_TAG: "Stochastic heating",
+},
+
 }
 
 
