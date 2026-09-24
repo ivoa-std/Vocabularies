@@ -729,7 +729,7 @@ class Term(object):
                ("skos:exactMatch", "Same As"),
                ("skos:related", "Related"),
                ("built-in:narrower", "Narrower"),
-               ("ivoasem:UCDSyntaxCode", "UCD Syntax"),
+               ("ivoasem:ucd-syntax-code", "UCD Syntax"),
             ]:
 
             if prop=="built-in:narrower":
