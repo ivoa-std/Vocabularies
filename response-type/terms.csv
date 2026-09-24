@@ -1,0 +1,7 @@
+response-function;1;Response Function;A data product type describing instrumental response functions for calibration and analysis.
+aeff;2;Effective Area;Geometric area of the telescope and/or instrument reduced by efficiency factors such as reflectivity and vignetting, among other effects
+arf;2;Ancillary Response File;Telescope/instrument effective area combined with detector quantum efficiency as a function of energy.
+bkgrate;2;Background Rate;Rate of residual events that are not from the expected source type.  For instance, in a neutrino instrument, it measures the residual cosmic ray atmospheric events.
+edisp;2;Energy Dispersion;Probability density function of detecting an event with an energy estimator given the true energy of the event.
+psf;2;Point Spread Function;Probability density function of spatial/angular spreading of incident photons from a point source caused by the instrument (detector and/or mirror and/or analysis)
+rmf;2;Redistribution Matrix File;Probability density function mapping from energy space into detector pulse height (or position) space.
