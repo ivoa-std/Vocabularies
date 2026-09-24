@@ -14,7 +14,7 @@ def convert_line(line):
         # if it didn't parse, it was not in the normative EN list either,
         # and so we skip it, too.
         pass
-
+listTopConcept = ["arith", "em", "instr", "meta", "obs", "phot", "phys", "pos", "spect", "src", "stat", "time"]
 
 def ucd_to_csv(in_file):
     for cur_line in in_file:
