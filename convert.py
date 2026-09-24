@@ -50,7 +50,7 @@ VOCABULARY_MANDATORY_KEYS = frozenset([
 # this is defined in Vocabularies in the VO 2
 KNOWN_PREDICATES = frozenset([
     "ivoasem:preliminary", "ivoasem:deprecated", "ivoasem:useInstead",
-    "ivoasem:UCDSyntaxCode",
+    "ivoasem:ucd-syntax-code",
     "rdfs:subClassOf",
     "rdfs:subPropertyOf",
     "skos:broader", "skos:exactMatch",
