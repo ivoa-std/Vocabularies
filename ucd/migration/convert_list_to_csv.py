@@ -27,7 +27,7 @@ def ucd_to_csv(in_file):
         else:
             level = 2
         print(f"{word};1;{word};\"{description}\";"
-            f"ivoasem:UCDSyntaxCode(`{syncode})")
+            f"ivoasem:ucd-syntax-code(`{syncode})")
 
 if __name__ == '__main__':
     with open("ucd-list.txt", 'r') as f:
