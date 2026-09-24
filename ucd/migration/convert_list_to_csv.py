@@ -22,6 +22,10 @@ def ucd_to_csv(in_file):
             continue
         syncode, word, description = convert_line(cur_line)
         assert '"' not in description
+        if word in listTopConcept:
+            level = 1
+        else:
+            level = 2
         print(f"{word};1;{word};\"{description}\";"
             f"ivoasem:UCDSyntaxCode(`{syncode})")
 
