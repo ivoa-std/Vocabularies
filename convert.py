@@ -63,7 +63,7 @@ KNOWN_PREDICATES = frozenset([
 FULL_TERM_PATTERN = r"[\w\d#:/_.*%-]+"
 
 # an RE our terms themselves must match
-TERM_PATTERN = "[\w\d_.-]+"
+TERM_PATTERN = r"[\w\d_.-]+"
 
 IVOA_RDF_URI = "http://www.ivoa.net/rdf/"
 
@@ -647,11 +647,10 @@ class Term(object):
             # but we don't want to confuse CSV format sniffers) to
             # suppress that; of course, we need to hex away that backquote
             # again.
+            if obj and obj.startswith("`"):
+                obj = obj[1:]
             if obj and re.match(TERM_PATTERN+"$", obj):
                 obj = "#"+obj
-
-            if obj.startswith("`"):
-                obj = obj[1:]
 
             self._add_relation(predicate, obj)
 
